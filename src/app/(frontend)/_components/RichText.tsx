@@ -8,20 +8,28 @@ export const RichText: React.FC<{ content: any }> = ({ content }) => {
       {content.root.children.map((node: any, i: number) => {
         switch (node.type) {
           case 'heading':
-            const Tag = node.tag as keyof JSX.IntrinsicElements
-            const headingClasses = {
-              h1: 'text-5xl font-extrabold mb-8 tracking-tighter',
-              h2: 'text-3xl font-bold mt-12 mb-6 tracking-tight',
-              h3: 'text-2xl font-semibold mt-8 mb-4',
-              h4: 'text-xl font-semibold mt-6 mb-3',
-              h5: 'text-lg font-semibold mt-4 mb-2',
-              h6: 'text-base font-semibold mt-2 mb-1',
-            }[node.tag as string] || 'text-2xl font-bold'
-            
-            return <Tag key={i} className={headingClasses}>{serialize(node.children)}</Tag>
+            const Tag = node.tag
+            const headingClasses =
+              {
+                h1: 'text-5xl font-extrabold mb-8 tracking-tighter',
+                h2: 'text-3xl font-bold mt-12 mb-6 tracking-tight',
+                h3: 'text-2xl font-semibold mt-8 mb-4',
+                h4: 'text-xl font-semibold mt-6 mb-3',
+                h5: 'text-lg font-semibold mt-4 mb-2',
+                h6: 'text-base font-semibold mt-2 mb-1',
+              }[node.tag as string] || 'text-2xl font-bold'
+
+            return (
+              <Tag key={i} className={headingClasses}>
+                {serialize(node.children)}
+              </Tag>
+            )
           case 'list':
             const ListTag = node.listType === 'bullet' ? 'ul' : 'ol'
-            const listClasses = node.listType === 'bullet' ? 'list-disc pl-6 mb-6 space-y-2' : 'list-decimal pl-6 mb-6 space-y-2'
+            const listClasses =
+              node.listType === 'bullet'
+                ? 'list-disc pl-6 mb-6 space-y-2'
+                : 'list-decimal pl-6 mb-6 space-y-2'
             return (
               <ListTag key={i} className={listClasses}>
                 {node.children.map((listItem: any, j: number) => (
@@ -31,7 +39,11 @@ export const RichText: React.FC<{ content: any }> = ({ content }) => {
             )
           case 'paragraph':
           default:
-            return <p key={i} className="mb-6">{serialize(node.children)}</p>
+            return (
+              <p key={i} className="mb-6">
+                {serialize(node.children)}
+              </p>
+            )
         }
       })}
     </div>
