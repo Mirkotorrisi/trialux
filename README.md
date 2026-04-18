@@ -34,7 +34,7 @@ Create a `.env` file in the root directory and populate it based on `.env.exampl
 PAYLOAD_SECRET=your_secret_here
 NEXT_PUBLIC_DATABASE_URL=libsql://your-db-url.turso.io
 DATABASE_AUTH_TOKEN=your_turso_token
-CLOUDINARY_NAME=your_cloud_name
+NEXT_PUBLIC_CLOUDINARY_NAME=your_cloud_name
 NEXT_PUBLIC_CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 ```
