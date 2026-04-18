@@ -32,10 +32,10 @@ Create a `.env` file in the root directory and populate it based on `.env.exampl
 
 ```env
 PAYLOAD_SECRET=your_secret_here
-DATABASE_URL=libsql://your-db-url.turso.io
+NEXT_PUBLIC_DATABASE_URL=libsql://your-db-url.turso.io
 DATABASE_AUTH_TOKEN=your_turso_token
 CLOUDINARY_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
+NEXT_PUBLIC_CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 ```
 
@@ -60,17 +60,22 @@ The CMS will be available at `/admin` and the frontend at `/`.
 ## 🏗 Project Architecture
 
 ### Hybrid Content Model
+
 Trialux follows a strict separation between static and dynamic content:
+
 - **STATIC**: Pages like Home, About, and Services are hardcoded for performance.
 - **DYNAMIC**: Posts (Blog) and Jobs (Careers) are managed via Payload CMS.
 
 ### Media Handling
+
 All assets are managed through the `Media` collection and stored on **Cloudinary**. Local filesystem storage is disabled to ensure compatibility with serverless environments (Netlify).
 
 ### Localization (i18n)
+
 The CMS is fully localized in **Italian**, providing a native experience for the administrative team. Support for English is maintained for technical collections (`Users`, `Media`).
 
 ### Automated Hooks
+
 - **Slug Generation**: Both `Posts` and `Jobs` collections automatically generate URL-friendly slugs from their respective titles using an optimized field hook.
 
 ---
@@ -78,9 +83,11 @@ The CMS is fully localized in **Italian**, providing a native experience for the
 ## 📚 Collections
 
 ### Articoli (Posts)
+
 The blog engine supporting rich text content (Lexical), featured images, and automated URL slugs.
 
 ### Annunci di Lavoro (Jobs)
+
 A career management module with status tracking (Bozza/Pubblicato/Chiuso), metadata (Location/Contract Type), and expiration dates.
 
 ---
@@ -93,4 +100,5 @@ A career management module with status tracking (Bozza/Pubblicato/Chiuso), metad
 - `npm run build`: Production build
 
 ## 📄 License
+
 MIT
