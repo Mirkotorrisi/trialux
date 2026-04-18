@@ -1,67 +1,96 @@
-# Payload Blank Template
+# Trialux Platform
 
-This template comes configured with the bare minimum to get started on anything you need.
+Trialux is a high-performance web platform built with **Next.js 15**, **Payload CMS 3.0**, and **Tailwind CSS v4**. It features a hybrid content model designed for maximum speed and SEO, utilizing building blocks like Turso (libSQL) and Cloudinary.
 
-## Quick start
+## 🚀 Tech Stack
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB and cloud S3 object storage for media.
+- **Framework**: Next.js 15 (App Router)
+- **CMS**: Payload 3.0 (Local API / Server Components)
+- **Database**: Turso (libSQL/SQLite)
+- **Styling**: Tailwind CSS v4 (Standard Utility-first)
+- **Media**: Cloudinary via `cloud-storage-plugin`
+- **Deployment**: Netlify
 
-## Quick Start - local setup
+## 🛠 Prerequisites
 
-To spin up this template locally, follow these steps:
+- Node.js 20.9.0 or higher
+- `npm` or `pnpm` (Next.js & Payload compatible)
 
-### Clone
+## 📦 Getting Started
 
-After you click the `Deploy` button above, you'll want to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
+### 1. Clone & Install
 
-### Development
+```bash
+git clone <your-repo-url>
+cd trialux
+npm install
+```
 
-1. First [clone the repo](#clone) if you have not done so already
-2. `cd my-project && cp .env.example .env` to copy the example environment variables. You'll need to add the `MONGODB_URL` from your Cloud project to your `.env` if you want to use S3 storage and the MongoDB database that was created for you.
+### 2. Environment Variables
 
-3. `pnpm install && pnpm dev` to install dependencies and start the dev server
-4. open `http://localhost:3000` to open the app in your browser
+Create a `.env` file in the root directory and populate it based on `.env.example`:
 
-That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
+```env
+PAYLOAD_SECRET=your_secret_here
+DATABASE_URL=libsql://your-db-url.turso.io
+DATABASE_AUTH_TOKEN=your_turso_token
+CLOUDINARY_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
 
-#### Docker (Optional)
+### 3. Database Initialization
 
-If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
+Since we use Turso (Remote libSQL), initial schema creation is required:
 
-To do so, follow these steps:
+```bash
+npx payload db:push
+```
 
-- Modify the `MONGODB_URL` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
-- Modify the `docker-compose.yml` file's `MONGODB_URL` to match the above `<dbname>`
-- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
+### 4. Development
 
-## How it works
+```bash
+npm run dev
+```
 
-The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
+The CMS will be available at `/admin` and the frontend at `/`.
 
-### Collections
+---
 
-See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
+## 🏗 Project Architecture
 
-- #### Users (Authentication)
+### Hybrid Content Model
+Trialux follows a strict separation between static and dynamic content:
+- **STATIC**: Pages like Home, About, and Services are hardcoded for performance.
+- **DYNAMIC**: Posts (Blog) and Jobs (Careers) are managed via Payload CMS.
 
-  Users are auth-enabled collections that have access to the admin panel.
+### Media Handling
+All assets are managed through the `Media` collection and stored on **Cloudinary**. Local filesystem storage is disabled to ensure compatibility with serverless environments (Netlify).
 
-  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
+### Localization (i18n)
+The CMS is fully localized in **Italian**, providing a native experience for the administrative team. Support for English is maintained for technical collections (`Users`, `Media`).
 
-- #### Media
+### Automated Hooks
+- **Slug Generation**: Both `Posts` and `Jobs` collections automatically generate URL-friendly slugs from their respective titles using an optimized field hook.
 
-  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
+---
 
-### Docker
+## 📚 Collections
 
-Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
+### Articoli (Posts)
+The blog engine supporting rich text content (Lexical), featured images, and automated URL slugs.
 
-1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
-1. Next run `docker-compose up`
-1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
+### Annunci di Lavoro (Jobs)
+A career management module with status tracking (Bozza/Pubblicato/Chiuso), metadata (Location/Contract Type), and expiration dates.
 
-That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
+---
 
-## Questions
+## 📋 Useful Commands
 
-If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+- `npm run dev`: Start development server
+- `npx payload generate:types`: Regerate Payload types based on schema changes
+- `npx payload db:push`: Push local schema changes to Turso
+- `npm run build`: Production build
+
+## 📄 License
+MIT
