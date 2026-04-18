@@ -15,7 +15,7 @@ import { cloudinaryAdapter } from './utilities/cloudinaryAdapter'
 import { Jobs } from './collections/Jobs'
 
 cloudinary.config({
-  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_NAME,
+  cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 })
@@ -41,7 +41,7 @@ export default buildConfig({
   },
   db: sqliteAdapter({
     client: {
-      url: process.env.NEXT_PUBLIC_DATABASE_URL || '',
+      url: process.env.DATABASE_URL || '',
       authToken: process.env.DATABASE_AUTH_TOKEN || '',
     },
   }),
