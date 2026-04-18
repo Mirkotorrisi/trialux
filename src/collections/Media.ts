@@ -8,6 +8,7 @@ export const Media: CollectionConfig = {
   fields: [
     {
       name: 'alt',
+      label: 'Testo alternativo',
       type: 'text',
       required: true,
     },
