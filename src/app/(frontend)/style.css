@@ -177,6 +177,7 @@ p {
 
 a {
   color: currentColor;
+  text-decoration: none !important;
 
   &:focus {
     opacity: 0.8;
@@ -265,4 +266,8 @@ svg {
       border-radius: 4px;
     }
   }
+}
+
+html, body {
+  font-family: var(--font-montserrat), sans-serif;
 }

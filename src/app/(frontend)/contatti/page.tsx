@@ -1,196 +1,185 @@
-import { Header } from '../_components/Header'
-import { MapPin, Phone, Mail, Send } from 'lucide-react'
+'use client'
 
-const LinkedinIcon = ({ className, size = 24 }: { className?: string, size?: number }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect width="4" height="12" x="2" y="9" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-)
+import { Header } from '../_components/Header'
+import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from 'lucide-react'
+import { FadeIn } from '../_components/FadeIn'
 
 export default function ContattiPage() {
   return (
-    <>
+    <div className="bg-white min-h-screen text-[#1A1A1A] selection:bg-[#F0921E]/20 font-sans">
       <Header />
-      <main className="w-full">
-        {/* 7.1 Intestazione pagina */}
-        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-zinc-900 border-b border-zinc-800">
-          <div className="container mx-auto px-6 relative z-10 text-center">
-            <span className="text-blue-500 font-bold tracking-wider uppercase text-sm mb-4 block">Contatti</span>
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-8 max-w-4xl mx-auto text-white">
-              Contatti
-            </h1>
-            <p className="max-w-2xl mx-auto text-xl text-zinc-400">
-              Siamo a Biancavilla, in provincia di Catania. Scrivici o chiamaci: ti risponderemo nel più breve tempo possibile.
-            </p>
+      
+      <main className="w-full relative overflow-hidden">
+        {/* Architectural Hero */}
+        <section className="relative w-full h-[80vh] min-h-[400px] md:min-h-[300px] md:min-h-[400px] flex items-center overflow-hidden">
+          <div className="absolute inset-0 w-full h-full">
+            <img src="https://images.unsplash.com/photo-1557425955-df376b5903c8?q=80&w=2070&auto=format&fit=crop" alt="Contatti" className="w-full h-full object-cover scale-105 grayscale opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A] via-[#1A1A1A]/90 to-transparent w-full md:w-[80%]" />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col justify-center h-full pt-32">
+            <FadeIn delay={0}>
+              <div className="flex items-center gap-4 mb-8">
+                <span className="w-12 h-[2px] bg-[#F0921E]"></span>
+                <span className="text-white font-bold tracking-widest uppercase text-sm">Contatti</span>
+              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-[80px] font-black tracking-tighter mb-6 max-w-5xl text-white leading-[0.95]">
+                Siamo a disposizione per <br className="hidden md:block" /> ogni <span className="text-[#F0921E]">richiesta.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <p className="text-lg md:text-xl lg:text-2xl text-zinc-300 max-w-3xl font-medium leading-tight">
+                Seleziona il reparto di interesse o compila il form per comunicare con il nostro team tecnico o commerciale.
+              </p>
+            </FadeIn>
           </div>
         </section>
 
-        <section className="py-24">
-          <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-16 max-w-7xl mx-auto">
+        <section className="py-16 md:py-12 md:py-20 bg-white">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="grid lg:grid-cols-12 gap-8 md:p-12 md:gap-8 lg:gap-12 lg:gap-24">
               
-              <div className="flex flex-col gap-12">
-                {/* 7.2 Sede */}
-                <div className="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800">
-                  <div className="flex items-center gap-4 mb-6">
-                    <MapPin className="text-blue-500" size={32} />
-                    <h2 className="text-2xl font-bold">Sede</h2>
+              {/* Informazioni di contatto (Sinistra) */}
+              <div className="lg:col-span-5 space-y-16">
+                
+                <FadeIn delay={0}>
+                  <div>
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1A1A1A] mb-8 tracking-tighter flex items-center gap-4">
+                      <MapPin className="text-[#EE2430]" size={32} /> Le nostre sedi
+                    </h3>
+                    <div className="space-y-8 pl-12 border-l-2 border-zinc-200">
+                      <div>
+                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">Sede Legale e Operativa</div>
+                        <div className="text-lg md:text-xl lg:text-2xl font-black text-[#1A1A1A] tracking-tighter">Via C. Colombo 3/B</div>
+                        <div className="text-sm md:text-base lg:text-lg text-zinc-600 font-medium mt-1">95033 Biancavilla (CT)</div>
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">Deposito</div>
+                        <div className="text-lg md:text-xl lg:text-2xl font-black text-[#1A1A1A] tracking-tighter">C.da S. Giovanni S.N.</div>
+                        <div className="text-sm md:text-base lg:text-lg text-zinc-600 font-medium mt-1">95033 Biancavilla (CT)</div>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-lg text-zinc-300 mb-6 font-medium">
-                    Trialux S.r.l. — Via del Tessitore snc, Biancavilla (CT)
-                  </p>
-                  <div className="w-full h-64 bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700">
-                     <iframe 
-                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12648.777717462064!2d14.851080300000002!3d37.6322894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313e2f50d173d1f%3A0x6b87640db90cf5a7!2s95033%20Biancavilla%20CT!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" 
-                       width="100%" 
-                       height="100%" 
-                       style={{border:0}} 
-                       allowFullScreen={false} 
-                       loading="lazy" 
-                       referrerPolicy="no-referrer-when-downgrade"
-                     ></iframe>
-                  </div>
-                </div>
+                </FadeIn>
 
-                {/* 7.3 Contatti telefonici */}
-                <div className="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800">
-                  <div className="flex items-center gap-4 mb-6">
-                    <Phone className="text-blue-500" size={32} />
-                    <h2 className="text-2xl font-bold">Recapiti Telefonici</h2>
+                <FadeIn delay={150}>
+                  <div>
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1A1A1A] mb-8 tracking-tighter flex items-center gap-4">
+                      <Phone className="text-[#55ABE4]" size={32} /> Recapiti e Orari
+                    </h3>
+                    <div className="grid grid-cols-2 gap-8 pl-12 border-l-2 border-zinc-200">
+                      <div>
+                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">Centralino</div>
+                        <div className="text-lg md:text-xl lg:text-2xl font-black tracking-tighter">095 8900010</div>
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">Orari</div>
+                        <div className="text-lg md:text-xl lg:text-2xl font-black tracking-tighter text-[#1A1A1A]">08:30 - 18:30</div>
+                        <div className="text-sm text-zinc-500 font-bold uppercase tracking-widest mt-1">LUN - VEN</div>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-3xl font-extrabold text-blue-400 mb-6">Tel. 095 814 4954</p>
-                  <div className="bg-background p-6 rounded-2xl border border-zinc-800">
-                    <p className="text-zinc-400 text-sm font-bold uppercase mb-4 tracking-wider">Chiama e seleziona l'interno:</p>
-                    <ul className="space-y-3 text-zinc-300">
-                      <li className="flex justify-between border-b border-zinc-800/50 pb-2"><span>01</span> <span>Ufficio amministrativo</span></li>
-                      <li className="flex justify-between border-b border-zinc-800/50 pb-2"><span>02</span> <span>Ufficio tecnico</span></li>
-                      <li className="flex justify-between border-b border-zinc-800/50 pb-2"><span>03</span> <span>Ufficio fatturazione</span></li>
-                      <li className="flex justify-between border-b border-zinc-800/50 pb-2"><span>04</span> <span>Ufficio Risorse umane</span></li>
-                      <li className="flex justify-between"><span>05</span> <span>Ufficio operativo</span></li>
-                    </ul>
-                  </div>
-                </div>
+                </FadeIn>
 
-                {/* 7.4 Contatti email */}
-                <div className="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800">
-                  <div className="flex items-center gap-4 mb-6">
-                    <Mail className="text-blue-500" size={32} />
-                    <h2 className="text-2xl font-bold">Email e PEC</h2>
+                <FadeIn delay={300}>
+                  <div>
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1A1A1A] mb-8 tracking-tighter flex items-center gap-4">
+                      <Mail className="text-[#EE2430]" size={32} /> Recapiti Email
+                    </h3>
+                    <div className="space-y-4 pl-12 border-l-2 border-zinc-200">
+                      <a href="mailto:info@trialux.it" className="flex flex-col group py-3 border-b border-zinc-100">
+                        <span className="text-zinc-400 font-bold text-xs uppercase tracking-widest mb-1">Generale</span>
+                        <span className="font-black text-base md:text-lg lg:text-xl text-[#1A1A1A] group-hover:text-[#EE2430] transition-colors tracking-tighter">info@trialux.it</span>
+                      </a>
+                      <a href="mailto:amministrazione@trialux.it" className="flex flex-col group py-3 border-b border-zinc-100">
+                        <span className="text-zinc-400 font-bold text-xs uppercase tracking-widest mb-1">Amministrazione</span>
+                        <span className="font-black text-base md:text-lg lg:text-xl text-[#1A1A1A] group-hover:text-[#EE2430] transition-colors tracking-tighter">amministrazione@trialux.it</span>
+                      </a>
+                      <a href="mailto:tecnico@trialux.it" className="flex flex-col group py-3 border-b border-zinc-100">
+                        <span className="text-zinc-400 font-bold text-xs uppercase tracking-widest mb-1">Ufficio Tecnico</span>
+                        <span className="font-black text-base md:text-lg lg:text-xl text-[#1A1A1A] group-hover:text-[#EE2430] transition-colors tracking-tighter">tecnico@trialux.it</span>
+                      </a>
+                      <a href="mailto:trialux@pec.it" className="flex flex-col group pt-3">
+                        <span className="text-zinc-400 font-bold text-xs uppercase tracking-widest mb-1">PEC (Posta Certificata)</span>
+                        <span className="font-black text-base md:text-lg lg:text-xl text-[#1A1A1A] group-hover:text-[#EE2430] transition-colors tracking-tighter">trialux@pec.it</span>
+                      </a>
+                    </div>
                   </div>
-                  <ul className="space-y-4">
-                    <li className="flex flex-col">
-                      <span className="text-zinc-500 text-sm">Informazioni generali</span>
-                      <a href="mailto:trialuxsrl@gmail.com" className="text-white hover:text-blue-400 transition-colors">trialuxsrl@gmail.com</a>
-                    </li>
-                    <li className="flex flex-col">
-                      <span className="text-zinc-500 text-sm">Ufficio amministrativo e fatturazione</span>
-                      <a href="mailto:amministrazione@trialuxsrl.it" className="text-white hover:text-blue-400 transition-colors">amministrazione@trialuxsrl.it</a>
-                    </li>
-                    <li className="flex flex-col">
-                      <span className="text-zinc-500 text-sm">Ufficio tecnico</span>
-                      <a href="mailto:ufficiotecnico@trialuxsrl.it" className="text-white hover:text-blue-400 transition-colors">ufficiotecnico@trialuxsrl.it</a>
-                    </li>
-                    <li className="flex flex-col">
-                      <span className="text-zinc-500 text-sm">Risorse umane</span>
-                      <a href="mailto:ufficiopersonale@trialuxsrl.it" className="text-white hover:text-blue-400 transition-colors">ufficiopersonale@trialuxsrl.it</a>
-                    </li>
-                    <li className="flex flex-col">
-                      <span className="text-zinc-500 text-sm">Istruttoria lavori</span>
-                      <a href="mailto:istruttorialavori@trialuxsrl.it" className="text-white hover:text-blue-400 transition-colors">istruttorialavori@trialuxsrl.it</a>
-                    </li>
-                    <li className="flex flex-col mt-4 p-4 bg-zinc-800/50 rounded-xl">
-                      <span className="text-zinc-400 text-sm font-bold">Posta Elettronica Certificata (PEC)</span>
-                      <a href="mailto:trialux@pec.it" className="text-blue-400 font-bold">trialux@pec.it</a>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* 7.5 Social */}
-                <div className="bg-[#0A66C2]/10 p-8 rounded-3xl border border-[#0A66C2]/30 flex flex-col items-center text-center">
-                  <LinkedinIcon className="text-[#0A66C2] mb-4" size={48} />
-                  <p className="text-[#0A66C2] font-medium mb-6">
-                    Seguici su LinkedIn per aggiornamenti su cantieri, posizioni aperte e novità aziendali.
-                  </p>
-                  <a href="https://linkedin.com/company/trialux-srl" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#0A66C2] text-white font-bold rounded-full hover:bg-[#004182] transition-colors">
-                    linkedin.com/company/trialux-srl
-                  </a>
-                </div>
+                </FadeIn>
 
               </div>
 
-              {/* 7.6 Form di contatto */}
-              <div>
-                <div className="sticky top-32 bg-zinc-900 p-8 md:p-10 rounded-3xl border border-zinc-800 shadow-2xl">
-                  <h2 className="text-3xl font-extrabold mb-8">Inviaci un messaggio</h2>
-                  <form className="flex flex-col gap-6" action="#">
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="name" className="text-sm font-medium text-zinc-300">Nome e cognome *</label>
-                      <input type="text" id="name" required className="bg-background border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Il tuo nome completo" />
-                    </div>
+              {/* Form di contatto (Destra) */}
+              <div className="lg:col-span-7">
+                <FadeIn delay={200}>
+                  <div className="bg-zinc-50 p-6 md:p-6 md:p-8 md:p-8 md:p-12 border border-zinc-200">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#1A1A1A] mb-6 tracking-tighter">Modulo di Contatto</h3>
+                    <p className="text-zinc-600 font-medium mb-6 lg:mb-12 text-sm md:text-base lg:text-lg ">Compila il modulo sottostante per inoltrare la tua richiesta al dipartimento corretto.</p>
                     
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="company" className="text-sm font-medium text-zinc-300">Azienda / Ente (opzionale)</label>
-                      <input type="text" id="company" className="bg-background border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="La tua azienda" />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="flex flex-col gap-2">
-                        <label htmlFor="email" className="text-sm font-medium text-zinc-300">Email *</label>
-                        <input type="email" id="email" required className="bg-background border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="La tua email" />
+                    <form className="space-y-8">
+                      <div className="grid sm:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                          <label htmlFor="nome" className="text-xs font-bold text-zinc-500 tracking-widest uppercase">Nome e Cognome *</label>
+                          <input type="text" id="nome" className="w-full bg-white border border-zinc-300 px-6 py-4 text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A] focus:ring-1 focus:ring-zinc-900 transition-all font-medium" required />
+                        </div>
+                        <div className="space-y-3">
+                          <label htmlFor="azienda" className="text-xs font-bold text-zinc-500 tracking-widest uppercase">Azienda</label>
+                          <input type="text" id="azienda" className="w-full bg-white border border-zinc-300 px-6 py-4 text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A] focus:ring-1 focus:ring-zinc-900 transition-all font-medium" />
+                        </div>
                       </div>
-                      <div className="flex flex-col gap-2">
-                        <label htmlFor="phone" className="text-sm font-medium text-zinc-300">Telefono (opzionale)</label>
-                        <input type="tel" id="phone" className="bg-background border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Il tuo telefono" />
+                      
+                      <div className="grid sm:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                          <label htmlFor="email" className="text-xs font-bold text-zinc-500 tracking-widest uppercase">Email *</label>
+                          <input type="email" id="email" className="w-full bg-white border border-zinc-300 px-6 py-4 text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A] focus:ring-1 focus:ring-zinc-900 transition-all font-medium" required />
+                        </div>
+                        <div className="space-y-3">
+                          <label htmlFor="telefono" className="text-xs font-bold text-zinc-500 tracking-widest uppercase">Telefono *</label>
+                          <input type="tel" id="telefono" className="w-full bg-white border border-zinc-300 px-6 py-4 text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A] focus:ring-1 focus:ring-zinc-900 transition-all font-medium" required />
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="subject" className="text-sm font-medium text-zinc-300">Oggetto *</label>
-                      <select id="subject" required className="bg-background border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors appearance-none">
-                        <option value="" disabled selected>Seleziona il motivo...</option>
-                        <option value="commerciale">Richiesta commerciale</option>
-                        <option value="tecniche">Informazioni tecniche</option>
-                        <option value="candidatura">Candidatura</option>
-                        <option value="altro">Altro</option>
-                      </select>
-                    </div>
 
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="message" className="text-sm font-medium text-zinc-300">Messaggio *</label>
-                      <textarea id="message" required rows={5} className="bg-background border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none" placeholder="Scrivi il tuo messaggio qui..."></textarea>
-                    </div>
+                      <div className="space-y-3">
+                        <label htmlFor="motivo" className="text-xs font-bold text-zinc-500 tracking-widest uppercase">Dipartimento / Motivo *</label>
+                        <select id="motivo" className="w-full bg-white border border-zinc-300 px-6 py-4 text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A] focus:ring-1 focus:ring-zinc-900 transition-all font-medium appearance-none cursor-pointer" required>
+                          <option value="">Seleziona un'opzione</option>
+                          <option value="commerciale">Ufficio Commerciale</option>
+                          <option value="tecnico">Ufficio Tecnico / Assistenza</option>
+                          <option value="amministrazione">Ufficio Amministrazione</option>
+                          <option value="lavoro">Risorse Umane</option>
+                          <option value="altro">Altro</option>
+                        </select>
+                      </div>
 
-                    <div className="flex items-start gap-3 mt-2">
-                      <input type="checkbox" id="privacy" required className="mt-1 w-5 h-5 accent-blue-600 bg-background border-zinc-700 rounded focus:ring-blue-500" />
-                      <label htmlFor="privacy" className="text-sm text-zinc-400 leading-tight">
-                        Acconsento al trattamento dei miei dati personali in conformità alla Privacy Policy per la gestione della richiesta. *
-                      </label>
-                    </div>
+                      <div className="space-y-3">
+                        <label htmlFor="messaggio" className="text-xs font-bold text-zinc-500 tracking-widest uppercase">Messaggio *</label>
+                        <textarea id="messaggio" rows={6} className="w-full bg-white border border-zinc-300 px-6 py-4 text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A] focus:ring-1 focus:ring-zinc-900 transition-all resize-none font-medium" required></textarea>
+                      </div>
 
-                    <button type="submit" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-all mt-4 w-full">
-                      Invia messaggio <Send size={18} />
-                    </button>
-                  </form>
-                </div>
+                      <div className="flex items-start gap-4 pt-4 border-t border-zinc-200">
+                        <input type="checkbox" id="privacy" className="mt-1 w-5 h-5 border-zinc-300 text-[#1A1A1A] focus:ring-zinc-900 cursor-pointer" required />
+                        <label htmlFor="privacy" className="text-sm text-zinc-600 leading-relaxed font-medium">
+                          Ho letto l'informativa sulla privacy e acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR). *
+                        </label>
+                      </div>
+
+                      <div className="pt-8 flex">
+                        <button type="submit" className="inline-flex items-center justify-center gap-4 px-8 py-4 md:px-12 md:py-5 bg-[#F0921E] text-[#1A1A1A] font-bold text-sm md:text-base lg:text-lg hover:bg-[#e67e22] hover:text-white transition-colors duration-300 active:translate-y-1">
+                          <span>Invia Richiesta</span>
+                          <Send size={20} />
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </FadeIn>
               </div>
 
             </div>
           </div>
         </section>
+
       </main>
-    </>
+    </div>
   )
 }

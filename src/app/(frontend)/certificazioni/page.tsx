@@ -1,111 +1,161 @@
 import { Header } from '../_components/Header'
-import { ShieldCheck, CheckCircle2, Award, Star, FileText, AlertTriangle } from 'lucide-react'
+import { ShieldCheck, CheckCircle2, Award, Star, FileText, AlertTriangle, ArrowRight } from 'lucide-react'
+import { FadeIn } from '../_components/FadeIn'
 
 export default function CertificazioniPage() {
   return (
-    <>
+    <div className="bg-white min-h-screen text-[#1A1A1A] selection:bg-emerald-500/20 font-sans">
       <Header />
-      <main className="w-full">
-        {/* 4.1 Intestazione pagina */}
-        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-zinc-900 border-b border-zinc-800">
-          <div className="container mx-auto px-6 relative z-10 text-center">
-            <span className="text-emerald-500 font-bold tracking-wider uppercase text-sm mb-4 block">Qualità e Certificazioni</span>
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-8 max-w-4xl mx-auto text-white">
-              Operiamo con sistemi di gestione certificati e standard riconosciuti a livello nazionale e internazionale.
-            </h1>
-            <p className="max-w-4xl mx-auto text-lg text-zinc-400 leading-relaxed">
-              Per Trialux la qualità non è una dichiarazione d’intenti, è un sistema strutturato e verificato da enti terzi indipendenti. Le nostre certificazioni sono il risultato di un percorso rigoroso di adeguamento dei processi interni e rappresentano una garanzia concreta per chiunque decida di affidarci un lavoro.
-            </p>
+      
+      <main className="w-full relative overflow-hidden">
+        {/* Architectural Hero */}
+        <section className="relative w-full h-[80vh] min-h-[400px] md:min-h-[300px] md:min-h-[400px] flex items-center overflow-hidden">
+          <div className="absolute inset-0 w-full h-full">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" alt="Qualità e Certificazioni" className="w-full h-full object-cover scale-105 grayscale opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A] via-[#1A1A1A]/90 to-transparent w-full md:w-[80%]" />
+            <div className="absolute inset-0 bg-black/20" />
           </div>
-        </section>
 
-        {/* 4.2 Certificazioni ISO */}
-        <section className="py-24">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <ShieldCheck size={64} className="mx-auto text-emerald-500 mb-8" />
-              <h2 className="text-4xl font-extrabold mb-6">Certificazioni ISO</h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-24">
-              <div className="flex flex-col gap-6 p-8 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-emerald-500/50 transition-colors">
-                <div className="flex items-center gap-4 border-b border-zinc-800 pb-6">
-                  <CheckCircle2 size={32} className="shrink-0 text-emerald-500" />
-                  <h3 className="text-2xl font-bold">ISO 9001</h3>
-                </div>
-                <div className="text-sm text-emerald-400 font-bold uppercase tracking-wider mb-2">Sistema di gestione per la qualità</div>
-                <p className="text-zinc-400 leading-relaxed">
-                  La certificazione ISO 9001 attesta che Trialux ha implementato e mantiene un sistema di gestione per la qualità conforme allo standard internazionale. Questo significa processi documentati, controllo costante delle attività operative e un approccio sistematico al miglioramento continuo. Per i nostri clienti, è la garanzia che ogni commessa viene gestita con metodo e rigore.
-                </p>
+          <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col justify-center h-full pt-32">
+            <FadeIn delay={0}>
+              <div className="flex items-center gap-4 mb-8">
+                <span className="w-12 h-[2px] bg-[#EE2430]"></span>
+                <span className="text-white font-bold tracking-widest uppercase text-sm">Qualità e Certificazioni</span>
               </div>
-              <div className="flex flex-col gap-6 p-8 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-emerald-500/50 transition-colors">
-                <div className="flex items-center gap-4 border-b border-zinc-800 pb-6">
-                  <CheckCircle2 size={32} className="shrink-0 text-emerald-500" />
-                  <h3 className="text-2xl font-bold">ISO 14001</h3>
-                </div>
-                <div className="text-sm text-emerald-400 font-bold uppercase tracking-wider mb-2">Sistema di gestione ambientale</div>
-                <p className="text-zinc-400 leading-relaxed">
-                  Con la certificazione ISO 14001, Trialux dimostra il proprio impegno nella gestione responsabile degli impatti ambientali legati alle attività di cantiere. Monitoriamo i consumi, gestiamo correttamente i rifiuti e adottiamo procedure operative che minimizzano l’impatto sull’ambiente. Un cantiere ben fatto non può prescindere dalla sostenibilità.
-                </p>
-              </div>
-              <div className="flex flex-col gap-6 p-8 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-emerald-500/50 transition-colors">
-                <div className="flex items-center gap-4 border-b border-zinc-800 pb-6">
-                  <CheckCircle2 size={32} className="shrink-0 text-emerald-500" />
-                  <h3 className="text-2xl font-bold">ISO 45001</h3>
-                </div>
-                <div className="text-sm text-emerald-400 font-bold uppercase tracking-wider mb-2">Sistema di gestione per la salute e la sicurezza</div>
-                <p className="text-zinc-400 leading-relaxed">
-                  La sicurezza dei lavoratori è la nostra priorità assoluta. La certificazione ISO 45001 attesta che Trialux ha adottato un sistema strutturato per l’identificazione e la gestione dei rischi professionali. Tutto il personale è formato e certificato per operare in sicurezza, anche nelle condizioni più critiche: lavori sotto tensione, spazi confinati, utilizzo di DPI di terza categoria.
-                </p>
-              </div>
-            </div>
-
-            {/* 4.3 Attestati e riconoscimenti */}
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <Award size={64} className="mx-auto text-yellow-500 mb-8" />
-              <h2 className="text-4xl font-extrabold mb-6">Attestati e riconoscimenti</h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="flex flex-col gap-6 p-8 bg-zinc-900 rounded-3xl border border-zinc-800">
-                <h3 className="text-xl font-bold flex items-center gap-2">Rating di legalità <span className="text-yellow-500 flex"><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /></span></h3>
-                <p className="text-zinc-400 leading-relaxed">
-                  Il Rating di Legalità è un indicatore del rispetto della legalità da parte delle imprese, rilasciato dall’Autorità Garante della Concorrenza e del Mercato (AGCM). Trialux ha ottenuto il punteggio di due stelle, riconoscimento che certifica la trasparenza nella gestione aziendale e il rispetto dei requisiti etici, fiscali e normativi. Un vantaggio concreto in tutte le procedure di gara pubblica.
-                </p>
-              </div>
-              <div className="flex flex-col gap-6 p-8 bg-zinc-900 rounded-3xl border border-zinc-800">
-                <h3 className="text-xl font-bold flex items-center gap-2"><FileText size={24} className="text-emerald-500" /> Attestato di rating di sostenibilità</h3>
-                <p className="text-zinc-400 leading-relaxed">
-                  Trialux è in possesso dell’attestato di rating di sostenibilità, che certifica l’integrazione di criteri ESG (ambientali, sociali e di governance) nei processi aziendali. Un riconoscimento che si affianca alle certificazioni ISO e rafforza il posizionamento dell’azienda nelle gare che prevedono criteri di selezione legati alla sostenibilità.
-                </p>
-              </div>
-              <div className="flex flex-col gap-6 p-8 bg-zinc-900 rounded-3xl border border-zinc-800">
-                <h3 className="text-xl font-bold flex items-center gap-2"><ShieldCheck size={24} className="text-blue-500" /> Iscrizione alla White List</h3>
-                <p className="text-zinc-400 leading-relaxed">
-                  Trialux è iscritta alla White List della Prefettura, l’elenco dei fornitori, prestatori di servizi ed esecutori di lavori non soggetti a tentativi di infiltrazione mafiosa. Un requisito essenziale per partecipare a numerose tipologie di appalti pubblici e un segnale inequivocabile di trasparenza e correttezza.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 4.4 Whistleblowing */}
-        <section className="py-24 bg-zinc-900/50 border-t border-zinc-800">
-          <div className="container mx-auto px-6">
-            <div className="max-w-3xl mx-auto text-center">
-              <AlertTriangle size={48} className="mx-auto text-red-500 mb-6" />
-              <h2 className="text-3xl font-extrabold mb-6">Segnalazione di condotte illecite</h2>
-              <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-                In linea con la normativa vigente in materia di whistleblowing (D. Lgs. 24/2023), Trialux ha attivato un canale dedicato per la segnalazione riservata di eventuali condotte illecite o irregolari. Il sistema garantisce la massima riservatezza al segnalante e viene gestito in modo indipendente dalla struttura aziendale.
+              <h1 className="text-4xl md:text-6xl lg:text-[80px] font-black tracking-tighter mb-6 max-w-5xl text-white leading-[0.95]">
+                La qualità è un <br /> <span className="text-[#EE2430]">fatto certificato.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <p className="text-lg md:text-xl lg:text-2xl text-zinc-300 max-w-3xl font-medium leading-tight">
+                Operiamo con sistemi di gestione certificati a livello internazionale. Le nostre certificazioni rappresentano una garanzia concreta.
               </p>
-              <a href="https://trialux.segnalazioni.eu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-white transition-all font-bold">
-                Accedi alla piattaforma: trialux.segnalazioni.eu
-              </a>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Certificazioni ISO - Sharp B2B Style */}
+        <section className="py-16 md:py-12 md:py-20 bg-white">
+          <div className="container mx-auto px-6 lg:px-12">
+            <FadeIn>
+              <div className="max-w-4xl mb-8 lg:mb-16">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="w-12 h-[2px] bg-[#EE2430]"></span>
+                  <span className="text-[#1A1A1A] font-bold tracking-widest uppercase text-sm">Sistemi di Gestione ISO</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#1A1A1A] tracking-tighter">Standard internazionali applicati ad ogni cantiere.</h2>
+              </div>
+            </FadeIn>
+
+            <div className="grid lg:grid-cols-3 gap-px bg-zinc-200 border border-zinc-200 mb-8 lg:mb-16 lg:mb-32">
+              <FadeIn delay={100} className="h-full">
+                <div className="bg-white p-6 md:p-6 md:p-8 hover:bg-zinc-50 transition-colors group flex flex-col h-full border-r border-b border-zinc-200">
+                  <div className="flex items-center gap-6 border-b-2 border-[#1A1A1A] pb-8 mb-8">
+                    <CheckCircle2 size={40} className="shrink-0 text-[#1A1A1A]" />
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#1A1A1A] tracking-tighter">ISO 9001</h3>
+                  </div>
+                  <div className="text-sm text-[#EE2430] font-bold uppercase tracking-widest mb-4">Qualità</div>
+                  <p className="text-sm md:text-base lg:text-lg text-zinc-600 font-medium leading-relaxed">
+                    Sistema di gestione per la qualità conforme allo standard internazionale. Processi documentati e approccio sistematico al miglioramento continuo.
+                  </p>
+                </div>
+              </FadeIn>
+              
+              <FadeIn delay={200} className="h-full">
+                <div className="bg-white p-6 md:p-6 md:p-8 hover:bg-zinc-50 transition-colors group flex flex-col h-full border-r border-b border-zinc-200">
+                  <div className="flex items-center gap-6 border-b-2 border-[#1A1A1A] pb-8 mb-8">
+                    <CheckCircle2 size={40} className="shrink-0 text-[#1A1A1A]" />
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#1A1A1A] tracking-tighter">ISO 14001</h3>
+                  </div>
+                  <div className="text-sm text-[#EE2430] font-bold uppercase tracking-widest mb-4">Ambiente</div>
+                  <p className="text-sm md:text-base lg:text-lg text-zinc-600 font-medium leading-relaxed">
+                    Impegno nella gestione responsabile degli impatti ambientali. Monitoraggio dei consumi e procedure operative sostenibili.
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={300} className="h-full">
+                <div className="bg-white p-6 md:p-6 md:p-8 hover:bg-zinc-50 transition-colors group flex flex-col h-full border-r border-b border-zinc-200">
+                  <div className="flex items-center gap-6 border-b-2 border-[#1A1A1A] pb-8 mb-8">
+                    <CheckCircle2 size={40} className="shrink-0 text-[#1A1A1A]" />
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#1A1A1A] tracking-tighter">ISO 45001</h3>
+                  </div>
+                  <div className="text-sm text-[#EE2430] font-bold uppercase tracking-widest mb-4">Sicurezza</div>
+                  <p className="text-sm md:text-base lg:text-lg text-zinc-600 font-medium leading-relaxed">
+                    Sistema strutturato per l’identificazione e gestione dei rischi professionali. Massima priorità alla salute dei lavoratori.
+                  </p>
+                </div>
+              </FadeIn>
             </div>
+
+            {/* Attestati */}
+            <div className="grid lg:grid-cols-2 gap-8 md:p-12">
+              <FadeIn delay={0}>
+                <div className="bg-[#1A1A1A] text-white p-6 md:p-6 md:p-8 lg:p-8 md:p-12 h-full flex flex-col justify-center border-l-4 border-[#F0921E]">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-8 flex items-center gap-4 tracking-tighter">
+                    Rating di legalità
+                    <span className="text-[#F0921E] flex gap-1"><Star size={24} fill="currentColor" /><Star size={24} fill="currentColor" /></span>
+                  </h3>
+                  <p className="text-zinc-400 font-medium leading-relaxed text-base md:text-lg lg:text-xl max-w-lg">
+                    Rilasciato dall’AGCM con punteggio di due stelle. Certifica la trasparenza nella gestione aziendale e il rispetto dei requisiti etici, fiscali e normativi. Un vantaggio concreto per gli appalti pubblici.
+                  </p>
+                </div>
+              </FadeIn>
+              
+              <div className="flex flex-col gap-8 h-full justify-center">
+                <FadeIn delay={150}>
+                  <div className="border-b-2 border-zinc-200 pb-8">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1A1A1A] mb-4 tracking-tighter flex items-center gap-3">
+                      <FileText className="text-[#EE2430]" size={32} /> Rating di Sostenibilità
+                    </h3>
+                    <p className="text-base md:text-lg lg:text-xl text-zinc-600 font-medium leading-relaxed">
+                      Integrazione di criteri ESG nei processi aziendali. Un requisito sempre più determinante nelle grandi gare.
+                    </p>
+                  </div>
+                </FadeIn>
+                <FadeIn delay={300}>
+                  <div className="pb-8">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1A1A1A] mb-4 tracking-tighter flex items-center gap-3">
+                      <ShieldCheck className="text-[#55ABE4]" size={32} /> White List Prefettura
+                    </h3>
+                    <p className="text-base md:text-lg lg:text-xl text-zinc-600 font-medium leading-relaxed">
+                      Iscrizione all'elenco dei fornitori non soggetti a tentativi di infiltrazione mafiosa.
+                    </p>
+                  </div>
+                </FadeIn>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Whistleblowing */}
+        <section className="py-16 md:py-12 md:py-20 bg-zinc-100 border-t border-zinc-200">
+          <div className="container mx-auto px-6 lg:px-12">
+            <FadeIn>
+              <div className="bg-white p-8 lg:p-8 md:p-12 border border-zinc-200 flex flex-col md:flex-row items-center justify-between gap-6 md:p-6 md:p-8">
+                <div className="max-w-3xl">
+                  <div className="flex items-center gap-4 mb-6">
+                    <AlertTriangle size={24} className="text-[#EE2430]" />
+                    <span className="text-[#EE2430] font-bold tracking-widest uppercase text-sm">Whistleblowing</span>
+                  </div>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#1A1A1A] mb-6 tracking-tighter">Piattaforma di Segnalazione</h2>
+                  <p className="text-zinc-600 text-base md:text-lg lg:text-xl font-medium leading-relaxed">
+                    In linea con la normativa vigente (D. Lgs. 24/2023), Trialux ha attivato un canale per la segnalazione riservata di illeciti, gestito in modo indipendente e confidenziale.
+                  </p>
+                </div>
+                <div className="shrink-0">
+                  <a href="https://trialux.segnalazioni.eu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 px-6 py-3 md:px-10 md:py-5 bg-[#EE2430] text-white font-bold text-sm md:text-base lg:text-lg hover:bg-red-800 transition-colors">
+                    <span>Accedi alla piattaforma</span>
+                    <ArrowRight size={24} />
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </section>
 
       </main>
-    </>
+    </div>
   )
 }

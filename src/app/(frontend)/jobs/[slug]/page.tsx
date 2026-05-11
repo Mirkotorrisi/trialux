@@ -29,13 +29,13 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
     <>
       <Header />
       <article className="container mx-auto px-6">
-        <header className="max-w-[800px] mx-auto py-24 text-center">
+        <header className="max-w-[800px] mx-auto py-12 md:py-20 text-center">
           <div className="mb-6">
             <span className="inline-flex items-center px-3 py-1 bg-emerald-500/10 text-emerald-500 rounded-full text-xs font-bold uppercase tracking-wider">
               Careers
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-[0.9]">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter mb-8 leading-[0.9]">
             {job.jobTitle}
           </h1>
           <div className="flex justify-center flex-wrap gap-4 md:gap-8 text-zinc-500 font-medium">
@@ -51,7 +51,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
         </header>
 
         {job.featuredImage && typeof job.featuredImage !== 'number' && job.featuredImage.url && (
-          <div className="max-w-[1000px] mx-auto mb-16">
+          <div className="max-w-[1000px] mx-auto mb-8 lg:mb-16">
             <img
               src={job.featuredImage.url}
               alt={job.jobTitle}
@@ -62,13 +62,13 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
 
         <div className="pb-32">
           <div className="max-w-[750px] mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-blue-500 tracking-tight">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-blue-500 tracking-tight">
               Descrizione della posizione
             </h2>
             <RichText content={job.description} />
 
-            <div className="mt-16 p-8 md:p-12 bg-zinc-900/40 border border-zinc-800 rounded-3xl backdrop-blur-sm">
-              <h3 className="text-2xl font-bold mb-4 tracking-tight">
+            <div className="mt-16 p-8 md:p-6 md:p-6 md:p-8 bg-[#1A1A1A]/40 border border-zinc-800 rounded-3xl backdrop-blur-sm">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4 tracking-tight">
                 Interessato a questa posizione?
               </h3>
               <p className="text-zinc-400 mb-8 max-w-[500px]">

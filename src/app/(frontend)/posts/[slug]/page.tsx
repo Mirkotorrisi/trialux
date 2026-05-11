@@ -29,11 +29,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     <>
       <Header />
       <article className="container mx-auto px-6">
-        <header className="max-w-[800px] mx-auto py-24 text-center">
+        <header className="max-w-[800px] mx-auto py-12 md:py-20 text-center">
           <span className="inline-flex items-center px-3 py-1 bg-blue-500/10 text-blue-500 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
             Magazine
           </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-[0.9]">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter mb-8 leading-[0.9]">
             {post.title}
           </h1>
           <div className="flex justify-center gap-6 text-zinc-500 text-sm font-medium">
@@ -47,7 +47,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </header>
 
         {post.featuredImage && typeof post.featuredImage !== 'number' && post.featuredImage.url && (
-          <div className="max-w-[1000px] mx-auto mb-16">
+          <div className="max-w-[1000px] mx-auto mb-8 lg:mb-16">
             <img
               src={post.featuredImage.url}
               alt={post.title}
