@@ -6,6 +6,8 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { FadeIn } from '../_components/FadeIn'
 import '../style.css'
+import { Job } from '@/payload-types'
+
 
 // Funzione per estrarre testo puro dal contenuto RichText (Lexical)
 function extractPlainText(content: any): string {
@@ -27,7 +29,7 @@ function extractPlainText(content: any): string {
 export default async function CareerPage() {
   const payload = await getPayload({ config })
   
-  let openPositions = []
+  let openPositions: Job[] = []
   try {
     const { docs } = await payload.find({
       collection: 'jobs',
