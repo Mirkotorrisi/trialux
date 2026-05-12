@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
                 href={link.href}
                 className={`relative text-[12px] font-bold uppercase tracking-[0.18em] transition-all no-underline ${
                   isActive
-                    ? 'text-[#55ABE4]'
+                    ? 'text-[#F0921E]'
                     : isSolid
                       ? 'text-zinc-600 hover:text-[#0A0A0A]'
                       : 'text-white/90 hover:text-white'
@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
             href="/contatti"
             className={`tri-btn px-8 py-4 text-[11px] ${
               isSolid
-                ? 'tri-btn-primary'
+                ? 'bg-[#F0921E] text-white border-[#F0921E] hover:bg-[#d8831a]'
                 : 'tri-btn-outline'
             }`}
           >
@@ -111,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-3xl font-black tracking-tighter no-underline ${isActive ? 'text-[#55ABE4]' : 'text-[#0A0A0A]'}`}
+                  className={`text-3xl font-black tracking-tighter no-underline ${isActive ? 'text-[#F0921E]' : 'text-[#0A0A0A]'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}

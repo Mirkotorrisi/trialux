@@ -30,10 +30,7 @@ export default function CertificazioniPage() {
 
           <div className="container-wide relative z-10 w-full">
             <FadeIn delay={0} effect="mask">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
-                <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Eccellenza e Standard</span>
-              </div>
+
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl">
                 Qualità e certificazioni.
               </h1>
@@ -55,8 +52,8 @@ export default function CertificazioniPage() {
             <div className="max-w-3xl mb-20">
               <FadeIn effect="mask">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                  <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Standard Internazionali</span>
+                  <span className="w-10 h-[2px] bg-[#F0921E]" />
+                  <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Standard Internazionali</span>
                 </div>
                 <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#0A0A0A] leading-[1.15]">
                   Certificazioni ISO.
@@ -125,6 +122,7 @@ export default function CertificazioniPage() {
 
         {/* ── 4.3 ATTESTATI E RICONOSCIMENTI ────────────────────────── */}
         <section className="section-dark py-16 md:py-32 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#55ABE4] via-[#F0921E] to-[#EE2430]" />
           <div className="container-wide relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div>
@@ -185,14 +183,14 @@ export default function CertificazioniPage() {
             <FadeIn>
               <div className="bg-zinc-50 border border-zinc-100 p-8 md:p-16 relative overflow-hidden group">
                 <div className="flex flex-col lg:flex-row gap-12 items-start relative z-10">
-                  <div className="w-16 h-16 bg-[#55ABE4] flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <div className="w-16 h-16 bg-[#F0921E] flex items-center justify-center text-white shrink-0 shadow-lg">
                     <Scale size={32} />
                   </div>
                   <div className="flex-1">
                     <FadeIn effect="mask">
                       <div className="flex items-center gap-4 mb-6">
-                        <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                        <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Etica Aziendale</span>
+                        <span className="w-10 h-[2px] bg-[#F0921E]" />
+                        <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Etica Aziendale</span>
                       </div>
                       <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#0A0A0A] leading-[1.1] mb-6">
                         Segnalazione di condotte illecite.
@@ -206,7 +204,7 @@ export default function CertificazioniPage() {
                         href="https://trialux.segnalazioni.eu"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-4 px-10 py-5 bg-[#0A0A0A] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#55ABE4] transition-all duration-500 group-button"
+                        className="inline-flex items-center gap-4 px-10 py-5 bg-[#0A0A0A] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
                       >
                         <span>Accedi alla piattaforma</span>
                         <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

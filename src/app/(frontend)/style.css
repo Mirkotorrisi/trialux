@@ -78,15 +78,15 @@ a:hover {
   text-decoration: none !important; /* Ensure no underline */
 }
 
-/* Primary: Blue background, white text */
+/* Primary: Orange background, white text */
 .tri-btn-primary {
-  background: var(--tri-blue);
+  background: var(--tri-orange);
   color: #ffffff;
-  border: 1px solid var(--tri-blue);
+  border: 1px solid var(--tri-orange);
 }
 .tri-btn-primary:hover {
-  background: #4499d3;
-  border-color: #4499d3;
+  background: #d8831a;
+  border-color: #d8831a;
   transform: translateY(-2px);
 }
 
@@ -149,6 +149,14 @@ a:hover {
   background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
   background-size: 40px 40px;
   pointer-events: none;
+}
+
+.section-data-light {
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  color: #0A0A0A;
+  position: relative;
+  overflow: hidden;
 }
 
 /* =======================================

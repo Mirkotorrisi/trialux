@@ -29,10 +29,7 @@ export default function ContattiPage() {
 
           <div className="container-wide relative z-10 w-full">
             <FadeIn delay={0} effect="mask">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-[1.5px] bg-[#EE2430]" />
-                <span className="text-[#EE2430] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Contatti</span>
-              </div>
+
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 Siamo qui per <br/> connetterti.
               </h1>
@@ -52,26 +49,26 @@ export default function ContattiPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-white/[0.07]">
               <FadeIn delay={0}>
                 <div className="py-12 px-8 lg:px-12 first:pl-6">
-                  <div className="text-[#55ABE4] text-xs font-bold tracking-widest uppercase mb-3">Indirizzo</div>
-                  <div className="text-white font-black text-xl mb-1">Via del Tessitore snc</div>
-                  <div className="text-zinc-500 text-sm">Biancavilla (CT) — Sicilia</div>
-                </div>
-              </FadeIn>
+                   <div className="text-[#55ABE4] text-xs font-bold tracking-widest uppercase mb-3">Indirizzo</div>
+                   <div className="text-white font-black text-xl mb-1">Via del Tessitore snc</div>
+                   <div className="text-zinc-500 text-sm">Biancavilla (CT) — Sicilia</div>
+                 </div>
+               </FadeIn>
               <FadeIn delay={80}>
                 <div className="py-12 px-8 lg:px-12">
-                  <div className="text-[#F0921E] text-xs font-bold tracking-widest uppercase mb-3">Telefono</div>
-                  <a href="tel:0958144954" className="text-white font-black text-xl hover:text-[#55ABE4] transition-colors block mb-1">
-                    095 814 4954
-                  </a>
+                   <div className="text-[#F0921E] text-xs font-bold tracking-widest uppercase mb-3">Telefono</div>
+                   <a href="tel:0958144954" className="text-white font-black text-xl hover:text-[#55ABE4] transition-colors block mb-1">
+                     095 814 4954
+                   </a>
                   <div className="text-zinc-500 text-sm">Lun–Ven, 8:30–17:30</div>
                 </div>
               </FadeIn>
               <FadeIn delay={160}>
                 <div className="py-12 px-8 lg:px-12">
-                  <div className="text-[#EE2430] text-xs font-bold tracking-widest uppercase mb-3">Email principale</div>
-                  <a href="mailto:trialuxsrl@gmail.com" className="text-white font-black text-base hover:text-[#55ABE4] transition-colors block mb-1 break-all">
-                    trialuxsrl@gmail.com
-                  </a>
+                   <div className="text-[#EE2430] text-xs font-bold tracking-widest uppercase mb-3">Email principale</div>
+                   <a href="mailto:trialuxsrl@gmail.com" className="text-white font-black text-base hover:text-[#55ABE4] transition-colors block mb-1 break-all">
+                     trialuxsrl@gmail.com
+                   </a>
                   <div className="text-zinc-500 text-sm">Per informazioni generali</div>
                 </div>
               </FadeIn>
@@ -286,7 +283,7 @@ export default function ContattiPage() {
                         </div>
                         <button
                           type="submit"
-                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0A0A0A] text-white font-bold hover:bg-[#55ABE4] transition-colors group"
+                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0A0A0A] text-white font-bold hover:bg-[#F0921E] transition-colors group"
                         >
                           <span>Invia messaggio</span>
                           <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

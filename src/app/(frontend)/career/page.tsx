@@ -70,10 +70,7 @@ export default async function CareerPage() {
 
           <div className="container-wide relative z-10 w-full">
             <FadeIn delay={0} effect="mask">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
-                <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Career</span>
-              </div>
+
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl">
                 Lavora con noi.
               </h1>
@@ -95,8 +92,8 @@ export default async function CareerPage() {
             <div className="max-w-3xl mb-20">
               <FadeIn effect="mask">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                  <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">I nostri valori</span>
+                  <span className="w-10 h-[2px] bg-[#F0921E]" />
+                  <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">I nostri valori</span>
                 </div>
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-8">
                   Perché scegliere Trialux.
@@ -196,9 +193,9 @@ export default async function CareerPage() {
                   ))}
                 </div>
                 
-                <FadeIn delay={400} className="bg-white/5 p-8 border-l-[4px] border-[#55ABE4]">
-                  <p className="text-white/70 text-sm font-medium leading-relaxed italic">
-                    Valutiamo anche candidature di <span className="text-white font-bold uppercase tracking-tight">profili junior</span> da inserire in affiancamento, con percorso di formazione e certificazione a carico aziendale.
+                <FadeIn delay={400} className="bg-zinc-50 p-8 border-l-[4px] border-[#F0921E]">
+                  <p className="text-zinc-600 text-sm font-medium leading-relaxed italic">
+                    Valutiamo anche candidature di <span className="text-[#0A0A0A] font-bold uppercase tracking-tight">profili junior</span> da inserire in affiancamento, con percorso di formazione e certificazione a carico aziendale.
                   </p>
                 </FadeIn>
               </div>
@@ -243,10 +240,10 @@ export default async function CareerPage() {
                       
                       return (
                         <FadeIn key={job.id} delay={index * 100}>
-                          <Link href={`/career/${job.slug || job.id}`} className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 p-8 bg-white hover:bg-[#55ABE4] group transition-all duration-500 shadow-sm hover:shadow-xl border border-zinc-100">
+                          <Link href={`/career/${job.slug || job.id}`} className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 p-8 bg-white hover:bg-[#F0921E] group transition-all duration-500 shadow-sm hover:shadow-xl border border-zinc-100">
                             <div className="flex-1">
                               {job.department && (
-                                <span className="text-[10px] font-black text-[#55ABE4] group-hover:text-white uppercase tracking-[0.2em] mb-2 block">{job.department}</span>
+                                <span className="text-[10px] font-black text-[#F0921E] group-hover:text-white uppercase tracking-[0.2em] mb-2 block">{job.department}</span>
                               )}
                               <h3 className="text-xl font-black text-[#0A0A0A] group-hover:text-white tracking-tighter mb-2">{job.jobTitle}</h3>
                               {descriptionPreview && (

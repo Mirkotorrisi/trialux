@@ -36,10 +36,7 @@ export default async function HomePage() {
 
           <div className="container-wide relative z-10">
             <FadeIn delay={0} effect="mask">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
-                <span className="text-[#55ABE4] font-bold tracking-[0.25em] uppercase text-[10px]">Trialux S.r.l.</span>
-              </div>
+
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 L’energia che muove <br className="hidden md:block" /> il territorio.
               </h1>
@@ -51,7 +48,7 @@ export default async function HomePage() {
             </FadeIn>
             <FadeIn delay={350}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/servizi" className="tri-btn tri-btn-primary">
+                <Link href="/servizi" className="tri-btn bg-[#F0921E] text-white border-[#F0921E] hover:bg-[#d8831a]">
                   <span>Scopri i nostri servizi</span>
                   <ArrowRight size={16} />
                 </Link>
@@ -70,8 +67,8 @@ export default async function HomePage() {
               <div className="lg:col-span-7 lg:pr-16">
                 <FadeIn effect="mask">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                    <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Chi siamo</span>
+                    <span className="w-10 h-[2px] bg-[#F0921E]" />
+                    <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Chi siamo</span>
                   </div>
                   <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6">
                     Un’azienda costruita <br />
@@ -104,15 +101,15 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.3 NUMERI CHIAVE (Identica a Chi Siamo) ────────────────── */}
-        <section className="section-dark py-0 relative overflow-hidden">
+        <section className="section-data-light py-0 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#55ABE4] via-[#F0921E] to-[#EE2430]" />
           <div className="container mx-auto px-6 lg:px-16 max-w-[1400px]">
-            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/[0.07]">
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-zinc-200">
               {[
                 { num: '2021', label: 'Anno di fondazione', color: '#55ABE4' },
                 { num: '+100', label: 'Professionisti in organico', color: '#F0921E' },
                 { num: 'MT/BT', label: 'Media e bassa tensione', color: '#EE2430' },
-                { num: '3 ISO', label: 'Certificazioni ISO', color: 'white' },
+                { num: '3 ISO', label: 'Certificazioni ISO', color: '#0A0A0A' },
               ].map((stat, idx) => (
                 <FadeIn key={idx} delay={idx * 80}>
                   <div className="py-10 md:py-14 px-6 md:px-10 first:pl-6">
@@ -175,10 +172,10 @@ export default async function HomePage() {
                     
                     <div className="absolute bottom-10 left-10 right-10 flex items-end justify-between">
                       <div>
-                        <h3 className="text-2xl font-black text-white mb-2 tracking-tighter leading-none group-hover:text-[#55ABE4] transition-colors">{s.title}</h3>
+                        <h3 className="text-2xl font-black text-white mb-2 tracking-tighter leading-none group-hover:text-[#F0921E] transition-colors">{s.title}</h3>
                         <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">{s.desc}</p>
                       </div>
-                      <div className="w-10 h-10 border border-white/20 flex items-center justify-center text-white group-hover:bg-[#55ABE4] group-hover:border-[#55ABE4] transition-all transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+                      <div className="w-10 h-10 border border-white/20 flex items-center justify-center text-white group-hover:bg-[#F0921E] group-hover:border-[#F0921E] transition-all transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
                         <ArrowRight size={16} />
                       </div>
                     </div>
@@ -196,8 +193,8 @@ export default async function HomePage() {
               <div>
                 <FadeIn effect="mask">
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                    <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Qualità certificata</span>
+                    <span className="w-10 h-[2px] bg-[#F0921E]" />
+                    <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Qualità certificata</span>
                   </div>
                   <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8">
                     Garantiamo l’eccellenza operativa.
@@ -213,8 +210,8 @@ export default async function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {['ISO 9001:2015', 'ISO 14001:2015', 'ISO 45001:2018', 'White List'].map(item => (
                   <div key={item} className="bg-white/5 border border-white/10 p-6 flex items-center gap-5 hover:bg-white/10 transition-all group">
-                    <div className="w-10 h-10 rounded-full bg-[#55ABE4]/10 flex items-center justify-center shrink-0 group-hover:bg-[#55ABE4] transition-colors">
-                      <CheckCircle2 size={18} className="text-[#55ABE4] group-hover:text-white transition-colors" />
+                    <div className="w-10 h-10 rounded-full bg-[#F0921E]/10 flex items-center justify-center shrink-0 group-hover:bg-[#F0921E] transition-colors">
+                      <CheckCircle2 size={18} className="text-[#F0921E] group-hover:text-white transition-colors" />
                     </div>
                     <span className="font-black text-[13px] tracking-tight uppercase text-white/90">{item}</span>
                   </div>
@@ -284,8 +281,8 @@ export default async function HomePage() {
               <div>
                 <FadeIn effect="mask">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                    <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Lavora con noi</span>
+                    <span className="w-10 h-[2px] bg-[#F0921E]" />
+                    <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Lavora con noi</span>
                   </div>
                   <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-8">Costruiamo il futuro.</h2>
                 </FadeIn>
