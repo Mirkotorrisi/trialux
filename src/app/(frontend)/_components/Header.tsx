@@ -38,7 +38,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isSolid = scrolled || forceSolid
+  const isSolid = scrolled || forceSolid || isMobileMenuOpen
 
   return (
     <div className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
