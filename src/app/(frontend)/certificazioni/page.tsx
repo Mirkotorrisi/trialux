@@ -1,5 +1,6 @@
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
+import { DecorativePattern } from '../_components/DecorativeArcs'
 import { Parallax } from '../_components/Parallax'
 import { ArrowUpRight, ShieldCheck, Leaf, HardHat, Scale, Globe, FileCheck } from 'lucide-react'
 import '../style.css'
@@ -122,6 +123,7 @@ export default function CertificazioniPage() {
 
         {/* ── 4.3 ATTESTATI E RICONOSCIMENTI ────────────────────────── */}
         <section className="section-dark py-16 md:py-32 relative overflow-hidden">
+          <DecorativePattern />
           <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#55ABE4] via-[#F0921E] to-[#EE2430]" />
           <div className="container-wide relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">

@@ -1,6 +1,7 @@
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
 import { Parallax } from '../_components/Parallax'
+import { DecorativePattern } from '../_components/DecorativeArcs'
 import Link from 'next/link'
 import { ArrowRight, Award, Users, Target, ShieldCheck } from 'lucide-react'
 import { InteractiveOrgChart } from '../_components/OrgChart'
@@ -88,9 +89,10 @@ export default function ChiSiamoPage() {
 
         {/* ── 3. IL MARCHIO (Section Dark) ────────────────────────── */}
         <section className="section-dark py-16 md:py-32 border-y border-white/5 relative overflow-hidden">
-          <div className="container-wide">
+          <DecorativePattern />
+          <div className="container-wide relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              <FadeIn className="aspect-square bg-zinc-900/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
+              <FadeIn className="aspect-square bg-[#0a0f1a] border border-white/5 flex items-center justify-center relative overflow-hidden group">
                 <div className="relative z-10 w-full px-12">
                    <div className="flex items-center justify-center">
                      <img src="/images/logo-white.png" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />

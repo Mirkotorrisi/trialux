@@ -3,6 +3,7 @@ import config from '@/payload.config'
 import Link from 'next/link'
 import { Header } from './_components/Header'
 import { FadeIn } from './_components/FadeIn'
+import { DecorativePattern } from './_components/DecorativeArcs'
 import './style.css'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { Parallax } from './_components/Parallax'
@@ -187,7 +188,8 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.5 SEZIONE CERTIFICAZIONI (Dark) ────────────────────────── */}
-        <section className="section-dark py-16 md:py-32 border-y border-white/5">
+        <section className="section-dark py-16 md:py-32 border-y border-white/5 relative overflow-hidden">
+          <DecorativePattern />
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div>
