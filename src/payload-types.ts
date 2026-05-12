@@ -202,6 +202,7 @@ export interface Job {
   jobTitle: string;
   slug?: string | null;
   location: string;
+  department?: string | null;
   contractType: 'full_time' | 'part_time' | 'permanent' | 'apprenticeship' | 'freelance';
   description: {
     root: {
@@ -367,6 +368,7 @@ export interface JobsSelect<T extends boolean = true> {
   jobTitle?: T;
   slug?: T;
   location?: T;
+  department?: T;
   contractType?: T;
   description?: T;
   featuredImage?: T;

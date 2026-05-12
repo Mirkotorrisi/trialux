@@ -7,12 +7,14 @@ import { RichText } from '../../_components/RichText'
 import { ArrowRight, MapPin, Briefcase, FileText } from 'lucide-react'
 import { FadeIn } from '../../_components/FadeIn'
 import '../../style.css'
+import { Job } from '@/payload-types'
+
 
 export default async function JobPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const payload = await getPayload({ config })
 
-  let job;
+  let job: Job | null = null;
   
   // Try finding by slug first
   try {

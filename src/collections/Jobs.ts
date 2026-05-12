@@ -8,7 +8,7 @@ export const Jobs: CollectionConfig = {
   },
   admin: {
     useAsTitle: 'jobTitle',
-    defaultColumns: ['jobTitle', 'location', 'contractType', 'status'],
+    defaultColumns: ['jobTitle', 'department', 'location', 'contractType', 'status'],
   },
   fields: [
     {
@@ -31,6 +31,11 @@ export const Jobs: CollectionConfig = {
       type: 'text',
       label: 'Sede di Lavoro',
       required: true,
+    },
+    {
+      name: 'department',
+      type: 'text',
+      label: 'Dipartimento',
     },
     {
       name: 'contractType',
