@@ -57,7 +57,7 @@ export default async function CareerPage() {
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
-                src="/images/Trialux 14.jpg"
+                src="/images/Trialux 17.jpg"
                 alt="Lavora con Trialux"
                 className="w-full h-[120%] object-cover transition-transform duration-[10s] hover:scale-110"
               />
@@ -202,12 +202,15 @@ export default async function CareerPage() {
                 </FadeIn>
               </div>
 
-              <FadeIn className="relative min-h-[400px] lg:min-h-full overflow-hidden group">
-                <img 
-                  src="/images/Trialux 15.jpg" 
-                  alt="Cantiere Operativo" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                />
+              <FadeIn className="relative min-h-[400px] lg:min-h-full overflow-hidden group shadow-2xl">
+                <Parallax offset={40} className="w-full h-full">
+                  <img 
+                    src="/images/Trialux 15.jpg" 
+                    alt="Cantiere Operativo" 
+                    className="w-full h-[120%] object-cover transition-transform duration-1000 group-hover:scale-105" 
+                    style={{ top: '-10%', position: 'absolute' }}
+                  />
+                </Parallax>
               </FadeIn>
             </div>
           </div>
