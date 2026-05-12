@@ -227,8 +227,8 @@ export default async function HomePage() {
                 {/* Group: Cliente Principale */}
                 <FadeIn delay={100} className="flex flex-col">
                   <span className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.3em] mb-6 block border-b border-zinc-200 pb-2">Cliente principale</span>
-                  <div className="flex-grow bg-white border border-zinc-200 flex items-center justify-center p-8 shadow-sm grayscale hover:grayscale-0 transition-all duration-500 min-h-[160px]">
-                    <span className="font-black text-lg tracking-tighter text-[#0A0A0A]">E-DISTRIBUZIONE</span>
+                  <div className="flex-grow bg-white border border-zinc-200 flex items-center justify-center p-8 shadow-sm transition-all duration-500 min-h-[160px] group overflow-hidden">
+                    <span className="font-black text-lg tracking-tighter text-[#0A0A0A] transition-transform duration-500 group-hover:scale-110">E-DISTRIBUZIONE</span>
                   </div>
                 </FadeIn>
 
@@ -236,11 +236,11 @@ export default async function HomePage() {
                 <FadeIn delay={200} className="flex flex-col">
                   <span className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.3em] mb-6 block border-b border-zinc-200 pb-2">Sponsorizzazioni</span>
                   <div className="flex-grow flex flex-col gap-4">
-                    <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] grayscale">
-                      <span className="font-black text-[10px] tracking-tight text-[#0A0A0A]">CATANIA FC</span>
+                    <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] group overflow-hidden">
+                      <span className="font-black text-[10px] tracking-tight text-[#0A0A0A] transition-transform duration-500 group-hover:scale-110">CATANIA FC</span>
                     </div>
-                    <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] grayscale">
-                      <span className="font-black text-[10px] tracking-tight text-[#0A0A0A]">BIANCAVILLA ACADEMY</span>
+                    <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] group overflow-hidden">
+                      <span className="font-black text-[10px] tracking-tight text-[#0A0A0A] transition-transform duration-500 group-hover:scale-110">BIANCAVILLA ACADEMY</span>
                     </div>
                   </div>
                 </FadeIn>

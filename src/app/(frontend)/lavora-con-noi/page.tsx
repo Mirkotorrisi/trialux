@@ -144,26 +144,26 @@ export default async function LavoraConNoiPage() {
               <div className="hidden lg:block sticky top-32 self-start">
                 <FadeIn delay={200} className="relative w-full">
                   <div className="grid grid-cols-12 gap-4">
-                    <div className="col-span-8 h-[400px] mt-10 relative z-10 shadow-2xl overflow-hidden">
+                    <div className="col-span-8 h-[400px] mt-10 relative z-10 shadow-2xl overflow-hidden group">
                       <img
                         src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop"
                         alt="Cantiere Trialux"
-                        className="w-full h-full object-cover transition-transform duration-[5s] hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                       />
                     </div>
                     <div className="col-span-4 flex flex-col gap-4">
-                      <div className="h-[180px] overflow-hidden shadow-xl">
+                      <div className="h-[180px] overflow-hidden shadow-xl group">
                         <img
                           src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
                           alt="Tecnica"
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                         />
                       </div>
-                      <div className="h-[260px] overflow-hidden shadow-xl">
+                      <div className="h-[260px] overflow-hidden shadow-xl group">
                         <img
                           src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop"
                           alt="Pianificazione"
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                         />
                       </div>
                     </div>

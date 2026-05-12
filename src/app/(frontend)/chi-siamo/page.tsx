@@ -71,11 +71,11 @@ export default function ChiSiamoPage() {
                 </FadeIn>
               </div>
               <FadeIn delay={200} className="lg:col-span-5">
-                <div className="relative aspect-[4/5] overflow-hidden">
+                <div className="relative aspect-[4/5] overflow-hidden group">
                   <img 
                     src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070" 
                     alt="Eccellenza Tecnica" 
-                    className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-110" 
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                   />
                 </div>
               </FadeIn>
@@ -208,11 +208,11 @@ export default function ChiSiamoPage() {
                   </div>
                 </FadeIn>
               </div>
-              <FadeIn delay={200} className="aspect-video overflow-hidden">
+              <FadeIn delay={200} className="aspect-video overflow-hidden group">
                 <img 
                   src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070" 
                   alt="Supporto al Territorio" 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                 />
               </FadeIn>
             </div>

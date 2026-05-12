@@ -117,14 +117,13 @@ export default function ServiziPage() {
                   </FadeIn>
                 </div>
 
-                {/* Image */}
                 <div className={idx % 2 !== 0 ? 'lg:order-1' : ''}>
                   <FadeIn delay={200}>
-                    <div className="aspect-video overflow-hidden">
+                    <div className="aspect-video overflow-hidden group">
                       <img 
                         src={srv.img} 
                         alt={srv.title} 
-                        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                       />
                     </div>
                   </FadeIn>
@@ -135,23 +134,50 @@ export default function ServiziPage() {
           </section>
         ))}
 
-        {/* ── FINAL CTA ────────────────────────────────────────────── */}
-        <section className="py-24 md:py-32 bg-white text-center">
-          <div className="container-wide">
-            <FadeIn effect="mask">
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-black tracking-tighter mb-8">
-                Pronti per il tuo prossimo cantiere.
-              </h2>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contatti" className="tri-btn tri-btn-dark">
-                  Parliamo del tuo progetto
-                </Link>
-                <Link href="/chi-siamo" className="tri-btn tri-btn-outline-dark">
-                  Scopri chi siamo
-                </Link>
-              </div>
-            </FadeIn>
+        {/* ── FINAL CTA (Ignition Hover Banner) ────────────────────── */}
+        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0A0A0A]">
+          {/* Base Image Background */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070" 
+              alt="Industrial Background" 
+              className="w-full h-full object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+            />
           </div>
+
+          {/* "Ignition" Gradient Overlay (Hidden by default) */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#F0921E] via-[#EE2430] to-[#9B161D] opacity-0 group-hover:opacity-90 transition-opacity duration-700" />
+          
+          {/* Technical Grid Overlay */}
+          <div className="absolute inset-0 z-0 opacity-5 mix-blend-overlay" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+          <div className="container-wide relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Text Side */}
+              <div className="lg:col-span-8">
+                <FadeIn effect="mask">
+                  <h2 className="text-[clamp(2.2rem,5vw,4rem)] font-black tracking-tighter text-white leading-[0.95] mb-4">
+                    Insieme, accendiamo <br />
+                    <span className="text-white/50 group-hover:text-white transition-colors duration-500">il vostro futuro.</span>
+                  </h2>
+                </FadeIn>
+              </div>
+
+              {/* Action Side */}
+              <div className="lg:col-span-4 flex lg:justify-end">
+                <FadeIn delay={200}>
+                  <Link href="/contatti" className="group relative px-12 py-7 bg-white text-[#0A0A0A] font-black uppercase tracking-[0.2em] text-sm hover:bg-[#0A0A0A] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[280px]">
+                    <span className="relative z-10">Inizia ora</span>
+                    <ArrowRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  </Link>
+                </FadeIn>
+              </div>
+            </div>
+          </div>
+
+          {/* Hover highlight line */}
+          <div className="absolute bottom-0 left-0 w-full h-[4px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
         </section>
 
       </main>
