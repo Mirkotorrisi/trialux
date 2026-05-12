@@ -165,13 +165,16 @@ export default function CertificazioniPage() {
                 </div>
               </div>
               
-              <FadeIn delay={300} className="relative aspect-[4/5] overflow-hidden group">
+              <FadeIn delay={300} className="relative aspect-[4/5] overflow-hidden group shadow-2xl">
+                <Parallax offset={40} className="w-full h-full">
                   <img 
                     src="/images/Trialux 20.jpg" 
                     alt="Ufficio Qualità" 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                    className="w-full h-[120%] object-cover transition-transform duration-1000 group-hover:scale-105" 
+                    style={{ top: '-10%', position: 'absolute' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] to-transparent opacity-40" />
+                </Parallax>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] to-transparent opacity-40" />
               </FadeIn>
             </div>
           </div>

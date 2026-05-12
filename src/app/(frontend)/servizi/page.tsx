@@ -142,12 +142,17 @@ export default function ServiziPage() {
 
                 <div className={idx % 2 !== 0 ? 'lg:order-1' : ''}>
                   <FadeIn className="h-full">
-                    <div className="relative h-full min-h-[300px] md:min-h-[450px] overflow-hidden group">
-                      <img 
-                        src={srv.img} 
-                        alt={srv.title} 
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                      />
+                    <div className="relative h-full min-h-[350px] md:min-h-[500px] overflow-hidden group shadow-2xl">
+                      <Parallax offset={50} className="w-full h-full">
+                        <img 
+                          src={srv.img} 
+                          alt={srv.title} 
+                          className="w-full h-[130%] object-cover transition-transform duration-700 group-hover:scale-105" 
+                          style={{ top: '-15%', position: 'absolute' }}
+                        />
+                      </Parallax>
+                      {/* Decorative Overlay for premium feel */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     </div>
                   </FadeIn>
                 </div>
