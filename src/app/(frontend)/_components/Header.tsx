@@ -14,15 +14,11 @@ const navLinks = [
 ]
 
 const Logo = ({ scrolled }: { scrolled: boolean }) => (
-  <svg width="140" height="40" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-9 w-auto">
-    {/* Left Arc - Blue */}
-    <path d="M42 40C32 24 42 8 42 8C28 16 28 40 28 40C28 64 42 72 42 72C42 72 32 56 42 40Z" fill="#55ABE4"/>
-    {/* Text TRIALUX */}
-    <text x="60" y="52" fontFamily="Inter, sans-serif" fontWeight="900" fontSize="38" letterSpacing="-0.02em" fill={scrolled ? "#0A0A0A" : "#FFFFFF"}>TRIALUX</text>
-    {/* Right Arcs */}
-    <path d="M228 32C236 40 228 48 228 48C242 44 242 36 242 36C242 28 228 32 228 32Z" fill="#F0921E"/>
-    <path d="M236 24C248 40 236 56 236 56C252 48 252 32 252 24C252 16 236 24 236 24Z" fill="#EE2430"/>
-  </svg>
+  <img 
+    src={scrolled ? "/images/logo-black.png" : "/images/logo-white.png"} 
+    alt="Trialux" 
+    className="h-12 md:h-16 w-auto transition-all duration-300"
+  />
 )
 
 export const Header: React.FC = () => {

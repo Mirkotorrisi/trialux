@@ -118,19 +118,11 @@ export default function ChiSiamoPage() {
         <section className="section-dark py-20 md:py-32 border-y border-white/5">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              <FadeIn delay={100} className="aspect-square bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden group">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070" 
-                  alt="Identity" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-1000 group-hover:scale-110" 
-                />
+              <FadeIn delay={100} className="aspect-square bg-zinc-900/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
                 <div className="relative z-10 w-full px-12">
-                   <svg width="100%" viewBox="0 0 400 300" fill="none" className="drop-shadow-2xl">
-                    <path d="M80 150 Q50 80 80 20 Q20 60 20 150 Q20 240 80 280 Q50 220 80 150Z" fill="#55ABE4" opacity="1"/>
-                    <path d="M290 110 Q320 148 290 188 Q340 170 340 148 Q340 126 290 110Z" fill="#F0921E" opacity="1"/>
-                    <path d="M318 90 Q360 148 318 208 Q370 185 372 148 Q372 110 318 90Z" fill="#EE2430" opacity="1"/>
-                    <text x="110" y="165" fontFamily="Inter, sans-serif" fontWeight="900" fontSize="56" fill="white" letterSpacing="-2">TRIALUX</text>
-                  </svg>
+                   <div className="flex items-center justify-center">
+                     <img src="/images/logo-white.png" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />
+                   </div>
                 </div>
               </FadeIn>
               <div>
