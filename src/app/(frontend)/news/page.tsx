@@ -54,7 +54,7 @@ export default async function NewsPage() {
       <main className="w-full">
 
         {/* ── 1. HERO (ALLINEATA AL RESTO DEL SITO) ── */}
-        <section className="relative w-full h-screen min-h-[640px] flex flex-col justify-end overflow-hidden pb-24 md:pb-32 lg:pb-40">
+        <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop"
@@ -72,14 +72,14 @@ export default async function NewsPage() {
             <FadeIn delay={0} effect="mask">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-[1.5px] bg-[#EE2430]" />
-                <span className="text-[#EE2430] font-semibold tracking-[0.25em] uppercase text-[11px]">News</span>
+                <span className="text-[#EE2430] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">News</span>
               </div>
-              <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
                 News & <br/> Aggiornamenti.
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white text-lg md:text-xl font-medium max-w-2xl mb-8 leading-relaxed">
+              <p className="text-white text-base md:text-xl font-medium max-w-2xl mb-8 leading-relaxed">
                 Dal campo ai progetti speciali: tutte le novità dal mondo Trialux e dal settore delle infrastrutture energetiche.
               </p>
             </FadeIn>
@@ -87,7 +87,7 @@ export default async function NewsPage() {
         </section>
 
         {/* ── 2. GRID NEWS (CARD SQUADRATE) ── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
 
             {posts.length > 0 ? (
@@ -122,10 +122,10 @@ export default async function NewsPage() {
                           <div className="text-xs font-bold text-[#EE2430] uppercase tracking-widest mb-6">
                             {new Date(featuredPost.publishedDate || featuredPost.createdAt).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
                           </div>
-                          <h2 className="text-3xl lg:text-5xl font-black text-[#0A0A0A] leading-tight tracking-tighter mb-8 uppercase">
+                          <h2 className="text-3xl md:text-5xl font-black text-[#0A0A0A] leading-tight tracking-tighter mb-8 uppercase">
                             {featuredPost.title}
                           </h2>
-                          <p className="text-zinc-600 text-lg leading-relaxed mb-10 max-w-xl line-clamp-3">
+                          <p className="text-zinc-600 text-sm md:text-lg leading-relaxed mb-10 max-w-xl line-clamp-3">
                             {featuredPost.excerpt || extractPlainText(featuredPost.content)}
                           </p>
                           <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-[#0A0A0A] group-hover:gap-6 transition-all">
@@ -183,7 +183,7 @@ export default async function NewsPage() {
                                   {post.title}
                                 </h3>
                                 {previewText && (
-                                  <p className="text-zinc-600 text-sm leading-relaxed mb-8 line-clamp-3 font-medium">
+                                  <p className="text-zinc-600 text-sm leading-relaxed mb-8 line-clamp-3">
                                     {previewText}
                                   </p>
                                 )}

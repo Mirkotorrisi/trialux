@@ -13,7 +13,7 @@ export default function ChiSiamoPage() {
       <main className="w-full relative">
 
         {/* ── 1. HERO (Intestazione pagina) ────────────────────────── */}
-        <section className="relative w-full h-screen min-h-[640px] flex flex-col justify-end overflow-hidden pb-24 md:pb-32 lg:pb-40">
+        <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1541888086425-d81bb19480f5?q=80&w=2070&auto=format&fit=crop"
@@ -33,7 +33,7 @@ export default function ChiSiamoPage() {
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-bold tracking-[0.25em] uppercase text-[10px]">Trialux S.r.l.</span>
               </div>
-              <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-black tracking-[-0.01em] text-white leading-[1.1] mb-4 max-w-3xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
                 Chi siamo.
               </h1>
             </FadeIn>
@@ -46,7 +46,7 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 2. LA STORIA ────────────────────────────────────────────── */}
-        <section className="bg-white py-20 md:py-32 relative z-10">
+        <section className="bg-white py-16 md:py-32 relative z-10">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
               <div className="lg:col-span-7 lg:pr-16">
@@ -55,7 +55,7 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">La storia</span>
                   </div>
-                  <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#0A0A0A] leading-[1.15] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
                     La nostra storia.
                   </h2>
                 </FadeIn>
@@ -87,7 +87,7 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 3. IL MARCHIO (Section Dark) ────────────────────────── */}
-        <section className="section-dark py-20 md:py-32 border-y border-white/5 relative overflow-hidden">
+        <section className="section-dark py-16 md:py-32 border-y border-white/5 relative overflow-hidden">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <FadeIn delay={100} className="aspect-square bg-zinc-900/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
@@ -103,7 +103,7 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Il marchio</span>
                   </div>
-                  <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black text-white leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8 uppercase">
                     Il nostro marchio.
                   </h2>
                   <p className="text-white/50 text-base leading-relaxed mb-6">
@@ -122,7 +122,7 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 4. ORGANIGRAMMA (La nostra struttura) ────────────────────── */}
-        <section className="bg-white py-20 md:py-32 border-t border-zinc-100 overflow-hidden">
+        <section className="bg-white py-16 md:py-32 border-t border-zinc-100 overflow-hidden">
           <div className="container-wide">
             <div className="max-w-3xl mb-24">
               <FadeIn effect="mask">
@@ -130,7 +130,7 @@ export default function ChiSiamoPage() {
                   <span className="w-10 h-[2px] bg-[#EE2430]" />
                   <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Organizzazione</span>
                 </div>
-                <h2 className="text-[clamp(2.2rem,3vw,3.2rem)] font-black tracking-tight text-[#0A0A0A] leading-[1.1] mb-6">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6 uppercase">
                   La nostra struttura.
                 </h2>
                 <p className="text-zinc-500 text-base leading-relaxed">
@@ -146,7 +146,7 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 5. I NUMERI ────────────────────────────────────────── */}
-        <section className="section-dark py-20 md:py-32 relative overflow-hidden">
+        <section className="section-dark py-16 md:py-32 relative overflow-hidden">
           <div className="container mx-auto px-6 lg:px-16 max-w-[1400px] relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
               <FadeIn effect="mask">
@@ -154,7 +154,7 @@ export default function ChiSiamoPage() {
                   <span className="w-10 h-[2px] bg-[#55ABE4]" />
                   <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Performance</span>
                 </div>
-                <h2 className="text-[clamp(2.2rem,3vw,3.2rem)] font-black text-white tracking-tight leading-[1.1] mb-8">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-8 uppercase">
                   Trialux in numeri.
                 </h2>
                 <p className="text-white/50 text-base leading-relaxed">
@@ -170,7 +170,7 @@ export default function ChiSiamoPage() {
                 ].map((stat, idx) => (
                   <FadeIn key={idx} delay={idx * 100} className="bg-white/5 border border-white/10 p-8">
                     <div className="mb-4">{stat.icon}</div>
-                    <div className="text-2xl font-black text-white mb-2 leading-none">{stat.num}</div>
+                    <div className="text-3xl font-black text-white mb-2 leading-none">{stat.num}</div>
                     <div className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">{stat.label}</div>
                   </FadeIn>
                 ))}
@@ -186,7 +186,7 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 6. SPONSORIZZAZIONI (Il territorio che sosteniamo) ────────── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -195,7 +195,7 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Impegno Sociale</span>
                   </div>
-                  <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black text-[#0A0A0A] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
                     Il territorio che sosteniamo.
                   </h2>
                   <p className="text-zinc-500 text-base leading-relaxed mb-8">

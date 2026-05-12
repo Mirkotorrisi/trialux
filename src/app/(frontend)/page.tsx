@@ -16,7 +16,7 @@ export default async function HomePage() {
       <main className="w-full relative">
 
         {/* ── 1.1 HERO ────────────────────────────────────────────────── */}
-        <section className="relative w-full h-screen min-h-[640px] flex flex-col justify-end overflow-hidden pb-24 md:pb-32 lg:pb-40">
+        <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop"
@@ -37,12 +37,12 @@ export default async function HomePage() {
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-bold tracking-[0.25em] uppercase text-[10px]">Trialux S.r.l.</span>
               </div>
-              <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-black tracking-[-0.01em] text-white leading-[1.1] mb-4 max-w-3xl">
-                L’energia che muove il territorio.
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
+                L’energia che muove <br className="hidden md:block" /> il territorio.
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white/70 text-base md:text-lg mb-10 max-w-2xl leading-relaxed">
+              <p className="text-white/70 text-base md:text-xl mb-10 max-w-2xl leading-relaxed">
                 Trialux realizza e mantiene reti elettriche di media e bassa tensione per enti pubblici e privati. Competenza tecnica, affidabilità e rispetto delle scadenze.
               </p>
             </FadeIn>
@@ -61,7 +61,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.2 CHI SIAMO ───────────────────────────────────────────── */}
-        <section className="bg-white py-20 md:py-32 relative z-10">
+        <section className="bg-white py-16 md:py-32 relative z-10">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
               <div className="lg:col-span-7 lg:pr-16">
@@ -70,8 +70,8 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Chi siamo</span>
                   </div>
-                  <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#0A0A0A] leading-[1.15] mb-4">
-                    Un’azienda costruita sulla competenza.
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6 uppercase">
+                    Un’azienda costruita <br className="hidden md:block" /> sulla competenza.
                   </h2>
                 </FadeIn>
                 <FadeIn delay={150}>
@@ -109,11 +109,11 @@ export default async function HomePage() {
                 { num: '3 ISO', label: 'Certificazioni ISO', color: 'white' },
               ].map((stat, idx) => (
                 <FadeIn key={idx} delay={idx * 80}>
-                  <div className="py-14 px-8 lg:px-10 first:pl-6">
-                    <div className="text-[clamp(1.8rem,2.8vw,2.8rem)] font-black mb-2 tracking-tight leading-none" style={{ color: stat.color }}>
+                  <div className="py-10 md:py-14 px-6 md:px-10 first:pl-6">
+                    <div className="text-3xl md:text-5xl font-black mb-2 tracking-tighter leading-none" style={{ color: stat.color }}>
                       {stat.num}
                     </div>
-                    <div className="text-zinc-500 text-xs font-medium uppercase tracking-widest leading-tight mt-3">
+                    <div className="text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest leading-tight mt-3">
                       {stat.label}
                     </div>
                   </div>
@@ -124,7 +124,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.4 SEZIONE SERVIZI (Premium Industrial Cards) ─────────── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
             <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-16">
               <FadeIn effect="mask">
@@ -132,11 +132,11 @@ export default async function HomePage() {
                   <span className="w-10 h-[2px] bg-[#EE2430]" />
                   <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Cosa facciamo</span>
                 </div>
-                <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#0A0A0A] leading-[1.1]">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] uppercase">
                   Soluzioni per l'energia.
                 </h2>
               </FadeIn>
-              <Link href="/servizi" className="tri-btn tri-btn-outline-dark">Tutti i servizi</Link>
+              <Link href="/servizi" className="tri-btn tri-btn-outline-dark px-8 py-4 text-[11px]">Tutti i servizi</Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
@@ -171,7 +171,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.5 SEZIONE CERTIFICAZIONI (Dark) ────────────────────────── */}
-        <section className="section-dark py-20 md:py-32 border-y border-white/5">
+        <section className="section-dark py-16 md:py-32 border-y border-white/5">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div>
@@ -180,13 +180,13 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Qualità certificata</span>
                   </div>
-                  <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black text-white leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8 uppercase">
                     Garantiamo l’eccellenza operativa.
                   </h2>
-                  <p className="text-white/50 text-base leading-relaxed mb-10 max-w-xl">
+                  <p className="text-white/50 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
                     Operiamo con sistemi di gestione certificati ISO 9001, 14001 e 45001. Siamo iscritti alla White List e titolari del Rating di Legalità a due stelle.
                   </p>
-                  <Link href="/certificazioni" className="tri-btn tri-btn-outline">Vedi certificazioni</Link>
+                  <Link href="/certificazioni" className="tri-btn tri-btn-outline px-8 py-4 text-[11px]">Vedi certificazioni</Link>
                 </FadeIn>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -204,7 +204,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.6 PARTNER & SPONSOR (Balanced Grid Layout) ──────────── */}
-        <section className="bg-zinc-50 py-20 md:py-32 border-b border-zinc-100">
+        <section className="bg-zinc-50 py-16 md:py-32 border-b border-zinc-100">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
               
@@ -215,10 +215,10 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.2em] uppercase text-[11px]">Il nostro network</span>
                   </div>
-                  <h2 className="text-[clamp(2.2rem,3.2vw,3.2rem)] font-black text-[#0A0A0A] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
                     Partner & Sponsor.
                   </h2>
-                  <p className="text-zinc-500 text-base leading-relaxed max-w-md">
+                  <p className="text-zinc-500 text-sm md:text-base leading-relaxed max-w-md">
                     Collaboriamo con le principali realtà dell’energia e sosteniamo il territorio attraverso partnership solide, fondate sulla condivisione di valori e obiettivi di crescita.
                   </p>
                 </FadeIn>
@@ -255,7 +255,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.7 LAVORA CON NOI ──────────────────────────────────────── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -264,11 +264,11 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Lavora con noi</span>
                   </div>
-                  <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black leading-[1.1] mb-8">Costruiamo il futuro.</h2>
-                  <p className="text-zinc-500 text-base leading-relaxed mb-10 max-w-xl">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-8 uppercase">Costruiamo il futuro.</h2>
+                  <p className="text-zinc-500 text-sm md:text-base leading-relaxed mb-10 max-w-xl">
                     Stiamo crescendo e cerchiamo professionisti appassionati. Se hai esperienza nel settore elettrico, c’è posto per te in Trialux.
                   </p>
-                  <Link href="/career" className="tri-btn tri-btn-outline-dark">Vedi posizioni aperte</Link>
+                  <Link href="/career" className="tri-btn tri-btn-outline-dark px-8 py-4 text-[11px]">Vedi posizioni aperte</Link>
                 </FadeIn>
               </div>
               <div className="aspect-video overflow-hidden group">

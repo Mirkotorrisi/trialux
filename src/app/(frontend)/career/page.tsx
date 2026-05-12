@@ -6,6 +6,23 @@ import config from '@/payload.config'
 import { FadeIn } from '../_components/FadeIn'
 import '../style.css'
 
+// Funzione per estrarre testo puro dal contenuto RichText (Lexical)
+function extractPlainText(content: any): string {
+  if (!content || !content.root || !content.root.children) return ''
+  
+  return content.root.children
+    .map((node: any) => {
+      if (node.children) {
+        return node.children
+          .map((child: any) => (child.type === 'text' ? child.text : ''))
+          .join('')
+      }
+      return ''
+    })
+    .join(' ')
+    .trim()
+}
+
 export default async function CareerPage() {
   const payload = await getPayload({ config })
   
@@ -32,7 +49,7 @@ export default async function CareerPage() {
       <main className="w-full">
         
         {/* ── 5.1 INTESTAZIONE PAGINA ── */}
-        <section className="relative w-full h-screen min-h-[640px] flex flex-col justify-end overflow-hidden pb-24 md:pb-32 lg:pb-40">
+        <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069&auto=format&fit=crop"
@@ -50,17 +67,17 @@ export default async function CareerPage() {
             <FadeIn delay={0} effect="mask">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
-                <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[11px]">Career</span>
+                <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Career</span>
               </div>
-              <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl uppercase">
                 Lavora con noi.
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white text-lg md:text-xl font-medium max-w-2xl mb-8 leading-relaxed">
+              <p className="text-white text-base md:text-xl font-medium max-w-2xl mb-6 md:mb-8 leading-relaxed">
                 Costruiamo reti. Cerchiamo persone che vogliano costruire qualcosa con noi.
               </p>
-              <p className="text-white/60 text-sm md:text-base max-w-lg leading-relaxed">
+              <p className="text-white/60 text-xs md:text-base max-w-lg leading-relaxed">
                 Trialux è in costante crescita e il team si allarga ogni anno. Cerchiamo professionisti tecnici, motivati e pronti a lavorare sul campo, in un ambiente che valorizza le competenze e investe nella formazione continua.
               </p>
             </FadeIn>
@@ -68,7 +85,7 @@ export default async function CareerPage() {
         </section>
 
         {/* ── 5.2 PERCHÉ SCEGLIERE TRIALUX ── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
             <div className="max-w-3xl mb-20">
               <FadeIn effect="mask">
@@ -76,7 +93,7 @@ export default async function CareerPage() {
                   <span className="w-10 h-[2px] bg-[#55ABE4]" />
                   <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">I nostri valori</span>
                 </div>
-                <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tighter text-[#0A0A0A] leading-[1.1]">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
                   Perché scegliere Trialux.
                 </h2>
               </FadeIn>
@@ -106,7 +123,7 @@ export default async function CareerPage() {
                   desc: 'Lavoriamo per cantieri, e ogni cantiere è una squadra. Troverai un ambiente diretto, meritocratico e orientato ai risultati, dove il contributo di ognuno conta.' 
                 },
               ].map((item, idx) => (
-                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden bg-zinc-50 p-10 lg:p-12 transition-all duration-700 hover:shadow-2xl">
+                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden bg-zinc-50 p-8 md:p-12 transition-all duration-700 hover:shadow-2xl">
                   {/* Hover Color Fill (Slide up) */}
                   <div 
                     className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-700 z-0" 
@@ -138,7 +155,7 @@ export default async function CareerPage() {
         </section>
 
         {/* ── 5.3 PROFILI RICERCATI (DARK) ── */}
-        <section className="section-dark py-20 md:py-32 border-y border-white/5">
+        <section className="section-dark py-16 md:py-32 border-y border-white/5">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
               
@@ -148,7 +165,7 @@ export default async function CareerPage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Competenze tecniche</span>
                   </div>
-                  <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tighter text-white leading-[1.1] mb-6">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.1] mb-6 uppercase">
                     Profili ricercati.
                   </h2>
                   <p className="text-white/50 text-base leading-relaxed mb-12 max-w-xl">
@@ -191,16 +208,16 @@ export default async function CareerPage() {
         </section>
 
         {/* ── 5.4 POSIZIONI APERTE (LIGHT GRAY) ── */}
-        <section className="bg-zinc-50 py-20 md:py-32">
+        <section className="bg-zinc-50 py-16 md:py-32">
           <div className="container-wide">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-              <div className="lg:col-span-4">
-                <FadeIn effect="mask" className="lg:sticky lg:top-32">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+              <div className="lg:col-span-4 lg:sticky lg:top-32">
+                <FadeIn effect="mask">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-[2px] bg-[#F0921E]" />
                     <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Opportunità</span>
                   </div>
-                  <h2 className="text-[clamp(1.8rem,2.8vw,2.8rem)] font-black text-[#0A0A0A] tracking-tighter leading-[1] mb-6">
+                  <h2 className="text-3xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter leading-[1] mb-6 uppercase">
                     Posizioni aperte.
                   </h2>
                   <p className="text-zinc-500 text-sm leading-relaxed mb-10 max-w-xs">
@@ -211,22 +228,31 @@ export default async function CareerPage() {
 
               <div className="lg:col-span-8">
                 {openPositions.length > 0 ? (
-                  <div className="space-y-1">
-                    {openPositions.map((job: any, index: number) => (
-                      <FadeIn key={job.id} delay={index * 100}>
-                        <Link href={`/career/${job.slug || job.id}`} className="flex flex-col sm:flex-row justify-between items-center gap-6 p-8 bg-white hover:bg-[#55ABE4] group transition-all duration-500 shadow-sm hover:shadow-xl">
-                          <div>
-                            {job.department && (
-                              <span className="text-[10px] font-black text-[#55ABE4] group-hover:text-white uppercase tracking-[0.2em] mb-2 block">{job.department}</span>
-                            )}
-                            <h3 className="text-xl font-black text-[#0A0A0A] group-hover:text-white tracking-tighter uppercase">{job.jobTitle}</h3>
-                          </div>
-                          <div className="w-12 h-12 flex items-center justify-center border border-zinc-100 group-hover:border-white text-[#0A0A0A] group-hover:text-white transition-all">
-                            <ArrowRight size={20} />
-                          </div>
-                        </Link>
-                      </FadeIn>
-                    ))}
+                  <div className="space-y-4">
+                    {openPositions.map((job: any, index: number) => {
+                      const descriptionPreview = extractPlainText(job.description)
+                      
+                      return (
+                        <FadeIn key={job.id} delay={index * 100}>
+                          <Link href={`/career/${job.slug || job.id}`} className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 p-8 bg-white hover:bg-[#55ABE4] group transition-all duration-500 shadow-sm hover:shadow-xl border border-zinc-100">
+                            <div className="flex-1">
+                              {job.department && (
+                                <span className="text-[10px] font-black text-[#55ABE4] group-hover:text-white uppercase tracking-[0.2em] mb-2 block">{job.department}</span>
+                              )}
+                              <h3 className="text-xl font-black text-[#0A0A0A] group-hover:text-white tracking-tighter uppercase mb-2">{job.jobTitle}</h3>
+                              {descriptionPreview && (
+                                <p className="text-zinc-500 text-sm group-hover:text-white/80 line-clamp-2 leading-relaxed">
+                                  {descriptionPreview}
+                                </p>
+                              )}
+                            </div>
+                            <div className="w-12 h-12 flex items-center justify-center border border-zinc-100 group-hover:border-white text-[#0A0A0A] group-hover:text-white transition-all shrink-0">
+                              <ArrowRight size={20} />
+                            </div>
+                          </Link>
+                        </FadeIn>
+                      )
+                    })}
                   </div>
                 ) : (
                   <FadeIn delay={100}>
@@ -243,7 +269,7 @@ export default async function CareerPage() {
         </section>
 
         {/* ── 5.5 CANDIDATURA SPONTANEA (WHITE) ── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
             <FadeIn>
               <div className="bg-zinc-50 border border-zinc-100 p-10 lg:p-16 relative overflow-hidden group">
@@ -266,7 +292,7 @@ export default async function CareerPage() {
                       href="mailto:ufficiopersonale@trialuxsrl.it"
                       className="inline-flex items-center gap-4 px-10 py-5 bg-[#0A0A0A] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
                     >
-                      <span>Invia la tua candidatura</span>
+                      <span>Candidati</span>
                       <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                     </a>
                     <div className="mt-6 text-zinc-400 text-xs font-mono uppercase tracking-widest">

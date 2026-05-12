@@ -9,8 +9,8 @@ export default function ContattiPage() {
 
       <main className="w-full">
 
-        {/* ── HERO ── full-bleed photo */}
-        <section className="relative w-full h-[70vh] min-h-[500px] flex flex-col justify-end overflow-hidden pb-16 md:pb-24 lg:pb-32">
+        {/* ── 6.1 INTESTAZIONE PAGINA ────────────────────────── */}
+        <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1577416412292-747c6607f055?q=80&w=2070&auto=format&fit=crop"
@@ -24,22 +24,20 @@ export default function ContattiPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/95 via-[#0A0A0A]/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/70 to-transparent" style={{ width: '60%' }} />
           </div>
-          <div className="absolute top-[-10%] right-[-8%] w-[55vw] h-[120%]  border border-white/[0.04] pointer-events-none" />
-          <div className="absolute top-[5%] right-[-15%] w-[45vw] h-[110%]  border border-[#EE2430]/[0.06] pointer-events-none" />
 
-          <div className="container-wide relative z-10 max-w-[1400px] w-full">
+          <div className="container-wide relative z-10 w-full">
             <FadeIn delay={0} effect="mask">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-[1.5px] bg-[#EE2430]" />
-                <span className="text-[#EE2430] font-semibold tracking-[0.25em] uppercase text-[11px]">Contatti</span>
+                <span className="text-[#EE2430] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Contatti</span>
               </div>
-              <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-black tracking-[-0.01em] text-white leading-[1.1] mb-3 max-w-2xl">
-                Siamo a Biancavilla, in provincia di Catania.
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
+                Siamo qui per <br/> connetterti.
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white/60 text-sm md:text-base max-w-lg leading-relaxed">
-                Scrivici o chiamaci: ti risponderemo nel più breve tempo possibile.
+              <p className="text-white text-base md:text-xl font-medium max-w-2xl mb-8 leading-relaxed">
+                Pronti a rispondere alle vostre esigenze tecniche con soluzioni concrete e tempestive.
               </p>
             </FadeIn>
           </div>
@@ -79,8 +77,8 @@ export default function ContattiPage() {
           </div>
         </section>
 
-        {/* ── RECAPITI + FORM — white, 12-col ── */}
-        <section className="bg-white py-16 md:py-24 lg:py-32">
+        {/* ── 6.2 INFO E FORM ────────────────────────────────── */}
+        <section className="bg-white py-16 md:py-32">
           <div className="container mx-auto px-6 lg:px-16 max-w-[1400px]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-0">
 
@@ -89,10 +87,10 @@ export default function ContattiPage() {
                 <FadeIn effect="mask">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                    <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Recapiti</span>
+                    <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Informazioni</span>
                   </div>
-                  <h2 className="text-[clamp(1.8rem,2.8vw,2.8rem)] font-black tracking-tight text-[#0A0A0A] leading-[1.15] mb-5 md:mb-8">
-                    Come raggiungerci.
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
+                    Dove trovarci.
                   </h2>
                 </FadeIn>
 

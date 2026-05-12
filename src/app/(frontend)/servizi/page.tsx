@@ -63,7 +63,7 @@ export default function ServiziPage() {
       <main className="w-full">
 
         {/* ── HERO ────────────────────────────────────────────────── */}
-        <section className="relative w-full h-[60vh] min-h-[480px] flex flex-col justify-end overflow-hidden pb-16 md:pb-24 lg:pb-32 bg-zinc-950">
+        <section className="relative w-full h-[70vh] md:h-[80vh] min-h-[480px] flex flex-col justify-end overflow-hidden pb-16 md:pb-24 lg:pb-32 bg-zinc-950">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069"
@@ -82,10 +82,10 @@ export default function ServiziPage() {
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-bold tracking-[0.2em] uppercase text-[10px]">Trialux S.r.l.</span>
               </div>
-              <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-black tracking-[-0.01em] text-white leading-[1.1] mb-2 max-w-3xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 max-w-3xl uppercase">
                 I nostri servizi.
               </h1>
-              <p className="text-white/60 text-base max-w-xl">
+              <p className="text-white/60 text-base md:text-xl max-w-xl">
                 Soluzioni complete per infrastrutture elettriche di media e bassa tensione.
               </p>
             </FadeIn>
@@ -108,13 +108,13 @@ export default function ServiziPage() {
                     <span className={`text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block ${srv.isDark ? 'text-[#55ABE4]' : 'text-[#55ABE4]'}`}>
                       {srv.cat}
                     </span>
-                    <h2 className={`text-[clamp(1.8rem,3vw,3rem)] font-black tracking-tight leading-[1.1] mb-4 ${srv.isDark ? 'text-white' : 'text-[#0A0A0A]'}`}>
+                    <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 uppercase ${srv.isDark ? 'text-white' : 'text-[#0A0A0A]'}`}>
                       {srv.title}
                     </h2>
-                    <p className={`text-base leading-relaxed mb-8 max-w-lg ${srv.isDark ? 'text-white/60' : 'text-zinc-500'}`}>
+                    <p className={`text-sm md:text-base leading-relaxed mb-10 max-w-lg ${srv.isDark ? 'text-white/60' : 'text-zinc-500'}`}>
                       {srv.desc}
                     </p>
-                    <Link href="/contatti" className={`tri-btn ${srv.isDark ? 'tri-btn-outline' : 'tri-btn-outline-dark'}`}>
+                    <Link href="/contatti" className={`tri-btn ${srv.isDark ? 'tri-btn-outline' : 'tri-btn-outline-dark'} px-8 py-4 text-[11px]`}>
                       Richiedi informazioni
                     </Link>
                   </FadeIn>
@@ -159,7 +159,7 @@ export default function ServiziPage() {
               {/* Text Side */}
               <div className="lg:col-span-8">
                 <FadeIn effect="mask">
-                  <h2 className="text-[clamp(2.2rem,5vw,4rem)] font-black tracking-tighter text-white leading-[0.95] mb-4">
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95] mb-4 uppercase">
                     Insieme, accendiamo <br />
                     <span className="text-white/50 group-hover:text-white transition-colors duration-500">il vostro futuro.</span>
                   </h2>

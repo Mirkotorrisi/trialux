@@ -11,7 +11,7 @@ export default function CertificazioniPage() {
       <main className="w-full">
 
         {/* ── 4.1 INTESTAZIONE PAGINA ────────────────────────── */}
-        <section className="relative w-full h-screen min-h-[640px] flex flex-col justify-end overflow-hidden pb-24 md:pb-32 lg:pb-40">
+        <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop"
@@ -29,17 +29,17 @@ export default function CertificazioniPage() {
             <FadeIn delay={0} effect="mask">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
-                <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[11px]">Eccellenza e Standard</span>
+                <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Eccellenza e Standard</span>
               </div>
-              <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl uppercase">
                 Qualità e certificazioni.
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white text-lg md:text-xl font-medium max-w-2xl mb-8 leading-relaxed">
+              <p className="text-white text-base md:text-xl font-medium max-w-2xl mb-6 md:mb-8 leading-relaxed">
                 Operiamo con sistemi di gestione certificati e standard riconosciuti a livello nazionale e internazionale.
               </p>
-              <p className="text-white/60 text-sm md:text-base max-w-lg leading-relaxed">
+              <p className="text-white/60 text-xs md:text-base max-w-lg leading-relaxed">
                 Per Trialux la qualità non è una dichiarazione d’intenti, è un sistema strutturato e verificato da enti terzi indipendenti. Le nostre certificazioni sono una garanzia concreta per chi decide di affidarci un lavoro.
               </p>
             </FadeIn>
@@ -47,7 +47,7 @@ export default function CertificazioniPage() {
         </section>
 
         {/* ── 4.2 CERTIFICAZIONI ISO ────────────────────────── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
             <div className="max-w-3xl mb-20">
               <FadeIn effect="mask">
@@ -92,7 +92,7 @@ export default function CertificazioniPage() {
                     style={{ backgroundColor: cert.color }} 
                   />
                   
-                  <div className="relative z-10 p-10 lg:p-14 h-full flex flex-col justify-between min-h-[380px]">
+                  <div className="relative z-10 p-8 md:p-14 h-full flex flex-col justify-between min-h-[320px] md:min-h-[380px]">
                     <div>
                       <div className="mb-10 flex items-center justify-between">
                         <div 
@@ -121,7 +121,7 @@ export default function CertificazioniPage() {
         </section>
 
         {/* ── 4.3 ATTESTATI E RICONOSCIMENTI ────────────────────────── */}
-        <section className="section-dark py-24 md:py-32 relative overflow-hidden">
+        <section className="section-dark py-16 md:py-32 relative overflow-hidden">
           <div className="container-wide relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div>
@@ -177,10 +177,10 @@ export default function CertificazioniPage() {
         </section>
 
         {/* ── 4.4 WHISTLEBLOWING ────────────────────────── */}
-        <section className="bg-white py-20 md:py-32">
+        <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
             <FadeIn>
-              <div className="bg-zinc-50 border border-zinc-100 p-10 lg:p-16 relative overflow-hidden group">
+              <div className="bg-zinc-50 border border-zinc-100 p-8 md:p-16 relative overflow-hidden group">
                 <div className="flex flex-col lg:flex-row gap-12 items-start relative z-10">
                   <div className="w-16 h-16 bg-[#55ABE4] flex items-center justify-center text-white shrink-0 shadow-lg">
                     <Scale size={32} />
