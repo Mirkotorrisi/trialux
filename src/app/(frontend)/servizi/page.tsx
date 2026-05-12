@@ -153,7 +153,7 @@ export default function ServiziPage() {
           </div>
 
           {/* "Ignition" Gradient Overlay (Hidden by default) */}
-          <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#F0921E] via-[#EE2430] to-[#9B161D] opacity-0 group-hover:opacity-90 transition-opacity duration-700" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#F0921E] to-[#EE2430] opacity-0 group-hover:opacity-90 transition-opacity duration-700" />
           
           {/* Technical Grid Overlay */}
           <div className="absolute inset-0 z-0 opacity-5 mix-blend-overlay" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />

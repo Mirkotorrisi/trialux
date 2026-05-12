@@ -5,7 +5,7 @@ import { Header } from './_components/Header'
 import { FadeIn } from './_components/FadeIn'
 import { DecorativePattern } from './_components/DecorativeArcs'
 import './style.css'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import { Parallax } from './_components/Parallax'
 
 export default async function HomePage() {
@@ -276,36 +276,50 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* ── 1.7 LAVORA CON NOI ──────────────────────────────────────── */}
-        <section className="bg-white py-16 md:py-32">
-          <div className="container-wide">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
+        {/* ── 1.7 FINAL CTA (Ignition Hover Banner) ────────────────────── */}
+        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
+          {/* Base Image Background */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/images/Trialux 1.jpg" 
+              alt="Power Projects" 
+              className="w-full h-full object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+            />
+          </div>
+
+          {/* "Ignition" Gradient Overlay (Hidden by default) */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#F0921E] to-[#EE2430] opacity-0 group-hover:opacity-90 transition-opacity duration-700" />
+          
+          {/* Technical Grid Overlay */}
+          <div className="absolute inset-0 z-0 opacity-5 mix-blend-overlay" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+          <div className="container-wide relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Text Side */}
+              <div className="lg:col-span-8">
                 <FadeIn effect="mask">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="w-10 h-[2px] bg-[#F0921E]" />
-                    <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Lavora con noi</span>
-                  </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-8">Costruiamo il futuro.</h2>
-                </FadeIn>
-                <FadeIn delay={200} effect="mask">
-                  <p className="text-zinc-500 text-sm md:text-base leading-relaxed mb-10 max-w-xl">
-                    Stiamo crescendo e cerchiamo professionisti appassionati. Se hai esperienza nel settore elettrico, c’è posto per te in Trialux.
-                  </p>
-                  <Link href="/career" className="tri-btn tri-btn-outline-dark px-8 py-4 text-[11px]">Vedi posizioni aperte</Link>
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95] mb-4">
+                    Insieme, diamo energia <br />
+                    <span className="text-white/50 group-hover:text-white transition-colors duration-500">ai vostri progetti.</span>
+                  </h2>
                 </FadeIn>
               </div>
-              <FadeIn className="aspect-video overflow-hidden group">
-                <Parallax offset={30} className="w-full h-full">
-                  <img 
-                    src="/images/Trialux 3.jpg" 
-                    alt="Team" 
-                    className="w-full h-[120%] object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  />
-                </Parallax>
-              </FadeIn>
+
+              {/* Action Side */}
+              <div className="lg:col-span-4 flex lg:justify-end">
+                <FadeIn delay={200}>
+                  <Link href="/contatti" className="group relative px-12 py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[280px]">
+                    <span className="relative z-10">Contattaci ora</span>
+                    <ArrowUpRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  </Link>
+                </FadeIn>
+              </div>
             </div>
           </div>
+
+          {/* Hover highlight line */}
+          <div className="absolute bottom-0 left-0 w-full h-[4px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
         </section>
 
       </main>
