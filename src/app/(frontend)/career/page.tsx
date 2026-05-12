@@ -77,10 +77,7 @@ export default async function CareerPage() {
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white text-base md:text-xl font-medium max-w-2xl mb-6 md:mb-8 leading-relaxed">
-                Costruiamo reti. Cerchiamo persone che vogliano costruire qualcosa con noi.
-              </p>
-              <p className="text-white/60 text-xs md:text-base max-w-lg leading-relaxed">
+              <p className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed">
                 Trialux è in costante crescita e il team si allarga ogni anno. Cerchiamo professionisti tecnici, motivati e pronti a lavorare sul campo, in un ambiente che valorizza le competenze e investe nella formazione continua.
               </p>
             </FadeIn>

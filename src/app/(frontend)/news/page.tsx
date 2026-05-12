@@ -74,12 +74,12 @@ export default async function NewsPage() {
           <div className="container-wide relative z-10 w-full">
             <FadeIn delay={0} effect="mask">
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 News & <br/> Aggiornamenti.
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white text-base md:text-xl font-medium max-w-2xl mb-8 leading-relaxed">
+              <p className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed">
                 Dal campo ai progetti speciali: tutte le novità dal mondo Trialux e dal settore delle infrastrutture energetiche.
               </p>
             </FadeIn>
@@ -122,7 +122,7 @@ export default async function NewsPage() {
                            <div className="text-xs font-bold text-[#F0921E] uppercase tracking-widest mb-6">
                             {new Date(featuredPost.publishedDate || featuredPost.createdAt).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
                           </div>
-                          <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] leading-tight tracking-tighter mb-8 uppercase">
+                          <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] leading-tight tracking-tighter mb-8">
                             {featuredPost.title}
                           </h2>
                           <p className="text-zinc-600 text-sm md:text-lg leading-relaxed mb-10 max-w-xl line-clamp-3">
@@ -179,7 +179,7 @@ export default async function NewsPage() {
                                 <div className="text-[10px] font-bold text-zinc-400 uppercase tracking-[0.2em] mb-4">
                                   {new Date(post.publishedDate || post.createdAt).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
                                 </div>
-                                <h3 className="text-xl font-black text-[#0a0f1a] leading-[1.2] tracking-tighter mb-4 uppercase group-hover:text-[#55ABE4] transition-colors">
+                                <h3 className="text-xl font-black text-[#0a0f1a] leading-[1.2] tracking-tighter mb-4 group-hover:text-[#55ABE4] transition-colors">
                                   {post.title}
                                 </h3>
                                 {previewText && (
@@ -207,7 +207,7 @@ export default async function NewsPage() {
               <FadeIn>
                 <div className="border-[4px] border-[#0a0f1a] p-16 md:p-24 text-center">
                   <Rss size={48} className="mx-auto text-[#F0921E] mb-8" />
-                  <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] uppercase tracking-tighter mb-6">
+                  <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] tracking-tighter mb-6">
                     Archivio in aggiornamento.
                   </h2>
                   <p className="text-zinc-500 text-base max-w-xl mx-auto leading-relaxed">
