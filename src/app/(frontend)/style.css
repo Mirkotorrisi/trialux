@@ -28,7 +28,8 @@
     --tri-blue: #55ABE4;
     --tri-orange: #F0921E;
     --tri-red: #EE2430;
-    --tri-black: #0A0A0A;
+    --tri-navy: #0a0f1a;
+    --tri-black: var(--tri-navy);
     --tri-dark: #070707;
   }
 }
@@ -90,14 +91,14 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* Secondary: Black background, white text */
+/* Secondary: Navy background, white text */
 .tri-btn-dark {
-  background: #0A0A0A;
+  background: var(--tri-navy);
   color: #ffffff;
-  border: 1px solid #0A0A0A;
+  border: 1px solid var(--tri-navy);
 }
 .tri-btn-dark:hover {
-  background: #1a1a1a;
+  background: #161e2e;
   transform: translateY(-2px);
 }
 
@@ -109,20 +110,20 @@ a:hover {
 }
 .tri-btn-outline:hover {
   background: #ffffff;
-  color: #0A0A0A;
+  color: var(--tri-navy);
   border-color: #ffffff;
 }
 
-/* Outline Dark: Transparent, black border */
+/* Outline Dark: Transparent, navy border */
 .tri-btn-outline-dark {
   background: transparent;
-  color: #0A0A0A;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--tri-navy);
+  border: 1px solid rgba(10, 15, 26, 0.1);
 }
 .tri-btn-outline-dark:hover {
-  background: #0A0A0A;
+  background: var(--tri-navy);
   color: #ffffff;
-  border-color: #0A0A0A;
+  border-color: var(--tri-navy);
 }
 
 /* Header specific: smaller, consistent */

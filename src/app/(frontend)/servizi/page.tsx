@@ -58,7 +58,7 @@ const services = [
 
 export default function ServiziPage() {
   return (
-    <div className="bg-white min-h-screen text-[#0A0A0A]">
+    <div className="bg-white min-h-screen text-[#0a0f1a]">
       <Header />
 
       <main className="w-full">
@@ -74,10 +74,10 @@ export default function ServiziPage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
           <div className="container-wide relative z-10">
@@ -110,7 +110,7 @@ export default function ServiziPage() {
                     <span className={`text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block ${srv.isDark ? 'text-[#55ABE4]' : 'text-[#55ABE4]'}`}>
                       {srv.cat}
                     </span>
-                    <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 ${srv.isDark ? 'text-white' : 'text-[#0A0A0A]'}`}>
+                    <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 ${srv.isDark ? 'text-white' : 'text-[#0a0f1a]'}`}>
                       {srv.title}
                     </h2>
                   </FadeIn>
@@ -142,7 +142,7 @@ export default function ServiziPage() {
         ))}
 
         {/* ── FINAL CTA (Ignition Hover Banner) ────────────────────── */}
-        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0A0A0A]">
+        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <img 
@@ -173,7 +173,7 @@ export default function ServiziPage() {
               {/* Action Side */}
               <div className="lg:col-span-4 flex lg:justify-end">
                 <FadeIn delay={200}>
-                  <Link href="/contatti" className="group relative px-12 py-7 bg-white text-[#0A0A0A] font-black uppercase tracking-[0.2em] text-sm hover:bg-[#0A0A0A] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[280px]">
+                  <Link href="/contatti" className="group relative px-12 py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[280px]">
                     <span className="relative z-10">Inizia ora</span>
                     <ArrowRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
