@@ -1,6 +1,7 @@
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
 import { MapPin, Phone, Mail, Globe, ArrowRight } from 'lucide-react'
+import { Parallax } from '../_components/Parallax'
 
 export default function ContattiPage() {
   return (
