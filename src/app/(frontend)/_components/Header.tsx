@@ -17,7 +17,7 @@ const Logo = ({ isSolid }: { isSolid: boolean }) => (
   <img 
     src={isSolid ? "/images/logo-black.png" : "/images/logo-white.png"} 
     alt="Trialux" 
-    className="h-12 md:h-16 w-auto transition-all duration-300"
+    className="h-13 md:h-18 w-auto transition-all duration-300"
   />
 )
 
@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
         ? 'bg-white border-b border-zinc-100' 
         : 'bg-transparent'
     }`}>
-      <header className="w-full flex items-center justify-between px-6 lg:px-16 h-[72px] md:h-[88px] max-w-[1400px] mx-auto">
+      <header className="w-full flex items-center justify-between px-6 lg:px-16 h-[80px] md:h-[100px] max-w-[1450px] mx-auto">
 
         {/* Logo */}
         <Link href="/" className="z-50 relative flex items-center h-full">
@@ -54,19 +54,19 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex gap-10 items-center">
+        <nav className="hidden lg:flex gap-11 items-center">
           {navLinks.filter(l => l.href !== '/').map((link) => {
             const isActive = pathname === link.href || (pathname?.startsWith(link.href) && link.href !== '/')
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative text-[11px] font-bold uppercase tracking-[0.15em] transition-all no-underline ${
+                className={`relative text-[12px] font-bold uppercase tracking-[0.18em] transition-all no-underline ${
                   isActive
                     ? 'text-[#55ABE4]'
                     : isSolid
-                      ? 'text-zinc-500 hover:text-[#0A0A0A]'
-                      : 'text-white/80 hover:text-white'
+                      ? 'text-zinc-600 hover:text-[#0A0A0A]'
+                      : 'text-white/90 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
         <div className="hidden lg:block">
           <Link
             href="/contatti"
-            className={`tri-btn header-btn ${
+            className={`tri-btn px-8 py-4 text-[11px] ${
               isSolid
                 ? 'tri-btn-primary'
                 : 'tri-btn-outline'
