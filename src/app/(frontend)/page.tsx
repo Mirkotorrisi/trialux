@@ -82,8 +82,12 @@ export default async function HomePage() {
                 </FadeIn>
               </div>
               <FadeIn delay={200} className="lg:col-span-5">
-                <div className="relative aspect-[4/5] overflow-hidden grayscale">
-                  <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069" alt="Trialux Team" className="w-full h-full object-cover" />
+                <div className="relative aspect-[4/5] overflow-hidden group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069" 
+                    alt="Trialux Team" 
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                  />
                 </div>
               </FadeIn>
             </div>
@@ -143,7 +147,7 @@ export default async function HomePage() {
                     <img 
                       src={s.img} 
                       alt={s.title} 
-                      className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-80 group-hover:grayscale-0" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-90" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent" />
                     
@@ -179,14 +183,16 @@ export default async function HomePage() {
                   <p className="text-white/50 text-base leading-relaxed mb-10 max-w-xl">
                     Operiamo con sistemi di gestione certificati ISO 9001, 14001 e 45001. Siamo iscritti alla White List e titolari del Rating di Legalità a due stelle.
                   </p>
-                  <Link href="/certificazioni" className="tri-btn tri-btn-primary">Vedi certificazioni</Link>
+                  <Link href="/certificazioni" className="tri-btn tri-btn-outline">Vedi certificazioni</Link>
                 </FadeIn>
               </div>
-              <div className="grid grid-cols-2 gap-6">
-                {['ISO 9001', 'ISO 14001', 'ISO 45001', 'White List'].map(item => (
-                  <div key={item} className="bg-white/5 border border-white/10 p-8 text-center hover:bg-white/10 transition-colors">
-                    <CheckCircle2 size={24} className="text-[#55ABE4] mx-auto mb-4" />
-                    <span className="font-black text-sm tracking-tighter uppercase text-white">{item}</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {['ISO 9001:2015', 'ISO 14001:2015', 'ISO 45001:2018', 'White List'].map(item => (
+                  <div key={item} className="bg-white/5 border border-white/10 p-6 flex items-center gap-5 hover:bg-white/10 transition-all group">
+                    <div className="w-10 h-10 rounded-full bg-[#55ABE4]/10 flex items-center justify-center shrink-0 group-hover:bg-[#55ABE4] transition-colors">
+                      <CheckCircle2 size={18} className="text-[#55ABE4] group-hover:text-white transition-colors" />
+                    </div>
+                    <span className="font-black text-[13px] tracking-tight uppercase text-white/90">{item}</span>
                   </div>
                 ))}
               </div>
@@ -259,11 +265,15 @@ export default async function HomePage() {
                   <p className="text-zinc-500 text-base leading-relaxed mb-10 max-w-xl">
                     Stiamo crescendo e cerchiamo professionisti appassionati. Se hai esperienza nel settore elettrico, c’è posto per te in Trialux.
                   </p>
-                  <Link href="/lavora-con-noi" className="tri-btn tri-btn-dark">Vedi posizioni aperte</Link>
+                  <Link href="/lavora-con-noi" className="tri-btn tri-btn-outline-dark">Vedi posizioni aperte</Link>
                 </FadeIn>
               </div>
-              <div className="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069" alt="Team" className="w-full h-full object-cover grayscale" />
+              <div className="aspect-video overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069" 
+                  alt="Team" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                />
               </div>
             </div>
           </div>

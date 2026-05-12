@@ -75,7 +75,7 @@ export const Header: React.FC = () => {
             href="/contatti"
             className={`tri-btn header-btn ${
               scrolled
-                ? 'tri-btn-dark'
+                ? 'tri-btn-primary'
                 : 'tri-btn-outline'
             }`}
           >
