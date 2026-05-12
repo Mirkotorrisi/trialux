@@ -5,7 +5,7 @@ import { Header } from './_components/Header'
 import { FadeIn } from './_components/FadeIn'
 import { DecorativePattern } from './_components/DecorativeArcs'
 import './style.css'
-import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, CheckCircle2, Target, Users, Zap, Award } from 'lucide-react'
 import { Parallax } from './_components/Parallax'
 
 export default async function HomePage() {
@@ -62,7 +62,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.2 CHI SIAMO ───────────────────────────────────────────── */}
-        <section className="bg-white py-16 md:py-32 relative z-10">
+        <section className="bg-white pt-16 md:pt-32 pb-12 md:pb-20 relative z-10">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
               <div className="lg:col-span-7 lg:pr-16">
@@ -98,34 +98,30 @@ export default async function HomePage() {
                 </div>
               </FadeIn>
             </div>
-          </div>
-        </section>
 
-        {/* ── 1.3 NUMERI CHIAVE (Identica a Chi Siamo) ────────────────── */}
-        <section className="section-data-light py-0 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#55ABE4] via-[#F0921E] to-[#EE2430]" />
-          <div className="container mx-auto px-6 lg:px-16 max-w-[1400px]">
-            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-zinc-200">
-              {[
-                { num: '2021', label: 'Anno di fondazione', color: '#55ABE4' },
-                { num: '+100', label: 'Professionisti in organico', color: '#F0921E' },
-                { num: 'MT/BT', label: 'Media e bassa tensione', color: '#EE2430' },
-                { num: '3 ISO', label: 'Certificazioni ISO', color: '#0a0f1a' },
-              ].map((stat, idx) => (
-                <FadeIn key={idx} delay={idx * 80}>
-                  <div className="py-10 md:py-14 px-6 md:px-10 flex flex-col items-center text-center">
-                    <div className="text-3xl md:text-5xl font-black mb-2 tracking-tighter leading-none" style={{ color: stat.color }}>
-                      {stat.num}
+            {/* Metrics integrated below the double section */}
+            <div className="mt-12 md:mt-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-zinc-200 border border-zinc-200">
+                {[
+                  { icon: <Target className="text-[#55ABE4]" size={24}/>, num: '2021', label: 'Anno di fondazione' },
+                  { icon: <Users className="text-[#F0921E]" size={24}/>, num: '+100', label: 'Professionisti in organico' },
+                  { icon: <Zap className="text-[#EE2430]" size={24}/>, num: 'MT/BT', label: 'Media e bassa tensione' },
+                  { icon: <Award className="text-[#55ABE4]" size={24}/>, num: '3 ISO', label: 'Certificazioni ISO' },
+                ].map((stat, idx) => (
+                  <FadeIn key={idx} delay={idx * 80}>
+                    <div className="p-8 md:p-10 flex flex-col items-center text-center gap-4">
+                      <div className="mb-2">{stat.icon}</div>
+                      <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0a0f1a] leading-none tracking-tighter">{stat.num}</div>
+                      <div className="text-zinc-500 text-[10px] md:text-xs uppercase tracking-widest font-bold max-w-[140px] mx-auto">{stat.label}</div>
                     </div>
-                    <div className="text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest leading-tight mt-3">
-                      {stat.label}
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
+                  </FadeIn>
+                ))}
+              </div>
             </div>
           </div>
         </section>
+
+
 
         {/* ── 1.4 SEZIONE SERVIZI (Premium Industrial Cards) ─────────── */}
         <section className="bg-white py-16 md:py-32">
