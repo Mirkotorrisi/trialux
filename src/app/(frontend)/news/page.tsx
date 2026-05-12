@@ -46,10 +46,10 @@ export default async function NewsPage() {
   const featuredPost = posts[0] || null
   const gridPosts = posts.slice(1)
 
-  const accentColors = ['#55ABE4', '#F0921E', '#EE2430']
+  const accentColors = ['#55ABE4', '#55ABE4', '#55ABE4']
 
   return (
-    <div className="bg-white min-h-screen text-[#0A0A0A] font-sans selection:bg-[#55ABE4]/20">
+    <div className="bg-white min-h-screen text-[#0A0A0A] font-sans selection:bg-[#F0921E]/20">
       <Header />
 
       <main className="w-full">
@@ -73,10 +73,7 @@ export default async function NewsPage() {
 
           <div className="container-wide relative z-10 w-full">
             <FadeIn delay={0} effect="mask">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-[1.5px] bg-[#EE2430]" />
-                <span className="text-[#EE2430] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">News</span>
-              </div>
+
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
                 News & <br/> Aggiornamenti.
               </h1>
@@ -122,7 +119,7 @@ export default async function NewsPage() {
                           )}
                         </div>
                         <div className="p-10 lg:p-16 flex flex-col justify-center">
-                          <div className="text-xs font-bold text-[#EE2430] uppercase tracking-widest mb-6">
+                           <div className="text-xs font-bold text-[#F0921E] uppercase tracking-widest mb-6">
                             {new Date(featuredPost.publishedDate || featuredPost.createdAt).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
                           </div>
                           <h2 className="text-3xl md:text-5xl font-black text-[#0A0A0A] leading-tight tracking-tighter mb-8 uppercase">
@@ -133,11 +130,11 @@ export default async function NewsPage() {
                           </p>
                           <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-[#0A0A0A] group-hover:gap-6 transition-all">
                             <span>Leggi l'articolo</span>
-                            <ArrowRight size={20} className="text-[#EE2430]" />
+                             <ArrowRight size={20} className="text-[#F0921E]" />
                           </div>
                         </div>
                       </div>
-                      <div className="absolute top-0 right-0 w-16 h-16 bg-[#EE2430] translate-x-8 -translate-y-8 rotate-45" />
+                       <div className="absolute top-0 right-0 w-16 h-16 bg-[#F0921E] translate-x-8 -translate-y-8 rotate-45" />
                     </Link>
                   </FadeIn>
                 )}
@@ -209,7 +206,7 @@ export default async function NewsPage() {
             ) : (
               <FadeIn>
                 <div className="border-[4px] border-[#0A0A0A] p-16 md:p-24 text-center">
-                  <Rss size={48} className="mx-auto text-[#55ABE4] mb-8" />
+                  <Rss size={48} className="mx-auto text-[#F0921E] mb-8" />
                   <h2 className="text-3xl md:text-5xl font-black text-[#0A0A0A] uppercase tracking-tighter mb-6">
                     Archivio in aggiornamento.
                   </h2>

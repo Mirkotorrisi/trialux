@@ -32,10 +32,7 @@ export default function ChiSiamoPage() {
 
           <div className="container-wide relative z-10">
             <FadeIn delay={0} effect="mask">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
-                <span className="text-[#55ABE4] font-bold tracking-[0.25em] uppercase text-[10px]">Trialux S.r.l.</span>
-              </div>
+
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 Chi siamo.
               </h1>
@@ -153,41 +150,49 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 5. I NUMERI ────────────────────────────────────────── */}
-        <section className="section-dark py-16 md:py-32 relative overflow-hidden">
+        <section className="section-data-light py-16 md:py-24 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#55ABE4] via-[#F0921E] to-[#EE2430]" />
           <div className="container mx-auto px-6 lg:px-16 max-w-[1400px] relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
+
+            {/* Header row — titolo sx, descrizione dx */}
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
               <FadeIn effect="mask">
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-4">
                   <span className="w-10 h-[2px] bg-[#55ABE4]" />
                   <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Performance</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-8">
+                <h2 className="text-3xl md:text-5xl font-black text-[#0A0A0A] tracking-tight leading-[1.1]">
                   Trialux in numeri.
                 </h2>
               </FadeIn>
-              <FadeIn delay={200} effect="mask">
-                <p className="text-white/50 text-base leading-relaxed">
-                  La crescita di un’azienda si misura nei risultati. Dal 2021 a oggi, ogni indicatore racconta una storia di sviluppo solido e progressivo.
+              <FadeIn delay={200} effect="mask" className="max-w-md">
+                <p className="text-zinc-600 text-sm leading-relaxed">
+                  La crescita di un&apos;azienda si misura nei risultati. Dal 2021 a oggi, ogni indicatore racconta una storia di sviluppo solido e progressivo.
                 </p>
               </FadeIn>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  { icon: <Target className="text-[#55ABE4]" size={20}/>, num: '2021', label: 'Anno di fondazione' },
-                  { icon: <Users className="text-[#F0921E]" size={20}/>, num: '+100', label: 'Dipendenti in forza' },
-                  { icon: <ShieldCheck className="text-[#EE2430]" size={20}/>, num: 'E-Distribuzione', label: 'Cliente principale' },
-                  { icon: <Award className="text-white" size={20}/>, num: 'Crescita', label: 'Costante anno su anno' },
-                ].map((stat, idx) => (
-                  <FadeIn key={idx} delay={idx * 100} className="bg-white/5 border border-white/10 p-8">
-                    <div className="mb-4">{stat.icon}</div>
-                    <div className="text-3xl font-black text-white mb-2 leading-none">{stat.num}</div>
-                    <div className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">{stat.label}</div>
-                  </FadeIn>
-                ))}
-              </div>
             </div>
 
-            <FadeIn delay={300} className="max-w-4xl mx-auto pt-20 border-t border-white/5">
-              <p className="text-white/60 text-base text-center leading-relaxed italic">
+            {/* Metrics grid — 4 colonne con divisori */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-zinc-200 border border-zinc-200">
+              {[
+                { icon: <Target className="text-[#55ABE4]" size={24}/>, num: '2021', label: 'Anno di fondazione' },
+                { icon: <Users className="text-[#F0921E]" size={24}/>, num: '+100', label: 'Dipendenti in forza' },
+                { icon: <ShieldCheck className="text-[#EE2430]" size={24}/>, num: 'E-Distribuzione', label: 'Cliente principale' },
+                { icon: <Award className="text-[#55ABE4]" size={24}/>, num: '3 ISO', label: 'Certificazioni ottenute' },
+              ].map((stat, idx) => (
+                <FadeIn key={idx} delay={idx * 80}>
+                  <div className="p-8 md:p-10 flex flex-col gap-4">
+                    <div>{stat.icon}</div>
+                    <div className="text-4xl font-black text-[#0A0A0A] leading-none tracking-tighter">{stat.num}</div>
+                    <div className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">{stat.label}</div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+
+            {/* Closing note */}
+            <FadeIn delay={300} className="max-w-4xl mx-auto pt-12 mt-12 border-t border-zinc-200">
+              <p className="text-zinc-500 text-sm text-center leading-relaxed italic">
                 Il team è composto da figure tecniche specializzate nelle principali operazioni su impianti elettrici: capisquadra, tirafili, giuntisti, cabinisti, operatori lavori sotto tensione e operatori di mezzi speciali. Tutto il personale dispone delle certificazioni di sicurezza richieste per operare in ambienti ad alto rischio.
               </p>
             </FadeIn>

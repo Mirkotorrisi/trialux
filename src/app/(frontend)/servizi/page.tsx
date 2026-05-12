@@ -82,10 +82,6 @@ export default function ServiziPage() {
 
           <div className="container-wide relative z-10">
             <FadeIn delay={0} effect="mask">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
-                <span className="text-[#55ABE4] font-bold tracking-[0.2em] uppercase text-[10px]">Trialux S.r.l.</span>
-              </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 max-w-3xl">
                 I nostri servizi.
               </h1>

@@ -19,7 +19,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="it" className={`${inter.variable}`}>
-      <body className="bg-white text-[#0A0A0A] selection:bg-[#55ABE4] selection:text-white antialiased">
+      <body className="bg-white text-[#0A0A0A] selection:bg-[#F0921E] selection:text-white antialiased">
         <SmoothScroll />
         {children}
         <Footer />
