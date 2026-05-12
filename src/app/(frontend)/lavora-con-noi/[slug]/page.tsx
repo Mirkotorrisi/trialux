@@ -47,37 +47,43 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
       
       <main className="w-full relative overflow-hidden pt-[90px]">
         {/* Job Header */}
-        <section className="bg-zinc-50 border-b border-zinc-200 py-12 md:py-20">
-          <div className="container mx-auto px-6 lg:px-12">
-            <FadeIn>
-              <div className="flex items-center gap-4 mb-8">
-                <span className="w-12 h-[2px] bg-[#55ABE4]"></span>
-                <span className="text-zinc-500 font-bold tracking-widest uppercase text-sm">Posizione Aperta</span>
+        <section className="bg-[#0A0A0A] bg-dot-grid-light py-24 lg:py-32 px-2 md:px-4">
+          <div className="container mx-auto px-6 lg:px-12 max-w-[1400px]">
+            <FadeIn effect="mask">
+              <div className="flex items-center gap-6 mb-8">
+                <span className="w-16 h-[3px] bg-[#EE2430]"></span>
+                <span className="text-white font-black tracking-[0.2em] uppercase text-sm">Posizione Aperta</span>
               </div>
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tighter mb-8 leading-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-12 leading-[0.9] text-white uppercase max-w-5xl">
                 {job.jobTitle}
               </h1>
               
-              <div className="flex flex-wrap gap-8 py-8 border-y border-zinc-200">
-                <div className="flex items-center gap-3">
-                  <MapPin className="text-[#EE2430]" size={24} />
+              <div className="flex flex-wrap gap-8 py-8 border-t-2 border-white/10">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-white flex items-center justify-center chamfer-reverse">
+                    <MapPin className="text-[#0A0A0A]" size={24} />
+                  </div>
                   <div>
-                    <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">Sede</div>
-                    <div className="font-bold">{job.location || 'Sicilia'}</div>
+                    <div className="text-xs font-black text-zinc-500 uppercase tracking-[0.2em] mb-1">Sede</div>
+                    <div className="font-bold text-white tracking-widest">{job.location || 'Sicilia'}</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 border-l border-zinc-200 pl-8">
-                  <FileText className="text-[#55ABE4]" size={24} />
+                <div className="flex items-center gap-4 lg:border-l-2 border-white/10 lg:pl-8">
+                  <div className="w-12 h-12 bg-white flex items-center justify-center chamfer-reverse">
+                    <FileText className="text-[#0A0A0A]" size={24} />
+                  </div>
                   <div>
-                    <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">Contratto</div>
-                    <div className="font-bold">{job.contractType ? job.contractType.replace('_', ' ') : 'Da definire'}</div>
+                    <div className="text-xs font-black text-zinc-500 uppercase tracking-[0.2em] mb-1">Contratto</div>
+                    <div className="font-bold text-white tracking-widest uppercase">{job.contractType ? job.contractType.replace('_', ' ') : 'Da definire'}</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 border-l border-zinc-200 pl-8">
-                  <Briefcase className="text-[#F0921E]" size={24} />
+                <div className="flex items-center gap-4 lg:border-l-2 border-white/10 lg:pl-8">
+                  <div className="w-12 h-12 bg-white flex items-center justify-center chamfer-reverse">
+                    <Briefcase className="text-[#0A0A0A]" size={24} />
+                  </div>
                   <div>
-                    <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">Dipartimento</div>
-                    <div className="font-bold">{job.department || 'Operativo'}</div>
+                    <div className="text-xs font-black text-zinc-500 uppercase tracking-[0.2em] mb-1">Dipartimento</div>
+                    <div className="font-bold text-white tracking-widest uppercase">{job.department || 'Operativo'}</div>
                   </div>
                 </div>
               </div>
@@ -86,31 +92,37 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
         </section>
 
         {/* Job Content */}
-        <section className="py-12 md:py-20 bg-white">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="flex flex-col lg:flex-row gap-8 md:p-12">
+        <section className="py-24 md:py-32 bg-white">
+          <div className="container mx-auto px-6 lg:px-12 max-w-[1400px]">
+            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
               <div className="lg:w-2/3">
-                <FadeIn delay={100}>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1A1A1A] mb-8 tracking-tighter">Descrizione del ruolo</h2>
-                  <div className="prose prose-base lg:prose-lg prose-zinc max-w-none mb-8 lg:mb-16">
+                <FadeIn effect="mask" delay={100}>
+                  <div className="flex items-center gap-6 mb-8">
+                    <span className="w-16 h-[3px] bg-[#EE2430]"></span>
+                    <span className="text-[#0A0A0A] font-black tracking-[0.2em] uppercase text-sm">Descrizione del ruolo</span>
+                  </div>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] mb-12 tracking-tighter uppercase leading-[0.9]">IL PROFILO <br/> CHE CERCHIAMO.</h2>
+                  <div className="prose prose-lg md:prose-xl prose-zinc max-w-none mb-8 lg:mb-16 font-medium">
                     <RichText content={job.description} />
                   </div>
                 </FadeIn>
               </div>
 
               <div className="lg:w-1/3">
-                <FadeIn delay={200} className="sticky top-32">
-                  <div className="bg-zinc-50 border border-zinc-200 p-6 md:p-8">
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-black mb-6 tracking-tighter">Candidati ora</h3>
-                    <p className="text-zinc-600 mb-8 font-medium">
+                <FadeIn effect="mask" delay={200} className="sticky top-32">
+                  <div className="bg-[#0A0A0A] p-10 lg:p-16 chamfer border-t-8 border-[#EE2430] shadow-2xl">
+                    <h3 className="text-3xl lg:text-4xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
+                      CANDIDATI <br/> ORA.
+                    </h3>
+                    <p className="text-zinc-400 font-medium text-lg leading-tight mb-10">
                       Inviaci il tuo curriculum per questa posizione. Valuteremo il tuo profilo il prima possibile.
                     </p>
                     <a
                       href="mailto:job@trialux.it"
-                      className="inline-flex w-full justify-between items-center px-6 py-4 bg-[#1A1A1A] text-white font-bold hover:bg-[#55ABE4] transition-colors no-underline"
+                      className="inline-flex w-full justify-center items-center gap-4 px-8 py-5 bg-white text-[#0A0A0A] font-black uppercase tracking-widest hover:bg-[#EE2430] hover:text-white transition-colors chamfer group"
                     >
-                      <span>Invia CV a job@trialux.it</span>
-                      <ArrowRight size={20} />
+                      <span>Invia CV</span>
+                      <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
                     </a>
                   </div>
                 </FadeIn>

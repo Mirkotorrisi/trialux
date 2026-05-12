@@ -1,25 +1,26 @@
 import React from 'react'
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './style.css'
+import { Footer } from './_components/Footer'
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat',
+  variable: '--font-inter',
 })
 
 export const metadata = {
-  description: 'Un portale moderno realizzato con Payload CMS e Next.js.',
-  title: 'Trialux Portale',
+  description: 'Realizzazione e manutenzione reti elettriche di media e bassa tensione.',
+  title: 'Trialux S.r.l.',
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="it" className={`${montserrat.variable} font-sans`}>
-      <body className="bg-white text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
-        <main>{children}</main>
+    <html lang="it" className={`${inter.variable}`}>
+      <body className="bg-white text-[#0A0A0A] selection:bg-[#55ABE4] selection:text-white antialiased">
+        {children}
+        <Footer />
       </body>
     </html>
   )

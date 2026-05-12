@@ -4,16 +4,17 @@ import config from '@/payload.config'
 import { notFound } from 'next/navigation'
 import { Header } from '../../_components/Header'
 import { RichText } from '../../_components/RichText'
-import { Calendar, User } from 'lucide-react'
+import { Calendar, ArrowLeft } from 'lucide-react'
 import { FadeIn } from '../../_components/FadeIn'
 import '../../style.css'
+import Link from 'next/link'
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const payload = await getPayload({ config })
 
-  let post;
-  
+  let post: any;
+
   // Try finding by slug first
   try {
     const { docs: posts } = await payload.find({
@@ -41,70 +42,97 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     return notFound()
   }
 
+  const publishedDate = new Date(post.publishedDate || post.createdAt).toLocaleDateString('it-IT', {
+    day: '2-digit', month: 'long', year: 'numeric'
+  })
+
   return (
-    <div className="bg-white min-h-screen text-[#1A1A1A] selection:bg-[#55ABE4]/20 font-sans">
+    <div className="bg-white min-h-screen text-[#0A0A0A] font-sans">
       <Header />
-      
-      <main className="w-full relative overflow-hidden pt-[90px]">
-        {/* Article Header */}
-        <section className="bg-zinc-50 border-b border-zinc-200 py-12 md:py-20">
-          <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
-            <FadeIn>
-              <div className="flex items-center gap-4 mb-8">
-                <span className="w-12 h-[2px] bg-[#EE2430]"></span>
-                <span className="text-zinc-500 font-bold tracking-widest uppercase text-sm">Trialux News</span>
+
+      <main className="w-full relative">
+
+        {/* ── ARTICLE HERO — full-bleed photo behind title */}
+        <section className="relative w-full min-h-[55vh] flex items-end overflow-hidden">
+          <div className="absolute inset-0 bg-[#0A0A0A]">
+            {post.featuredImage && typeof post.featuredImage !== 'number' && post.featuredImage.url && (
+              <img
+                src={post.featuredImage.url}
+                alt={post.title}
+                className="w-full h-full object-cover opacity-40"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/95 via-[#0A0A0A]/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/60 to-transparent" style={{ width: '70%' }} />
+          </div>
+
+          {/* Arc deco */}
+          <div className="absolute top-[-10%] right-[-8%] w-[55vw] h-[120%] rounded-full border border-white/[0.04] pointer-events-none" />
+
+          <div className="container mx-auto px-6 lg:px-16 relative z-10 pb-16 pt-40 max-w-[1400px] w-full">
+            <FadeIn effect="mask">
+              {/* Breadcrumb */}
+              <Link href="/news" className="inline-flex items-center gap-2 text-zinc-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-colors mb-8 group">
+                <ArrowLeft size={13} className="group-hover:-translate-x-1 transition-transform" />
+                Tutte le news
+              </Link>
+
+              {/* Tag + date */}
+              <div className="flex items-center gap-6 mb-6">
+                <div className="flex items-center gap-2">
+                  <span className="w-8 h-[2px] bg-[#EE2430]" />
+                  <span className="text-[#EE2430] text-xs font-bold tracking-widest uppercase">Trialux News</span>
+                </div>
+                <div className="flex items-center gap-2 text-zinc-500 text-xs">
+                  <Calendar size={12} />
+                  <span className="font-medium">{publishedDate}</span>
+                </div>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter mb-8 leading-tight">
+
+              <h1 className="text-[clamp(1.7rem,2.5vw,2.6rem)] font-black text-white leading-[1.2] tracking-[-0.01em] max-w-3xl">
                 {post.title}
               </h1>
-              
-              <div className="flex flex-wrap gap-8 py-8 border-t border-zinc-200">
-                <div className="flex items-center gap-3">
-                  <Calendar className="text-[#55ABE4]" size={24} />
-                  <div>
-                    <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">Data pubblicazione</div>
-                    <div className="font-bold">{new Date(post.publishedDate || post.createdAt).toLocaleDateString('it-IT')}</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 border-l border-zinc-200 pl-8">
-                  <User className="text-[#F0921E]" size={24} />
-                  <div>
-                    <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">Autore</div>
-                    <div className="font-bold">Trialux Editorial Team</div>
-                  </div>
-                </div>
-              </div>
             </FadeIn>
           </div>
         </section>
 
-        {/* Featured Image */}
-        {post.featuredImage && typeof post.featuredImage !== 'number' && post.featuredImage.url && (
-          <section className="bg-white py-12">
-            <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
-              <FadeIn delay={100}>
-                <div className="aspect-[21/9] w-full relative overflow-hidden bg-zinc-100 border border-zinc-200">
-                  <img
-                    src={post.featuredImage.url}
-                    alt={post.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-              </FadeIn>
-            </div>
-          </section>
-        )}
-
-        {/* Content */}
-        <section className="py-12 bg-white pb-32">
-          <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
-            <FadeIn delay={200}>
-              <div className="prose prose-base lg:prose-lg prose-zinc max-w-none">
+        {/* ── ARTICLE BODY ── */}
+        <section className="bg-white py-16 lg:py-24">
+          <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+            <FadeIn delay={100}>
+              {/* Optional excerpt as lead */}
+              {post.excerpt && (
+                <p className="text-xl font-medium text-zinc-600 leading-relaxed border-l-4 border-[#55ABE4] pl-6 mb-6">
+                  {post.excerpt}
+                </p>
+              )}
+              <div className="prose prose-base lg:prose-lg prose-zinc max-w-none
+                prose-headings:font-black prose-headings:tracking-tight
+                prose-a:text-[#55ABE4] prose-a:no-underline hover:prose-a:underline
+                prose-strong:text-[#0A0A0A]
+              ">
                 <RichText content={post.content} />
               </div>
             </FadeIn>
           </div>
         </section>
+
+        {/* ── BACK TO NEWS — footer CTA */}
+        <section className="bg-zinc-50 border-t border-zinc-100 py-16">
+          <div className="container mx-auto px-6 lg:px-16 max-w-[1400px]">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <div>
+                <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">Hai finito di leggere?</p>
+                <h3 className="text-2xl font-black text-[#0A0A0A] tracking-tight">Torna agli aggiornamenti</h3>
+              </div>
+              <Link href="/news" className="tri-btn tri-btn-primary inline-flex group shrink-0">
+                <span>Tutte le news</span>
+                <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
   )
