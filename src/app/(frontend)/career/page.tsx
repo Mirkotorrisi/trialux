@@ -101,52 +101,55 @@ export default async function CareerPage() {
                 </h2>
               </FadeIn>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-100">
               {[
                 { 
                   num: '01',
                   icon: <GraduationCap size={40} />, 
                   color: '#55ABE4', 
                   title: 'Formazione continua', 
-                  desc: 'Investiamo nella crescita delle nostre persone. Organizziamo corsi di formazione e aggiornamento su tematiche tecniche e di sicurezza: dal rischio elettrico agli spazi confinati.' 
+                  desc: 'Investiamo nella crescita delle nostre persone. Organizziamo corsi di formazione e aggiornamento su tematiche tecniche e di sicurezza.' 
                 },
                 { 
                   num: '02',
                   icon: <TrendingUp size={40} />, 
                   color: '#F0921E', 
-                  title: 'Un settore in espansione', 
-                  desc: 'La transizione energetica e i grandi investimenti pubblici creano una domanda crescente di tecnici qualificati. Entrare in Trialux oggi significa costruirsi una carriera solida.' 
+                  title: 'Settore in espansione', 
+                  desc: 'La transizione energetica e i grandi investimenti pubblici creano una domanda crescente di tecnici qualificati.' 
                 },
                 { 
                   num: '03',
                   icon: <Users size={40} />, 
                   color: '#EE2430', 
-                  title: 'Squadra e spirito di gruppo', 
-                  desc: 'Lavoriamo per cantieri, e ogni cantiere è una squadra. Troverai un ambiente diretto, meritocratico e orientato ai risultati, dove il contributo di ognuno conta.' 
+                  title: 'Spirito di gruppo', 
+                  desc: 'Lavoriamo per cantieri, e ogni cantiere è una squadra. Troverai un ambiente meritocratico e orientato ai risultati.' 
                 },
               ].map((item, idx) => (
-                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden bg-zinc-50 p-8 md:p-12 transition-all duration-700 hover:shadow-2xl">
-                  {/* Hover Color Fill (Slide up) */}
+                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden border-r last:border-r-0 border-zinc-100">
+                  {/* Hover Color Fill */}
                   <div 
-                    className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-700 z-0" 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-0" 
                     style={{ backgroundColor: item.color }} 
                   />
                   
-                  {/* Number Overlay */}
-                  <div className="absolute top-8 right-10 text-xs font-black tracking-widest opacity-20 group-hover:opacity-40 group-hover:text-white transition-all">
-                    {item.num}
-                  </div>
-
-                  <div className="relative z-10 flex flex-col justify-between h-full min-h-[300px]">
+                  <div className="relative z-10 p-8 md:p-14 h-full flex flex-col justify-between min-h-[320px] md:min-h-[380px]">
                     <div>
-                      <div className="mb-8 transition-all duration-500 group-hover:scale-110 group-hover:!text-white" style={{ color: item.color }}>
-                        {item.icon}
+                      <div className="mb-10 flex items-center justify-between">
+                        <div 
+                          className="transition-all duration-500 group-hover:scale-125 group-hover:!text-white" 
+                          style={{ color: item.color }}
+                        >
+                          {item.icon}
+                        </div>
+                        <div className="text-[11px] font-black tracking-[0.3em] uppercase opacity-40 group-hover:opacity-100 group-hover:text-white transition-all">
+                          {item.num}
+                        </div>
                       </div>
-                      <h3 className="text-xl font-black mb-4 tracking-tighter leading-tight group-hover:text-white transition-colors">
+                      
+                      <h3 className="text-2xl font-black mb-6 leading-tight tracking-tighter group-hover:text-white transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-zinc-500 text-sm leading-relaxed group-hover:text-white/90 transition-colors">
+                      <p className="text-zinc-500 text-base leading-relaxed group-hover:text-white/90 transition-colors">
                         {item.desc}
                       </p>
                     </div>
