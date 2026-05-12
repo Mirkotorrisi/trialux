@@ -198,66 +198,60 @@ export default function ContattiPage() {
               {/* Form */}
               <div className="lg:col-span-7">
                 <FadeIn effect="mask" delay={150} className="sticky top-28">
-                  <div className="section-dark border border-white/[0.06]  p-8 lg:p-12 relative overflow-hidden">
-                    {/* Arc deco */}
-                    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                      <svg className="absolute right-[-5%] top-[-10%] h-[120%] w-auto opacity-[0.04]" viewBox="0 0 200 400" fill="none">
-                        <path d="M200 200 Q200 0 50 0" stroke="white" strokeWidth="60" fill="none"/>
-                      </svg>
-                    </div>
+                  <div className="bg-zinc-50 border border-zinc-100 p-8 lg:p-12 relative">
                     <div className="relative z-10">
                       <div className="flex items-center gap-4 mb-4">
                         <span className="w-10 h-[2px] bg-[#EE2430]" />
                         <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Scrivici</span>
                       </div>
-                      <h3 className="text-2xl lg:text-3xl font-black mb-10 text-white tracking-tight">Invia una richiesta</h3>
+                      <h3 className="text-2xl lg:text-3xl font-black mb-10 text-[#0A0A0A] tracking-tight">Invia una richiesta</h3>
                       <form className="space-y-6">
                         <div>
-                          <label htmlFor="name" className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Nome e cognome *</label>
+                          <label htmlFor="name" className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Nome e cognome *</label>
                           <input
                             type="text"
                             id="name"
                             required
-                            className="w-full bg-zinc-900 border border-white/[0.1]  px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-white placeholder:text-zinc-600"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
                             placeholder="Mario Rossi"
                           />
                         </div>
                         <div>
-                          <label htmlFor="company" className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Azienda / Ente <span className="text-zinc-600 font-normal normal-case">(opzionale)</span></label>
+                          <label htmlFor="company" className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Azienda / Ente <span className="text-zinc-400 font-normal normal-case">(opzionale)</span></label>
                           <input
                             type="text"
                             id="company"
-                            className="w-full bg-zinc-900 border border-white/[0.1]  px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-white placeholder:text-zinc-600"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
                             placeholder="Nome azienda"
                           />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <label htmlFor="email" className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Email *</label>
+                            <label htmlFor="email" className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Email *</label>
                             <input
                               type="email"
                               id="email"
                               required
-                              className="w-full bg-zinc-900 border border-white/[0.1]  px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-white placeholder:text-zinc-600"
+                              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
                               placeholder="mario@esempio.it"
                             />
                           </div>
                           <div>
-                            <label htmlFor="phone" className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Telefono <span className="text-zinc-600 font-normal normal-case">(opz.)</span></label>
+                            <label htmlFor="phone" className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Telefono <span className="text-zinc-400 font-normal normal-case">(opz.)</span></label>
                             <input
                               type="tel"
                               id="phone"
-                              className="w-full bg-zinc-900 border border-white/[0.1]  px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-white placeholder:text-zinc-600"
+                              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
                               placeholder="+39"
                             />
                           </div>
                         </div>
                         <div>
-                          <label htmlFor="subject" className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Oggetto *</label>
+                          <label htmlFor="subject" className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Oggetto *</label>
                           <select
                             id="subject"
                             required
-                            className="w-full bg-zinc-900 border border-white/[0.1]  px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-white cursor-pointer appearance-none"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] cursor-pointer appearance-none"
                           >
                             <option value="" disabled>Seleziona l'argomento</option>
                             <option value="commerciale">Richiesta commerciale</option>
@@ -267,12 +261,12 @@ export default function ContattiPage() {
                           </select>
                         </div>
                         <div>
-                          <label htmlFor="message" className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Messaggio *</label>
+                          <label htmlFor="message" className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Messaggio *</label>
                           <textarea
                             id="message"
                             required
                             rows={4}
-                            className="w-full bg-zinc-900 border border-white/[0.1]  px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-white placeholder:text-zinc-600 resize-none"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400 resize-none"
                             placeholder="Scrivi qui la tua richiesta..."
                           />
                         </div>
@@ -281,7 +275,7 @@ export default function ContattiPage() {
                             id="privacy"
                             type="checkbox"
                             required
-                            className="w-4 h-4 mt-1 border-zinc-600 rounded focus:ring-0 checked:bg-[#55ABE4] cursor-pointer"
+                            className="w-4 h-4 mt-1 border-zinc-300 rounded focus:ring-0 checked:bg-[#55ABE4] cursor-pointer"
                           />
                           <label htmlFor="privacy" className="text-sm text-zinc-500 leading-relaxed">
                             Dichiaro di aver letto l'informativa sulla privacy e acconsento al trattamento dei miei dati personali. *
@@ -289,7 +283,7 @@ export default function ContattiPage() {
                         </div>
                         <button
                           type="submit"
-                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#0A0A0A] font-bold  hover:bg-[#55ABE4] hover:text-white transition-colors group"
+                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0A0A0A] text-white font-bold hover:bg-[#55ABE4] transition-colors group"
                         >
                           <span>Invia messaggio</span>
                           <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
