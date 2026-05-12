@@ -43,7 +43,7 @@ export const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-8 text-[#55ABE4]">Azienda</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 list-none p-0">
               {['Chi siamo', 'Servizi', 'Qualità', 'Carriere', 'News', 'Contatti'].map((item) => (
                 <li key={item}>
                   <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-zinc-400 text-sm hover:text-white transition-colors">
@@ -57,7 +57,7 @@ export const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-8 text-[#55ABE4]">Servizi</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 list-none p-0">
               {[
                 'Cavi MT/BT sotterranei',
                 'Linee aeree MT/BT',
