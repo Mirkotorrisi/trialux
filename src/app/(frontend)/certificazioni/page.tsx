@@ -2,6 +2,7 @@ import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
 import { DecorativePattern } from '../_components/DecorativeArcs'
 import { Parallax } from '../_components/Parallax'
+import Link from 'next/link'
 import { ArrowUpRight, ShieldCheck, Leaf, HardHat, Scale, Globe, FileCheck } from 'lucide-react'
 import '../style.css'
 
@@ -217,6 +218,52 @@ export default function CertificazioniPage() {
               </div>
             </FadeIn>
           </div>
+        </section>
+
+        {/* ── FINAL CTA (Ignition Hover Banner) ────────────────────── */}
+        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
+          {/* Base Image Background */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/images/Trialux 13.jpg" 
+              alt="Quality Background" 
+              className="w-full h-full object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+            />
+          </div>
+
+          {/* "Ignition" Gradient Overlay (Hidden by default) */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#F0921E] to-[#EE2430] opacity-0 group-hover:opacity-90 transition-opacity duration-700" />
+          
+          {/* Technical Grid Overlay */}
+          <div className="absolute inset-0 z-0 opacity-5 mix-blend-overlay" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+          <div className="container-wide relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Text Side */}
+              <div className="lg:col-span-8">
+                <FadeIn effect="mask">
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95] mb-4">
+                    Insieme, garantiamo <br />
+                    <span className="text-white/50 group-hover:text-white transition-colors duration-500">l’eccellenza certificata.</span>
+                  </h2>
+                </FadeIn>
+              </div>
+
+              {/* Action Side */}
+              <div className="lg:col-span-4 flex lg:justify-end">
+                <FadeIn delay={200}>
+                  <Link href="/contatti" className="group relative px-12 py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[280px]">
+                    <span className="relative z-10">Contattaci</span>
+                    <ArrowUpRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  </Link>
+                </FadeIn>
+              </div>
+            </div>
+          </div>
+
+          {/* Hover highlight line */}
+          <div className="absolute bottom-0 left-0 w-full h-[4px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
         </section>
 
       </main>
