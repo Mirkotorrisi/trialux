@@ -12,7 +12,7 @@ export default function CertificazioniPage() {
       <main className="w-full">
 
         {/* ── 4.1 INTESTAZIONE PAGINA ────────────────────────── */}
-        <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
+        <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
@@ -22,10 +22,10 @@ export default function CertificazioniPage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/70 to-transparent w-full md:w-[60%]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
           <div className="container-wide relative z-10 w-full">
@@ -34,7 +34,7 @@ export default function CertificazioniPage() {
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Eccellenza e Standard</span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl">
                 Qualità e certificazioni.
               </h1>
             </FadeIn>
@@ -159,7 +159,7 @@ export default function CertificazioniPage() {
                     <FadeIn key={idx} delay={idx * 100} className="flex gap-6">
                       <div className="shrink-0 mt-1">{item.icon}</div>
                       <div>
-                        <h3 className="text-lg font-black text-white mb-2 uppercase tracking-tight">{item.title}</h3>
+                        <h3 className="text-lg font-black text-white mb-2 tracking-tight">{item.title}</h3>
                         <p className="text-white/50 text-sm leading-relaxed max-w-lg">{item.text}</p>
                       </div>
                     </FadeIn>
@@ -189,25 +189,29 @@ export default function CertificazioniPage() {
                     <Scale size={32} />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-6">
-                      <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                      <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Etica Aziendale</span>
-                    </div>
-                    <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#0A0A0A] leading-[1.1] mb-6">
-                      Segnalazione di condotte illecite.
-                    </h2>
-                    <p className="text-zinc-500 text-base leading-relaxed mb-10 max-w-3xl">
-                      In linea con la normativa vigente in materia di whistleblowing (D. Lgs. 24/2023), Trialux ha attivato un canale dedicato per la segnalazione riservata di eventuali condotte illecite o irregolari. Il sistema garantisce la massima riservatezza al segnalante e viene gestito in modo indipendente dalla struttura aziendale.
-                    </p>
-                    <a
-                      href="https://trialux.segnalazioni.eu"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-4 px-10 py-5 bg-[#0A0A0A] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#55ABE4] transition-all duration-500 group-button"
-                    >
-                      <span>Accedi alla piattaforma</span>
-                      <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </a>
+                    <FadeIn effect="mask">
+                      <div className="flex items-center gap-4 mb-6">
+                        <span className="w-10 h-[2px] bg-[#55ABE4]" />
+                        <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Etica Aziendale</span>
+                      </div>
+                      <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#0A0A0A] leading-[1.1] mb-6">
+                        Segnalazione di condotte illecite.
+                      </h2>
+                    </FadeIn>
+                    <FadeIn delay={200} effect="mask">
+                      <p className="text-zinc-500 text-base leading-relaxed mb-10 max-w-3xl">
+                        In linea con la normativa vigente in materia di whistleblowing (D. Lgs. 24/2023), Trialux ha attivato un canale dedicato per la segnalazione riservata di eventuali condotte illecite o irregolari. Il sistema garantisce la massima riservatezza al segnalante e viene gestito in modo indipendente dalla struttura aziendale.
+                      </p>
+                      <a
+                        href="https://trialux.segnalazioni.eu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-4 px-10 py-5 bg-[#0A0A0A] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#55ABE4] transition-all duration-500 group-button"
+                      >
+                        <span>Accedi alla piattaforma</span>
+                        <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      </a>
+                    </FadeIn>
                   </div>
                 </div>
               </div>

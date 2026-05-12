@@ -10,7 +10,7 @@ export default function ContattiPage() {
       <main className="w-full">
 
         {/* ── 6.1 HERO ────────────────────────────────────────────── */}
-        <section className="relative w-full h-[70vh] md:h-[80vh] min-h-[480px] flex flex-col justify-end overflow-hidden pb-16 md:pb-24 lg:pb-32 bg-zinc-950">
+        <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40 bg-zinc-950">
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
@@ -20,10 +20,10 @@ export default function ContattiPage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/95 via-[#0A0A0A]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/70 to-transparent" style={{ width: '60%' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
+            
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
           <div className="container-wide relative z-10 w-full">
@@ -32,7 +32,7 @@ export default function ContattiPage() {
                 <span className="w-8 h-[1.5px] bg-[#EE2430]" />
                 <span className="text-[#EE2430] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Contatti</span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 Siamo qui per <br/> connetterti.
               </h1>
             </FadeIn>
@@ -90,7 +90,7 @@ export default function ContattiPage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Informazioni</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8">
                     Dove trovarci.
                   </h2>
                 </FadeIn>
@@ -104,7 +104,7 @@ export default function ContattiPage() {
                         <MapPin size={20} className="text-[#0A0A0A]" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-black mb-2 text-[#0A0A0A] uppercase tracking-wide">Sede operativa</h3>
+                        <h3 className="text-sm font-black mb-2 text-[#0A0A0A] tracking-wide">Sede operativa</h3>
                         <p className="text-zinc-500 text-sm leading-relaxed">
                           Trialux S.r.l.<br />
                           Via del Tessitore snc,<br />
@@ -121,7 +121,7 @@ export default function ContattiPage() {
                         <Phone size={20} className="text-[#0A0A0A]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-sm font-black mb-3 text-[#0A0A0A] uppercase tracking-wide">Contatti telefonici</h3>
+                        <h3 className="text-sm font-black mb-3 text-[#0A0A0A] tracking-wide">Contatti telefonici</h3>
                         <a href="tel:0958144954" className="text-2xl font-black text-[#55ABE4] hover:text-[#0A0A0A] transition-colors mb-4 block">
                           095 814 4954
                         </a>
@@ -150,7 +150,7 @@ export default function ContattiPage() {
                         <Mail size={20} className="text-[#0A0A0A]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-sm font-black mb-4 text-[#0A0A0A] uppercase tracking-wide">Email</h3>
+                        <h3 className="text-sm font-black mb-4 text-[#0A0A0A] tracking-wide">Email</h3>
                         <ul className="space-y-3">
                           {[
                             { label: 'Informazioni generali', email: 'trialuxsrl@gmail.com' },
@@ -179,7 +179,7 @@ export default function ContattiPage() {
                         <Globe size={20} className="text-[#0A0A0A]" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-black mb-2 text-[#0A0A0A] uppercase tracking-wide">LinkedIn</h3>
+                        <h3 className="text-sm font-black mb-2 text-[#0A0A0A] tracking-wide">LinkedIn</h3>
                         <p className="text-zinc-500 text-sm mb-3">
                           Seguici per aggiornamenti su cantieri, posizioni aperte e novità aziendali.
                         </p>
