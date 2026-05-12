@@ -43,7 +43,7 @@ html, body {
   font-size: 17px;
   line-height: 1.6;
   background: #ffffff;
-  color: #0A0A0A;
+  color: #0a0f1a;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   margin: 0;
@@ -145,7 +145,7 @@ a:hover {
 .section-data-light {
   background: #f9f9f9;
   border: 1px solid #e5e5e5;
-  color: #0A0A0A;
+  color: #0a0f1a;
   position: relative;
   overflow: hidden;
 }
@@ -171,6 +171,27 @@ a:hover {
 /* =======================================
    TYPOGRAPHY FIXES
    ======================================= */
+/* Typography: Default Navy for headings and bold elements */
+h1, h2, h3, h4, h5, h6, strong, b {
+  color: var(--tri-navy);
+}
+
+/* Forced White Contrast: Only for dark or colored contexts */
+/* Specifically target headings/bold inside dark sections or those with explicit white text utility */
+.section-dark :is(h1, h2, h3, h4, h5, h6, strong, b),
+.bg-zinc-950 :is(h1, h2, h3, h4, h5, h6, strong, b),
+.tri-btn :is(h1, h2, h3, h4, h5, h6, strong, b),
+.text-white :is(h1, h2, h3, h4, h5, h6, strong, b),
+:is(h1, h2, h3, h4, h5, h6, strong, b).text-white {
+  color: #ffffff !important;
+}
+
+/* Hero text visibility (for Hero sections that use text-white/70 or similar) */
+[class*="text-white/"] :is(h1, h2, h3, h4, h5, h6, strong, b),
+:is(h1, h2, h3, h4, h5, h6, strong, b)[class*="text-white/"] {
+  color: #ffffff !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 900;
@@ -181,6 +202,16 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 0;
 }
+
+/* Base Bold Style */
+strong, b {
+  font-weight: 700;
+}
+
+/* Ensure navy is the default for bold elements in standard sections 
+   only if the parent doesn't already provide a color. 
+   Since the main wrapper has text-[#0a0f1a], this will happen naturally. */
+
 
 /* =======================================
    UTILITIES
