@@ -12,7 +12,7 @@ export default async function HomePage() {
   const payload = await getPayload({ config })
 
   return (
-    <div className="bg-white min-h-screen text-[#0A0A0A]">
+    <div className="bg-white min-h-screen text-[#0a0f1a]">
       <Header />
 
       <main className="w-full relative">
@@ -29,10 +29,10 @@ export default async function HomePage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
           <div className="container-wide relative z-10">
@@ -71,7 +71,7 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#F0921E]" />
                     <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Chi siamo</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0a0f1a] leading-[1.1] mb-6">
                     Un’azienda costruita <br />
                     sulla competenza.
                   </h2>
@@ -137,7 +137,7 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Cosa facciamo</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1]">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0a0f1a] leading-[1.1]">
                     Soluzioni per l'energia.
                   </h2>
                 </FadeIn>
@@ -169,7 +169,7 @@ export default async function HomePage() {
                       alt={s.title} 
                       className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-90" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
                     
                     <div className="absolute bottom-10 left-10 right-10 flex items-end justify-between">
                       <div>
@@ -235,7 +235,7 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.2em] uppercase text-[11px]">Il nostro network</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0a0f1a] leading-[1.1] mb-8">
                     Partner & Sponsor.
                   </h2>
                 </FadeIn>
@@ -253,7 +253,7 @@ export default async function HomePage() {
                 <FadeIn delay={100} className="flex flex-col">
                   <span className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.3em] mb-6 block border-b border-zinc-200 pb-2">Cliente principale</span>
                   <div className="flex-grow bg-white border border-zinc-200 flex items-center justify-center p-8 shadow-sm transition-all duration-500 min-h-[160px] group overflow-hidden">
-                    <span className="font-black text-lg tracking-tighter text-[#0A0A0A] transition-transform duration-500 group-hover:scale-110">E-DISTRIBUZIONE</span>
+                    <span className="font-black text-lg tracking-tighter text-[#0a0f1a] transition-transform duration-500 group-hover:scale-110">E-DISTRIBUZIONE</span>
                   </div>
                 </FadeIn>
 
@@ -262,10 +262,10 @@ export default async function HomePage() {
                   <span className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.3em] mb-6 block border-b border-zinc-200 pb-2">Sponsorizzazioni</span>
                   <div className="flex-grow flex flex-col gap-4">
                     <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] group overflow-hidden">
-                      <span className="font-black text-[10px] tracking-tight text-[#0A0A0A] transition-transform duration-500 group-hover:scale-110">CATANIA FC</span>
+                      <span className="font-black text-[10px] tracking-tight text-[#0a0f1a] transition-transform duration-500 group-hover:scale-110">CATANIA FC</span>
                     </div>
                     <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] group overflow-hidden">
-                      <span className="font-black text-[10px] tracking-tight text-[#0A0A0A] transition-transform duration-500 group-hover:scale-110">BIANCAVILLA ACADEMY</span>
+                      <span className="font-black text-[10px] tracking-tight text-[#0a0f1a] transition-transform duration-500 group-hover:scale-110">BIANCAVILLA ACADEMY</span>
                     </div>
                   </div>
                 </FadeIn>

@@ -5,7 +5,7 @@ import { Parallax } from '../_components/Parallax'
 
 export default function ContattiPage() {
   return (
-    <div className="bg-white min-h-screen text-[#0A0A0A] font-sans">
+    <div className="bg-white min-h-screen text-[#0a0f1a] font-sans">
       <Header />
 
       <main className="w-full">
@@ -21,10 +21,10 @@ export default function ContattiPage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
           <div className="container-wide relative z-10 w-full">
@@ -88,7 +88,7 @@ export default function ContattiPage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Informazioni</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0a0f1a] leading-[1.1] mb-8">
                     Dove trovarci.
                   </h2>
                 </FadeIn>
@@ -99,10 +99,10 @@ export default function ContattiPage() {
                   <FadeIn delay={100}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <MapPin size={20} className="text-[#0A0A0A]" />
+                        <MapPin size={20} className="text-[#0a0f1a]" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-black mb-2 text-[#0A0A0A] tracking-wide">Sede operativa</h3>
+                        <h3 className="text-sm font-black mb-2 text-[#0a0f1a] tracking-wide">Sede operativa</h3>
                         <p className="text-zinc-500 text-sm leading-relaxed">
                           Trialux S.r.l.<br />
                           Via del Tessitore snc,<br />
@@ -116,11 +116,11 @@ export default function ContattiPage() {
                   <FadeIn delay={150}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <Phone size={20} className="text-[#0A0A0A]" />
+                        <Phone size={20} className="text-[#0a0f1a]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-sm font-black mb-3 text-[#0A0A0A] tracking-wide">Contatti telefonici</h3>
-                        <a href="tel:0958144954" className="text-2xl font-black text-[#55ABE4] hover:text-[#0A0A0A] transition-colors mb-4 block">
+                        <h3 className="text-sm font-black mb-3 text-[#0a0f1a] tracking-wide">Contatti telefonici</h3>
+                        <a href="tel:0958144954" className="text-2xl font-black text-[#55ABE4] hover:text-[#0a0f1a] transition-colors mb-4 block">
                           095 814 4954
                         </a>
                         <div className="space-y-2">
@@ -132,7 +132,7 @@ export default function ContattiPage() {
                             { ext: '05', name: 'Ufficio Operativo' },
                           ].map((item, idx) => (
                             <div key={idx} className="flex items-center gap-3 text-zinc-500 text-sm">
-                              <span className="w-7 h-7  bg-zinc-100 flex items-center justify-center text-xs font-black text-[#0A0A0A]">{item.ext}</span>
+                              <span className="w-7 h-7  bg-zinc-100 flex items-center justify-center text-xs font-black text-[#0a0f1a]">{item.ext}</span>
                               <span className="font-medium">{item.name}</span>
                             </div>
                           ))}
@@ -145,10 +145,10 @@ export default function ContattiPage() {
                   <FadeIn delay={200}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <Mail size={20} className="text-[#0A0A0A]" />
+                        <Mail size={20} className="text-[#0a0f1a]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-sm font-black mb-4 text-[#0A0A0A] tracking-wide">Email</h3>
+                        <h3 className="text-sm font-black mb-4 text-[#0a0f1a] tracking-wide">Email</h3>
                         <ul className="space-y-3">
                           {[
                             { label: 'Informazioni generali', email: 'trialuxsrl@gmail.com' },
@@ -160,7 +160,7 @@ export default function ContattiPage() {
                           ].map((item, idx) => (
                             <li key={idx} className="border-b border-zinc-100 pb-3">
                               <span className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-1">{item.label}</span>
-                              <a href={`mailto:${item.email}`} className="text-[#0A0A0A] text-sm font-semibold hover:text-[#EE2430] transition-colors">
+                              <a href={`mailto:${item.email}`} className="text-[#0a0f1a] text-sm font-semibold hover:text-[#EE2430] transition-colors">
                                 {item.email}
                               </a>
                             </li>
@@ -174,10 +174,10 @@ export default function ContattiPage() {
                   <FadeIn delay={250}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <Globe size={20} className="text-[#0A0A0A]" />
+                        <Globe size={20} className="text-[#0a0f1a]" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-black mb-2 text-[#0A0A0A] tracking-wide">LinkedIn</h3>
+                        <h3 className="text-sm font-black mb-2 text-[#0a0f1a] tracking-wide">LinkedIn</h3>
                         <p className="text-zinc-500 text-sm mb-3">
                           Seguici per aggiornamenti su cantieri, posizioni aperte e novità aziendali.
                         </p>
@@ -185,7 +185,7 @@ export default function ContattiPage() {
                           href="https://linkedin.com/company/trialux-srl"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-[#55ABE4] text-sm font-bold hover:text-[#0A0A0A] transition-colors"
+                          className="inline-flex items-center gap-2 text-[#55ABE4] text-sm font-bold hover:text-[#0a0f1a] transition-colors"
                         >
                           linkedin.com/company/trialux-srl <ArrowRight size={14} />
                         </a>
@@ -204,7 +204,7 @@ export default function ContattiPage() {
                         <span className="w-10 h-[2px] bg-[#EE2430]" />
                         <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Scrivici</span>
                       </div>
-                      <h3 className="text-2xl lg:text-3xl font-black mb-10 text-[#0A0A0A] tracking-tight">Invia una richiesta</h3>
+                      <h3 className="text-2xl lg:text-3xl font-black mb-10 text-[#0a0f1a] tracking-tight">Invia una richiesta</h3>
                       <form className="space-y-6">
                         <div>
                           <label htmlFor="name" className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Nome e cognome *</label>
@@ -212,7 +212,7 @@ export default function ContattiPage() {
                             type="text"
                             id="name"
                             required
-                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
                             placeholder="Mario Rossi"
                           />
                         </div>
@@ -221,7 +221,7 @@ export default function ContattiPage() {
                           <input
                             type="text"
                             id="company"
-                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
                             placeholder="Nome azienda"
                           />
                         </div>
@@ -232,7 +232,7 @@ export default function ContattiPage() {
                               type="email"
                               id="email"
                               required
-                              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
+                              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#000080] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
                               placeholder="mario@esempio.it"
                             />
                           </div>
@@ -241,7 +241,7 @@ export default function ContattiPage() {
                             <input
                               type="tel"
                               id="phone"
-                              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400"
+                              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
                               placeholder="+39"
                             />
                           </div>
@@ -251,7 +251,7 @@ export default function ContattiPage() {
                           <select
                             id="subject"
                             required
-                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] cursor-pointer appearance-none"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] cursor-pointer appearance-none"
                           >
                             <option value="" disabled>Seleziona l'argomento</option>
                             <option value="commerciale">Richiesta commerciale</option>
@@ -266,7 +266,7 @@ export default function ContattiPage() {
                             id="message"
                             required
                             rows={4}
-                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0A0A0A] placeholder:text-zinc-400 resize-none"
+                            className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400 resize-none"
                             placeholder="Scrivi qui la tua richiesta..."
                           />
                         </div>
@@ -283,7 +283,7 @@ export default function ContattiPage() {
                         </div>
                         <button
                           type="submit"
-                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0A0A0A] text-white font-bold hover:bg-[#F0921E] transition-colors group"
+                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0a0f1a] text-white font-bold hover:bg-[#F0921E] transition-colors group"
                         >
                           <span>Invia messaggio</span>
                           <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

@@ -7,7 +7,7 @@ import '../style.css'
 
 export default function CertificazioniPage() {
   return (
-    <div className="bg-white min-h-screen text-[#0A0A0A] font-sans">
+    <div className="bg-white min-h-screen text-[#0a0f1a] font-sans">
       <Header />
 
       <main className="w-full">
@@ -23,10 +23,10 @@ export default function CertificazioniPage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
           <div className="container-wide relative z-10 w-full">
@@ -56,7 +56,7 @@ export default function CertificazioniPage() {
                   <span className="w-10 h-[2px] bg-[#F0921E]" />
                   <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Standard Internazionali</span>
                 </div>
-                <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#0A0A0A] leading-[1.15]">
+                <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#0a0f1a] leading-[1.15]">
                   Certificazioni ISO.
                 </h2>
               </FadeIn>
@@ -168,12 +168,12 @@ export default function CertificazioniPage() {
               </div>
               
               <FadeIn delay={300} className="relative aspect-[4/5] overflow-hidden group">
-                <img 
-                  src="/images/Trialux 20.jpg" 
-                  alt="Ufficio Qualità" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] to-transparent opacity-40" />
+                  <img 
+                    src="/images/Trialux 20.jpg" 
+                    alt="Ufficio Qualità" 
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] to-transparent opacity-40" />
               </FadeIn>
             </div>
           </div>
@@ -194,7 +194,7 @@ export default function CertificazioniPage() {
                         <span className="w-10 h-[2px] bg-[#F0921E]" />
                         <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Etica Aziendale</span>
                       </div>
-                      <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#0A0A0A] leading-[1.1] mb-6">
+                      <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#0a0f1a] leading-[1.1] mb-6">
                         Segnalazione di condotte illecite.
                       </h2>
                     </FadeIn>
@@ -206,7 +206,7 @@ export default function CertificazioniPage() {
                         href="https://trialux.segnalazioni.eu"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-4 px-10 py-5 bg-[#0A0A0A] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
+                        className="inline-flex items-center gap-4 px-10 py-5 bg-[#0a0f1a] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
                       >
                         <span>Accedi alla piattaforma</span>
                         <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
