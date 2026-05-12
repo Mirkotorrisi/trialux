@@ -40,7 +40,7 @@ export default async function HomePage() {
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-bold tracking-[0.25em] uppercase text-[10px]">Trialux S.r.l.</span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 L’energia che muove <br className="hidden md:block" /> il territorio.
               </h1>
             </FadeIn>
@@ -73,11 +73,12 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Chi siamo</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6 uppercase">
-                    Un’azienda costruita <br className="hidden md:block" /> sulla competenza.
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6">
+                    Un’azienda costruita <br />
+                    sulla competenza.
                   </h2>
                 </FadeIn>
-                <FadeIn delay={150}>
+                <FadeIn delay={200} effect="mask">
                   <p className="text-zinc-500 text-sm md:text-base leading-relaxed mb-8 max-w-lg">
                     Fondata nel 2021 da Salvatore Salamone, Trialux è cresciuta rapidamente fino a diventare un riferimento nel settore dell’impiantistica elettrica in Sicilia. Oggi operiamo con oltre 100 professionisti qualificati, serviamo i principali operatori del settore energetico — tra cui E-Distribuzione — e lavoriamo ogni giorno per garantire reti sicure ed efficienti.
                   </p>
@@ -87,7 +88,7 @@ export default async function HomePage() {
                   </Link>
                 </FadeIn>
               </div>
-              <FadeIn delay={400} className="lg:col-span-5">
+              <FadeIn className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <Parallax offset={40} className="w-full h-full">
                     <img 
@@ -131,17 +132,30 @@ export default async function HomePage() {
         {/* ── 1.4 SEZIONE SERVIZI (Premium Industrial Cards) ─────────── */}
         <section className="bg-white py-16 md:py-32">
           <div className="container-wide">
-            <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-16">
-              <FadeIn effect="mask">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="w-10 h-[2px] bg-[#EE2430]" />
-                  <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Cosa facciamo</span>
-                </div>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] uppercase">
-                  Soluzioni per l'energia.
-                </h2>
-              </FadeIn>
-              <Link href="/servizi" className="tri-btn tri-btn-outline-dark px-8 py-4 text-[11px]">Tutti i servizi</Link>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-8">
+              <div className="max-w-2xl">
+                <FadeIn effect="mask">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="w-10 h-[2px] bg-[#EE2430]" />
+                    <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Cosa facciamo</span>
+                  </div>
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1]">
+                    Soluzioni per l'energia.
+                  </h2>
+                </FadeIn>
+              </div>
+
+              <div className="w-full md:w-auto flex justify-start md:justify-end">
+                <FadeIn delay={200}>
+                  <Link
+                    href="/servizi"
+                    className="group inline-flex items-center gap-4 px-8 py-4 border-[1px] border-zinc-200 hover:border-[#0A0A0A] text-[#0A0A0A] font-bold uppercase tracking-widest text-xs transition-all duration-500 hover:bg-[#0A0A0A] hover:text-white"
+                  >
+                    <span>Tutti i servizi</span>
+                    <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
+                  </Link>
+                </FadeIn>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
@@ -185,9 +199,11 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Qualità certificata</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8 uppercase">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8">
                     Garantiamo l’eccellenza operativa.
                   </h2>
+                </FadeIn>
+                <FadeIn delay={200} effect="mask">
                   <p className="text-white/50 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
                     Operiamo con sistemi di gestione certificati ISO 9001, 14001 e 45001. Siamo iscritti alla White List e titolari del Rating di Legalità a due stelle.
                   </p>
@@ -220,9 +236,11 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.2em] uppercase text-[11px]">Il nostro network</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8">
                     Partner & Sponsor.
                   </h2>
+                </FadeIn>
+                <FadeIn delay={200} effect="mask">
                   <p className="text-zinc-500 text-sm md:text-base leading-relaxed max-w-md">
                     Collaboriamo con le principali realtà dell’energia e sosteniamo il territorio attraverso partnership solide, fondate sulla condivisione di valori e obiettivi di crescita.
                   </p>
@@ -269,14 +287,16 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Lavora con noi</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-8 uppercase">Costruiamo il futuro.</h2>
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-8">Costruiamo il futuro.</h2>
+                </FadeIn>
+                <FadeIn delay={200} effect="mask">
                   <p className="text-zinc-500 text-sm md:text-base leading-relaxed mb-10 max-w-xl">
                     Stiamo crescendo e cerchiamo professionisti appassionati. Se hai esperienza nel settore elettrico, c’è posto per te in Trialux.
                   </p>
                   <Link href="/career" className="tri-btn tri-btn-outline-dark px-8 py-4 text-[11px]">Vedi posizioni aperte</Link>
                 </FadeIn>
               </div>
-              <FadeIn delay={400} className="aspect-video overflow-hidden group">
+              <FadeIn className="aspect-video overflow-hidden group">
                 <Parallax offset={30} className="w-full h-full">
                   <img 
                     src="/images/Trialux 3.jpg" 

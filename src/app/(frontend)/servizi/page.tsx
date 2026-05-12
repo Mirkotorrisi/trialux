@@ -64,7 +64,7 @@ export default function ServiziPage() {
       <main className="w-full">
 
         {/* ── HERO ────────────────────────────────────────────────── */}
-        <section className="relative w-full h-[70vh] md:h-[80vh] min-h-[480px] flex flex-col justify-end overflow-hidden pb-16 md:pb-24 lg:pb-32 bg-zinc-950">
+        <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40 bg-zinc-950">
           <div className="absolute inset-0">
             <Parallax offset={60} className="w-full h-full">
               <img
@@ -76,18 +76,21 @@ export default function ServiziPage() {
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
-          <div className="container-wide relative z-10 pb-16">
+          <div className="container-wide relative z-10">
             <FadeIn delay={0} effect="mask">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-bold tracking-[0.2em] uppercase text-[10px]">Trialux S.r.l.</span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 max-w-3xl">
                 I nostri servizi.
               </h1>
+            </FadeIn>
+            <FadeIn delay={200} effect="mask">
               <p className="text-white/60 text-base md:text-xl max-w-xl">
                 Soluzioni complete per infrastrutture elettriche di media e bassa tensione.
               </p>
@@ -111,9 +114,11 @@ export default function ServiziPage() {
                     <span className={`text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block ${srv.isDark ? 'text-[#55ABE4]' : 'text-[#55ABE4]'}`}>
                       {srv.cat}
                     </span>
-                    <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 uppercase ${srv.isDark ? 'text-white' : 'text-[#0A0A0A]'}`}>
+                    <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 ${srv.isDark ? 'text-white' : 'text-[#0A0A0A]'}`}>
                       {srv.title}
                     </h2>
+                  </FadeIn>
+                  <FadeIn delay={200} effect="mask">
                     <p className={`text-sm md:text-base leading-relaxed mb-10 max-w-lg ${srv.isDark ? 'text-white/60' : 'text-zinc-500'}`}>
                       {srv.desc}
                     </p>
@@ -124,7 +129,7 @@ export default function ServiziPage() {
                 </div>
 
                 <div className={idx % 2 !== 0 ? 'lg:order-1' : ''}>
-                  <FadeIn delay={200}>
+                  <FadeIn>
                     <div className="aspect-video overflow-hidden group">
                       <img 
                         src={srv.img} 
@@ -162,7 +167,7 @@ export default function ServiziPage() {
               {/* Text Side */}
               <div className="lg:col-span-8">
                 <FadeIn effect="mask">
-                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95] mb-4 uppercase">
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95] mb-4">
                     Insieme, accendiamo <br />
                     <span className="text-white/50 group-hover:text-white transition-colors duration-500">il vostro futuro.</span>
                   </h2>

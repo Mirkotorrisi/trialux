@@ -30,18 +30,16 @@ export const FadeIn: React.FC<FadeInProps> = ({
     none: { x: 0, y: 0 }
   }
 
-  const initial = effect === 'mask' 
-    ? { y: 60, opacity: 0 } 
-    : { ...directions[direction], opacity: 0 }
+  const initial = { ...directions[direction], opacity: 0 }
 
   const animate = { x: 0, y: 0, opacity: 1 }
 
   if (effect === 'scale') {
     return (
       <motion.div
-        initial={{ opacity: 0, scale: 0.96, y: 20 }}
+        initial={{ opacity: 0, scale: 0.98, y: distance }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true, margin: "-40px" }}
+        viewport={{ once: true, margin: "-5%", amount: 0.1 }}
         transition={{
           duration: duration,
           delay: delay / 1000,
@@ -58,11 +56,11 @@ export const FadeIn: React.FC<FadeInProps> = ({
     return (
       <div className={`overflow-hidden ${className}`}>
         <motion.div
-          initial={{ y: "100%", opacity: 0 }}
+          initial={{ y: distance, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
+          viewport={{ once: true, margin: "-5%", amount: 0.1 }}
           transition={{
-            duration: 1,
+            duration: duration,
             delay: delay / 1000,
             ease: [0.16, 1, 0.3, 1]
           }}
@@ -77,11 +75,11 @@ export const FadeIn: React.FC<FadeInProps> = ({
     <motion.div
       initial={initial}
       whileInView={animate}
-      viewport={{ once: true, margin: "-40px" }}
+      viewport={{ once: true, margin: "-5%", amount: 0.1 }}
       transition={{
         duration: duration,
         delay: delay / 1000,
-        ease: [0.16, 1, 0.3, 1]
+        ease: [0.16, 1, 0.16, 1]
       }}
       className={className}
     >

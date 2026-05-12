@@ -36,7 +36,7 @@ export default function ChiSiamoPage() {
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-bold tracking-[0.25em] uppercase text-[10px]">Trialux S.r.l.</span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 Chi siamo.
               </h1>
             </FadeIn>
@@ -58,11 +58,11 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">La storia</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-8">
                     La nostra storia.
                   </h2>
                 </FadeIn>
-                <FadeIn delay={150}>
+                <FadeIn delay={200} effect="mask">
                   <div className="space-y-6 text-zinc-500 text-sm md:text-base leading-relaxed mb-10 max-w-2xl">
                     <p>
                       Trialux S.r.l. nasce nel 2021 per volontà dell’imprenditore Salvatore Salamone, con un obiettivo chiaro: portare nel settore dell’impiantistica elettrica un modello operativo fondato su qualità, affidabilità e attenzione al territorio.
@@ -76,7 +76,7 @@ export default function ChiSiamoPage() {
                   </div>
                 </FadeIn>
               </div>
-              <FadeIn delay={200} className="lg:col-span-5">
+              <FadeIn className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <img 
                     src="/images/Trialux 5.jpg" 
@@ -93,7 +93,7 @@ export default function ChiSiamoPage() {
         <section className="section-dark py-16 md:py-32 border-y border-white/5 relative overflow-hidden">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              <FadeIn delay={400} className="aspect-square bg-zinc-900/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
+              <FadeIn className="aspect-square bg-zinc-900/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
                 <div className="relative z-10 w-full px-12">
                    <div className="flex items-center justify-center">
                      <img src="/images/logo-white.png" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />
@@ -106,9 +106,11 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Il marchio</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8 uppercase">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8">
                     Il nostro marchio.
                   </h2>
+                </FadeIn>
+                <FadeIn delay={200} effect="mask">
                   <p className="text-white/50 text-base leading-relaxed mb-6">
                     Il logo di Trialux nasce da un’idea semplice e significativa: tre foglie, tre persone, un’unica direzione. Ideato insieme ai tre figli di Salvatore Salamone, il simbolo racconta il carattere familiare e generazionale dell’azienda, senza rinunciare alla proiezione verso il futuro.
                   </p>
@@ -133,9 +135,11 @@ export default function ChiSiamoPage() {
                   <span className="w-10 h-[2px] bg-[#EE2430]" />
                   <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Organizzazione</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6 uppercase">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-6">
                   La nostra struttura.
                 </h2>
+              </FadeIn>
+              <FadeIn delay={200} effect="mask">
                 <p className="text-zinc-500 text-base leading-relaxed">
                   Trialux è organizzata con una struttura chiara, che garantisce presidio su ogni area operativa: dalla direzione tecnica alla gestione dei cantieri, dall’amministrazione alle risorse umane. Ogni funzione ha un responsabile definito e ruoli precisi, perché la chiarezza interna si traduce in affidabilità verso i clienti e le stazioni appaltanti.
                 </p>
@@ -157,9 +161,11 @@ export default function ChiSiamoPage() {
                   <span className="w-10 h-[2px] bg-[#55ABE4]" />
                   <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Performance</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-8 uppercase">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-8">
                   Trialux in numeri.
                 </h2>
+              </FadeIn>
+              <FadeIn delay={200} effect="mask">
                 <p className="text-white/50 text-base leading-relaxed">
                   La crescita di un’azienda si misura nei risultati. Dal 2021 a oggi, ogni indicatore racconta una storia di sviluppo solido e progressivo.
                 </p>
@@ -198,9 +204,11 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Impegno Sociale</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0A0A0A] leading-[1.1] mb-8">
                     Il territorio che sosteniamo.
                   </h2>
+                </FadeIn>
+                <FadeIn delay={200} effect="mask">
                   <p className="text-zinc-500 text-base leading-relaxed mb-8">
                     Trialux crede nel valore del radicamento locale. Per questo sosteniamo due realtà sportive del territorio siciliano: il <strong className="text-[#0A0A0A]">Catania Football Club S.r.l.</strong> e la <strong className="text-[#0A0A0A]">SSD Biancavilla Calcio Academy</strong>. 
                   </p>

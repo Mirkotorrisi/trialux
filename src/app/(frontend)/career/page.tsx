@@ -50,7 +50,7 @@ export default async function CareerPage() {
       <main className="w-full">
         
         {/* ── 5.1 INTESTAZIONE PAGINA ── */}
-        <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
+        <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
@@ -60,10 +60,10 @@ export default async function CareerPage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-[#0A0A0A]/20" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 to-transparent w-full md:w-[60%]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
           </div>
 
           <div className="container-wide relative z-10 w-full">
@@ -72,7 +72,7 @@ export default async function CareerPage() {
                 <span className="w-8 h-[1.5px] bg-[#55ABE4]" />
                 <span className="text-[#55ABE4] font-semibold tracking-[0.25em] uppercase text-[10px] md:text-[11px]">Career</span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl uppercase">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 md:mb-6 max-w-3xl">
                 Lavora con noi.
               </h1>
             </FadeIn>
@@ -96,7 +96,7 @@ export default async function CareerPage() {
                   <span className="w-10 h-[2px] bg-[#55ABE4]" />
                   <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">I nostri valori</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-8 uppercase">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0A0A0A] leading-[1.1] mb-8">
                   Perché scegliere Trialux.
                 </h2>
               </FadeIn>
@@ -143,7 +143,7 @@ export default async function CareerPage() {
                       <div className="mb-8 transition-all duration-500 group-hover:scale-110 group-hover:!text-white" style={{ color: item.color }}>
                         {item.icon}
                       </div>
-                      <h3 className="text-xl font-black mb-4 tracking-tighter leading-tight uppercase group-hover:text-white transition-colors">
+                      <h3 className="text-xl font-black mb-4 tracking-tighter leading-tight group-hover:text-white transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-zinc-500 text-sm leading-relaxed group-hover:text-white/90 transition-colors">
@@ -163,18 +163,20 @@ export default async function CareerPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
               
               <div className="py-8">
-                <FadeIn effect="mask">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="w-10 h-[2px] bg-[#EE2430]" />
-                    <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Competenze tecniche</span>
-                  </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.1] mb-6 uppercase">
-                    Profili ricercati.
-                  </h2>
-                  <p className="text-white/50 text-base leading-relaxed mb-12 max-w-xl">
-                    Operiamo principalmente con le seguenti figure professionali. Se rientri in uno di questi profili o hai un’esperienza affine, candidati.
-                  </p>
-                </FadeIn>
+                  <FadeIn effect="mask">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="w-10 h-[2px] bg-[#EE2430]" />
+                      <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Competenze tecniche</span>
+                    </div>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.1] mb-6">
+                      Profili ricercati.
+                    </h2>
+                  </FadeIn>
+                  <FadeIn delay={200} effect="mask">
+                    <p className="text-white/50 text-base leading-relaxed mb-12 max-w-xl">
+                      Operiamo principalmente con le seguenti figure professionali. Se rientri in uno di questi profili o hai un’esperienza affine, candidati.
+                    </p>
+                  </FadeIn>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-1 mb-12">
                   {[
@@ -186,7 +188,7 @@ export default async function CareerPage() {
                     { title: 'Operatore Mezzi Speciali / OMS', desc: 'conduzione mezzi' },
                   ].map((item, idx) => (
                     <FadeIn key={idx} delay={idx * 50} className="py-6 border-b border-white/10">
-                      <h4 className="font-black text-white text-sm uppercase tracking-tight mb-1">{item.title}</h4>
+                      <h4 className="font-black text-white text-sm tracking-tight mb-1">{item.title}</h4>
                       <p className="text-white/40 text-xs">{item.desc}</p>
                     </FadeIn>
                   ))}
@@ -199,7 +201,7 @@ export default async function CareerPage() {
                 </FadeIn>
               </div>
 
-              <FadeIn delay={400} className="relative min-h-[400px] lg:min-h-full overflow-hidden group">
+              <FadeIn className="relative min-h-[400px] lg:min-h-full overflow-hidden group">
                 <img 
                   src="/images/Trialux 15.jpg" 
                   alt="Cantiere Operativo" 
@@ -220,9 +222,11 @@ export default async function CareerPage() {
                     <span className="w-10 h-[2px] bg-[#F0921E]" />
                     <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Opportunità</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter leading-[1] mb-6 uppercase">
+                  <h2 className="text-3xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter leading-[1] mb-6">
                     Posizioni aperte.
                   </h2>
+                </FadeIn>
+                <FadeIn delay={200} effect="mask">
                   <p className="text-zinc-500 text-sm leading-relaxed mb-10 max-w-xs">
                     Trova la posizione adatta al tuo profilo. Se non trovi nulla di specifico, scrivici comunque.
                   </p>
@@ -242,7 +246,7 @@ export default async function CareerPage() {
                               {job.department && (
                                 <span className="text-[10px] font-black text-[#55ABE4] group-hover:text-white uppercase tracking-[0.2em] mb-2 block">{job.department}</span>
                               )}
-                              <h3 className="text-xl font-black text-[#0A0A0A] group-hover:text-white tracking-tighter uppercase mb-2">{job.jobTitle}</h3>
+                              <h3 className="text-xl font-black text-[#0A0A0A] group-hover:text-white tracking-tighter mb-2">{job.jobTitle}</h3>
                               {descriptionPreview && (
                                 <p className="text-zinc-500 text-sm group-hover:text-white/80 line-clamp-2 leading-relaxed">
                                   {descriptionPreview}
