@@ -21,7 +21,7 @@ export default async function HomePage() {
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
-                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop"
+                src="/images/Trialux 1.jpg"
                 alt="Cantiere Trialux"
                 className="w-full h-[120%] object-cover scale-[1.1] transition-transform duration-[10s] ease-out"
                 style={{ transformOrigin: 'center bottom' }}
@@ -91,7 +91,7 @@ export default async function HomePage() {
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <Parallax offset={40} className="w-full h-full">
                     <img 
-                      src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069" 
+                      src="/images/Trialux 2.jpg" 
                       alt="Trialux Team" 
                       className="w-full h-[115%] object-cover transition-transform duration-1000 group-hover:scale-110" 
                     />
@@ -146,9 +146,9 @@ export default async function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
               {[
-                { title: 'Cavi MT/BT', desc: 'Sotterranei e aerei', img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070' },
-                { title: 'Cabine Elettriche', desc: 'Manutenzione e posa', img: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=2070' },
-                { title: 'Opere Murarie', desc: 'Scavi e movimento terra', img: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070' },
+                { title: 'Cavi MT/BT', desc: 'Sotterranei e aerei', img: '/images/Trialux 22.jpg' },
+                { title: 'Cabine Elettriche', desc: 'Manutenzione e posa', img: '/images/Trialux 23.jpg' },
+                { title: 'Opere Murarie', desc: 'Scavi e movimento terra', img: '/images/Trialux 24.jpg' },
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
                   <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0A0A0A]">
@@ -279,7 +279,7 @@ export default async function HomePage() {
               <FadeIn delay={400} className="aspect-video overflow-hidden group">
                 <Parallax offset={30} className="w-full h-full">
                   <img 
-                    src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069" 
+                    src="/images/Trialux 3.jpg" 
                     alt="Team" 
                     className="w-full h-[120%] object-cover transition-transform duration-1000 group-hover:scale-110" 
                   />

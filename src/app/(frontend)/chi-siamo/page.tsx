@@ -18,7 +18,7 @@ export default function ChiSiamoPage() {
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
-                src="https://images.unsplash.com/photo-1541888086425-d81bb19480f5?q=80&w=2070&auto=format&fit=crop"
+                src="/images/Trialux 4.jpg"
                 alt="Cantiere Trialux"
                 className="w-full h-[120%] object-cover scale-[1.1]"
               />
@@ -79,7 +79,7 @@ export default function ChiSiamoPage() {
               <FadeIn delay={200} className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <img 
-                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070" 
+                    src="/images/Trialux 5.jpg" 
                     alt="Eccellenza Tecnica" 
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                   />
@@ -216,7 +216,7 @@ export default function ChiSiamoPage() {
               </div>
               <FadeIn delay={200} className="aspect-video overflow-hidden group">
                 <img 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070" 
+                  src="/images/Trialux 25.jpg" 
                   alt="Supporto al Territorio" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                 />
