@@ -1,6 +1,7 @@
 import { Header } from '../_components/Header'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
+import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { ArrowRight, Rss } from 'lucide-react'
 import { FadeIn } from '../_components/FadeIn'
@@ -56,11 +57,13 @@ export default async function NewsPage() {
         {/* ── 1. HERO (ALLINEATA AL RESTO DEL SITO) ── */}
         <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop"
-              alt="News e Blog"
-              className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-110"
-            />
+            <Parallax offset={80} className="w-full h-full">
+              <img
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop"
+                alt="News e Blog"
+                className="w-full h-[120%] object-cover transition-transform duration-[10s] hover:scale-110"
+              />
+            </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
             

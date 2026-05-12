@@ -1,5 +1,6 @@
 import { Header } from '../_components/Header'
 import { Briefcase, ArrowRight, GraduationCap, Users, TrendingUp } from 'lucide-react'
+import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
@@ -51,11 +52,13 @@ export default async function CareerPage() {
         {/* ── 5.1 INTESTAZIONE PAGINA ── */}
         <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069&auto=format&fit=crop"
-              alt="Lavora con Trialux"
-              className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-110"
-            />
+            <Parallax offset={80} className="w-full h-full">
+              <img
+                src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069&auto=format&fit=crop"
+                alt="Lavora con Trialux"
+                className="w-full h-[120%] object-cover transition-transform duration-[10s] hover:scale-110"
+              />
+            </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
             
@@ -196,7 +199,7 @@ export default async function CareerPage() {
                 </FadeIn>
               </div>
 
-              <FadeIn delay={200} className="relative min-h-[400px] lg:min-h-full overflow-hidden group">
+              <FadeIn delay={400} className="relative min-h-[400px] lg:min-h-full overflow-hidden group">
                 <img 
                   src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070" 
                   alt="Cantiere Operativo" 

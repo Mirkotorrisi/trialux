@@ -5,6 +5,7 @@ import { Header } from './_components/Header'
 import { FadeIn } from './_components/FadeIn'
 import './style.css'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Parallax } from './_components/Parallax'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -18,12 +19,14 @@ export default async function HomePage() {
         {/* ── 1.1 HERO ────────────────────────────────────────────────── */}
         <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop"
-              alt="Cantiere Trialux"
-              className="w-full h-full object-cover scale-[1.04] transition-transform duration-[10s] ease-out"
-              style={{ transformOrigin: 'center bottom' }}
-            />
+            <Parallax offset={80} className="w-full h-full">
+              <img
+                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop"
+                alt="Cantiere Trialux"
+                className="w-full h-[120%] object-cover scale-[1.1] transition-transform duration-[10s] ease-out"
+                style={{ transformOrigin: 'center bottom' }}
+              />
+            </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
             
@@ -84,13 +87,15 @@ export default async function HomePage() {
                   </Link>
                 </FadeIn>
               </div>
-              <FadeIn delay={200} className="lg:col-span-5">
+              <FadeIn delay={400} className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
-                  <img 
-                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069" 
-                    alt="Trialux Team" 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  />
+                  <Parallax offset={40} className="w-full h-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069" 
+                      alt="Trialux Team" 
+                      className="w-full h-[115%] object-cover transition-transform duration-1000 group-hover:scale-110" 
+                    />
+                  </Parallax>
                 </div>
               </FadeIn>
             </div>
@@ -271,13 +276,15 @@ export default async function HomePage() {
                   <Link href="/career" className="tri-btn tri-btn-outline-dark px-8 py-4 text-[11px]">Vedi posizioni aperte</Link>
                 </FadeIn>
               </div>
-              <div className="aspect-video overflow-hidden group">
-                <img 
-                  src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069" 
-                  alt="Team" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                />
-              </div>
+              <FadeIn delay={400} className="aspect-video overflow-hidden group">
+                <Parallax offset={30} className="w-full h-full">
+                  <img 
+                    src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=80&w=2069" 
+                    alt="Team" 
+                    className="w-full h-[120%] object-cover transition-transform duration-1000 group-hover:scale-110" 
+                  />
+                </Parallax>
+              </FadeIn>
             </div>
           </div>
         </section>

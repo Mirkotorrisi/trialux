@@ -1,5 +1,6 @@
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
+import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { ArrowRight, Zap, Radio, Building2, Battery, Hammer, Tractor, Shovel, HardHat } from 'lucide-react'
 import '../style.css'
@@ -65,11 +66,13 @@ export default function ServiziPage() {
         {/* ── HERO ────────────────────────────────────────────────── */}
         <section className="relative w-full h-[70vh] md:h-[80vh] min-h-[480px] flex flex-col justify-end overflow-hidden pb-16 md:pb-24 lg:pb-32 bg-zinc-950">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069"
-              alt="Servizi Trialux"
-              className="w-full h-full object-cover opacity-60"
-            />
+            <Parallax offset={60} className="w-full h-full">
+              <img
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069"
+                alt="Servizi Trialux"
+                className="w-full h-[120%] object-cover opacity-60"
+              />
+            </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
             

@@ -1,5 +1,6 @@
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
+import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { ArrowRight, Award, Users, Target, ShieldCheck } from 'lucide-react'
 import { InteractiveOrgChart } from '../_components/OrgChart'
@@ -15,11 +16,13 @@ export default function ChiSiamoPage() {
         {/* ── 1. HERO (Intestazione pagina) ────────────────────────── */}
         <section className="relative w-full h-[80vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1541888086425-d81bb19480f5?q=80&w=2070&auto=format&fit=crop"
-              alt="Cantiere Trialux"
-              className="w-full h-full object-cover scale-[1.04]"
-            />
+            <Parallax offset={80} className="w-full h-full">
+              <img
+                src="https://images.unsplash.com/photo-1541888086425-d81bb19480f5?q=80&w=2070&auto=format&fit=crop"
+                alt="Cantiere Trialux"
+                className="w-full h-[120%] object-cover scale-[1.1]"
+              />
+            </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
 
@@ -90,7 +93,7 @@ export default function ChiSiamoPage() {
         <section className="section-dark py-16 md:py-32 border-y border-white/5 relative overflow-hidden">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              <FadeIn delay={100} className="aspect-square bg-zinc-900/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
+              <FadeIn delay={400} className="aspect-square bg-zinc-900/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
                 <div className="relative z-10 w-full px-12">
                    <div className="flex items-center justify-center">
                      <img src="/images/logo-white.png" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />

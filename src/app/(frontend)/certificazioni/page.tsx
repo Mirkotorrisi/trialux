@@ -1,5 +1,6 @@
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
+import { Parallax } from '../_components/Parallax'
 import { ArrowUpRight, ShieldCheck, Leaf, HardHat, Scale, Globe, FileCheck } from 'lucide-react'
 import '../style.css'
 
@@ -13,11 +14,13 @@ export default function CertificazioniPage() {
         {/* ── 4.1 INTESTAZIONE PAGINA ────────────────────────── */}
         <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop"
-              alt="Certificazioni Trialux"
-              className="w-full h-full object-cover scale-[1.04]"
-            />
+            <Parallax offset={80} className="w-full h-full">
+              <img
+                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop"
+                alt="Certificazioni Trialux"
+                className="w-full h-[120%] object-cover scale-[1.1]"
+              />
+            </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
 

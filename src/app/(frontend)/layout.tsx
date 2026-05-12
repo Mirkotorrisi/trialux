@@ -2,6 +2,7 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import './style.css'
 import { Footer } from './_components/Footer'
+import { SmoothScroll } from './_components/SmoothScroll'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,6 +20,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="it" className={`${inter.variable}`}>
       <body className="bg-white text-[#0A0A0A] selection:bg-[#55ABE4] selection:text-white antialiased">
+        <SmoothScroll />
         {children}
         <Footer />
       </body>
