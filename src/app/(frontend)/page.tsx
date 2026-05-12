@@ -265,7 +265,7 @@ export default async function HomePage() {
                   <p className="text-zinc-500 text-base leading-relaxed mb-10 max-w-xl">
                     Stiamo crescendo e cerchiamo professionisti appassionati. Se hai esperienza nel settore elettrico, c’è posto per te in Trialux.
                   </p>
-                  <Link href="/lavora-con-noi" className="tri-btn tri-btn-outline-dark">Vedi posizioni aperte</Link>
+                  <Link href="/career" className="tri-btn tri-btn-outline-dark">Vedi posizioni aperte</Link>
                 </FadeIn>
               </div>
               <div className="aspect-video overflow-hidden group">

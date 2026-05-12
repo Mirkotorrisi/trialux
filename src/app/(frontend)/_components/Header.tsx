@@ -9,7 +9,7 @@ const navLinks = [
   { name: 'Chi siamo', href: '/chi-siamo' },
   { name: 'Servizi', href: '/servizi' },
   { name: 'Qualità', href: '/certificazioni' },
-  { name: 'Carriere', href: '/lavora-con-noi' },
+  { name: 'Career', href: '/career' },
   { name: 'News', href: '/news' },
 ]
 

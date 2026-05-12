@@ -35,14 +35,20 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-8 text-[#55ABE4]">Azienda</h4>
             <ul className="space-y-4 list-none p-0">
-              {['Chi siamo', 'Servizi', 'Qualità', 'Carriere', 'News', 'Contatti'].map((item) => (
-                <li key={item}>
-                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-zinc-400 text-sm hover:text-white transition-colors">
-                    {item}
+              {[
+                { name: 'Chi siamo', href: '/chi-siamo' },
+                { name: 'Servizi', href: '/servizi' },
+                { name: 'Qualità', href: '/certificazioni' },
+                { name: 'Carriere', href: '/career' },
+                { name: 'News', href: '/news' },
+                { name: 'Contatti', href: '/contatti' },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-zinc-400 text-sm hover:text-white transition-colors">
+                    {link.name}
                   </Link>
                 </li>
               ))}
