@@ -117,10 +117,10 @@ export default function ServiziPage() {
             )}
 
             <div className="container-wide relative z-10">
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-stretch ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                 
                 {/* Content */}
-                <div className={idx % 2 !== 0 ? 'lg:order-2' : ''}>
+                <div className={`flex flex-col justify-center py-8 ${idx % 2 !== 0 ? 'lg:order-2' : ''}`}>
                   <FadeIn effect="mask">
                     <div className="mb-6">{srv.icon}</div>
                     <span className={`text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block ${srv.isDark ? 'text-[#55ABE4]' : 'text-[#55ABE4]'}`}>
@@ -141,12 +141,12 @@ export default function ServiziPage() {
                 </div>
 
                 <div className={idx % 2 !== 0 ? 'lg:order-1' : ''}>
-                  <FadeIn>
-                    <div className="aspect-video overflow-hidden group">
+                  <FadeIn className="h-full">
+                    <div className="relative h-full min-h-[300px] md:min-h-[450px] overflow-hidden group">
                       <img 
                         src={srv.img} 
                         alt={srv.title} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                       />
                     </div>
                   </FadeIn>
