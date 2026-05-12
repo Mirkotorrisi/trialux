@@ -110,7 +110,7 @@ export default async function HomePage() {
                 { num: '2021', label: 'Anno di fondazione', color: '#55ABE4' },
                 { num: '+100', label: 'Professionisti in organico', color: '#F0921E' },
                 { num: 'MT/BT', label: 'Media e bassa tensione', color: '#EE2430' },
-                { num: '3 ISO', label: 'Certificazioni ISO', color: '#0A0A0A' },
+                { num: '3 ISO', label: 'Certificazioni ISO', color: '#0a0f1a' },
               ].map((stat, idx) => (
                 <FadeIn key={idx} delay={idx * 80}>
                   <div className="py-10 md:py-14 px-6 md:px-10 first:pl-6">
@@ -147,7 +147,7 @@ export default async function HomePage() {
                 <FadeIn delay={200}>
                   <Link
                     href="/servizi"
-                    className="group inline-flex items-center gap-4 px-8 py-4 border-[1px] border-zinc-200 hover:border-[#0A0A0A] text-[#0A0A0A] font-bold uppercase tracking-widest text-xs transition-all duration-500 hover:bg-[#0A0A0A] hover:text-white"
+                    className="group inline-flex items-center gap-4 px-8 py-4 border-[1px] border-zinc-200 hover:border-[#0a0f1a] text-[#0a0f1a] font-bold uppercase tracking-widest text-xs transition-all duration-500 hover:bg-[#0a0f1a] hover:text-white"
                   >
                     <span>Tutti i servizi</span>
                     <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
@@ -163,7 +163,7 @@ export default async function HomePage() {
                 { title: 'Opere Murarie', desc: 'Scavi e movimento terra', img: '/images/Trialux 24.jpg' },
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
-                  <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0A0A0A]">
+                  <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0a0f1a]">
                     <img 
                       src={s.img} 
                       alt={s.title} 

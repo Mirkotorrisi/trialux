@@ -17,7 +17,7 @@ interface Department {
 const teamData: Department[] = [
   {
     title: 'Founders & Leadership',
-    color: '#0A0A0A',
+    color: '#0a0f1a',
     members: [
       { role: 'Amministratore Unico', name: 'Salvatore Salamone' }
     ]
@@ -79,7 +79,7 @@ const MemberCard: React.FC<{ member: Member, color: string }> = ({ member, color
          <div className="absolute bottom-0 left-0 w-full h-[3px]" style={{ background: color, opacity: 0.3 }} />
       </div>
       <div>
-        <h4 className="text-base font-black text-[#0A0A0A] leading-tight mb-1">{member.name}</h4>
+        <h4 className="text-base font-black text-[#0a0f1a] leading-tight mb-1">{member.name}</h4>
         <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-zinc-400">{member.role}</p>
       </div>
     </div>
@@ -100,7 +100,7 @@ export const InteractiveOrgChart: React.FC = () => {
                   <div className="w-10 h-[2px]" style={{ background: dept.color }} />
                   <span className="font-bold uppercase tracking-[0.2em] text-[10px]" style={{ color: dept.color }}>Department</span>
                 </div>
-                <h3 className="text-3xl font-black tracking-tight text-[#0A0A0A]">{dept.title}</h3>
+                <h3 className="text-3xl font-black tracking-tight text-[#0a0f1a]">{dept.title}</h3>
               </div>
             </FadeIn>
           </div>
