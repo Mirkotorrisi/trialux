@@ -4,6 +4,7 @@ import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
+import { DecorativePattern } from '../_components/DecorativeArcs'
 import { FadeIn } from '../_components/FadeIn'
 import '../style.css'
 import { Job } from '@/payload-types'
@@ -157,7 +158,8 @@ export default async function CareerPage() {
         </section>
 
         {/* ── 5.3 PROFILI RICERCATI (DARK) ── */}
-        <section className="section-dark py-16 md:py-32 border-y border-white/5">
+        <section className="section-dark py-16 md:py-32 border-y border-white/5 relative overflow-hidden">
+          <DecorativePattern />
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
               
@@ -193,9 +195,9 @@ export default async function CareerPage() {
                   ))}
                 </div>
                 
-                <FadeIn delay={400} className="bg-zinc-50 p-8 border-l-[4px] border-[#F0921E]">
-                  <p className="text-zinc-600 text-sm font-medium leading-relaxed italic">
-                    Valutiamo anche candidature di <span className="text-[#0A0A0A] font-bold uppercase tracking-tight">profili junior</span> da inserire in affiancamento, con percorso di formazione e certificazione a carico aziendale.
+                <FadeIn delay={400} className="bg-white/5 border border-white/10 p-8 border-l-[4px] border-l-[#F0921E]">
+                  <p className="text-white/70 text-sm font-medium leading-relaxed italic">
+                    Valutiamo anche candidature di <span className="text-white font-bold uppercase tracking-tight">profili junior</span> da inserire in affiancamento, con percorso di formazione e certificazione a carico aziendale.
                   </p>
                 </FadeIn>
               </div>
