@@ -252,7 +252,7 @@ export default function CertificazioniPage() {
               {/* Action Side */}
               <div className="lg:col-span-4 flex lg:justify-end">
                 <FadeIn delay={200}>
-                  <Link href="/contatti" className="group relative px-12 py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[280px]">
+                  <Link href="/contatti" className="group relative px-8 py-5 md:px-12 md:py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[240px] md:min-w-[280px]">
                     <span className="relative z-10">Contattaci</span>
                     <ArrowUpRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
