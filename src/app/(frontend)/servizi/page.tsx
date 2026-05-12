@@ -1,6 +1,7 @@
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
 import { Parallax } from '../_components/Parallax'
+import { DecorativePattern, DecorativeArc } from '../_components/DecorativeArcs'
 import Link from 'next/link'
 import { ArrowRight, Zap, Radio, Building2, Battery, Hammer, Tractor, Shovel, HardHat } from 'lucide-react'
 import '../style.css'
@@ -98,9 +99,24 @@ export default function ServiziPage() {
         {services.map((srv, idx) => (
           <section 
             key={idx} 
-            className={`py-20 md:py-32 border-b border-zinc-100 ${srv.isDark ? 'section-dark' : 'bg-white'}`}
+            className={`py-20 md:py-32 border-b border-zinc-100 relative overflow-hidden ${srv.isDark ? 'section-dark' : 'bg-white'}`}
           >
-            <div className="container-wide">
+            {/* Variations of Decorative Patterns for Dark Sections */}
+            {srv.isDark && idx === 1 && <DecorativePattern />}
+            {srv.isDark && idx === 3 && (
+              <>
+                <DecorativeArc className="-top-32 -left-32 md:-top-64 md:-left-64" size={800} rotation={210} color="#55ABE4" opacity={0.02} />
+                <DecorativeArc className="-bottom-32 -right-32 md:-bottom-64 md:-right-64" size={1000} rotation={30} color="#55ABE4" opacity={0.03} />
+              </>
+            )}
+            {srv.isDark && idx === 5 && (
+              <>
+                <DecorativeArc className="-top-48 -right-64" size={1200} rotation={-30} color="#55ABE4" opacity={0.015} />
+                <DecorativeArc className="-bottom-64 -left-64" size={1000} rotation={150} color="#55ABE4" opacity={0.02} />
+              </>
+            )}
+
+            <div className="container-wide relative z-10">
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                 
                 {/* Content */}
