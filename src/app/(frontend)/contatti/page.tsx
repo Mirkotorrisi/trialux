@@ -18,6 +18,9 @@ export default function ContattiPage() {
               className="w-full h-full object-cover scale-[1.04] transition-transform duration-[10s] ease-out"
               style={{ transformOrigin: 'center center' }}
             />
+            {/* Top Shadow for Header Visibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
+
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/95 via-[#0A0A0A]/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/70 to-transparent" style={{ width: '60%' }} />
           </div>

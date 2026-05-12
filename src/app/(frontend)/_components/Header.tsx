@@ -13,34 +13,44 @@ const navLinks = [
   { name: 'News', href: '/news' },
 ]
 
-const Logo = ({ scrolled }: { scrolled: boolean }) => (
+const Logo = ({ isSolid }: { isSolid: boolean }) => (
   <img 
-    src={scrolled ? "/images/logo-black.png" : "/images/logo-white.png"} 
+    src={isSolid ? "/images/logo-black.png" : "/images/logo-white.png"} 
     alt="Trialux" 
     className="h-12 md:h-16 w-auto transition-all duration-300"
   />
 )
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  forceSolid?: boolean
+}
+
+export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
   const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40)
+      setScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const isSolid = scrolled || forceSolid
+
   return (
-    <div className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'bg-white shadow-sm border-b border-zinc-100' : 'bg-transparent'}`}>
+    <div className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
+      isSolid 
+        ? 'bg-white border-b border-zinc-100' 
+        : 'bg-transparent'
+    }`}>
       <header className="w-full flex items-center justify-between px-6 lg:px-16 h-[72px] md:h-[88px] max-w-[1400px] mx-auto">
 
         {/* Logo */}
         <Link href="/" className="z-50 relative flex items-center h-full">
-           <Logo scrolled={scrolled} />
+           <Logo isSolid={isSolid} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -54,7 +64,7 @@ export const Header: React.FC = () => {
                 className={`relative text-[11px] font-bold uppercase tracking-[0.15em] transition-all no-underline ${
                   isActive
                     ? 'text-[#55ABE4]'
-                    : scrolled
+                    : isSolid
                       ? 'text-zinc-500 hover:text-[#0A0A0A]'
                       : 'text-white/80 hover:text-white'
                 }`}
@@ -70,7 +80,7 @@ export const Header: React.FC = () => {
           <Link
             href="/contatti"
             className={`tri-btn header-btn ${
-              scrolled
+              isSolid
                 ? 'tri-btn-primary'
                 : 'tri-btn-outline'
             }`}
@@ -85,9 +95,9 @@ export const Header: React.FC = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
-          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? 'rotate-45 translate-y-[1px] bg-[#0A0A0A]' : scrolled ? 'bg-[#0A0A0A] -translate-y-[4px]' : 'bg-white -translate-y-[4px]'}`} />
-          <span className={`block h-[1.5px] w-6 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : scrolled ? 'bg-[#0A0A0A] opacity-100' : 'bg-white opacity-100'}`} />
-          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? '-rotate-45 -translate-y-[2px] bg-[#0A0A0A]' : scrolled ? 'bg-[#0A0A0A] translate-y-[4px]' : 'bg-white translate-y-[4px]'}`} />
+          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? 'rotate-45 translate-y-[1px] bg-[#0A0A0A]' : isSolid ? 'bg-[#0A0A0A] -translate-y-[4px]' : 'bg-white -translate-y-[4px]'}`} />
+          <span className={`block h-[1.5px] w-6 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : isSolid ? 'bg-[#0A0A0A] opacity-100' : 'bg-white opacity-100'}`} />
+          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? '-rotate-45 -translate-y-[2px] bg-[#0A0A0A]' : isSolid ? 'bg-[#0A0A0A] translate-y-[4px]' : 'bg-white translate-y-[4px]'}`} />
         </button>
       </header>
 

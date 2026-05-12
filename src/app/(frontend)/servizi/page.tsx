@@ -70,6 +70,9 @@ export default function ServiziPage() {
               alt="Servizi Trialux"
               className="w-full h-full object-cover opacity-60"
             />
+            {/* Top Shadow for Header Visibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
+            
             <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-transparent" />
           </div>
 

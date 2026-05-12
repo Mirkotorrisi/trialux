@@ -103,9 +103,10 @@ export const Footer = () => {
             <Link href="/privacy-policy" className="text-zinc-600 text-[10px] uppercase tracking-widest hover:text-white transition-colors">Privacy Policy</Link>
             <button 
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-zinc-400 text-[10px] uppercase tracking-widest hover:text-[#55ABE4] transition-colors group"
+              className="flex items-center gap-2 text-zinc-500 text-[10px] uppercase tracking-[0.2em] font-bold hover:text-white transition-all bg-transparent border-none p-0 cursor-pointer group"
             >
-              Back to top <ArrowUp size={14} className="group-hover:-translate-y-1 transition-transform" />
+              <span>Torna su</span>
+              <ArrowUp size={14} className="group-hover:-translate-y-1 transition-transform" />
             </button>
           </div>
         </div>

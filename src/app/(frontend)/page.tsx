@@ -24,6 +24,9 @@ export default async function HomePage() {
               className="w-full h-full object-cover scale-[1.04] transition-transform duration-[10s] ease-out"
               style={{ transformOrigin: 'center bottom' }}
             />
+            {/* Top Shadow for Header Visibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-transparent to-transparent h-40" />
+            
             <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/70 to-transparent w-full md:w-[60%]" />
           </div>

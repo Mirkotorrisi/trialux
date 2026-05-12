@@ -43,7 +43,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
 
   return (
     <div className="bg-white min-h-screen text-[#0A0A0A] selection:bg-[#55ABE4]/20 font-sans">
-      <Header />
+      <Header forceSolid />
       
       <main className="w-full relative overflow-hidden pt-[90px]">
         {/* Job Header */}
