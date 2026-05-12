@@ -10,7 +10,7 @@ const services = [
     cat: 'Cavi MT/BT sotterranei',
     title: 'Fornitura e posa di cavi sotterranei',
     desc: 'Progettiamo e realizziamo il posizionamento di cavi di media e bassa tensione interrati, comprese le operazioni di giunzione e terminazione. Lavoriamo con materiali di prima qualità e rispettiamo le normative tecniche vigenti per garantire impianti duraturi e sicuri.',
-    img: 'https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=2069',
+    img: '/images/Trialux 7.jpg',
     icon: <Zap size={32} className="text-[#55ABE4]" />,
     isDark: false
   },
@@ -18,7 +18,7 @@ const services = [
     cat: 'Linee aeree MT/BT',
     title: 'Linee aeree su palo e su traliccio',
     desc: 'Realizziamo linee aeree di media e bassa tensione, sia su palo che su traliccio, per la trasmissione e distribuzione di energia elettrica. Gestiamo l\'intera filiera operativa: progettazione del tracciato, fornitura dei materiali, installazione e collaudo.',
-    img: 'https://images.unsplash.com/photo-1473665516087-0b5c1fb98115?q=80&w=2070',
+    img: '/images/Trialux 8.jpg',
     icon: <Radio size={32} className="text-[#55ABE4]" />,
     isDark: true
   },
@@ -26,7 +26,7 @@ const services = [
     cat: 'Cabine secondarie MT/BT',
     title: 'Installazione di cabine di trasformazione',
     desc: 'Forniamo e installiamo cabine secondarie di media e bassa tensione per la distribuzione locale dell\'energia. Le nostre squadre sono qualificate per operare su impianti in media tensione e garantiscono esecuzioni a regola d\'arte.',
-    img: 'https://images.unsplash.com/photo-1590496794008-383c8070b257?q=80&w=2070',
+    img: '/images/Trialux 9.jpg',
     icon: <Building2 size={32} className="text-[#55ABE4]" />,
     isDark: false
   },
@@ -34,7 +34,7 @@ const services = [
     cat: 'Gruppi elettrogeni temporanei',
     title: 'Alimentazione temporanea di cantiere e emergenza',
     desc: 'Forniamo e installiamo in via temporanea gruppi elettrogeni per garantire la continuità di alimentazione durante interventi sulla rete o in situazioni di emergenza.',
-    img: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=2070',
+    img: '/images/Trialux 10.jpg',
     icon: <Battery size={32} className="text-[#55ABE4]" />,
     isDark: true
   },
@@ -42,7 +42,7 @@ const services = [
     cat: 'Scavi di trincea',
     title: 'Scavi con escavatori per la posa di cavi interrati',
     desc: 'Disponiamo di mezzi propri per l\'esecuzione di scavi di trincea necessari alla posa di cavi sotterranei. Operiamo in ambiente urbano ed extraurbano, coordinandoci con le autorità competenti.',
-    img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070',
+    img: '/images/Trialux 11.jpg',
     icon: <Shovel size={32} className="text-[#55ABE4]" />,
     isDark: false
   },
@@ -50,7 +50,7 @@ const services = [
     cat: 'Opere murarie',
     title: 'Opere edili a supporto degli impianti elettrici',
     desc: 'Eseguiamo le opere murarie necessarie alla realizzazione e protezione degli impianti: basamenti per cabine, tramezzi tecnici, chiusure e finiture. Una competenza complementare che ci permette di offrire un servizio realmente chiavi in mano.',
-    img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071',
+    img: '/images/Trialux 12.jpg',
     icon: <Hammer size={32} className="text-[#55ABE4]" />,
     isDark: true
   }
@@ -68,7 +68,7 @@ export default function ServiziPage() {
           <div className="absolute inset-0">
             <Parallax offset={60} className="w-full h-full">
               <img
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069"
+                src="/images/Trialux 6.jpg"
                 alt="Servizi Trialux"
                 className="w-full h-[120%] object-cover opacity-60"
               />
@@ -145,7 +145,7 @@ export default function ServiziPage() {
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070" 
+              src="/images/Trialux 21.jpg" 
               alt="Industrial Background" 
               className="w-full h-full object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
             />

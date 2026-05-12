@@ -16,7 +16,7 @@ export default function CertificazioniPage() {
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
-                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop"
+                src="/images/Trialux 13.jpg"
                 alt="Certificazioni Trialux"
                 className="w-full h-[120%] object-cover scale-[1.1]"
               />
@@ -169,7 +169,7 @@ export default function CertificazioniPage() {
               
               <FadeIn delay={300} className="relative aspect-[4/5] overflow-hidden group">
                 <img 
-                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071" 
+                  src="/images/Trialux 20.jpg" 
                   alt="Ufficio Qualità" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                 />

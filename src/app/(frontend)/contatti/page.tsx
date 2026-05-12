@@ -9,15 +9,16 @@ export default function ContattiPage() {
 
       <main className="w-full">
 
-        {/* ── 6.1 INTESTAZIONE PAGINA ────────────────────────── */}
-        <section className="relative w-full h-[70vh] md:h-screen min-h-[500px] md:min-h-[640px] flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40">
+        {/* ── 6.1 HERO ────────────────────────────────────────────── */}
+        <section className="relative w-full h-[70vh] md:h-[80vh] min-h-[480px] flex flex-col justify-end overflow-hidden pb-16 md:pb-24 lg:pb-32 bg-zinc-950">
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1577416412292-747c6607f055?q=80&w=2070&auto=format&fit=crop"
-              alt="Sede Trialux"
-              className="w-full h-full object-cover scale-[1.04] transition-transform duration-[10s] ease-out"
-              style={{ transformOrigin: 'center center' }}
-            />
+            <Parallax offset={80} className="w-full h-full">
+              <img
+                src="/images/Trialux 19.jpg"
+                alt="Contatti Trialux"
+                className="w-full h-[120%] object-cover opacity-60"
+              />
+            </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-transparent to-transparent h-40" />
 
