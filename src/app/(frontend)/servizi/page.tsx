@@ -83,12 +83,12 @@ export default function ServiziPage() {
 
           <div className="container-wide relative z-10">
             <FadeIn delay={0} effect="mask">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 max-w-3xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
                 I nostri servizi.
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white/60 text-base md:text-xl max-w-xl">
+              <p className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed">
                 Soluzioni complete per infrastrutture elettriche di media e bassa tensione.
               </p>
             </FadeIn>

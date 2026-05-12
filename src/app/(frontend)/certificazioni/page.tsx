@@ -38,10 +38,7 @@ export default function CertificazioniPage() {
               </h1>
             </FadeIn>
             <FadeIn delay={200} effect="mask">
-              <p className="text-white text-base md:text-xl font-medium max-w-2xl mb-6 md:mb-8 leading-relaxed">
-                Operiamo con sistemi di gestione certificati e standard riconosciuti a livello nazionale e internazionale.
-              </p>
-              <p className="text-white/60 text-xs md:text-base max-w-lg leading-relaxed">
+              <p className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed">
                 Per Trialux la qualità non è una dichiarazione d’intenti, è un sistema strutturato e verificato da enti terzi indipendenti. Le nostre certificazioni sono una garanzia concreta per chi decide di affidarci un lavoro.
               </p>
             </FadeIn>

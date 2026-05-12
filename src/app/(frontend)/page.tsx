@@ -113,7 +113,7 @@ export default async function HomePage() {
                 { num: '3 ISO', label: 'Certificazioni ISO', color: '#0a0f1a' },
               ].map((stat, idx) => (
                 <FadeIn key={idx} delay={idx * 80}>
-                  <div className="py-10 md:py-14 px-6 md:px-10 first:pl-6">
+                  <div className="py-10 md:py-14 px-6 md:px-10 flex flex-col items-center text-center">
                     <div className="text-3xl md:text-5xl font-black mb-2 tracking-tighter leading-none" style={{ color: stat.color }}>
                       {stat.num}
                     </div>
