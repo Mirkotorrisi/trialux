@@ -13,7 +13,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className="bg-[#050810] text-white pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
+    <footer className="bg-[#0a0f1a] text-white pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
       <DecorativeArc className="-top-32 -right-32 md:-top-64 md:-right-64" size={900} rotation={15} color="#55ABE4" opacity={0.015} />
       <DecorativeArc className="-bottom-48 -left-48 md:-bottom-96 md:-left-96" size={1200} rotation={195} color="#55ABE4" opacity={0.015} />
 
