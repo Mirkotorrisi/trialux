@@ -1,4 +1,4 @@
-import { withPayload } from '@payloadcms/next/withPayload'
+import { withPayload } from '@payloadcms/next/withPayload' // Force reload for fonts
 import type { NextConfig } from 'next'
 import path from 'path'
 import { fileURLToPath } from 'url'

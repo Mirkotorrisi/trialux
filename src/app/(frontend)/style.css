@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss/theme';
 @import 'tailwindcss/utilities';
+
+@theme {
+  --font-sans: "Urbanist", ui-sans-serif, system-ui, sans-serif;
+}
 
 @layer base {
   :root {
@@ -39,16 +44,14 @@
 }
 
 html, body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Urbanist", sans-serif !important;
   font-size: 17px;
   line-height: 1.6;
   background: #ffffff;
   color: #0a0f1a;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 a {
@@ -140,7 +143,6 @@ a:hover {
   background: radial-gradient(circle at center, #161e2e 0%, #0a0f1a 100%);
   color: #ffffff;
   position: relative;
-  overflow: hidden;
 }
 
 .section-data-light {
@@ -148,7 +150,6 @@ a:hover {
   border: 1px solid #e5e5e5;
   color: #0a0f1a;
   position: relative;
-  overflow: hidden;
 }
 
 /* =======================================

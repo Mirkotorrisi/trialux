@@ -6,7 +6,6 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { DecorativePattern } from '../_components/DecorativeArcs'
 import { FadeIn } from '../_components/FadeIn'
-import '../style.css'
 import { Job } from '@/payload-types'
 
 

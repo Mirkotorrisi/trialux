@@ -149,7 +149,7 @@ export default function ContattiPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-sm font-black mb-4 text-[#0a0f1a] tracking-wide">Email</h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 list-none p-0 m-0">
                           {[
                             { label: 'Informazioni generali', email: 'trialuxsrl@gmail.com' },
                             { label: 'Amministrazione e fatturazione', email: 'amministrazione@trialuxsrl.it' },
@@ -310,7 +310,7 @@ export default function ContattiPage() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Mappa Sede Trialux"
-              className="grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full"
             />
           </FadeIn>
         </section>

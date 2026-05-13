@@ -5,7 +5,6 @@ import { DecorativePattern } from '../_components/DecorativeArcs'
 import Link from 'next/link'
 import { ArrowRight, Award, Users, Target, ShieldCheck } from 'lucide-react'
 import { InteractiveOrgChart } from '../_components/OrgChart'
-import '../style.css'
 
 export default function ChiSiamoPage() {
   return (
@@ -15,7 +14,7 @@ export default function ChiSiamoPage() {
       <main className="w-full relative">
 
         {/* ── 1. HERO (Intestazione pagina) ────────────────────────── */}
-        <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
+        <section className="relative w-full flex flex-col justify-end pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
@@ -126,7 +125,7 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 4. ORGANIGRAMMA (La nostra struttura) ────────────────────── */}
-        <section className="bg-white py-16 md:py-32 border-t border-zinc-100 overflow-hidden">
+        <section className="bg-white py-16 md:py-32 border-t border-zinc-100">
           <div className="container-wide">
             <div className="max-w-3xl mb-24">
               <FadeIn effect="mask">
@@ -152,7 +151,7 @@ export default function ChiSiamoPage() {
         </section>
 
         {/* ── 5. I NUMERI ────────────────────────────────────────── */}
-        <section className="section-data-light py-16 md:py-24 relative overflow-hidden">
+        <section className="section-data-light py-16 md:py-24 relative">
           <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#55ABE4] via-[#F0921E] to-[#EE2430]" />
           <div className="container mx-auto px-6 lg:px-16 max-w-[1400px] relative z-10">
 

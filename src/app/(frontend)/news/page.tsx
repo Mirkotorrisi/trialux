@@ -5,7 +5,6 @@ import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { ArrowRight, Rss } from 'lucide-react'
 import { FadeIn } from '../_components/FadeIn'
-import '../style.css'
 
 export const metadata = {
   title: 'News & Aggiornamenti — Trialux',
