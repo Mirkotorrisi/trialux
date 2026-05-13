@@ -4,7 +4,6 @@ import { DecorativePattern } from '../_components/DecorativeArcs'
 import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { ArrowUpRight, ShieldCheck, Leaf, HardHat, Scale, Globe, FileCheck } from 'lucide-react'
-import '../style.css'
 
 export default function CertificazioniPage() {
   return (

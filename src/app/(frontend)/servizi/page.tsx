@@ -4,7 +4,6 @@ import { Parallax } from '../_components/Parallax'
 import { DecorativePattern, DecorativeArc } from '../_components/DecorativeArcs'
 import Link from 'next/link'
 import { ArrowRight, Zap, Radio, Building2, Battery, Hammer, Tractor, Shovel, HardHat } from 'lucide-react'
-import '../style.css'
 
 const services = [
   {
@@ -65,7 +64,7 @@ export default function ServiziPage() {
       <main className="w-full">
 
         {/* ── HERO ────────────────────────────────────────────────── */}
-        <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40 bg-zinc-950" style={{ height: '100dvh', minHeight: '100dvh' }}>
+        <section className="relative w-full flex flex-col justify-end pb-16 md:pb-32 lg:pb-40 bg-zinc-950" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={60} className="w-full h-full">
               <img
@@ -87,8 +86,8 @@ export default function ServiziPage() {
                 I nostri servizi.
               </h1>
             </FadeIn>
-            <FadeIn delay={200} effect="mask">
-              <p className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed">
+            <FadeIn delay={300} effect="fade">
+              <p className="text-zinc-200 text-base md:text-xl max-w-2xl leading-relaxed">
                 Soluzioni complete per infrastrutture elettriche di media e bassa tensione.
               </p>
             </FadeIn>
