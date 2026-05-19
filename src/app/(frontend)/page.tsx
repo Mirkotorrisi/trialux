@@ -154,9 +154,9 @@ export default async function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
               {[
-                { title: 'Cavi MT/BT', desc: 'Sotterranei e aerei', img: '/images/Trialux 22.jpg' },
-                { title: 'Cabine Elettriche', desc: 'Manutenzione e posa', img: '/images/Trialux 23.jpg' },
-                { title: 'Opere Murarie', desc: 'Scavi e movimento terra', img: '/images/Trialux 24.jpg' },
+                { tag: 'Infrastrutture', title: 'Cavi MT/BT', desc: 'Posa di cavi sotterranei e aerei, inclusi i sistemi di giunzione e terminazione.', img: '/images/Trialux 22.jpg' },
+                { tag: 'Impiantistica', title: 'Cabine Elettriche', desc: 'Installazione e manutenzione di cabine secondarie per la distribuzione locale.', img: '/images/Trialux 23.jpg' },
+                { tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 24.jpg' },
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
                   <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0a0f1a]">
@@ -167,13 +167,16 @@ export default async function HomePage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
                     
-                    <div className="absolute bottom-10 left-10 right-10 flex items-end justify-between">
-                      <div>
-                        <h3 className="text-2xl font-black text-white mb-2 tracking-tighter leading-none group-hover:text-[#F0921E] transition-colors">{s.title}</h3>
-                        <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">{s.desc}</p>
-                      </div>
-                      <div className="w-10 h-10 border border-white/20 flex items-center justify-center text-white group-hover:bg-[#F0921E] group-hover:border-[#F0921E] transition-all transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
-                        <ArrowRight size={16} />
+                    <div className="absolute inset-x-10 bottom-10 flex flex-col justify-end">
+                      <span className="text-[#F0921E] text-[10px] font-bold uppercase tracking-[0.2em] mb-3 block">{s.tag}</span>
+                      <div className="flex items-end justify-between gap-4">
+                        <div className="pr-4">
+                          <h3 className="text-2xl font-black text-white mb-2 tracking-tighter leading-none group-hover:text-[#F0921E] transition-colors">{s.title}</h3>
+                          <p className="text-white/70 text-xs leading-relaxed transition-all line-clamp-3">{s.desc}</p>
+                        </div>
+                        <div className="w-10 h-10 shrink-0 border border-white/20 flex items-center justify-center text-white group-hover:bg-[#F0921E] group-hover:border-[#F0921E] transition-all transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+                          <ArrowRight size={16} />
+                        </div>
                       </div>
                     </div>
                   </Link>
