@@ -42,7 +42,7 @@ export const Footer = () => {
               {[
                 { name: 'Chi siamo', href: '/chi-siamo' },
                 { name: 'Servizi', href: '/servizi' },
-                { name: 'Qualità', href: '/certificazioni' },
+                { name: 'Certificazioni', href: '/certificazioni' },
                 { name: 'Carriere', href: '/career' },
                 { name: 'News', href: '/news' },
                 { name: 'Contatti', href: '/contatti' },

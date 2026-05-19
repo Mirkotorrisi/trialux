@@ -8,7 +8,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Chi siamo', href: '/chi-siamo' },
   { name: 'Servizi', href: '/servizi' },
-  { name: 'Qualità', href: '/certificazioni' },
+  { name: 'Certificazioni', href: '/certificazioni' },
   { name: 'Career', href: '/career' },
   { name: 'News', href: '/news' },
 ]
@@ -55,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-11 items-center">
-          {navLinks.filter(l => l.href !== '/').map((link) => {
+          {navLinks.map((link) => {
             const isActive = pathname === link.href || (pathname?.startsWith(link.href) && link.href !== '/')
             return (
               <Link
