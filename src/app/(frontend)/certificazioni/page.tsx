@@ -1,9 +1,11 @@
+'use client'
+
 import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
 import { DecorativePattern } from '../_components/DecorativeArcs'
 import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
-import { ArrowUpRight, ShieldCheck, Leaf, HardHat, Scale, Globe, FileCheck } from 'lucide-react'
+import { ArrowUpRight, ShieldCheck, Leaf, HardHat, Scale, Globe, FileCheck, Download } from 'lucide-react'
 
 export default function CertificazioniPage() {
   return (
@@ -66,21 +68,24 @@ export default function CertificazioniPage() {
                   color: '#55ABE4',
                   icon: <ShieldCheck size={48} />,
                   title: 'Sistema di gestione per la qualità',
-                  text: 'La certificazione ISO 9001 attesta che Trialux mantiene un sistema di gestione conforme allo standard internazionale. Significa processi documentati, controllo costante delle attività e miglioramento continuo.'
+                  text: 'La certificazione ISO 9001 attesta che Trialux mantiene un sistema di gestione conforme allo standard internazionale. Significa processi documentati, controllo costante delle attività e miglioramento continuo.',
+                  fileUrl: '#'
                 },
                 {
                   code: 'ISO 14001',
                   color: '#F0921E',
                   icon: <Leaf size={48} />,
                   title: 'Sistema di gestione ambientale',
-                  text: 'Dimostriamo il nostro impegno nella gestione responsabile degli impatti ambientali legati alle attività di cantiere. Monitoriamo i consumi, gestiamo i rifiuti e minimizziamo l’impatto sull’ambiente.'
+                  text: 'Dimostriamo il nostro impegno nella gestione responsabile degli impatti ambientali legati alle attività di cantiere. Monitoriamo i consumi, gestiamo i rifiuti e minimizziamo l’impatto sull’ambiente.',
+                  fileUrl: '#'
                 },
                 {
                   code: 'ISO 45001',
                   color: '#EE2430',
                   icon: <HardHat size={48} />,
                   title: 'Salute e sicurezza sul lavoro',
-                  text: 'La sicurezza è la nostra priorità. ISO 45001 attesta la gestione dei rischi professionali. Tutto il personale è formato per operare in sicurezza anche in condizioni critiche.'
+                  text: 'La sicurezza è la nostra priorità. ISO 45001 attesta la gestione dei rischi professionali. Tutto il personale è formato per operare in sicurezza anche in condizioni critiche.',
+                  fileUrl: '#'
                 }
               ].map((cert, idx) => (
                 <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden border-r last:border-r-0 border-zinc-100">
@@ -90,7 +95,7 @@ export default function CertificazioniPage() {
                     style={{ backgroundColor: cert.color }} 
                   />
                   
-                  <div className="relative z-10 p-8 md:p-14 h-full flex flex-col justify-between min-h-[320px] md:min-h-[380px]">
+                  <div className="relative z-10 p-8 md:p-14 h-full flex flex-col justify-between min-h-[380px] md:min-h-[460px]">
                     <div>
                       <div className="mb-10 flex items-center justify-between">
                         <div 
@@ -107,9 +112,26 @@ export default function CertificazioniPage() {
                       <h3 className="text-2xl font-black mb-6 leading-tight tracking-tighter group-hover:text-white transition-colors">
                         {cert.title}
                       </h3>
-                      <p className="text-zinc-500 text-base leading-relaxed group-hover:text-white/90 transition-colors">
+                      <p className="text-zinc-500 text-base leading-relaxed group-hover:text-white/90 transition-colors mb-8">
                         {cert.text}
                       </p>
+                    </div>
+
+                    <div>
+                      <a 
+                        href={cert.fileUrl}
+                        download
+                        onClick={(e) => {
+                          if (cert.fileUrl === '#') {
+                            e.preventDefault();
+                            alert('Il file di certificazione sarà disponibile a breve.');
+                          }
+                        }}
+                        className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest py-4 px-6 border border-zinc-200 text-[#0a0f1a] transition-all duration-300 group-hover:text-white group-hover:border-white/30 hover:!bg-white hover:!text-[#0a0f1a]"
+                      >
+                        <Download size={16} />
+                        <span>Scarica certificato</span>
+                      </a>
                     </div>
                   </div>
                 </FadeIn>
