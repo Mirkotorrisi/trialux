@@ -5,6 +5,7 @@ import { DecorativePattern } from '../_components/DecorativeArcs'
 import Link from 'next/link'
 import { ArrowRight, Award, Users, Target, ShieldCheck } from 'lucide-react'
 import { InteractiveOrgChart } from '../_components/OrgChart'
+import Image from 'next/image'
 
 export default function ChiSiamoPage() {
   return (
@@ -17,10 +18,13 @@ export default function ChiSiamoPage() {
         <section className="relative w-full flex flex-col justify-end pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
-              <img
+              <Image
                 src="/images/Trialux 4.jpg"
                 alt="Cantiere Trialux"
-                className="w-full h-[120%] object-cover scale-[1.1]"
+                fill
+                priority
+                sizes="100vw"
+                className="!w-full !h-[120%] object-cover scale-[1.1]"
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
@@ -75,10 +79,12 @@ export default function ChiSiamoPage() {
               </div>
               <FadeIn className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
-                  <img 
+                  <Image 
                     src="/images/Trialux 5.jpg" 
                     alt="Eccellenza Tecnica" 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                   />
                 </div>
               </FadeIn>
@@ -227,11 +233,13 @@ export default function ChiSiamoPage() {
                   </div>
                 </FadeIn>
               </div>
-              <FadeIn delay={200} className="aspect-video overflow-hidden group">
-                <img 
+              <FadeIn delay={200} className="relative aspect-video overflow-hidden group">
+                <Image 
                   src="/images/Trialux 25.jpg" 
                   alt="Supporto al Territorio" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                 />
               </FadeIn>
             </div>

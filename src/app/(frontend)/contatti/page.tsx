@@ -2,6 +2,7 @@ import { Header } from '../_components/Header'
 import { FadeIn } from '../_components/FadeIn'
 import { MapPin, Phone, Mail, Globe, ArrowRight } from 'lucide-react'
 import { Parallax } from '../_components/Parallax'
+import Image from 'next/image'
 
 export default function ContattiPage() {
   return (
@@ -14,10 +15,13 @@ export default function ContattiPage() {
         <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40 bg-zinc-950" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
-              <img
+              <Image
                 src="/images/Trialux 19.jpg"
                 alt="Contatti Trialux"
-                className="w-full h-[120%] object-cover opacity-60"
+                fill
+                priority
+                sizes="100vw"
+                className="!w-full !h-[120%] object-cover opacity-60"
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}

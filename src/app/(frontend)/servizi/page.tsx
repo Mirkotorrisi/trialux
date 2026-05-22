@@ -4,6 +4,7 @@ import { Parallax } from '../_components/Parallax'
 import { DecorativePattern, DecorativeArc } from '../_components/DecorativeArcs'
 import Link from 'next/link'
 import { ArrowRight, Zap, Radio, Building2, Battery, Hammer, Tractor, Shovel, HardHat } from 'lucide-react'
+import Image from 'next/image'
 
 const services = [
   {
@@ -67,10 +68,13 @@ export default function ServiziPage() {
         <section className="relative w-full flex flex-col justify-end pb-16 md:pb-32 lg:pb-40 bg-zinc-950" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={60} className="w-full h-full">
-              <img
+              <Image
                 src="/images/Trialux 6.jpg"
                 alt="Servizi Trialux"
-                className="w-full h-[120%] object-cover opacity-60"
+                fill
+                priority
+                sizes="100vw"
+                className="!w-full !h-[120%] object-cover opacity-60"
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
@@ -143,10 +147,12 @@ export default function ServiziPage() {
                   <FadeIn className="h-full">
                     <div className="relative h-full min-h-[350px] md:min-h-[500px] overflow-hidden group shadow-2xl">
                       <Parallax offset={50} className="w-full h-full">
-                        <img 
+                        <Image 
                           src={srv.img} 
                           alt={srv.title} 
-                          className="w-full h-[130%] object-cover transition-transform duration-700 group-hover:scale-105" 
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 45vw"
+                          className="!w-full !h-[130%] object-cover transition-transform duration-700 group-hover:scale-105" 
                           style={{ top: '-15%', position: 'absolute' }}
                         />
                       </Parallax>
@@ -165,10 +171,12 @@ export default function ServiziPage() {
         <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="/images/Trialux 21.jpg" 
               alt="Industrial Background" 
-              className="w-full h-full object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+              fill
+              sizes="100vw"
+              className="object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
             />
           </div>
 

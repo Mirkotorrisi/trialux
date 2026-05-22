@@ -1,5 +1,3 @@
-import { getPayload } from 'payload'
-import config from '@/payload.config'
 import Link from 'next/link'
 import { Header } from './_components/Header'
 import { FadeIn } from './_components/FadeIn'
@@ -7,10 +5,9 @@ import { DecorativePattern } from './_components/DecorativeArcs'
 import './style.css'
 import { ArrowRight, ArrowUpRight, CheckCircle2, Target, Users, Zap, Award } from 'lucide-react'
 import { Parallax } from './_components/Parallax'
+import Image from 'next/image'
 
 export default async function HomePage() {
-  const payload = await getPayload({ config })
-
   return (
     <div className="bg-white min-h-screen text-[#0a0f1a]">
       <Header />
@@ -21,10 +18,13 @@ export default async function HomePage() {
         <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
-              <img
+              <Image
                 src="/images/Trialux 1.jpg"
                 alt="Cantiere Trialux"
-                className="w-full h-[120%] object-cover scale-[1.1] transition-transform duration-[10s] ease-out"
+                fill
+                priority
+                sizes="100vw"
+                className="!w-full !h-[120%] object-cover scale-[1.1] transition-transform duration-[10s] ease-out"
                 style={{ transformOrigin: 'center bottom' }}
               />
             </Parallax>
@@ -89,10 +89,12 @@ export default async function HomePage() {
               <FadeIn className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <Parallax offset={40} className="w-full h-full">
-                    <img 
+                    <Image 
                       src="/images/Trialux 2.jpg" 
                       alt="Trialux Team" 
-                      className="w-full h-[115%] object-cover transition-transform duration-1000 group-hover:scale-110" 
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="!w-full !h-[115%] object-cover transition-transform duration-1000 group-hover:scale-110" 
                     />
                   </Parallax>
                 </div>
@@ -160,10 +162,12 @@ export default async function HomePage() {
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
                   <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0a0f1a]">
-                    <img 
+                    <Image 
                       src={s.img} 
                       alt={s.title} 
-                      className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-90" 
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-90" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
                     
@@ -279,10 +283,12 @@ export default async function HomePage() {
         <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="/images/Trialux 1.jpg" 
               alt="Power Projects" 
-              className="w-full h-full object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+              fill
+              sizes="100vw"
+              className="object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
             />
           </div>
 

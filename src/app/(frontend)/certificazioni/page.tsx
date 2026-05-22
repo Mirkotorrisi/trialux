@@ -6,6 +6,7 @@ import { DecorativePattern } from '../_components/DecorativeArcs'
 import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
 import { ArrowUpRight, ShieldCheck, Leaf, HardHat, Scale, Globe, FileCheck, Download } from 'lucide-react'
+import Image from 'next/image'
 
 export default function CertificazioniPage() {
   return (
@@ -18,10 +19,13 @@ export default function CertificazioniPage() {
         <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
-              <img
+              <Image
                 src="/images/Trialux 13.jpg"
                 alt="Certificazioni Trialux"
-                className="w-full h-[120%] object-cover scale-[1.1]"
+                fill
+                priority
+                sizes="100vw"
+                className="!w-full !h-[120%] object-cover scale-[1.1]"
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
@@ -188,10 +192,12 @@ export default function CertificazioniPage() {
               
               <FadeIn delay={300} className="relative aspect-[4/5] overflow-hidden group shadow-2xl">
                 <Parallax offset={40} className="w-full h-full">
-                  <img 
+                  <Image 
                     src="/images/Trialux 20.jpg" 
                     alt="Ufficio Qualità" 
-                    className="w-full h-[120%] object-cover transition-transform duration-1000 group-hover:scale-105" 
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="!w-full !h-[120%] object-cover transition-transform duration-1000 group-hover:scale-105" 
                     style={{ top: '-10%', position: 'absolute' }}
                   />
                 </Parallax>
@@ -245,10 +251,12 @@ export default function CertificazioniPage() {
         <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="/images/Trialux 13.jpg" 
               alt="Quality Background" 
-              className="w-full h-full object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+              fill
+              sizes="100vw"
+              className="object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
             />
           </div>
 

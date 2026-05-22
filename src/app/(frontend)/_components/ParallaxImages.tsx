@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import Image from 'next/image'
 
 interface ParallaxImagesProps {
   images: {
@@ -12,34 +14,37 @@ interface ParallaxImagesProps {
 }
 
 export const ParallaxImages: React.FC<ParallaxImagesProps> = ({ images }) => {
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end start'],
+  })
 
   return (
-    <div className="relative h-[500px] lg:h-[700px] w-full">
-      {images.map((img, idx) => (
-        <div
-          key={idx}
-          className={`absolute overflow-hidden shadow-2xl transition-transform duration-100 ease-out ${img.className}`}
-          style={{
-            transform: `translateY(${scrollY * img.speed * 0.1}px)`,
-            willChange: 'transform',
-          }}
-        >
-          <img
-            src={img.src}
-            alt={img.alt}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-          />
-        </div>
-      ))}
+    <div ref={containerRef} className="relative h-[500px] lg:h-[700px] w-full overflow-hidden">
+      {images.map((img, idx) => {
+        // Calculate vertical translation based on speed.
+        // We transform the scroll progress (from 0 to 1) into a translation offset.
+        const y = useTransform(scrollYProgress, [0, 1], [-img.speed * 120, img.speed * 120])
+        
+        return (
+          <motion.div
+            key={idx}
+            className={`absolute overflow-hidden shadow-2xl ${img.className}`}
+            style={{
+              y,
+            }}
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+        )
+      })}
     </div>
   )
 }

@@ -17,11 +17,10 @@ export const Parallax = ({ children, offset = 50, className = '' }: ParallaxProp
   })
 
   const y = useTransform(scrollYProgress, [0, 1], [-offset, offset])
-  const springY = useSpring(y, { stiffness: 400, damping: 90 })
 
   return (
     <div ref={ref} className={`relative overflow-hidden ${className}`}>
-      <motion.div style={{ y: springY }} className="h-full w-full">
+      <motion.div style={{ y }} className="relative h-full w-full">
         {children}
       </motion.div>
     </div>

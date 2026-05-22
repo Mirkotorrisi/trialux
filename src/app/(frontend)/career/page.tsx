@@ -7,6 +7,7 @@ import config from '@/payload.config'
 import { DecorativePattern } from '../_components/DecorativeArcs'
 import { FadeIn } from '../_components/FadeIn'
 import { Job } from '@/payload-types'
+import Image from 'next/image'
 
 
 // Funzione per estrarre testo puro dal contenuto RichText (Lexical)
@@ -55,10 +56,13 @@ export default async function CareerPage() {
         <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
-              <img
+              <Image
                 src="/images/Trialux 17.jpg"
                 alt="Lavora con Trialux"
-                className="w-full h-[120%] object-cover transition-transform duration-[10s] hover:scale-110"
+                fill
+                priority
+                sizes="100vw"
+                className="!w-full !h-[120%] object-cover transition-transform duration-[10s] hover:scale-110"
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
@@ -203,10 +207,12 @@ export default async function CareerPage() {
 
               <FadeIn className="relative min-h-[400px] lg:min-h-full overflow-hidden group shadow-2xl">
                 <Parallax offset={40} className="w-full h-full">
-                  <img 
+                  <Image 
                     src="/images/Trialux 15.jpg" 
                     alt="Cantiere Operativo" 
-                    className="w-full h-[120%] object-cover transition-transform duration-1000 group-hover:scale-105" 
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="!w-full !h-[120%] object-cover transition-transform duration-1000 group-hover:scale-105" 
                     style={{ top: '-10%', position: 'absolute' }}
                   />
                 </Parallax>
