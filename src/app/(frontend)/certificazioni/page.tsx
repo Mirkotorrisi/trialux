@@ -217,11 +217,11 @@ export default function CertificazioniPage() {
               <FadeIn delay={300} className="relative aspect-[4/5] overflow-hidden group shadow-2xl">
                 <Parallax offset={40} className="w-full h-full">
                   <Image 
-                    src="/images/Trialux 20.jpg" 
+                    src="/images/Trialux 58 copia.jpg" 
                     alt="Ufficio Qualità" 
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="!w-full !h-[120%] object-cover transition-transform duration-1000 group-hover:scale-105" 
+                    className="!w-full !h-[120%] object-cover object-center transition-transform duration-1000 group-hover:scale-105" 
                     style={{ top: '-10%', position: 'absolute' }}
                   />
                 </Parallax>
@@ -276,7 +276,7 @@ export default function CertificazioniPage() {
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
-              src="/images/Trialux 13.jpg" 
+              src="/images/Trialux 135.jpg" 
               alt="Quality Background" 
               fill
               sizes="100vw"

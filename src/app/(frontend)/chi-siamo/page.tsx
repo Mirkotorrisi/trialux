@@ -105,7 +105,7 @@ export default function ChiSiamoPage() {
               <FadeIn className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <Image 
-                    src="/images/Trialux 5.jpg" 
+                    src="/images/Trialux 9.jpg" 
                     alt="Eccellenza Tecnica" 
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -248,24 +248,29 @@ export default function ChiSiamoPage() {
                   <p className="text-zinc-500 text-base leading-relaxed mb-8">
                     Trialux crede nel valore del radicamento locale. Per questo sosteniamo due realtà sportive del territorio siciliano: il <strong className="text-[#0a0f1a]">Catania Football Club S.r.l.</strong> e la <strong className="text-[#0a0f1a]">SSD Biancavilla Calcio Academy</strong>. 
                   </p>
-                  <p className="text-zinc-500 text-base leading-relaxed mb-10">
+                  <p className="text-zinc-500 text-base leading-relaxed">
                     Un modo concreto di restituire alla comunità parte di ciò che l’azienda riceve ogni giorno lavorando su questo territorio.
                   </p>
-                  <div className="flex gap-12 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                    {/* Placeholder per loghi sponsor se necessari in futuro */}
-                    <span className="text-xs font-bold tracking-widest uppercase">Catania Football Club</span>
-                    <span className="text-xs font-bold tracking-widest uppercase">SSD Biancavilla Calcio</span>
-                  </div>
                 </FadeIn>
               </div>
-              <FadeIn delay={200} className="relative aspect-video overflow-hidden group">
-                <Image 
-                  src="/images/Trialux 25.jpg" 
-                  alt="Supporto al Territorio" 
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110" 
-                />
+              <FadeIn delay={200} className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                {/* Catania Football Club Logo Slot */}
+                <div className="border border-zinc-200 border-dashed rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-zinc-50 hover:bg-zinc-100/50 hover:border-zinc-300 transition-all duration-300 group">
+                  {/* <Image src="/images/catania-fc-logo.png" alt="Catania FC Logo" width={120} height={120} className="object-contain" /> */}
+                  <span className="text-zinc-400 group-hover:text-zinc-600 font-bold tracking-widest uppercase text-center text-xs md:text-sm">
+                    Catania Football Club
+                  </span>
+                  <span className="text-[10px] text-zinc-400 mt-2 tracking-wider">Slot Logo</span>
+                </div>
+
+                {/* SSD Biancavilla Calcio Logo Slot */}
+                <div className="border border-zinc-200 border-dashed rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-zinc-50 hover:bg-zinc-100/50 hover:border-zinc-300 transition-all duration-300 group">
+                  {/* <Image src="/images/biancavilla-logo.png" alt="SSD Biancavilla Calcio Logo" width={120} height={120} className="object-contain" /> */}
+                  <span className="text-zinc-400 group-hover:text-zinc-600 font-bold tracking-widest uppercase text-center text-xs md:text-sm">
+                    SSD Biancavilla Calcio
+                  </span>
+                  <span className="text-[10px] text-zinc-400 mt-2 tracking-wider">Slot Logo</span>
+                </div>
               </FadeIn>
             </div>
           </div>

@@ -97,12 +97,12 @@ export default async function HomePage() {
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <Parallax offset={40} className="w-full h-full">
                     <Image 
-                      src="/images/Trialux 2.jpg" 
+                      src="/images/Trialux 137.jpg" 
                       alt="Trialux Team" 
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       quality={100}
-                      className="!w-full !h-[115%] object-cover transition-transform duration-1000 group-hover:scale-110" 
+                      className="!w-full !h-[115%] !top-auto !bottom-0 object-cover object-left-bottom transition-transform duration-1000 group-hover:scale-110" 
                     />
                   </Parallax>
                 </div>
@@ -164,9 +164,9 @@ export default async function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
               {[
-                { tag: 'Infrastrutture', title: 'Cavi MT/BT', desc: 'Posa di cavi sotterranei e aerei, inclusi i sistemi di giunzione e terminazione.', img: '/images/Trialux 22.jpg' },
-                { tag: 'Impiantistica', title: 'Cabine Elettriche', desc: 'Installazione e manutenzione di cabine secondarie per la distribuzione locale.', img: '/images/Trialux 23.jpg' },
-                { tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 24.jpg' },
+                { tag: 'Infrastrutture', title: 'Cavi MT/BT', desc: 'Posa di cavi sotterranei e aerei, inclusi i sistemi di giunzione e terminazione.', img: '/images/Trialux 119.jpg' },
+                { tag: 'Impiantistica', title: 'Cabine Elettriche', desc: 'Installazione e manutenzione di cabine secondarie per la distribuzione locale.', img: '/images/Trialux 131.jpg' },
+                { tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 148.jpg' },
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
                   <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0a0f1a]">
@@ -293,7 +293,7 @@ export default async function HomePage() {
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
-              src="/images/Trialux 1.jpg" 
+              src="/images/Trialux 20.jpg" 
               alt="Power Projects" 
               fill
               sizes="100vw"

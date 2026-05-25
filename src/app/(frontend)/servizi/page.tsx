@@ -19,7 +19,7 @@ const services = [
     cat: 'Linee aeree MT/BT',
     title: 'Linee aeree su palo e su traliccio',
     desc: 'Realizziamo linee aeree di media e bassa tensione, sia su palo che su traliccio, per la trasmissione e distribuzione di energia elettrica. Gestiamo l\'intera filiera operativa: progettazione del tracciato, fornitura dei materiali, installazione e collaudo.',
-    img: '/images/Trialux 8.jpg',
+    img: '/images/Trialux 209.jpg',
     icon: <Radio size={32} className="text-[#55ABE4]" />,
     isDark: true
   },
@@ -27,7 +27,7 @@ const services = [
     cat: 'Cabine secondarie MT/BT',
     title: 'Installazione di cabine di trasformazione',
     desc: 'Forniamo e installiamo cabine secondarie di media e bassa tensione per la distribuzione locale dell\'energia. Le nostre squadre sono qualificate per operare su impianti in media tensione e garantiscono esecuzioni a regola d\'arte.',
-    img: '/images/Trialux 9.jpg',
+    img: '/images/Trialux 130.jpg',
     icon: <Building2 size={32} className="text-[#55ABE4]" />,
     isDark: false
   },
@@ -35,7 +35,7 @@ const services = [
     cat: 'Gruppi elettrogeni temporanei',
     title: 'Alimentazione temporanea di cantiere e emergenza',
     desc: 'Forniamo e installiamo in via temporanea gruppi elettrogeni per garantire la continuità di alimentazione durante interventi sulla rete o in situazioni di emergenza.',
-    img: '/images/Trialux 10.jpg',
+    img: '/images/Trialux 8.jpg',
     icon: <Battery size={32} className="text-[#55ABE4]" />,
     isDark: true
   },
@@ -43,7 +43,7 @@ const services = [
     cat: 'Scavi di trincea',
     title: 'Scavi con escavatori per la posa di cavi interrati',
     desc: 'Disponiamo di mezzi propri per l\'esecuzione di scavi di trincea necessari alla posa di cavi sotterranei. Operiamo in ambiente urbano ed extraurbano, coordinandoci con le autorità competenti.',
-    img: '/images/Trialux 11.jpg',
+    img: '/images/Trialux 150.jpg',
     icon: <Shovel size={32} className="text-[#55ABE4]" />,
     isDark: false
   },
@@ -196,11 +196,11 @@ export default function ServiziPage() {
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
-              src="/images/Trialux 21.jpg" 
+              src="/images/Trialux 197.jpg" 
               alt="Industrial Background" 
               fill
               sizes="100vw"
-              className="object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+              className="object-cover opacity-30 transition-transform duration-[2s] scale-x-[-1] group-hover:scale-x-[-1.1] group-hover:scale-y-110"
             />
           </div>
 
