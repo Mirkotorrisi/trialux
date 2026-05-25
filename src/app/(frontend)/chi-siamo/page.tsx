@@ -18,14 +18,22 @@ export default function ChiSiamoPage() {
         <section className="relative w-full flex flex-col justify-end pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
-              <Image
-                src="/images/Trialux 4.jpg"
-                alt="Cantiere Trialux"
-                fill
-                priority
-                sizes="100vw"
-                className="!w-full !h-[120%] object-cover scale-[1.1]"
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                disablePictureInPicture
+                disableRemotePlayback
+                poster="/images/Trialux 4.jpg"
+                className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none"
+                style={{ transformOrigin: 'center bottom' }}
+              >
+                <source src="/videos/chisiamo-optimized.mp4" type="video/mp4" />
+                <source src="/videos/chisiamo-optimized.webm" type="video/webm" />
+                Il tuo browser non supporta il tag video.
+              </video>
             </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />

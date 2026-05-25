@@ -18,15 +18,22 @@ export default async function HomePage() {
         <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
-              <Image
-                src="/images/Trialux 1.jpg"
-                alt="Cantiere Trialux"
-                fill
-                priority
-                sizes="100vw"
-                className="!w-full !h-[120%] object-cover scale-[1.1] transition-transform duration-[10s] ease-out"
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                disablePictureInPicture
+                disableRemotePlayback
+                poster="/images/Trialux 1.jpg"
+                className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none"
                 style={{ transformOrigin: 'center bottom' }}
-              />
+              >
+                <source src="/videos/home-optimized.mp4" type="video/mp4" />
+                <source src="/videos/home-optimized.webm" type="video/webm" />
+                Il tuo browser non supporta il tag video.
+              </video>
             </Parallax>
             {/* Top Shadow for Header Visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
@@ -94,6 +101,7 @@ export default async function HomePage() {
                       alt="Trialux Team" 
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
+                      quality={100}
                       className="!w-full !h-[115%] object-cover transition-transform duration-1000 group-hover:scale-110" 
                     />
                   </Parallax>
@@ -167,6 +175,7 @@ export default async function HomePage() {
                       alt={s.title} 
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={100}
                       className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-90" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
@@ -288,6 +297,7 @@ export default async function HomePage() {
               alt="Power Projects" 
               fill
               sizes="100vw"
+              quality={100}
               className="object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
             />
           </div>
