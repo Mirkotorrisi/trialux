@@ -26,7 +26,7 @@ export default async function HomePage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/Trialux 1.jpg"
+                poster="/images/home-optimized-poster.jpg"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none"
                 style={{ transformOrigin: 'center bottom' }}
               >

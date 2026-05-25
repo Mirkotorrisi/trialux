@@ -68,6 +68,7 @@ export default function ServiziPage() {
         <section className="relative w-full flex flex-col justify-end pb-16 md:pb-32 lg:pb-40 bg-zinc-950" style={{ height: '100dvh', minHeight: '100dvh' }}>
           <div className="absolute inset-0">
             <Parallax offset={60} className="w-full h-full">
+              {/* Mobile Vertical Video */}
               <video
                 autoPlay
                 loop
@@ -76,8 +77,24 @@ export default function ServiziPage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/Trialux 6.jpg"
-                className="absolute inset-0 w-full h-[120%] object-cover opacity-60 pointer-events-none select-none"
+                poster="/images/servizi_verticale-optimized-poster.jpg"
+                className="absolute inset-0 w-full h-[120%] object-cover opacity-60 pointer-events-none select-none block md:hidden"
+                style={{ transformOrigin: 'center bottom' }}
+              >
+                <source src="/videos/servizi_verticale-optimized.mp4" type="video/mp4" />
+                Il tuo browser non supporta il tag video.
+              </video>
+              {/* Desktop Horizontal Video */}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                disablePictureInPicture
+                disableRemotePlayback
+                poster="/images/servizi-optimized-poster.jpg"
+                className="absolute inset-0 w-full h-[120%] object-cover opacity-60 pointer-events-none select-none hidden md:block"
                 style={{ transformOrigin: 'center bottom' }}
               >
                 <source src="/videos/servizi-optimized.mp4" type="video/mp4" />
