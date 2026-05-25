@@ -65,7 +65,7 @@ export default async function CareerPage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/lavoraconnoi_verticale-optimized-poster.jpg"
+                poster="/images/lavoraconnoi_verticale-optimized-poster.webp"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none block md:hidden"
                 style={{ transformOrigin: 'center bottom' }}
               >
@@ -81,7 +81,7 @@ export default async function CareerPage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/career-optimized-poster.jpg"
+                poster="/images/career-optimized-poster.webp"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none hidden md:block"
                 style={{ transformOrigin: 'center bottom' }}
               >
@@ -232,7 +232,7 @@ export default async function CareerPage() {
               <FadeIn className="relative min-h-[400px] lg:min-h-full overflow-hidden group shadow-2xl">
                 <Parallax offset={40} className="w-full h-full">
                   <Image 
-                    src="/images/Trialux 15.jpg" 
+                    src="/images/Trialux 15.webp" 
                     alt="Cantiere Operativo" 
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

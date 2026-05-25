@@ -28,7 +28,7 @@ export default function CertificazioniPage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/certificazioni_verticale-optimized-poster.jpg"
+                poster="/images/certificazioni_verticale-optimized-poster.webp"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none block md:hidden"
                 style={{ transformOrigin: 'center bottom' }}
               >
@@ -44,7 +44,7 @@ export default function CertificazioniPage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/certificazioni-optimized-poster.jpg"
+                poster="/images/certificazioni-optimized-poster.webp"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none hidden md:block"
                 style={{ transformOrigin: 'center bottom' }}
               >
@@ -217,7 +217,7 @@ export default function CertificazioniPage() {
               <FadeIn delay={300} className="relative aspect-[4/5] overflow-hidden group shadow-2xl">
                 <Parallax offset={40} className="w-full h-full">
                   <Image 
-                    src="/images/Trialux 58 copia.jpg" 
+                    src="/images/Trialux 58 copia.webp" 
                     alt="Ufficio Qualità" 
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
@@ -276,7 +276,7 @@ export default function CertificazioniPage() {
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
-              src="/images/Trialux 135.jpg" 
+              src="/images/Trialux 135.webp" 
               alt="Quality Background" 
               fill
               sizes="100vw"

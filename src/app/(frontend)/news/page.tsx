@@ -58,7 +58,7 @@ export default async function NewsPage() {
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <img
-                src="/images/Trialux 16.jpg"
+                src="/images/Trialux 16.webp"
                 alt="News e Blog"
                 className="w-full h-[120%] object-cover transition-transform duration-[10s] hover:scale-110"
               />

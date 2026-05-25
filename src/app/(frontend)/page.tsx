@@ -26,12 +26,11 @@ export default async function HomePage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/home-optimized-poster.jpg"
+                poster="/images/home-optimized-poster.webp"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none"
                 style={{ transformOrigin: 'center bottom' }}
               >
                 <source src="/videos/home-optimized.mp4" type="video/mp4" />
-                <source src="/videos/home-optimized.webm" type="video/webm" />
                 Il tuo browser non supporta il tag video.
               </video>
             </Parallax>
@@ -97,7 +96,7 @@ export default async function HomePage() {
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <Parallax offset={40} className="w-full h-full">
                     <Image 
-                      src="/images/Trialux 137.jpg" 
+                      src="/images/Trialux 137.webp" 
                       alt="Trialux Team" 
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
@@ -164,9 +163,9 @@ export default async function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
               {[
-                { tag: 'Infrastrutture', title: 'Cavi MT/BT', desc: 'Posa di cavi sotterranei e aerei, inclusi i sistemi di giunzione e terminazione.', img: '/images/Trialux 119.jpg' },
-                { tag: 'Impiantistica', title: 'Cabine Elettriche', desc: 'Installazione e manutenzione di cabine secondarie per la distribuzione locale.', img: '/images/Trialux 131.jpg' },
-                { tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 148.jpg' },
+                { tag: 'Infrastrutture', title: 'Cavi MT/BT', desc: 'Posa di cavi sotterranei e aerei, inclusi i sistemi di giunzione e terminazione.', img: '/images/Trialux 119.webp' },
+                { tag: 'Impiantistica', title: 'Cabine Elettriche', desc: 'Installazione e manutenzione di cabine secondarie per la distribuzione locale.', img: '/images/Trialux 131.webp' },
+                { tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 148.webp' },
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
                   <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0a0f1a]">
@@ -293,7 +292,7 @@ export default async function HomePage() {
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
-              src="/images/Trialux 20.jpg" 
+              src="/images/Trialux 20.webp" 
               alt="Power Projects" 
               fill
               sizes="100vw"

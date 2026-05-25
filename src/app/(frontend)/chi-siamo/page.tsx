@@ -27,7 +27,7 @@ export default function ChiSiamoPage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/chisiamoverticale-optimized-poster.jpg"
+                poster="/images/chisiamoverticale-optimized-poster.webp"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none block md:hidden"
                 style={{ transformOrigin: 'center bottom' }}
               >
@@ -43,12 +43,11 @@ export default function ChiSiamoPage() {
                 preload="auto"
                 disablePictureInPicture
                 disableRemotePlayback
-                poster="/images/chisiamo-optimized-poster.jpg"
+                poster="/images/chisiamo-optimized-poster.webp"
                 className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none hidden md:block"
                 style={{ transformOrigin: 'center bottom' }}
               >
                 <source src="/videos/chisiamo-optimized.mp4" type="video/mp4" />
-                <source src="/videos/chisiamo-optimized.webm" type="video/webm" />
                 Il tuo browser non supporta il tag video.
               </video>
             </Parallax>
@@ -105,7 +104,7 @@ export default function ChiSiamoPage() {
               <FadeIn className="lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden group">
                   <Image 
-                    src="/images/Trialux 9.jpg" 
+                    src="/images/Trialux 9.webp" 
                     alt="Eccellenza Tecnica" 
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
