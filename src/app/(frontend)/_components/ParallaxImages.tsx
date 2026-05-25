@@ -33,6 +33,7 @@ export const ParallaxImages: React.FC<ParallaxImagesProps> = ({ images }) => {
             className={`absolute overflow-hidden shadow-2xl ${img.className}`}
             style={{
               y,
+              willChange: 'transform',
             }}
           >
             <Image

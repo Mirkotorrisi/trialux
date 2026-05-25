@@ -14,11 +14,22 @@ const navLinks = [
 ]
 
 const Logo = ({ isSolid }: { isSolid: boolean }) => (
-  <img 
-    src={isSolid ? "/images/logo-black.png" : "/images/logo-white.png"} 
-    alt="Trialux" 
-    className="h-13 md:h-18 w-auto transition-all duration-300"
-  />
+  <div className="relative h-13 md:h-18">
+    <img 
+      src="/images/logo-white.png" 
+      alt="Trialux" 
+      className={`h-full w-auto object-contain transition-opacity duration-300 ${
+        isSolid ? 'opacity-0 pointer-events-none' : 'opacity-100'
+      }`}
+    />
+    <img 
+      src="/images/logo-black.png" 
+      alt="Trialux" 
+      className={`absolute inset-0 h-full w-auto object-contain transition-opacity duration-300 ${
+        isSolid ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
+    />
+  </div>
 )
 
 interface HeaderProps {
@@ -32,19 +43,21 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
+      const isScrolled = window.scrollY > 20
+      setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev))
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const isSolid = scrolled || forceSolid || isMobileMenuOpen
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
+    <div className={`fixed top-0 left-0 w-full z-[100] border-b transition-colors duration-500 ${
       isSolid 
-        ? 'bg-white border-b border-zinc-100' 
-        : 'bg-transparent'
+        ? 'bg-white border-zinc-100' 
+        : 'bg-transparent border-transparent'
     }`}>
       <header className="w-full flex items-center justify-between px-6 lg:px-16 h-[80px] md:h-[100px] max-w-[1450px] mx-auto">
 

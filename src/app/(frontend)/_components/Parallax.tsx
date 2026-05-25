@@ -20,7 +20,7 @@ export const Parallax = ({ children, offset = 50, className = '' }: ParallaxProp
 
   return (
     <div ref={ref} className={`relative overflow-hidden ${className}`}>
-      <motion.div style={{ y }} className="relative h-full w-full">
+      <motion.div style={{ y, willChange: 'transform' }} className="relative h-full w-full">
         {children}
       </motion.div>
     </div>

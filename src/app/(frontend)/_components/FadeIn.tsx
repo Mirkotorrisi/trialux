@@ -45,6 +45,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
           delay: delay / 1000,
           ease: [0.16, 1, 0.3, 1]
         }}
+        style={{ willChange: 'transform, opacity' }}
         className={className}
       >
         {children}
@@ -64,6 +65,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
             delay: delay / 1000,
             ease: [0.16, 1, 0.3, 1]
           }}
+          style={{ willChange: 'transform, opacity' }}
         >
           {children}
         </motion.div>
@@ -81,6 +83,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
         delay: delay / 1000,
         ease: [0.16, 1, 0.16, 1]
       }}
+      style={{ willChange: 'transform, opacity' }}
       className={className}
     >
       {children}
