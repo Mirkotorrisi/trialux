@@ -9,6 +9,14 @@ import { FadeIn } from '../../_components/FadeIn'
 import '../../style.css'
 import { Job } from '@/payload-types'
 
+const contractTypeMap: Record<string, string> = {
+  'full_time': 'Full-time',
+  'part_time': 'Part-time',
+  'permanent': 'indeterminato',
+  'apprenticeship': 'apprendistato',
+  'freelance': 'frelance'
+};
+
 
 export default async function JobPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -75,7 +83,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                     <FileText className="text-[#55ABE4]" size={20} />
                     <div>
                       <div className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em]">Contratto</div>
-                      <div className="font-bold text-white tracking-tight uppercase text-sm">{job.contractType.replace('_', ' ')}</div>
+                      <div className="font-bold text-white tracking-tight uppercase text-sm">{contractTypeMap[job.contractType] || job.contractType}</div>
                     </div>
                   </div>
                 )}

@@ -6,6 +6,14 @@ import { Header } from '../../_components/Header'
 import { RichText } from '../../_components/RichText'
 import '../../style.css'
 
+const contractTypeMap: Record<string, string> = {
+  'full_time': 'Full-time',
+  'part_time': 'Part-time',
+  'permanent': 'indeterminato',
+  'apprenticeship': 'apprendistato',
+  'freelance': 'frelance'
+};
+
 export default async function JobPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const payload = await getPayload({ config })
@@ -41,7 +49,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
           <div className="flex justify-center flex-wrap gap-4 md:gap-8 text-zinc-500 font-medium">
             <span className="flex items-center gap-2">📍 {job.location}</span>
             <span className="text-zinc-800 hidden md:inline">•</span>
-            <span className="flex items-center gap-2">📄 {job.contractType.replace('_', ' ')}</span>
+            <span className="flex items-center gap-2">📄 {contractTypeMap[job.contractType] || job.contractType}</span>
             <span className="text-zinc-800 hidden md:inline">•</span>
             <span className="flex items-center gap-2 text-emerald-500 font-bold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
