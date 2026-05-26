@@ -44,7 +44,7 @@ const services = [
     isDark: true
   },
   {
-    id: 'movimento-terra',
+    id: 'scavi-trincea',
     cat: 'Scavi di trincea',
     title: 'Scavi con escavatori per la posa di cavi interrati',
     desc: 'Disponiamo di mezzi propri per l\'esecuzione di scavi di trincea necessari alla posa di cavi sotterranei. Operiamo in ambiente urbano ed extraurbano, coordinandoci con le autorità competenti.',

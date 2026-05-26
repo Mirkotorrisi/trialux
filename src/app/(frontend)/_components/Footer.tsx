@@ -63,10 +63,10 @@ export const Footer = () => {
               {[
                 { name: 'Cavi MT/BT sotterranei', href: '/servizi#cavi-sotterranei' },
                 { name: 'Linee aeree MT/BT', href: '/servizi#linee-aeree' },
-                { name: 'Cabine secondarie', href: '/servizi#cabine-secondarie' },
-                { name: 'Gruppi elettrogeni', href: '/servizi#gruppi-elettrogeni' },
-                { name: 'Opere murarie', href: '/servizi#opere-murarie' },
-                { name: 'Movimento terra', href: '/servizi#movimento-terra' }
+                { name: 'Cabine secondarie MT/BT', href: '/servizi#cabine-secondarie' },
+                { name: 'Gruppi elettrogeni temporanei', href: '/servizi#gruppi-elettrogeni' },
+                { name: 'Scavi di trincea', href: '/servizi#scavi-trincea' },
+                { name: 'Opere murarie', href: '/servizi#opere-murarie' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link 
