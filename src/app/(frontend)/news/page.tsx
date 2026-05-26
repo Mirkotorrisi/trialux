@@ -53,62 +53,29 @@ export default async function NewsPage() {
 
       <main className="w-full">
 
-        {/* ── 1. TYPOGRAPHIC HERO (NON-PHOTOGRAPHIC) ── */}
-        <section className="section-dark relative w-full overflow-hidden pt-32 pb-16 md:pt-44 md:pb-24 lg:pt-48 lg:pb-28 border-b border-white/5">
+        {/* ── 1. TYPOGRAPHIC HERO (NON-PHOTOGRAPHIC BANNER) ── */}
+        <section className="section-dark relative w-full overflow-hidden pt-28 pb-10 md:pt-36 md:pb-14 lg:pt-40 lg:pb-16 border-b border-white/5">
           <DecorativePattern />
           <div className="container-wide relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-8 items-center">
-              
-              {/* Left Column - Text */}
-              <div className="pr-0 lg:pr-8">
-                <FadeIn delay={0} effect="mask">
-                  <div className="flex items-center gap-4 mb-6 md:mb-8">
-                     <div className="w-8 h-[2px] bg-[#F0921E]" />
-                     <span className="text-[#F0921E] text-xs md:text-sm font-bold uppercase tracking-[0.4em]">
-                       Trialux Newsroom
-                     </span>
-                  </div>
-                </FadeIn>
-                <FadeIn delay={100} effect="mask">
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl break-words">
-                    News & <br className="hidden md:block" /> Aggiornamenti.
-                  </h1>
-                </FadeIn>
-                <FadeIn delay={200} effect="mask">
-                  <p className="text-white/70 text-base md:text-xl max-w-xl leading-relaxed">
-                    Dal campo ai progetti speciali: tutte le novità dal mondo Trialux e dal settore delle infrastrutture energetiche.
-                  </p>
-                </FadeIn>
-              </div>
-
-              {/* Right Column - News UI Illustration */}
-              <div className="relative w-full aspect-square max-w-lg mx-auto flex items-center justify-center">
-                 <FadeIn delay={300} className="w-full h-full relative flex items-center justify-center">
-                       
-                       {/* Floating UI Card - Newspaper */}
-                       <div className="relative z-10 w-[75%] aspect-[3/4] bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-800/10 p-6 flex flex-col gap-4 transform rotate-[-4deg] translate-x-4 hover:rotate-0 transition-transform duration-700">
-                          
-                          {/* Image Skeleton */}
-                          <div className="w-full h-2/5 bg-zinc-100 rounded-xl relative overflow-hidden mb-2 flex items-center justify-center">
-                            <Newspaper size={32} className="text-zinc-200" />
-                          </div>
-
-                          <div className="w-3/4 h-4 bg-zinc-200 rounded-full" />
-                          <div className="w-full h-2 bg-zinc-100 rounded-full mt-2" />
-                          <div className="w-5/6 h-2 bg-zinc-100 rounded-full" />
-                          <div className="w-full h-2 bg-zinc-100 rounded-full" />
-                          
-                          <div className="mt-auto pt-4 border-t border-zinc-50 flex items-center justify-between">
-                             <div className="w-1/2 h-2 bg-zinc-200 rounded-full" />
-                             <div className="w-8 h-8 bg-[#0a0f1a] rounded-full flex items-center justify-center text-white">
-                               <ArrowRight size={14} />
-                             </div>
-                          </div>
-                       </div>
-                       
-                 </FadeIn>
-              </div>
-
+            <div className="max-w-4xl">
+              <FadeIn delay={0} effect="mask">
+                <div className="flex items-center gap-4 mb-4 md:mb-6">
+                   <div className="w-8 h-[2px] bg-[#F0921E]" />
+                   <span className="text-[#F0921E] text-xs md:text-sm font-bold uppercase tracking-[0.4em]">
+                     Trialux Newsroom
+                   </span>
+                </div>
+              </FadeIn>
+              <FadeIn delay={100} effect="mask">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-4 max-w-3xl break-words">
+                  News & Aggiornamenti.
+                </h1>
+              </FadeIn>
+              <FadeIn delay={200} effect="mask">
+                <p className="text-white/70 text-base md:text-lg max-w-2xl leading-relaxed">
+                  Dal campo ai progetti speciali: tutte le novità dal mondo Trialux e dal settore delle infrastrutture energetiche.
+                </p>
+              </FadeIn>
             </div>
           </div>
           
