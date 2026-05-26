@@ -63,7 +63,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a]/95 via-[#0a0f1a]/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/60 to-transparent" style={{ width: '70%' }} />
+
           </div>
 
           {/* Arc deco */}

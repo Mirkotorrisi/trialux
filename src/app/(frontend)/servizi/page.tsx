@@ -78,7 +78,7 @@ export default function ServiziPage() {
                 disablePictureInPicture
                 disableRemotePlayback
                 poster="/images/servizi_verticale-optimized-poster.webp"
-                className="absolute inset-0 w-full h-[120%] object-cover opacity-60 pointer-events-none select-none block md:hidden"
+                className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none block md:hidden"
                 style={{ transformOrigin: 'center bottom' }}
               >
                 <source src="/videos/servizi_verticale-optimized.mp4" type="video/mp4" />
@@ -94,7 +94,7 @@ export default function ServiziPage() {
                 disablePictureInPicture
                 disableRemotePlayback
                 poster="/images/servizi-optimized-poster.webp"
-                className="absolute inset-0 w-full h-[120%] object-cover opacity-60 pointer-events-none select-none hidden md:block"
+                className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none hidden md:block"
                 style={{ transformOrigin: 'center bottom' }}
               >
                 <source src="/videos/servizi-optimized.mp4" type="video/mp4" />
@@ -105,7 +105,7 @@ export default function ServiziPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
             
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/70 to-transparent w-full md:w-[60%]" />
+
           </div>
 
           <div className="container-wide relative z-10">
