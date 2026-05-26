@@ -190,7 +190,7 @@ export default function ChiSiamoPage() {
               <FadeIn effect="mask">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="w-10 h-[2px] bg-[#55ABE4]" />
-                  <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">Performance</span>
+                  <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">I nostri numeri</span>
                 </div>
                 <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] tracking-tight leading-[1.1]">
                   Trialux in numeri.

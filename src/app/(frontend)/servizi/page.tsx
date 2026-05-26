@@ -157,7 +157,7 @@ export default function ServiziPage() {
                 <div className={`flex flex-col justify-center py-8 ${idx % 2 !== 0 ? 'lg:order-2' : ''}`}>
                   <FadeIn effect="mask">
                     <div className="mb-6">{srv.icon}</div>
-                    <span className={`text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block ${srv.isDark ? 'text-[#55ABE4]' : 'text-[#55ABE4]'}`}>
+                    <span className={`text-xs font-bold tracking-[0.15em] uppercase mb-4 block ${srv.isDark ? 'text-[#55ABE4]' : 'text-[#55ABE4]'}`}>
                       {srv.cat}
                     </span>
                     <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 ${srv.isDark ? 'text-white' : 'text-[#0a0f1a]'}`}>

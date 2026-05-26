@@ -98,7 +98,7 @@ export const InteractiveOrgChart: React.FC = () => {
               <div className="sticky top-32">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-[2px]" style={{ background: dept.color }} />
-                  <span className="font-bold uppercase tracking-[0.2em] text-[10px]" style={{ color: dept.color }}>Department</span>
+                  <span className="font-bold uppercase tracking-[0.15em] text-xs" style={{ color: dept.color }}>Dipartimento</span>
                 </div>
                 <h3 className="text-3xl font-black tracking-tight text-[#0a0f1a]">{dept.title}</h3>
               </div>

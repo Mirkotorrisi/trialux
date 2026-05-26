@@ -17,6 +17,16 @@ const contractTypeMap: Record<string, string> = {
   'freelance': 'frelance'
 };
 
+function translateDepartment(dept: string | null | undefined): string {
+  if (!dept) return ''
+  const lower = dept.toLowerCase().trim()
+  if (lower === 'technical' || lower === 'technical department' || lower === 'direzione tecnica' || lower === 'ufficio tecnico') return 'Direzione Tecnica'
+  if (lower === 'operations' || lower === 'direzione operativa' || lower === 'direttore operativo') return 'Direzione Operativa'
+  if (lower === 'administration' || lower === 'area amministrativa' || lower === 'amministrazione') return 'Area Amministrativa'
+  if (lower === 'quality & safety' || lower === 'qualità e sicurezza' || lower === 'safety') return 'Qualità e Sicurezza'
+  return dept
+}
+
 
 export default async function JobPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -62,7 +72,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
             <FadeIn effect="mask">
               <div className="flex items-center gap-6 mb-8">
                 <span className="w-16 h-[3px] bg-[#55ABE4]"></span>
-                <span className="text-white font-black tracking-[0.4em] uppercase text-xs">Posizione Aperta</span>
+                <span className="text-white font-bold tracking-[0.15em] uppercase text-xs">Posizione Aperta</span>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter mb-12 leading-[0.9] text-white uppercase max-w-5xl">
                 {job.jobTitle}
@@ -73,7 +83,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                   <div className="flex items-center gap-4">
                     <MapPin className="text-[#55ABE4]" size={20} />
                     <div>
-                      <div className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em]">Sede</div>
+                      <div className="text-xs font-bold text-zinc-500 uppercase tracking-[0.15em]">Sede</div>
                       <div className="font-bold text-white tracking-tight uppercase text-sm">{job.location}</div>
                     </div>
                   </div>
@@ -82,7 +92,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                   <div className="flex items-center gap-4 lg:border-l border-white/10 lg:pl-8">
                     <FileText className="text-[#55ABE4]" size={20} />
                     <div>
-                      <div className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em]">Contratto</div>
+                      <div className="text-xs font-bold text-zinc-500 uppercase tracking-[0.15em]">Contratto</div>
                       <div className="font-bold text-white tracking-tight uppercase text-sm">{contractTypeMap[job.contractType] || job.contractType}</div>
                     </div>
                   </div>
@@ -91,8 +101,8 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                   <div className="flex items-center gap-4 lg:border-l border-white/10 lg:pl-8">
                     <Briefcase className="text-[#55ABE4]" size={20} />
                     <div>
-                      <div className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em]">Dipartimento</div>
-                      <div className="font-bold text-white tracking-tight uppercase text-sm">{job.department}</div>
+                      <div className="text-xs font-bold text-zinc-500 uppercase tracking-[0.15em]">Dipartimento</div>
+                      <div className="font-bold text-white tracking-tight uppercase text-sm">{translateDepartment(job.department)}</div>
                     </div>
                   </div>
                 )}
@@ -101,7 +111,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
           </div>
           <div className="absolute top-0 right-0 w-1/3 h-full bg-[#55ABE4]/5 -skew-x-12 translate-x-1/2" />
         </section>
-
+ 
         {/* Job Content */}
         <section className="py-20 md:py-32 bg-white">
           <div className="container mx-auto px-6 lg:px-12 max-w-[1400px]">
@@ -110,7 +120,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                 <FadeIn effect="mask" delay={100}>
                   <div className="flex items-center gap-6 mb-8">
                     <span className="w-16 h-[3px] bg-[#55ABE4]"></span>
-                    <span className="text-[#0a0f1a] font-black tracking-[0.2em] uppercase text-sm">Dettagli posizione</span>
+                    <span className="text-[#0a0f1a] font-bold tracking-[0.15em] uppercase text-xs">Dettagli posizione</span>
                   </div>
                   <div className="prose prose-lg md:prose-xl prose-zinc max-w-none mb-8 lg:mb-16 font-medium">
                     <RichText content={job.description} />

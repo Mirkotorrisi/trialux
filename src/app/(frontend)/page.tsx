@@ -244,7 +244,7 @@ export default async function HomePage() {
                 <FadeIn effect="mask">
                   <div className="flex items-center gap-4 mb-6">
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
-                    <span className="text-[#EE2430] font-bold tracking-[0.2em] uppercase text-[11px]">Il nostro network</span>
+                    <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Il nostro network</span>
                   </div>
                   <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0a0f1a] leading-[1.1] mb-8">
                     Partner & Sponsor.

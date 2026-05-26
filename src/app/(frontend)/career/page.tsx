@@ -27,6 +27,16 @@ function extractPlainText(content: any): string {
     .trim()
 }
 
+function translateDepartment(dept: string | null | undefined): string {
+  if (!dept) return ''
+  const lower = dept.toLowerCase().trim()
+  if (lower === 'technical' || lower === 'technical department' || lower === 'direzione tecnica' || lower === 'ufficio tecnico') return 'Direzione Tecnica'
+  if (lower === 'operations' || lower === 'direzione operativa' || lower === 'direttore operativo') return 'Direzione Operativa'
+  if (lower === 'administration' || lower === 'area amministrativa' || lower === 'amministrazione') return 'Area Amministrativa'
+  if (lower === 'quality & safety' || lower === 'qualità e sicurezza' || lower === 'safety') return 'Qualità e Sicurezza'
+  return dept
+}
+
 export default async function CareerPage() {
   const payload = await getPayload({ config })
   
@@ -277,7 +287,7 @@ export default async function CareerPage() {
                           <Link href={`/career/${job.slug || job.id}`} className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 p-8 bg-white hover:bg-[#F0921E] group transition-all duration-500 shadow-sm hover:shadow-xl border border-zinc-100">
                             <div className="flex-1">
                               {job.department && (
-                                <span className="text-[10px] font-black text-[#F0921E] group-hover:text-white uppercase tracking-[0.2em] mb-2 block">{job.department}</span>
+                                <span className="text-xs font-bold text-[#F0921E] group-hover:text-white uppercase tracking-[0.15em] mb-2 block">{translateDepartment(job.department)}</span>
                               )}
                               <h3 className="text-xl font-black text-[#0a0f1a] group-hover:text-white tracking-tighter mb-2">{job.jobTitle}</h3>
                               {descriptionPreview && (
