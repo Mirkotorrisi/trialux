@@ -116,7 +116,7 @@ export default function CertificazioniPage() {
                   fileUrl: '#'
                 }
               ].map((cert, idx) => (
-                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden border-r last:border-r-0 border-zinc-100">
+                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden border-b last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 border-zinc-100">
                   {/* Hover Color Fill */}
                   <div 
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-0" 
