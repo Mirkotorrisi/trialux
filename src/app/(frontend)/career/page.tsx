@@ -335,9 +335,7 @@ export default async function CareerPage() {
                       <span>Candidati</span>
                       <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                     </a>
-                    <div className="mt-6 text-zinc-400 text-xs font-mono uppercase tracking-widest">
-                      ufficiopersonale@trialuxsrl.it
-                    </div>
+
                   </div>
                 </div>
               </div>

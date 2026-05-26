@@ -134,11 +134,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                       <span>Invia Candidatura</span>
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </a>
-                    <div className="mt-8 pt-8 border-t border-zinc-200 text-center">
-                      <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
-                        ufficiopersonale@trialuxsrl.it
-                      </p>
-                    </div>
+
                   </div>
                 </FadeIn>
               </div>
