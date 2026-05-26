@@ -8,6 +8,7 @@ import Image from 'next/image'
 
 const services = [
   {
+    id: 'cavi-sotterranei',
     cat: 'Cavi MT/BT sotterranei',
     title: 'Fornitura e posa di cavi sotterranei',
     desc: 'Progettiamo e realizziamo il posizionamento di cavi di media e bassa tensione interrati, comprese le operazioni di giunzione e terminazione. Lavoriamo con materiali di prima qualità e rispettiamo le normative tecniche vigenti per garantire impianti duraturi e sicuri.',
@@ -16,6 +17,7 @@ const services = [
     isDark: false
   },
   {
+    id: 'linee-aeree',
     cat: 'Linee aeree MT/BT',
     title: 'Linee aeree su palo e su traliccio',
     desc: 'Realizziamo linee aeree di media e bassa tensione, sia su palo che su traliccio, per la trasmissione e distribuzione di energia elettrica. Gestiamo l\'intera filiera operativa: progettazione del tracciato, fornitura dei materiali, installazione e collaudo.',
@@ -24,6 +26,7 @@ const services = [
     isDark: true
   },
   {
+    id: 'cabine-secondarie',
     cat: 'Cabine secondarie MT/BT',
     title: 'Installazione di cabine di trasformazione',
     desc: 'Forniamo e installiamo cabine secondarie di media e bassa tensione per la distribuzione locale dell\'energia. Le nostre squadre sono qualificate per operare su impianti in media tensione e garantiscono esecuzioni a regola d\'arte.',
@@ -32,6 +35,7 @@ const services = [
     isDark: false
   },
   {
+    id: 'gruppi-elettrogeni',
     cat: 'Gruppi elettrogeni temporanei',
     title: 'Alimentazione temporanea di cantiere e emergenza',
     desc: 'Forniamo e installiamo in via temporanea gruppi elettrogeni per garantire la continuità di alimentazione durante interventi sulla rete o in situazioni di emergenza.',
@@ -40,6 +44,7 @@ const services = [
     isDark: true
   },
   {
+    id: 'movimento-terra',
     cat: 'Scavi di trincea',
     title: 'Scavi con escavatori per la posa di cavi interrati',
     desc: 'Disponiamo di mezzi propri per l\'esecuzione di scavi di trincea necessari alla posa di cavi sotterranei. Operiamo in ambiente urbano ed extraurbano, coordinandoci con le autorità competenti.',
@@ -48,6 +53,7 @@ const services = [
     isDark: false
   },
   {
+    id: 'opere-murarie',
     cat: 'Opere murarie',
     title: 'Opere edili a supporto degli impianti elettrici',
     desc: 'Eseguiamo le opere murarie necessarie alla realizzazione e protezione degli impianti: basamenti per cabine, tramezzi tecnici, chiusure e finiture. Una competenza complementare che ci permette di offrire un servizio realmente chiavi in mano.',
@@ -126,7 +132,8 @@ export default function ServiziPage() {
         {services.map((srv, idx) => (
           <section 
             key={idx} 
-            className={`py-20 md:py-32 border-b border-zinc-100 relative overflow-hidden ${srv.isDark ? 'section-dark' : 'bg-white'}`}
+            id={srv.id}
+            className={`scroll-mt-[80px] md:scroll-mt-[100px] py-20 md:py-32 border-b border-zinc-100 relative overflow-hidden ${srv.isDark ? 'section-dark' : 'bg-white'}`}
           >
             {/* Variations of Decorative Patterns for Dark Sections */}
             {srv.isDark && idx === 1 && <DecorativePattern />}

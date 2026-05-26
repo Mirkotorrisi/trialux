@@ -61,15 +61,20 @@ export const Footer = () => {
             <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-8 text-[#F0921E]">Servizi</h4>
             <ul className="space-y-4 list-none p-0">
               {[
-                'Cavi MT/BT sotterranei',
-                'Linee aeree MT/BT',
-                'Cabine secondarie',
-                'Gruppi elettrogeni',
-                'Opere murarie',
-                'Movimento terra'
+                { name: 'Cavi MT/BT sotterranei', href: '/servizi#cavi-sotterranei' },
+                { name: 'Linee aeree MT/BT', href: '/servizi#linee-aeree' },
+                { name: 'Cabine secondarie', href: '/servizi#cabine-secondarie' },
+                { name: 'Gruppi elettrogeni', href: '/servizi#gruppi-elettrogeni' },
+                { name: 'Opere murarie', href: '/servizi#opere-murarie' },
+                { name: 'Movimento terra', href: '/servizi#movimento-terra' }
               ].map((item) => (
-                <li key={item} className="text-white/40 text-sm">
-                  {item}
+                <li key={item.name}>
+                  <Link 
+                    href={item.href} 
+                    className="text-white/60 text-sm hover:text-[#F0921E] transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
