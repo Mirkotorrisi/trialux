@@ -211,7 +211,7 @@ export default function ChiSiamoPage() {
                 { icon: <Award className="text-[#55ABE4]" size={24}/>, num: '3 ISO', label: 'Certificazioni ottenute' },
               ].map((stat, idx) => (
                 <FadeIn key={idx} delay={idx * 80}>
-                  <div className="p-8 md:p-10 flex flex-col items-center text-center gap-4">
+                  <div className="p-8 md:p-10 flex flex-col items-center text-center gap-4 bg-white">
                     <div className="mb-2">{stat.icon}</div>
                     <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0a0f1a] leading-none tracking-tighter">{stat.num}</div>
                     <div className="text-zinc-500 text-[10px] md:text-xs uppercase tracking-widest font-bold max-w-[140px] mx-auto">{stat.label}</div>

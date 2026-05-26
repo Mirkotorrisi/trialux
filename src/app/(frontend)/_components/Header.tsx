@@ -67,14 +67,14 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex gap-11 items-center">
+        <nav className="hidden lg:flex lg:gap-6 xl:gap-11 items-center">
           {navLinks.map((link) => {
             const isActive = pathname === link.href || (pathname?.startsWith(link.href) && link.href !== '/')
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative text-[12px] font-bold uppercase tracking-[0.18em] transition-all no-underline ${
+                className={`relative text-[14px] font-bold uppercase tracking-[0.18em] transition-all no-underline ${
                   isActive
                     ? 'text-[#F0921E]'
                     : isSolid
