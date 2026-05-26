@@ -16,7 +16,7 @@ export default function ContattiPage() {
           <div className="absolute inset-0">
             <Parallax offset={80} className="w-full h-full">
               <Image
-                src="/images/Trialux 19.webp"
+                src="/images/Trialux 35.webp"
                 alt="Contatti Trialux"
                 fill
                 priority
