@@ -1,10 +1,10 @@
 import { Header } from '../_components/Header'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
-import { Parallax } from '../_components/Parallax'
 import Link from 'next/link'
-import { ArrowRight, Rss } from 'lucide-react'
+import { ArrowRight, Rss, Newspaper } from 'lucide-react'
 import { FadeIn } from '../_components/FadeIn'
+import { DecorativePattern } from '../_components/DecorativeArcs'
 
 export const metadata = {
   title: 'News & Aggiornamenti — Trialux',
@@ -42,7 +42,7 @@ export default async function NewsPage() {
     console.log('Posts collection not found or error fetching posts:', error)
   }
 
-  const featuredPost = posts[0] || null
+  const featuredPost = posts.length > 0 ? posts[0] : null
   const gridPosts = posts.slice(1)
 
   const accentColors = ['#55ABE4', '#55ABE4', '#55ABE4']
@@ -53,40 +53,71 @@ export default async function NewsPage() {
 
       <main className="w-full">
 
-        {/* ── 1. HERO (ALLINEATA AL RESTO DEL SITO) ── */}
-        <section className="relative w-full flex flex-col justify-end overflow-hidden pb-16 md:pb-32 lg:pb-40" style={{ height: '100dvh', minHeight: '100dvh' }}>
-          <div className="absolute inset-0">
-            <Parallax offset={80} className="w-full h-full">
-              <img
-                src="/images/Trialux 16.webp"
-                alt="News e Blog"
-                className="w-full h-[120%] object-cover transition-transform duration-[10s] hover:scale-110"
-              />
-            </Parallax>
-            {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
-            
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
-
-          </div>
-
+        {/* ── 1. TYPOGRAPHIC HERO (NON-PHOTOGRAPHIC) ── */}
+        <section className="section-dark relative w-full overflow-hidden pt-32 pb-16 md:pt-44 md:pb-24 lg:pt-48 lg:pb-28 border-b border-white/5">
+          <DecorativePattern />
           <div className="container-wide relative z-10 w-full">
-            <FadeIn delay={0} effect="mask">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-8 items-center">
+              
+              {/* Left Column - Text */}
+              <div className="pr-0 lg:pr-8">
+                <FadeIn delay={0} effect="mask">
+                  <div className="flex items-center gap-4 mb-6 md:mb-8">
+                     <div className="w-8 h-[2px] bg-[#F0921E]" />
+                     <span className="text-[#F0921E] text-xs md:text-sm font-bold uppercase tracking-[0.4em]">
+                       Trialux Newsroom
+                     </span>
+                  </div>
+                </FadeIn>
+                <FadeIn delay={100} effect="mask">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl break-words">
+                    News & <br className="hidden md:block" /> Aggiornamenti.
+                  </h1>
+                </FadeIn>
+                <FadeIn delay={200} effect="mask">
+                  <p className="text-white/70 text-base md:text-xl max-w-xl leading-relaxed">
+                    Dal campo ai progetti speciali: tutte le novità dal mondo Trialux e dal settore delle infrastrutture energetiche.
+                  </p>
+                </FadeIn>
+              </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 max-w-3xl">
-                News & <br/> Aggiornamenti.
-              </h1>
-            </FadeIn>
-            <FadeIn delay={200} effect="mask">
-              <p className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed">
-                Dal campo ai progetti speciali: tutte le novità dal mondo Trialux e dal settore delle infrastrutture energetiche.
-              </p>
-            </FadeIn>
+              {/* Right Column - News UI Illustration */}
+              <div className="relative w-full aspect-square max-w-lg mx-auto flex items-center justify-center">
+                 <FadeIn delay={300} className="w-full h-full relative flex items-center justify-center">
+                       
+                       {/* Floating UI Card - Newspaper */}
+                       <div className="relative z-10 w-[75%] aspect-[3/4] bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-zinc-800/10 p-6 flex flex-col gap-4 transform rotate-[-4deg] translate-x-4 hover:rotate-0 transition-transform duration-700">
+                          
+                          {/* Image Skeleton */}
+                          <div className="w-full h-2/5 bg-zinc-100 rounded-xl relative overflow-hidden mb-2 flex items-center justify-center">
+                            <Newspaper size={32} className="text-zinc-200" />
+                          </div>
+
+                          <div className="w-3/4 h-4 bg-zinc-200 rounded-full" />
+                          <div className="w-full h-2 bg-zinc-100 rounded-full mt-2" />
+                          <div className="w-5/6 h-2 bg-zinc-100 rounded-full" />
+                          <div className="w-full h-2 bg-zinc-100 rounded-full" />
+                          
+                          <div className="mt-auto pt-4 border-t border-zinc-50 flex items-center justify-between">
+                             <div className="w-1/2 h-2 bg-zinc-200 rounded-full" />
+                             <div className="w-8 h-8 bg-[#0a0f1a] rounded-full flex items-center justify-center text-white">
+                               <ArrowRight size={14} />
+                             </div>
+                          </div>
+                       </div>
+                       
+                 </FadeIn>
+              </div>
+
+            </div>
           </div>
+          
+          {/* Subtle Geometric accent */}
+          <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-[#F0921E]/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
         </section>
 
-        {/* ── 2. GRID NEWS (CARD SQUADRATE) ── */}
-        <section className="bg-white py-16 md:py-32">
+        {/* ── 2. GRID NEWS ── */}
+        <section className="bg-white py-16 md:py-32 min-h-[50vh]">
           <div className="container-wide">
 
             {posts.length > 0 ? (
@@ -95,13 +126,15 @@ export default async function NewsPage() {
                 {/* FEATURED — High Contrast Block */}
                 {featuredPost && (
                   <FadeIn>
-                    <div className="flex items-center gap-4 mb-12">
-                       <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400">In Evidenza</span>
-                       <span className="flex-1 h-[1px] bg-zinc-100" />
+                    <div className="flex items-center gap-6 mb-12">
+                       <h2 className="text-3xl md:text-5xl font-black tracking-tight text-[#0a0f1a]">
+                         In Evidenza
+                       </h2>
+                       <span className="flex-1 h-[2px] bg-zinc-200" />
                     </div>
                     <Link
                       href={`/news/${featuredPost.slug || featuredPost.id}`}
-                      className="group block relative bg-white border border-zinc-200 overflow-hidden hover:border-[#0a0f1a] transition-all duration-500"
+                      className="group block relative bg-white border border-zinc-200 overflow-hidden hover:border-[#0a0f1a] transition-all duration-500 shadow-sm hover:shadow-xl"
                     >
                       <div className="grid grid-cols-1 lg:grid-cols-2">
                         <div className="aspect-[16/10] lg:aspect-auto relative overflow-hidden bg-zinc-100">
@@ -118,16 +151,16 @@ export default async function NewsPage() {
                           )}
                         </div>
                         <div className="p-10 lg:p-16 flex flex-col justify-center">
-                           <div className="text-xs font-bold text-[#F0921E] uppercase tracking-widest mb-6">
+                           <div className="text-sm font-bold text-[#F0921E] uppercase tracking-widest mb-6">
                             {new Date(featuredPost.publishedDate || featuredPost.createdAt).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
                           </div>
-                          <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] leading-tight tracking-tighter mb-8">
+                          <h3 className="text-3xl md:text-5xl font-black text-[#0a0f1a] leading-tight tracking-tighter mb-8 group-hover:text-[#F0921E] transition-colors">
                             {featuredPost.title}
-                          </h2>
+                          </h3>
                           <p className="text-zinc-600 text-sm md:text-lg leading-relaxed mb-10 max-w-xl line-clamp-3">
                             {featuredPost.excerpt || extractPlainText(featuredPost.content)}
                           </p>
-                          <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-[#0a0f1a] group-hover:gap-6 transition-all">
+                          <div className="flex items-center gap-4 text-sm font-black uppercase tracking-widest text-[#0a0f1a] group-hover:gap-6 transition-all">
                             <span>Leggi l'articolo</span>
                              <ArrowRight size={20} className="text-[#F0921E]" />
                           </div>
@@ -142,22 +175,24 @@ export default async function NewsPage() {
                 {gridPosts.length > 0 && (
                   <div>
                     <FadeIn>
-                      <div className="flex items-center gap-4 mb-16">
-                        <h2 className="text-xs font-black uppercase tracking-widest text-zinc-400 whitespace-nowrap">Recenti dal blog</h2>
-                        <span className="flex-1 h-[1px] bg-zinc-100" />
+                      <div className="flex items-center gap-6 mb-16">
+                        <h2 className="text-2xl md:text-4xl font-black tracking-tight text-[#0a0f1a]">
+                          Recenti dal blog
+                        </h2>
+                        <span className="flex-1 h-[2px] bg-zinc-200" />
                       </div>
                     </FadeIn>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                       {gridPosts.map((post: any, index: number) => {
                         const accent = accentColors[index % accentColors.length]
-                        // Anteprima testo dal contenuto se manca excerpt
                         const previewText = post.excerpt || extractPlainText(post.content)
 
                         return (
-                          <FadeIn key={post.id} delay={index * 100} className="h-full">
+                          <FadeIn key={post.id} delay={index * 50} className="h-full">
                             <Link
                               href={`/news/${post.slug || post.id}`}
-                              className="group flex flex-col h-full bg-white border border-zinc-200 hover:border-[#0a0f1a] transition-all duration-300 relative"
+                              className="group flex flex-col h-full bg-white border border-zinc-200 hover:border-[#0a0f1a] hover:shadow-lg transition-all duration-300 relative"
                             >
                               <div className="aspect-[16/10] relative overflow-hidden bg-zinc-50 border-b border-zinc-100">
                                 {post.featuredImage ? (
@@ -180,7 +215,7 @@ export default async function NewsPage() {
                                 </div>
                                 <h3 className="text-xl font-black text-[#0a0f1a] leading-[1.2] tracking-tighter mb-4 group-hover:text-[#55ABE4] transition-colors">
                                   {post.title}
-                                </h3>
+                               </h3>
                                 {previewText && (
                                   <p className="text-zinc-600 text-sm leading-relaxed mb-8 line-clamp-3">
                                     {previewText}
@@ -188,7 +223,7 @@ export default async function NewsPage() {
                                 )}
                                 <div className="mt-auto pt-6 border-t border-zinc-100 flex items-center justify-between">
                                   <span className="text-[10px] font-black uppercase tracking-widest text-[#0a0f1a]">Leggi Tutto</span>
-                                  <div className="w-8 h-8 flex items-center justify-center bg-zinc-50 group-hover:bg-[#0a0f1a] group-hover:text-white transition-all">
+                                  <div className="w-8 h-8 flex items-center justify-center bg-zinc-50 group-hover:bg-[#0a0f1a] group-hover:text-white transition-all rounded-full">
                                     <ArrowRight size={16} />
                                   </div>
                                 </div>
@@ -204,12 +239,12 @@ export default async function NewsPage() {
               </div>
             ) : (
               <FadeIn>
-                <div className="border-[4px] border-[#0a0f1a] p-16 md:p-24 text-center">
-                  <Rss size={48} className="mx-auto text-[#F0921E] mb-8" />
-                  <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] tracking-tighter mb-6">
+                <div className="border-[4px] border-zinc-100 rounded-3xl p-16 md:p-24 text-center bg-white shadow-sm">
+                  <Rss size={64} className="mx-auto text-zinc-300 mb-8" />
+                  <h2 className="text-3xl md:text-4xl font-black text-[#0a0f1a] tracking-tighter mb-4">
                     Archivio in aggiornamento.
                   </h2>
-                  <p className="text-zinc-500 text-base max-w-xl mx-auto leading-relaxed">
+                  <p className="text-zinc-500 text-lg max-w-xl mx-auto leading-relaxed">
                     Stiamo riorganizzando la nostra comunicazione per offrirvi aggiornamenti più puntuali e tecnici. Tornate a trovarci a breve.
                   </p>
                 </div>
