@@ -287,7 +287,7 @@ export default function ContattiPage() {
                         </div>
                         <button
                           type="submit"
-                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0a0f1a] text-white font-bold hover:bg-[#F0921E] transition-colors group"
+                          className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0a0f1a] text-white font-bold hover:bg-[#F0921E] transition-colors group border-none outline-none"
                         >
                           <span>Invia messaggio</span>
                           <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
