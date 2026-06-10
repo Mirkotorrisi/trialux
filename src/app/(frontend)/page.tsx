@@ -223,8 +223,8 @@ export default async function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {['ISO 9001:2015', 'ISO 14001:2015', 'ISO 45001:2018', 'White List'].map(item => (
                   <div key={item} className="bg-white/5 border border-white/10 p-6 flex items-center gap-5 hover:bg-white/10 transition-all group">
-                    <div className="w-10 h-10 rounded-full bg-[#F0921E]/10 flex items-center justify-center shrink-0 group-hover:bg-[#F0921E] transition-colors">
-                      <CheckCircle2 size={18} className="text-[#F0921E] group-hover:text-white transition-colors" />
+                    <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 transition-colors">
+                      <CheckCircle2 size={18} className="text-emerald-500 group-hover:text-white transition-colors" />
                     </div>
                     <span className="font-black text-[13px] tracking-tight uppercase text-white/90">{item}</span>
                   </div>
