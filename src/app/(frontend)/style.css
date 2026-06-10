@@ -48,7 +48,7 @@ html, body {
   font-size: 17px;
   line-height: 1.6;
   background: #ffffff;
-  color: #0a0f1a;
+  color: #152238;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -102,7 +102,7 @@ a:hover {
   border: 1px solid var(--tri-navy);
 }
 .tri-btn-dark:hover {
-  background: #161e2e;
+  background: #1b355f;
   transform: translateY(-2px);
 }
 
@@ -122,7 +122,7 @@ a:hover {
 .tri-btn-outline-dark {
   background: transparent;
   color: var(--tri-navy);
-  border: 1px solid rgba(10, 15, 26, 0.1);
+  border: 1px solid rgba(21, 34, 56, 0.15);
 }
 .tri-btn-outline-dark:hover {
   background: var(--tri-navy);
@@ -148,7 +148,7 @@ a:hover {
 .section-data-light {
   background: #f9f9f9;
   border: 1px solid #e5e5e5;
-  color: #0a0f1a;
+  color: #152238;
   position: relative;
 }
 
@@ -212,7 +212,7 @@ strong, b {
 
 /* Ensure navy is the default for bold elements in standard sections 
    only if the parent doesn't already provide a color. 
-   Since the main wrapper has text-[#0a0f1a], this will happen naturally. */
+   Since the main wrapper has text-[#152238], this will happen naturally. */
 
 
 /* =======================================

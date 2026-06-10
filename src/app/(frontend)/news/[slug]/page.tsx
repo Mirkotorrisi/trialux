@@ -47,14 +47,14 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   })
 
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a] font-sans">
+    <div className="bg-white min-h-screen text-[#152238] font-sans">
       <Header />
 
       <main className="w-full relative">
 
         {/* ── ARTICLE HERO — full-bleed photo behind title */}
         <section className="relative w-full min-h-[55vh] flex items-end overflow-hidden">
-          <div className="absolute inset-0 bg-[#0a0f1a]">
+          <div className="absolute inset-0 bg-[#152238]">
             {post.featuredImage && typeof post.featuredImage !== 'number' && post.featuredImage.url && (
               <img
                 src={post.featuredImage.url}
@@ -62,7 +62,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                 className="w-full h-full object-cover opacity-40"
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a]/95 via-[#0a0f1a]/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#152238]/95 via-[#152238]/50 to-transparent" />
 
           </div>
 
@@ -109,7 +109,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               <div className="prose prose-base lg:prose-lg prose-zinc max-w-none
                 prose-headings:font-black prose-headings:tracking-tight
                 prose-a:text-[#55ABE4] prose-a:no-underline hover:prose-a:underline
-                prose-strong:text-[#0a0f1a]
+                prose-strong:text-[#152238]
               ">
                 <RichText content={post.content} />
               </div>
@@ -123,7 +123,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div>
                 <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">Hai finito di leggere?</p>
-                <h3 className="text-2xl font-black text-[#0a0f1a] tracking-tight">Torna agli aggiornamenti</h3>
+                <h3 className="text-2xl font-black text-[#152238] tracking-tight">Torna agli aggiornamenti</h3>
               </div>
               <Link href="/news" className="tri-btn tri-btn-primary inline-flex group shrink-0">
                 <span>Tutte le news</span>

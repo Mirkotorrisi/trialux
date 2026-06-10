@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export default function ChiSiamoPage() {
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a]">
+    <div className="bg-white min-h-screen text-[#152238]">
       <Header />
 
       <main className="w-full relative">
@@ -52,9 +52,9 @@ export default function ChiSiamoPage() {
               </video>
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#152238]/80 via-transparent to-transparent h-40" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#152238] via-[#152238]/40 to-transparent" />
 
           </div>
 
@@ -83,7 +83,7 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#55ABE4]" />
                     <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">La storia</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0a0f1a] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#152238] leading-[1.1] mb-8">
                     La nostra storia.
                   </h2>
                 </FadeIn>
@@ -159,7 +159,7 @@ export default function ChiSiamoPage() {
                   <span className="w-10 h-[2px] bg-[#EE2430]" />
                   <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Organizzazione</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0a0f1a] leading-[1.1] mb-6">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#152238] leading-[1.1] mb-6">
                   La nostra struttura.
                 </h2>
               </FadeIn>
@@ -188,7 +188,7 @@ export default function ChiSiamoPage() {
                   <span className="w-10 h-[2px] bg-[#55ABE4]" />
                   <span className="text-[#55ABE4] font-bold tracking-[0.15em] uppercase text-xs">I nostri numeri</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] tracking-tight leading-[1.1]">
+                <h2 className="text-3xl md:text-5xl font-black text-[#152238] tracking-tight leading-[1.1]">
                   Trialux in numeri.
                 </h2>
               </FadeIn>
@@ -209,7 +209,7 @@ export default function ChiSiamoPage() {
                 <FadeIn key={idx} delay={idx * 80}>
                   <div className="p-8 md:p-10 flex flex-col items-center text-center gap-4 bg-white">
                     <div className="mb-2">{stat.icon}</div>
-                    <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0a0f1a] leading-none tracking-tighter">{stat.num}</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#152238] leading-none tracking-tighter">{stat.num}</div>
                     <div className="text-zinc-500 text-[10px] md:text-xs uppercase tracking-widest font-bold max-w-[140px] mx-auto">{stat.label}</div>
                   </div>
                 </FadeIn>
@@ -235,13 +235,13 @@ export default function ChiSiamoPage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Impegno Sociale</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0a0f1a] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#152238] leading-[1.1] mb-8">
                     Il territorio che sosteniamo.
                   </h2>
                 </FadeIn>
                 <FadeIn delay={200} effect="mask">
                   <p className="text-zinc-500 text-base leading-relaxed mb-8">
-                    Trialux crede nel valore del radicamento locale. Per questo sosteniamo due realtà sportive del territorio siciliano: il <strong className="text-[#0a0f1a]">Catania Football Club S.r.l.</strong> e la <strong className="text-[#0a0f1a]">SSD Biancavilla Calcio Academy</strong>. 
+                    Trialux crede nel valore del radicamento locale. Per questo sosteniamo due realtà sportive del territorio siciliano: il <strong className="text-[#152238]">Catania Football Club S.r.l.</strong> e la <strong className="text-[#152238]">SSD Biancavilla Calcio Academy</strong>. 
                   </p>
                   <p className="text-zinc-500 text-base leading-relaxed">
                     Un modo concreto di restituire alla comunità parte di ciò che l’azienda riceve ogni giorno lavorando su questo territorio.

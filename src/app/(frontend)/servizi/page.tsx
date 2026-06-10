@@ -65,7 +65,7 @@ const services = [
 
 export default function ServiziPage() {
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a]">
+    <div className="bg-white min-h-screen text-[#152238]">
       <Header />
 
       <main className="w-full">
@@ -108,9 +108,9 @@ export default function ServiziPage() {
               </video>
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#152238]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#152238] via-[#152238]/40 to-transparent" />
 
           </div>
 
@@ -160,7 +160,7 @@ export default function ServiziPage() {
                     <span className={`text-xs font-bold tracking-[0.15em] uppercase mb-4 block ${srv.isDark ? 'text-[#55ABE4]' : 'text-[#55ABE4]'}`}>
                       {srv.cat}
                     </span>
-                    <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 ${srv.isDark ? 'text-white' : 'text-[#0a0f1a]'}`}>
+                    <h2 className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] mb-6 ${srv.isDark ? 'text-white' : 'text-[#152238]'}`}>
                       {srv.title}
                     </h2>
                   </FadeIn>
@@ -188,7 +188,7 @@ export default function ServiziPage() {
                         />
                       </Parallax>
                       {/* Decorative Overlay for premium feel */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#152238]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     </div>
                   </FadeIn>
                 </div>
@@ -199,7 +199,7 @@ export default function ServiziPage() {
         ))}
 
         {/* ── FINAL CTA (Ignition Hover Banner) ────────────────────── */}
-        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
+        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#152238]">
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
@@ -232,7 +232,7 @@ export default function ServiziPage() {
               {/* Action Side */}
               <div className="lg:col-span-4 flex lg:justify-end">
                 <FadeIn delay={200}>
-                  <Link href="/contatti" className="group relative px-8 py-5 md:px-12 md:py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[240px] md:min-w-[280px]">
+                  <Link href="/contatti" className="group relative px-8 py-5 md:px-12 md:py-7 bg-white text-[#152238] font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-[#152238] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[240px] md:min-w-[280px]">
                     <span className="relative z-10">Inizia ora</span>
                     <ArrowRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

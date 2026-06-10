@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
                   isActive
                     ? 'text-[#F0921E]'
                     : isSolid
-                      ? 'text-zinc-600 hover:text-[#0a0f1a]'
+                      ? 'text-zinc-600 hover:text-[#152238]'
                       : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -108,9 +108,9 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
-          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? 'rotate-45 translate-y-[1px] bg-[#0a0f1a]' : isSolid ? 'bg-[#0a0f1a] -translate-y-[4px]' : 'bg-white -translate-y-[4px]'}`} />
-          <span className={`block h-[1.5px] w-6 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : isSolid ? 'bg-[#0a0f1a] opacity-100' : 'bg-white opacity-100'}`} />
-          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? '-rotate-45 -translate-y-[2px] bg-[#0a0f1a]' : isSolid ? 'bg-[#0a0f1a] translate-y-[4px]' : 'bg-white translate-y-[4px]'}`} />
+          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? 'rotate-45 translate-y-[1px] bg-[#152238]' : isSolid ? 'bg-[#152238] -translate-y-[4px]' : 'bg-white -translate-y-[4px]'}`} />
+          <span className={`block h-[1.5px] w-6 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : isSolid ? 'bg-[#152238] opacity-100' : 'bg-white opacity-100'}`} />
+          <span className={`block h-[1.5px] w-6 transition-all duration-300 origin-center ${isMobileMenuOpen ? '-rotate-45 -translate-y-[2px] bg-[#152238]' : isSolid ? 'bg-[#152238] translate-y-[4px]' : 'bg-white translate-y-[4px]'}`} />
         </button>
       </header>
 
@@ -124,7 +124,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-3xl font-black tracking-tighter no-underline ${isActive ? 'text-[#F0921E]' : 'text-[#0a0f1a]'}`}
+                  className={`text-3xl font-black tracking-tighter no-underline ${isActive ? 'text-[#F0921E]' : 'text-[#152238]'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}

@@ -34,7 +34,7 @@ export function ContactForm() {
     return (
       <div className="bg-zinc-50 border border-zinc-100 p-8 lg:p-12 flex flex-col items-center justify-center gap-4 min-h-[400px] text-center">
         <span className="text-4xl">✓</span>
-        <h3 className="text-2xl font-black text-[#0a0f1a]">Messaggio inviato!</h3>
+        <h3 className="text-2xl font-black text-[#152238]">Messaggio inviato!</h3>
         <p className="text-zinc-500">Ti risponderemo a breve al tuo indirizzo email.</p>
       </div>
     )
@@ -49,7 +49,7 @@ export function ContactForm() {
             Scrivici
           </span>
         </div>
-        <h3 className="text-2xl lg:text-3xl font-black mb-10 text-[#0a0f1a] tracking-tight">
+        <h3 className="text-2xl lg:text-3xl font-black mb-10 text-[#152238] tracking-tight">
           Invia una richiesta
         </h3>
         <form className="space-y-6">
@@ -64,7 +64,7 @@ export function ContactForm() {
               type="text"
               id="name"
               required
-              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
+              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400"
               placeholder="Mario Rossi"
             />
           </div>
@@ -79,7 +79,7 @@ export function ContactForm() {
             <input
               type="text"
               id="company"
-              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
+              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400"
               placeholder="Nome azienda"
             />
           </div>
@@ -95,7 +95,7 @@ export function ContactForm() {
                 type="email"
                 id="email"
                 required
-                className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#000080] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
+                className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#000080] transition-colors text-[#152238] placeholder:text-zinc-400"
                 placeholder="mario@esempio.it"
               />
             </div>
@@ -109,7 +109,7 @@ export function ContactForm() {
               <input
                 type="tel"
                 id="phone"
-                className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400"
+                className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400"
                 placeholder="+39"
               />
             </div>
@@ -124,7 +124,7 @@ export function ContactForm() {
             <select
               id="subject"
               required
-              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] cursor-pointer appearance-none"
+              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] cursor-pointer appearance-none"
             >
               <option value="" disabled>
                 Seleziona l'argomento
@@ -146,7 +146,7 @@ export function ContactForm() {
               id="message"
               required
               rows={4}
-              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#0a0f1a] placeholder:text-zinc-400 resize-none"
+              className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400 resize-none"
               placeholder="Scrivi qui la tua richiesta..."
             />
           </div>
@@ -164,7 +164,7 @@ export function ContactForm() {
           </div>
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0a0f1a] text-white font-bold hover:bg-[#F0921E] transition-colors group border-none outline-none"
+            className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#152238] text-white font-bold hover:bg-[#F0921E] transition-colors group border-none outline-none"
           >
             <span>Invia messaggio</span>
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

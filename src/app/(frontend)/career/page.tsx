@@ -57,7 +57,7 @@ export default async function CareerPage() {
   }
 
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a] font-sans">
+    <div className="bg-white min-h-screen text-[#152238] font-sans">
       <Header />
       
       <main className="w-full">
@@ -100,9 +100,9 @@ export default async function CareerPage() {
               </video>
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#152238]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#152238] via-[#152238]/40 to-transparent" />
 
           </div>
 
@@ -130,7 +130,7 @@ export default async function CareerPage() {
                   <span className="w-10 h-[2px] bg-[#F0921E]" />
                   <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">I nostri valori</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0a0f1a] leading-[1.1] mb-8">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#152238] leading-[1.1] mb-8">
                   Perché scegliere Trialux.
                 </h2>
               </FadeIn>
@@ -265,7 +265,7 @@ export default async function CareerPage() {
                     <span className="w-10 h-[2px] bg-[#F0921E]" />
                     <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Opportunità</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl font-black text-[#0a0f1a] tracking-tighter leading-[1] mb-6">
+                  <h2 className="text-3xl md:text-5xl font-black text-[#152238] tracking-tighter leading-[1] mb-6">
                     Posizioni aperte.
                   </h2>
                 </FadeIn>
@@ -289,14 +289,14 @@ export default async function CareerPage() {
                               {job.department && (
                                 <span className="text-xs font-bold text-[#F0921E] group-hover:text-white uppercase tracking-[0.15em] mb-2 block">{translateDepartment(job.department)}</span>
                               )}
-                              <h3 className="text-xl font-black text-[#0a0f1a] group-hover:text-white tracking-tighter mb-2">{job.jobTitle}</h3>
+                              <h3 className="text-xl font-black text-[#152238] group-hover:text-white tracking-tighter mb-2">{job.jobTitle}</h3>
                               {descriptionPreview && (
                                 <p className="text-zinc-500 text-sm group-hover:text-white/80 line-clamp-2 leading-relaxed">
                                   {descriptionPreview}
                                 </p>
                               )}
                             </div>
-                            <div className="w-12 h-12 flex items-center justify-center border border-zinc-100 group-hover:border-white text-[#0a0f1a] group-hover:text-white transition-all shrink-0">
+                            <div className="w-12 h-12 flex items-center justify-center border border-zinc-100 group-hover:border-white text-[#152238] group-hover:text-white transition-all shrink-0">
                               <ArrowRight size={20} />
                             </div>
                           </Link>
@@ -332,7 +332,7 @@ export default async function CareerPage() {
                       <span className="w-10 h-[2px] bg-[#F0921E]" />
                       <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Candidatura spontanea</span>
                     </div>
-                    <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#0a0f1a] leading-[1.1] mb-6">
+                    <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#152238] leading-[1.1] mb-6">
                       Non trovi la posizione giusta? <br className="hidden md:block" /> Scrivici lo stesso.
                     </h2>
                     <p className="text-zinc-500 text-base leading-relaxed mb-10 max-w-3xl">
@@ -340,7 +340,7 @@ export default async function CareerPage() {
                     </p>
                     <a
                       href="mailto:ufficiopersonale@trialuxsrl.it"
-                      className="inline-flex items-center gap-4 px-10 py-5 bg-[#0a0f1a] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
+                      className="inline-flex items-center gap-4 px-10 py-5 bg-[#152238] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
                     >
                       <span>Candidati</span>
                       <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />

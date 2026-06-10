@@ -62,12 +62,12 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
   }
 
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a] selection:bg-[#55ABE4]/20 font-sans">
+    <div className="bg-white min-h-screen text-[#152238] selection:bg-[#55ABE4]/20 font-sans">
       <Header forceSolid />
       
       <main className="w-full relative overflow-hidden pt-[90px]">
         {/* Job Header */}
-        <section className="bg-[#0a0f1a] py-24 lg:py-32 px-2 md:px-4 relative overflow-hidden">
+        <section className="bg-[#152238] py-24 lg:py-32 px-2 md:px-4 relative overflow-hidden">
           <div className="container mx-auto px-6 lg:px-12 max-w-[1400px] relative z-10">
             <FadeIn effect="mask">
               <div className="flex items-center gap-6 mb-8">
@@ -120,7 +120,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                 <FadeIn effect="mask" delay={100}>
                   <div className="flex items-center gap-6 mb-8">
                     <span className="w-16 h-[3px] bg-[#55ABE4]"></span>
-                    <span className="text-[#0a0f1a] font-bold tracking-[0.15em] uppercase text-xs">Dettagli posizione</span>
+                    <span className="text-[#152238] font-bold tracking-[0.15em] uppercase text-xs">Dettagli posizione</span>
                   </div>
                   <div className="prose prose-lg md:prose-xl prose-zinc max-w-none mb-8 lg:mb-16 font-medium">
                     <RichText content={job.description} />
@@ -131,7 +131,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
               <div className="lg:w-1/3">
                 <FadeIn effect="mask" delay={200} className="sticky top-32">
                   <div className="bg-zinc-50 p-10 lg:p-12 border-t-8 border-[#55ABE4] shadow-xl">
-                    <h3 className="text-2xl font-black text-[#0a0f1a] mb-6 tracking-tighter leading-tight uppercase">
+                    <h3 className="text-2xl font-black text-[#152238] mb-6 tracking-tighter leading-tight uppercase">
                       Candidati <br/> ora.
                     </h3>
                     <p className="text-zinc-500 font-medium text-base leading-relaxed mb-10">
@@ -139,7 +139,7 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
                     </p>
                     <a
                       href="mailto:ufficiopersonale@trialuxsrl.it"
-                      className="inline-flex w-full justify-center items-center gap-4 px-8 py-5 bg-[#0a0f1a] text-white font-black uppercase tracking-widest text-xs hover:bg-[#55ABE4] transition-all group"
+                      className="inline-flex w-full justify-center items-center gap-4 px-8 py-5 bg-[#152238] text-white font-black uppercase tracking-widest text-xs hover:bg-[#55ABE4] transition-all group"
                     >
                       <span>Invia Candidatura</span>
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

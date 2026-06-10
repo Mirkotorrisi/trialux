@@ -48,7 +48,7 @@ export default async function NewsPage() {
   const accentColors = ['#55ABE4', '#55ABE4', '#55ABE4']
 
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a] font-sans selection:bg-[#F0921E]/20">
+    <div className="bg-white min-h-screen text-[#152238] font-sans selection:bg-[#F0921E]/20">
       <Header />
 
       <main className="w-full">
@@ -94,14 +94,14 @@ export default async function NewsPage() {
                 {featuredPost && (
                   <FadeIn>
                     <div className="flex items-center gap-6 mb-12">
-                       <h2 className="text-3xl md:text-5xl font-black tracking-tight text-[#0a0f1a]">
+                       <h2 className="text-3xl md:text-5xl font-black tracking-tight text-[#152238]">
                          In Evidenza
                        </h2>
                        <span className="flex-1 h-[2px] bg-zinc-200" />
                     </div>
                     <Link
                       href={`/news/${featuredPost.slug || featuredPost.id}`}
-                      className="group block relative bg-white border border-zinc-200 overflow-hidden hover:border-[#0a0f1a] transition-all duration-500 shadow-sm hover:shadow-xl"
+                      className="group block relative bg-white border border-zinc-200 overflow-hidden hover:border-[#152238] transition-all duration-500 shadow-sm hover:shadow-xl"
                     >
                       <div className="grid grid-cols-1 lg:grid-cols-2">
                         <div className="aspect-[16/10] lg:aspect-auto relative overflow-hidden bg-zinc-100">
@@ -121,13 +121,13 @@ export default async function NewsPage() {
                            <div className="text-sm font-bold text-[#F0921E] uppercase tracking-widest mb-6">
                             {new Date(featuredPost.publishedDate || featuredPost.createdAt).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
                           </div>
-                          <h3 className="text-3xl md:text-5xl font-black text-[#0a0f1a] leading-tight tracking-tighter mb-8 group-hover:text-[#F0921E] transition-colors">
+                          <h3 className="text-3xl md:text-5xl font-black text-[#152238] leading-tight tracking-tighter mb-8 group-hover:text-[#F0921E] transition-colors">
                             {featuredPost.title}
                           </h3>
                           <p className="text-zinc-600 text-sm md:text-lg leading-relaxed mb-10 max-w-xl line-clamp-3">
                             {featuredPost.excerpt || extractPlainText(featuredPost.content)}
                           </p>
-                          <div className="flex items-center gap-4 text-sm font-black uppercase tracking-widest text-[#0a0f1a] group-hover:gap-6 transition-all">
+                          <div className="flex items-center gap-4 text-sm font-black uppercase tracking-widest text-[#152238] group-hover:gap-6 transition-all">
                             <span>Leggi l'articolo</span>
                              <ArrowRight size={20} className="text-[#F0921E]" />
                           </div>
@@ -143,7 +143,7 @@ export default async function NewsPage() {
                   <div>
                     <FadeIn>
                       <div className="flex items-center gap-6 mb-16">
-                        <h2 className="text-2xl md:text-4xl font-black tracking-tight text-[#0a0f1a]">
+                        <h2 className="text-2xl md:text-4xl font-black tracking-tight text-[#152238]">
                           Recenti dal blog
                         </h2>
                         <span className="flex-1 h-[2px] bg-zinc-200" />
@@ -159,7 +159,7 @@ export default async function NewsPage() {
                           <FadeIn key={post.id} delay={index * 50} className="h-full">
                             <Link
                               href={`/news/${post.slug || post.id}`}
-                              className="group flex flex-col h-full bg-white border border-zinc-200 hover:border-[#0a0f1a] hover:shadow-lg transition-all duration-300 relative"
+                              className="group flex flex-col h-full bg-white border border-zinc-200 hover:border-[#152238] hover:shadow-lg transition-all duration-300 relative"
                             >
                               <div className="aspect-[16/10] relative overflow-hidden bg-zinc-50 border-b border-zinc-100">
                                 {post.featuredImage ? (
@@ -180,7 +180,7 @@ export default async function NewsPage() {
                                 <div className="text-[10px] font-bold text-zinc-400 uppercase tracking-[0.2em] mb-4">
                                   {new Date(post.publishedDate || post.createdAt).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
                                 </div>
-                                <h3 className="text-xl font-black text-[#0a0f1a] leading-[1.2] tracking-tighter mb-4 group-hover:text-[#55ABE4] transition-colors">
+                                <h3 className="text-xl font-black text-[#152238] leading-[1.2] tracking-tighter mb-4 group-hover:text-[#55ABE4] transition-colors">
                                   {post.title}
                                </h3>
                                 {previewText && (
@@ -189,8 +189,8 @@ export default async function NewsPage() {
                                   </p>
                                 )}
                                 <div className="mt-auto pt-6 border-t border-zinc-100 flex items-center justify-between">
-                                  <span className="text-[10px] font-black uppercase tracking-widest text-[#0a0f1a]">Leggi Tutto</span>
-                                  <div className="w-8 h-8 flex items-center justify-center bg-zinc-50 group-hover:bg-[#0a0f1a] group-hover:text-white transition-all rounded-full">
+                                  <span className="text-[10px] font-black uppercase tracking-widest text-[#152238]">Leggi Tutto</span>
+                                  <div className="w-8 h-8 flex items-center justify-center bg-zinc-50 group-hover:bg-[#152238] group-hover:text-white transition-all rounded-full">
                                     <ArrowRight size={16} />
                                   </div>
                                 </div>
@@ -208,7 +208,7 @@ export default async function NewsPage() {
               <FadeIn>
                 <div className="border-[4px] border-zinc-100 rounded-3xl p-16 md:p-24 text-center bg-white shadow-sm">
                   <Rss size={64} className="mx-auto text-zinc-300 mb-8" />
-                  <h2 className="text-3xl md:text-4xl font-black text-[#0a0f1a] tracking-tighter mb-4">
+                  <h2 className="text-3xl md:text-4xl font-black text-[#152238] tracking-tighter mb-4">
                     Archivio in aggiornamento.
                   </h2>
                   <p className="text-zinc-500 text-lg max-w-xl mx-auto leading-relaxed">

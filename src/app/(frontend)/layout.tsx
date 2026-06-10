@@ -18,7 +18,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-white text-[#0a0f1a] selection:bg-[#F0921E] selection:text-white antialiased font-sans">
+      <body className="bg-white text-[#152238] selection:bg-[#F0921E] selection:text-white antialiased font-sans">
         <SmoothScroll />
         {children}
         <Footer />

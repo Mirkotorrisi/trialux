@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 export default function CertificazioniPage() {
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a] font-sans">
+    <div className="bg-white min-h-screen text-[#152238] font-sans">
       <Header />
 
       <main className="w-full">
@@ -53,9 +53,9 @@ export default function CertificazioniPage() {
               </video>
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#152238]/80 via-transparent to-transparent h-40" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#152238] via-[#152238]/40 to-transparent" />
 
           </div>
 
@@ -83,7 +83,7 @@ export default function CertificazioniPage() {
                   <span className="w-10 h-[2px] bg-[#F0921E]" />
                   <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Standard Internazionali</span>
                 </div>
-                <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#0a0f1a] leading-[1.15]">
+                <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-black tracking-tight text-[#152238] leading-[1.15]">
                   Certificazioni ISO.
                 </h2>
               </FadeIn>
@@ -155,7 +155,7 @@ export default function CertificazioniPage() {
                             alert('Il file di certificazione sarà disponibile a breve.');
                           }
                         }}
-                        className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest py-4 px-6 border border-zinc-200 text-[#0a0f1a] transition-all duration-300 group-hover:text-white group-hover:border-white/30 hover:!bg-white hover:!text-[#0a0f1a]"
+                        className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest py-4 px-6 border border-zinc-200 text-[#152238] transition-all duration-300 group-hover:text-white group-hover:border-white/30 hover:!bg-white hover:!text-[#152238]"
                       >
                         <Download size={16} />
                         <span>Scarica certificato</span>
@@ -225,7 +225,7 @@ export default function CertificazioniPage() {
                     style={{ top: '-10%', position: 'absolute' }}
                   />
                 </Parallax>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] to-transparent opacity-40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#152238] to-transparent opacity-40" />
               </FadeIn>
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function CertificazioniPage() {
                         <span className="w-10 h-[2px] bg-[#F0921E]" />
                         <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Etica Aziendale</span>
                       </div>
-                      <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#0a0f1a] leading-[1.1] mb-6">
+                      <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#152238] leading-[1.1] mb-6">
                         Segnalazione di condotte illecite.
                       </h2>
                     </FadeIn>
@@ -258,7 +258,7 @@ export default function CertificazioniPage() {
                         href="https://trialux.segnalazioni.eu"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-4 px-10 py-5 bg-[#0a0f1a] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
+                        className="inline-flex items-center gap-4 px-10 py-5 bg-[#152238] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#F0921E] transition-all duration-500 group-button"
                       >
                         <span>Accedi alla piattaforma</span>
                         <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -272,7 +272,7 @@ export default function CertificazioniPage() {
         </section>
 
         {/* ── FINAL CTA (Ignition Hover Banner) ────────────────────── */}
-        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
+        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#152238]">
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
@@ -305,7 +305,7 @@ export default function CertificazioniPage() {
               {/* Action Side */}
               <div className="lg:col-span-4 flex lg:justify-end">
                 <FadeIn delay={200}>
-                  <Link href="/contatti" className="group relative px-8 py-5 md:px-12 md:py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[240px] md:min-w-[280px]">
+                  <Link href="/contatti" className="group relative px-8 py-5 md:px-12 md:py-7 bg-white text-[#152238] font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-[#152238] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[240px] md:min-w-[280px]">
                     <span className="relative z-10">Contattaci</span>
                     <ArrowUpRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

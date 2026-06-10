@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export default async function HomePage() {
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a]">
+    <div className="bg-white min-h-screen text-[#152238]">
       <Header />
 
       <main className="w-full relative">
@@ -35,9 +35,9 @@ export default async function HomePage() {
               </video>
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#152238]/80 via-transparent to-transparent h-40" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#152238] via-[#152238]/40 to-transparent" />
 
           </div>
 
@@ -77,7 +77,7 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#F0921E]" />
                     <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Chi siamo</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0a0f1a] leading-[1.1] mb-6">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#152238] leading-[1.1] mb-6">
                     Un’azienda costruita <br />
                     sulla competenza.
                   </h2>
@@ -120,7 +120,7 @@ export default async function HomePage() {
                   <FadeIn key={idx} delay={idx * 80}>
                     <div className="p-8 md:p-10 flex flex-col items-center text-center gap-4">
                       <div className="mb-2">{stat.icon}</div>
-                      <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0a0f1a] leading-none tracking-tighter">{stat.num}</div>
+                      <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#152238] leading-none tracking-tighter">{stat.num}</div>
                       <div className="text-zinc-500 text-[10px] md:text-xs uppercase tracking-widest font-bold max-w-[140px] mx-auto">{stat.label}</div>
                     </div>
                   </FadeIn>
@@ -142,7 +142,7 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Cosa facciamo</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#0a0f1a] leading-[1.1]">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#152238] leading-[1.1]">
                     Soluzioni per l'energia.
                   </h2>
                 </FadeIn>
@@ -152,7 +152,7 @@ export default async function HomePage() {
                 <FadeIn delay={200}>
                   <Link
                     href="/servizi"
-                    className="group inline-flex items-center gap-4 px-8 py-4 border-[1px] border-zinc-200 hover:border-[#0a0f1a] text-[#0a0f1a] font-bold uppercase tracking-widest text-xs transition-all duration-500 hover:bg-[#0a0f1a] hover:text-white"
+                    className="group inline-flex items-center gap-4 px-8 py-4 border-[1px] border-zinc-200 hover:border-[#152238] text-[#152238] font-bold uppercase tracking-widest text-xs transition-all duration-500 hover:bg-[#152238] hover:text-white"
                   >
                     <span>Tutti i servizi</span>
                     <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
@@ -168,7 +168,7 @@ export default async function HomePage() {
                 { tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 148.webp' },
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
-                  <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#0a0f1a]">
+                  <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#152238]">
                     <Image 
                       src={s.img} 
                       alt={s.title} 
@@ -177,7 +177,7 @@ export default async function HomePage() {
                       quality={100}
                       className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-90" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#152238] via-[#152238]/40 to-transparent" />
                     
                     <div className="absolute inset-x-10 bottom-10 flex flex-col justify-end">
                       <span className="text-[#F0921E] text-[10px] font-bold uppercase tracking-[0.2em] mb-3 block">{s.tag}</span>
@@ -246,7 +246,7 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Il nostro network</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0a0f1a] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#152238] leading-[1.1] mb-8">
                     Partner & Sponsor.
                   </h2>
                 </FadeIn>
@@ -289,7 +289,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 1.7 FINAL CTA (Ignition Hover Banner) ────────────────────── */}
-        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#0a0f1a]">
+        <section className="relative py-20 lg:py-28 overflow-hidden group cursor-pointer bg-[#152238]">
           {/* Base Image Background */}
           <div className="absolute inset-0 z-0">
             <Image 
@@ -323,7 +323,7 @@ export default async function HomePage() {
               {/* Action Side */}
               <div className="lg:col-span-4 flex lg:justify-end">
                 <FadeIn delay={200}>
-                  <Link href="/contatti" className="group relative px-8 py-5 md:px-12 md:py-7 bg-white text-[#0a0f1a] font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-[#0a0f1a] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[240px] md:min-w-[280px]">
+                  <Link href="/contatti" className="group relative px-8 py-5 md:px-12 md:py-7 bg-white text-[#152238] font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-[#152238] hover:text-white transition-all duration-500 flex items-center justify-between gap-6 shadow-2xl overflow-hidden min-w-[240px] md:min-w-[280px]">
                     <span className="relative z-10">Contattaci ora</span>
                     <ArrowUpRight size={22} className="relative z-10 group-hover:translate-x-2 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

@@ -7,7 +7,7 @@ import { ContactForm } from './ContactForm'
 
 export default function ContattiPage() {
   return (
-    <div className="bg-white min-h-screen text-[#0a0f1a] font-sans">
+    <div className="bg-white min-h-screen text-[#152238] font-sans">
       <Header />
 
       <main className="w-full">
@@ -28,9 +28,9 @@ export default function ContattiPage() {
               />
             </Parallax>
             {/* Top Shadow for Header Visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-transparent to-transparent h-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#152238]/80 via-transparent to-transparent h-40" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#152238] via-[#152238]/40 to-transparent" />
           </div>
 
           <div className="container-wide relative z-10 w-full">
@@ -107,7 +107,7 @@ export default function ContattiPage() {
                       Informazioni
                     </span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0a0f1a] leading-[1.1] mb-8">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#152238] leading-[1.1] mb-8">
                     Dove trovarci.
                   </h2>
                 </FadeIn>
@@ -117,10 +117,10 @@ export default function ContattiPage() {
                   <FadeIn delay={100}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <MapPin size={20} className="text-[#0a0f1a]" />
+                        <MapPin size={20} className="text-[#152238]" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-black mb-2 text-[#0a0f1a] tracking-wide">
+                        <h3 className="text-sm font-black mb-2 text-[#152238] tracking-wide">
                           Sede operativa
                         </h3>
                         <p className="text-zinc-500 text-sm leading-relaxed">
@@ -138,15 +138,15 @@ export default function ContattiPage() {
                   <FadeIn delay={150}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <Phone size={20} className="text-[#0a0f1a]" />
+                        <Phone size={20} className="text-[#152238]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-sm font-black mb-3 text-[#0a0f1a] tracking-wide">
+                        <h3 className="text-sm font-black mb-3 text-[#152238] tracking-wide">
                           Contatti telefonici
                         </h3>
                         <a
                           href="tel:0958144954"
-                          className="text-2xl font-black text-[#55ABE4] hover:text-[#0a0f1a] transition-colors mb-4 block"
+                          className="text-2xl font-black text-[#55ABE4] hover:text-[#152238] transition-colors mb-4 block"
                         >
                           095 814 4954
                         </a>
@@ -162,7 +162,7 @@ export default function ContattiPage() {
                               key={idx}
                               className="flex items-center gap-3 text-zinc-500 text-sm"
                             >
-                              <span className="w-7 h-7  bg-zinc-100 flex items-center justify-center text-xs font-black text-[#0a0f1a]">
+                              <span className="w-7 h-7  bg-zinc-100 flex items-center justify-center text-xs font-black text-[#152238]">
                                 {item.ext}
                               </span>
                               <span className="font-medium">{item.name}</span>
@@ -177,10 +177,10 @@ export default function ContattiPage() {
                   <FadeIn delay={200}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <Mail size={20} className="text-[#0a0f1a]" />
+                        <Mail size={20} className="text-[#152238]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-sm font-black mb-4 text-[#0a0f1a] tracking-wide">
+                        <h3 className="text-sm font-black mb-4 text-[#152238] tracking-wide">
                           Email
                         </h3>
                         <ul className="space-y-3 list-none p-0 m-0">
@@ -204,7 +204,7 @@ export default function ContattiPage() {
                               </span>
                               <a
                                 href={`mailto:${item.email}`}
-                                className="text-[#0a0f1a] text-sm font-semibold hover:text-[#EE2430] transition-colors"
+                                className="text-[#152238] text-sm font-semibold hover:text-[#EE2430] transition-colors"
                               >
                                 {item.email}
                               </a>
@@ -219,10 +219,10 @@ export default function ContattiPage() {
                   <FadeIn delay={250}>
                     <div className="flex items-start gap-5">
                       <div className="w-11 h-11  bg-zinc-100 flex items-center justify-center shrink-0">
-                        <Globe size={20} className="text-[#0a0f1a]" />
+                        <Globe size={20} className="text-[#152238]" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-black mb-2 text-[#0a0f1a] tracking-wide">
+                        <h3 className="text-sm font-black mb-2 text-[#152238] tracking-wide">
                           LinkedIn
                         </h3>
                         <p className="text-zinc-500 text-sm mb-3">
@@ -233,7 +233,7 @@ export default function ContattiPage() {
                           href="https://linkedin.com/company/trialux-srl"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-[#55ABE4] text-sm font-bold hover:text-[#0a0f1a] transition-colors"
+                          className="inline-flex items-center gap-2 text-[#55ABE4] text-sm font-bold hover:text-[#152238] transition-colors"
                         >
                           linkedin.com/company/trialux-srl <ArrowRight size={14} />
                         </a>

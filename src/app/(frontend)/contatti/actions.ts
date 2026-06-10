@@ -26,7 +26,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
   const html = `
     <table style="font-family: sans-serif; font-size: 15px; color: #1a1a1a; max-width: 600px; width: 100%; border-collapse: collapse;">
       <tr><td style="padding: 32px 32px 0;">
-        <h2 style="margin: 0 0 24px; font-size: 20px; color: #0a0f1a;">Nuova richiesta dal sito Trialux</h2>
+        <h2 style="margin: 0 0 24px; font-size: 20px; color: #152238;">Nuova richiesta dal sito Trialux</h2>
       </td></tr>
       <tr><td style="padding: 0 32px;">
         <table style="width: 100%; border-collapse: collapse;">
