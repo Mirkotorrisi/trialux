@@ -70,8 +70,8 @@ export default function ContattiPage() {
               <FadeIn delay={160}>
                 <div className="py-12 px-8 lg:px-12">
                    <div className="text-[#EE2430] text-xs font-bold tracking-widest uppercase mb-3">Email principale</div>
-                   <a href="mailto:trialuxsrl@gmail.com" className="text-white font-black text-base hover:text-[#55ABE4] transition-colors block mb-1 break-all">
-                     trialuxsrl@gmail.com
+                   <a href="mailto:info@trialuxsrl.it" className="text-white font-black text-base hover:text-[#55ABE4] transition-colors block mb-1 break-all">
+                     info@trialuxsrl.it
                    </a>
                   <div className="text-zinc-500 text-sm">Per informazioni generali</div>
                 </div>
@@ -155,7 +155,7 @@ export default function ContattiPage() {
                         <h3 className="text-sm font-black mb-4 text-[#0a0f1a] tracking-wide">Email</h3>
                         <ul className="space-y-3 list-none p-0 m-0">
                           {[
-                            { label: 'Informazioni generali', email: 'trialuxsrl@gmail.com' },
+                            { label: 'Informazioni generali', email: 'info@trialuxsrl.it' },
                             { label: 'Amministrazione e fatturazione', email: 'amministrazione@trialuxsrl.it' },
                             { label: 'Ufficio tecnico', email: 'ufficiotecnico@trialuxsrl.it' },
                             { label: 'Risorse umane', email: 'ufficiopersonale@trialuxsrl.it' },

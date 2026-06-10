@@ -94,7 +94,7 @@ export const Footer = () => {
               </div>
               <div className="flex gap-4">
                 <Mail size={20} className="text-[#55ABE4] shrink-0" />
-                <a href="mailto:trialuxsrl@gmail.com" className="text-white/50 text-sm hover:text-[#F0921E] transition-colors">trialuxsrl@gmail.com</a>
+                <a href="mailto:info@trialuxsrl.it" className="text-white/50 text-sm hover:text-[#F0921E] transition-colors">info@trialuxsrl.it</a>
               </div>
             </div>
           </div>
