@@ -1,11 +1,13 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { FadeIn } from './FadeIn'
 
 interface Member {
   role: string
   name: string
+  image?: string
 }
 
 interface Department {
@@ -19,18 +21,19 @@ const teamData: Department[] = [
     title: 'Founders & Leadership',
     color: '#0a0f1a',
     members: [
-      { role: 'Amministratore Unico', name: 'Salvatore Salamone' }
+      { role: 'Amministratore Unico', name: 'Salvatore Salamone' },
+      { role: 'Responsabile Gare e Contratti', name: 'Salvatore Salamone' }
     ]
   },
   {
     title: 'Qualità e Sicurezza',
     color: '#55ABE4',
     members: [
-      { role: 'Responsabile SGI', name: 'Dott.ssa Valentina Postagna' },
-      { role: 'Medico Competente', name: 'San Giorgio Rosa' },
+      { role: 'Responsabile SGI', name: 'Dott.Ing. Valentina Petagna' },
+      { role: 'Medico Competente', name: 'Dott.ssa Rosa Sangiorgio' },
       { role: 'RSPP', name: 'Salvatore Salamone' },
-      { role: 'ASPP', name: 'Dott. Andrea Nicosia' },
-      { role: 'RLS', name: 'Dott. Placido Lavenia' },
+      { role: 'ASPP', name: 'Dott. Andrea Nicosia', image: '/images/nicosia.webp' },
+      { role: 'RLS', name: 'Dott. Placido Lavenia', image: '/images/lavenia.webp' },
     ]
   },
   {
@@ -38,11 +41,11 @@ const teamData: Department[] = [
     color: '#55ABE4',
     members: [
       { role: 'Direttore Tecnico', name: 'Salvatore Salamone' },
-      { role: 'Resp. Ufficio Tecnico', name: 'Dott. Placido Lavenia' },
-      { role: 'Ufficio Acquisti', name: 'Giuseppe Magistro' },
-      { role: 'Gestione Macchine', name: 'Pietro M. Bonanno' },
-      { role: 'Magazzino', name: 'Pietro M. Bonanno' },
       { role: 'Resp. Commessa', name: 'Salvatore Salamone' },
+      { role: 'Resp. Ufficio Tecnico', name: 'Dott. Placido Lavenia', image: '/images/lavenia.webp' },
+      { role: 'Ufficio Acquisti', name: 'Giuseppe Magistro', image: '/images/magistro.webp' },
+      { role: 'Gestione Macchine e Attrezzature', name: 'Pietro Maria Bonanno', image: '/images/bonanno.webp' },
+      { role: 'Magazzino', name: 'Pietro Maria Bonanno', image: '/images/bonanno.webp' },
     ]
   },
   {
@@ -51,32 +54,46 @@ const teamData: Department[] = [
     members: [
       { role: 'Direttore Operativo', name: 'Salvatore Salamone' },
       { role: 'Responsabile Commesse', name: 'Salvatore Salamone' },
-      { role: 'Responsabile Cantieri', name: 'Placido Lavenia' },
+      { role: 'Responsabile Cantieri', name: 'Placido Lavenia', image: '/images/lavenia.webp' },
     ]
   },
   {
     title: 'Area Amministrativa',
     color: '#F0921E',
     members: [
-      { role: 'Direttore Amministrativo', name: 'Dott. Tommaso Lombardo' },
-      { role: 'Segreteria', name: 'Dott.ssa Fabiana Cicero' },
-      { role: 'Ufficio Personale', name: 'Dott. Andrea G. Nicosia' },
-      { role: 'Ufficio Contabilità', name: 'Giuseppe Magistro' },
-      { role: 'Ufficio Istruttoria', name: 'Luigi Pellegrini' },
+      { role: 'Direttore Amministrativo', name: 'Dott. Tommaso Lombardo', image: '/images/lombardo.webp' },
+      { role: 'Ufficio Commesse', name: 'Dott. Fabiano Lo Cicero', image: '/images/lo-cicero.webp' },
+      { role: 'Ufficio Personale', name: 'Dott. Andrea Giovanni Nicosia', image: '/images/nicosia.webp' },
+      { role: 'Ufficio Contabilità', name: 'Giuseppe Magistro', image: '/images/magistro.webp' },
+      { role: 'Ufficio Istruttoria', name: 'Luigi Pellegrini', image: '/images/pellegriti.webp' },
     ]
   }
 ]
 
-const MemberCard: React.FC<{ member: Member, color: string }> = ({ member, color }) => {
-  const initials = member.name.split(' ').map(n => n[0]).join('').substring(0, 2)
+const MemberCard: React.FC<{ member: Member; color: string }> = ({ member, color }) => {
+  const initials = member.name
+    .split(' ')
+    .filter(n => n.toLowerCase() !== 'dott.' && n.toLowerCase() !== 'dott.ssa' && n.toLowerCase() !== 'dott.ing.')
+    .map(n => n[0])
+    .join('')
+    .substring(0, 2)
   
   return (
     <div className="flex flex-col group">
       <div className="aspect-[4/5] bg-zinc-50 border border-zinc-100 mb-4 flex items-center justify-center relative overflow-hidden group-hover:border-zinc-200 transition-all">
-         <span className="text-4xl font-black text-zinc-200 group-hover:text-[#55ABE4] group-hover:scale-110 transition-all duration-500 uppercase tracking-tighter">
-           {initials}
-         </span>
-         <div className="absolute bottom-0 left-0 w-full h-[3px]" style={{ background: color, opacity: 0.3 }} />
+         {member.image ? (
+           <Image 
+             src={member.image} 
+             alt={member.name} 
+             fill 
+             className="object-cover group-hover:scale-105 transition-all duration-700" 
+           />
+         ) : (
+           <span className="text-4xl font-black text-zinc-200 group-hover:text-[#55ABE4] group-hover:scale-110 transition-all duration-500 uppercase tracking-tighter">
+              {initials}
+           </span>
+         )}
+         <div className="absolute bottom-0 left-0 w-full h-[3px] z-10" style={{ background: color, opacity: 0.3 }} />
       </div>
       <div>
         <h4 className="text-base font-black text-[#0a0f1a] leading-tight mb-1">{member.name}</h4>
@@ -105,15 +122,18 @@ export const InteractiveOrgChart: React.FC = () => {
             </FadeIn>
           </div>
 
-          {/* Members Grid (Right) */}
-          <div className="lg:col-span-8">
-             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
-               {dept.members.map((member, j) => (
-                 <FadeIn key={j} delay={j * 50}>
-                   <MemberCard member={member} color={dept.color} />
-                 </FadeIn>
-               ))}
-             </div>
+          {/* Members Area (Right) */}
+          <div className="lg:col-span-8 flex flex-col gap-16">
+             {/* Department Members */}
+             {dept.members && dept.members.length > 0 && (
+               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
+                  {dept.members.map((member, j) => (
+                    <FadeIn key={j} delay={j * 50}>
+                      <MemberCard member={member} color={dept.color} />
+                    </FadeIn>
+                  ))}
+               </div>
+             )}
           </div>
 
         </div>
