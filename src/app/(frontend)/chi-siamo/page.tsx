@@ -254,21 +254,13 @@ export default function ChiSiamoPage() {
               </div>
               <FadeIn delay={200} className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                 {/* Catania Football Club Logo Slot */}
-                <div className="border border-zinc-200 border-dashed rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-zinc-50 hover:bg-zinc-100/50 hover:border-zinc-300 transition-all duration-300 group">
-                  {/* <Image src="/images/catania-fc-logo.png" alt="Catania FC Logo" width={120} height={120} className="object-contain" /> */}
-                  <span className="text-zinc-400 group-hover:text-zinc-600 font-bold tracking-widest uppercase text-center text-xs md:text-sm">
-                    Catania Football Club
-                  </span>
-                  <span className="text-[10px] text-zinc-400 mt-2 tracking-wider">Slot Logo</span>
+                <div className="border border-zinc-200 rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-white hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-300 group relative">
+                  <Image src="/images/Logo_CATANIA_FC.svg" alt="Catania Football Club" fill className="object-contain p-8 transition-transform duration-500 group-hover:scale-110" />
                 </div>
 
                 {/* SSD Biancavilla Calcio Logo Slot */}
-                <div className="border border-zinc-200 border-dashed rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-zinc-50 hover:bg-zinc-100/50 hover:border-zinc-300 transition-all duration-300 group">
-                  {/* <Image src="/images/biancavilla-logo.png" alt="SSD Biancavilla Calcio Logo" width={120} height={120} className="object-contain" /> */}
-                  <span className="text-zinc-400 group-hover:text-zinc-600 font-bold tracking-widest uppercase text-center text-xs md:text-sm">
-                    SSD Biancavilla Calcio
-                  </span>
-                  <span className="text-[10px] text-zinc-400 mt-2 tracking-wider">Slot Logo</span>
+                <div className="border border-zinc-200 rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-white hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-300 group relative">
+                  <Image src="/images/biancavillalogo.svg" alt="SSD Biancavilla Calcio" fill className="object-contain p-8 transition-transform duration-500 group-hover:scale-110" />
                 </div>
               </FadeIn>
             </div>
