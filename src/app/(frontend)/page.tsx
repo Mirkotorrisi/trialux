@@ -263,20 +263,21 @@ export default async function HomePage() {
                 {/* Group: Cliente Principale */}
                 <FadeIn delay={100} className="flex flex-col">
                   <span className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.3em] mb-6 block border-b border-zinc-200 pb-2">Cliente principale</span>
-                  <div className="flex-grow bg-white border border-zinc-200 flex items-center justify-center p-8 shadow-sm transition-all duration-500 min-h-[160px] group overflow-hidden">
-                    <Image src="/images/E-distribuzione_logo.svg" alt="E-Distribuzione" width={200} height={80} className="object-contain transition-transform duration-500 group-hover:scale-110" />
+                  <div className="flex-grow flex items-center justify-center h-full group overflow-hidden">
+                    <Image src="/images/E-distribuzione_logo.svg" alt="E-Distribuzione" width={260} height={104} className="object-contain transition-transform duration-500 group-hover:scale-110" />
                   </div>
                 </FadeIn>
 
                 {/* Group: Sponsorizzazioni */}
                 <FadeIn delay={200} className="flex flex-col">
                   <span className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.3em] mb-6 block border-b border-zinc-200 pb-2">Sponsorizzazioni</span>
-                  <div className="flex-grow flex flex-col gap-4">
-                    <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] group overflow-hidden">
-                      <Image src="/images/Logo_CATANIA_FC.svg" alt="Catania FC" width={140} height={48} className="object-contain transition-transform duration-500 group-hover:scale-110" />
+                  <div className="flex-grow flex items-center justify-center gap-8 h-full">
+                    <div className="group overflow-hidden flex items-center justify-center w-full sm:w-1/2">
+                      <Image src="/images/Logo_CATANIA_FC.svg" alt="Catania FC" width={160} height={60} className="h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-110" />
                     </div>
-                    <div className="bg-white border border-zinc-200 flex items-center justify-center p-4 shadow-sm h-full min-h-[72px] group overflow-hidden">
-                      <Image src="/images/biancavillalogo.svg" alt="Biancavilla Academy" width={140} height={48} className="object-contain transition-transform duration-500 group-hover:scale-110" />
+                    <div className="w-[1px] h-20 bg-zinc-200 shrink-0"></div>
+                    <div className="group overflow-hidden flex items-center justify-center w-full sm:w-1/2">
+                      <Image src="/images/biancavillalogo.svg" alt="Biancavilla Academy" width={160} height={60} className="h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-110" />
                     </div>
                   </div>
                 </FadeIn>

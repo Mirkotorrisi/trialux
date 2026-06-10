@@ -121,12 +121,8 @@ export default function ChiSiamoPage() {
           <DecorativePattern />
           <div className="container-wide relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              <FadeIn className="aspect-square bg-[#0a0f1a] border border-white/5 flex items-center justify-center relative overflow-hidden group">
-                <div className="relative z-10 w-full px-12">
-                   <div className="flex items-center justify-center">
-                     <img src="/images/logo-white.png" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />
-                   </div>
-                </div>
+              <FadeIn className="flex items-center justify-center">
+                 <img src="/images/logo-white.png" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />
               </FadeIn>
               <div>
                 <FadeIn effect="mask">
@@ -252,15 +248,17 @@ export default function ChiSiamoPage() {
                   </p>
                 </FadeIn>
               </div>
-              <FadeIn delay={200} className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+              <FadeIn delay={200} className="flex flex-col sm:flex-row items-center justify-center w-full gap-8">
                 {/* Catania Football Club Logo Slot */}
-                <div className="border border-zinc-200 rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-white hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-300 group relative">
-                  <Image src="/images/Logo_CATANIA_FC.svg" alt="Catania Football Club" fill className="object-contain p-8 transition-transform duration-500 group-hover:scale-110" />
+                <div className="flex items-center justify-center group w-full sm:w-1/2">
+                  <Image src="/images/Logo_CATANIA_FC.svg" alt="Catania Football Club" width={240} height={100} className="object-contain transition-transform duration-500 group-hover:scale-110" />
                 </div>
 
+                <div className="w-full h-[1px] sm:w-[1px] sm:h-24 bg-zinc-200 shrink-0"></div>
+
                 {/* SSD Biancavilla Calcio Logo Slot */}
-                <div className="border border-zinc-200 rounded-lg aspect-[4/3] sm:aspect-video flex flex-col items-center justify-center p-6 bg-white hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-300 group relative">
-                  <Image src="/images/biancavillalogo.svg" alt="SSD Biancavilla Calcio" fill className="object-contain p-8 transition-transform duration-500 group-hover:scale-110" />
+                <div className="flex items-center justify-center group w-full sm:w-1/2">
+                  <Image src="/images/biancavillalogo.svg" alt="SSD Biancavilla Calcio" width={240} height={100} className="object-contain transition-transform duration-500 group-hover:scale-110" />
                 </div>
               </FadeIn>
             </div>
