@@ -103,7 +103,7 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-white/30 text-[10px] uppercase tracking-widest">
-            © {new Date().getFullYear()} Trialux S.r.l. — P.IVA 05886610875
+            © {new Date().getFullYear()} Trialux S.r.l. — P.IVA 05825360877
           </p>
           <div className="flex gap-8">
             <Link href="/privacy-policy" className="text-white/30 text-[10px] uppercase tracking-widest hover:text-[#F0921E] transition-colors">Privacy Policy</Link>
