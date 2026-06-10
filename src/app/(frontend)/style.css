@@ -33,7 +33,7 @@
     --tri-blue: #55ABE4;
     --tri-orange: #F0921E;
     --tri-red: #EE2430;
-    --tri-navy: #0a0f1a;
+    --tri-navy: #0f172a;
     --tri-black: var(--tri-navy);
     --tri-dark: #070707;
   }
@@ -140,7 +140,7 @@ a:hover {
    DARK BACKGROUNDS & SECTIONS
    ======================================= */
 .section-dark {
-  background: radial-gradient(circle at center, #161e2e 0%, #0a0f1a 100%);
+  background: radial-gradient(circle at center, #1b355f 0%, #0f172a 100%);
   color: #ffffff;
   position: relative;
 }
