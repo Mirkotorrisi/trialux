@@ -142,7 +142,7 @@ export default async function HomePage() {
                     <span className="w-10 h-[2px] bg-[#EE2430]" />
                     <span className="text-[#EE2430] font-bold tracking-[0.15em] uppercase text-xs">Cosa facciamo</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#152238] leading-[1.1]">
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-[#152238] leading-[1.15] pb-2">
                     Soluzioni per l'energia.
                   </h2>
                 </FadeIn>

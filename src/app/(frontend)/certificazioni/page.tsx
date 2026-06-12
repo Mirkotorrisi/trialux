@@ -246,7 +246,7 @@ export default function CertificazioniPage() {
                         <span className="w-10 h-[2px] bg-[#F0921E]" />
                         <span className="text-[#F0921E] font-bold tracking-[0.15em] uppercase text-xs">Etica Aziendale</span>
                       </div>
-                      <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#152238] leading-[1.1] mb-6">
+                      <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black text-[#152238] leading-[1.15] pb-2 mb-6">
                         Segnalazione di condotte illecite.
                       </h2>
                     </FadeIn>
