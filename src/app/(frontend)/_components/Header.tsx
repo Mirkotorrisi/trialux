@@ -70,6 +70,21 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
     }
   }, [])
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+      document.documentElement.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+    }
+  }, [isMobileMenuOpen])
+
   const isSolid = scrolled || forceSolid || isMobileMenuOpen
   const shouldHide = !isVisible && scrolled && !isMobileMenuOpen
 
@@ -89,6 +104,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
             setIsVisible(false)
           }
         }}
+        data-lenis-prevent="true"
       >
         <header className="w-full flex items-center justify-between px-6 lg:px-16 h-[80px] md:h-[100px] max-w-[1450px] mx-auto">
           {/* Logo */}
@@ -147,7 +163,10 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-0 bg-white z-[90] lg:hidden flex flex-col px-8 pt-32 pb-10 overflow-y-auto">
+        <div 
+          className="fixed inset-0 top-0 bg-white z-[90] lg:hidden flex flex-col px-8 pt-32 pb-10 overflow-y-auto"
+          data-lenis-prevent="true"
+        >
           <div className="flex flex-col gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || (pathname?.startsWith(link.href) && link.href !== '/')
