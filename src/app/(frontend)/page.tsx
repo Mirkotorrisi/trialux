@@ -221,7 +221,7 @@ export default async function HomePage() {
                 </FadeIn>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {['ISO 9001:2015', 'ISO 14001:2015', 'ISO 45001:2018', 'White List'].map(item => (
+                {['ISO 9001:2015', 'ISO 45001:2018', 'UNI/PdR 125:2022', 'White List'].map(item => (
                   <div key={item} className="bg-white/5 border border-white/10 p-6 flex items-center gap-5 hover:bg-white/10 transition-all group">
                     <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 transition-colors">
                       <CheckCircle2 size={18} className="text-emerald-500 group-hover:text-white transition-colors" />
