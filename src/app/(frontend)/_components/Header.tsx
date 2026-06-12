@@ -40,25 +40,55 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
   const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout
+
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20
+      const currentScrollY = window.scrollY
+      const isScrolled = currentScrollY > 20
       setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev))
+      
+      setIsVisible(true)
+      
+      clearTimeout(timeoutId)
+      
+      if (currentScrollY > 20) {
+        timeoutId = setTimeout(() => {
+          setIsVisible(false)
+        }, 1500)
+      }
     }
+
     window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      clearTimeout(timeoutId)
+    }
   }, [])
 
   const isSolid = scrolled || forceSolid || isMobileMenuOpen
+  const shouldHide = !isVisible && scrolled && !isMobileMenuOpen
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-[100] border-b transition-colors duration-500 ${
-      isSolid 
-        ? 'bg-white border-zinc-100' 
-        : 'bg-transparent border-transparent'
-    }`}>
+    <div 
+      className={`fixed top-0 left-0 w-full z-[100] border-b transition-all duration-500 ${
+        isSolid 
+          ? 'bg-white border-zinc-100' 
+          : 'bg-transparent border-transparent'
+      } ${
+        shouldHide ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+      }`}
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => {
+        if (scrolled && !isMobileMenuOpen) {
+          setIsVisible(false)
+        }
+      }}
+    >
       <header className="w-full flex items-center justify-between px-6 lg:px-16 h-[80px] md:h-[100px] max-w-[1450px] mx-auto">
 
         {/* Logo */}
