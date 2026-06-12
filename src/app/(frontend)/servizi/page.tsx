@@ -207,9 +207,12 @@ export default function ServiziPage() {
               alt="Industrial Background" 
               fill
               sizes="100vw"
-              className="object-cover opacity-30 transition-transform duration-[2s] scale-x-[-1] group-hover:scale-x-[-1.1] group-hover:scale-y-110"
+              className="object-cover opacity-15 transition-transform duration-[2s] scale-x-[-1] group-hover:scale-x-[-1.1] group-hover:scale-y-110"
             />
           </div>
+
+          {/* Dark Overlay (Default) */}
+          <div className="absolute inset-0 bg-black/40 z-0 transition-opacity duration-700 group-hover:opacity-0" />
 
           {/* "Ignition" Gradient Overlay (Hidden by default) */}
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#F0921E] to-[#EE2430] opacity-0 group-hover:opacity-90 transition-opacity duration-700" />
@@ -224,7 +227,7 @@ export default function ServiziPage() {
                 <FadeIn effect="mask">
                   <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95] mb-4">
                     Insieme, accendiamo <br />
-                    <span className="text-white/50 group-hover:text-white transition-colors duration-500">il vostro futuro.</span>
+                    <span className="text-[#F0921E] group-hover:text-white transition-colors duration-500">il vostro futuro.</span>
                   </h2>
                 </FadeIn>
               </div>

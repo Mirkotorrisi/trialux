@@ -298,9 +298,12 @@ export default async function HomePage() {
               fill
               sizes="100vw"
               quality={100}
-              className="object-cover opacity-30 transition-transform duration-[2s] group-hover:scale-110"
+              className="object-cover opacity-15 transition-transform duration-[2s] group-hover:scale-110"
             />
           </div>
+
+          {/* Dark Overlay (Default) */}
+          <div className="absolute inset-0 bg-black/40 z-0 transition-opacity duration-700 group-hover:opacity-0" />
 
           {/* "Ignition" Gradient Overlay (Hidden by default) */}
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#F0921E] to-[#EE2430] opacity-0 group-hover:opacity-90 transition-opacity duration-700" />
@@ -315,7 +318,7 @@ export default async function HomePage() {
                 <FadeIn effect="mask">
                   <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95] mb-4">
                     Insieme, diamo energia <br />
-                    <span className="text-white/50 group-hover:text-white transition-colors duration-500">ai vostri progetti.</span>
+                    <span className="text-[#F0921E] group-hover:text-white transition-colors duration-500">ai vostri progetti.</span>
                   </h2>
                 </FadeIn>
               </div>
