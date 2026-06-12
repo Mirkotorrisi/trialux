@@ -34,7 +34,7 @@ export const Footer = () => {
           {/* Brand & Mission */}
           <div className="lg:col-span-1">
             <div className="inline-block mb-8">
-              <img src="/images/logo-white.png" alt="Trialux" className="h-12 md:h-18 w-auto" />
+              <img src="/images/trialux_logo_negativo.svg" alt="Trialux" className="h-6 md:h-8 w-auto" />
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-8">
               Realizziamo e manteniamo reti elettriche di media e bassa tensione con competenza

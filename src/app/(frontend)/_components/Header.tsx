@@ -14,16 +14,16 @@ const navLinks = [
 ]
 
 const Logo = ({ isSolid }: { isSolid: boolean }) => (
-  <div className="relative h-13 md:h-18">
+  <div className="relative h-6 md:h-8">
     <img 
-      src="/images/logo-white.png" 
+      src="/images/trialux_logo_negativo.svg" 
       alt="Trialux" 
       className={`h-full w-auto object-contain transition-opacity duration-300 ${
         isSolid ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     />
     <img 
-      src="/images/logo-black.png" 
+      src="/images/trialux_logo.svg" 
       alt="Trialux" 
       className={`absolute inset-0 h-full w-auto object-contain transition-opacity duration-300 ${
         isSolid ? 'opacity-100' : 'opacity-0 pointer-events-none'

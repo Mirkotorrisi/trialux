@@ -122,7 +122,7 @@ export default function ChiSiamoPage() {
           <div className="container-wide relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <FadeIn className="flex items-center justify-center">
-                 <img src="/images/logo-white.png" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />
+                <img src="/images/trialux_logo_negativo.svg" alt="Trialux" className="w-full max-w-[450px] h-auto drop-shadow-2xl" />
               </FadeIn>
               <div>
                 <FadeIn effect="mask">

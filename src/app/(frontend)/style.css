@@ -255,3 +255,37 @@ html.lenis body {
   pointer-events: none;
 }
 
+/* =======================================
+   ANIMATED LOGO LOADER
+   ======================================= */
+@keyframes logo-left {
+  0%, 15%, 85%, 100% { transform: translateX(0); }
+  45%, 55% { transform: translateX(1100px); }
+}
+@keyframes logo-right {
+  0%, 15%, 85%, 100% { transform: translateX(0); }
+  45%, 55% { transform: translateX(-1100px); }
+}
+@keyframes logo-text {
+  0%, 25%, 75%, 100% { transform: scaleX(1); opacity: 1; }
+  45%, 55% { transform: scaleX(0); opacity: 0; }
+}
+
+.animate-logo-left {
+  animation: logo-left 2.5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+.animate-logo-right {
+  animation: logo-right 2.5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+.animate-logo-text {
+  animation: logo-text 2.5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+  transform-origin: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
