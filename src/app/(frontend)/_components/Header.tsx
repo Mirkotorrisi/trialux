@@ -91,7 +91,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
   return (
     <>
       <div 
-        className={`fixed top-0 left-0 w-full z-[100] border-b transition-all duration-500 ${
+        className={`fixed top-0 left-0 w-full z-[9999999] border-b transition-all duration-500 ${
           isSolid 
             ? 'bg-white border-zinc-100' 
             : 'bg-transparent border-transparent'
@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 top-0 bg-white z-[90] lg:hidden flex flex-col px-8 pt-32 pb-10 overflow-y-auto"
+          className="fixed inset-0 top-0 bg-white z-[9999998] lg:hidden flex flex-col px-8 pt-32 pb-10 overflow-y-auto"
           data-lenis-prevent="true"
         >
           <div className="flex flex-col gap-8">
@@ -178,11 +178,8 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
                   onClick={() => {
                     if (!isActive) {
                       window.dispatchEvent(new Event('START_PAGE_LOADING'))
-                      // Close the menu slightly after the loader appears
-                      setTimeout(() => setIsMobileMenuOpen(false), 100)
-                    } else {
-                      setIsMobileMenuOpen(false)
                     }
+                    setIsMobileMenuOpen(false)
                   }}
                 >
                   {link.name}
@@ -198,10 +195,8 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
               onClick={() => {
                 if (pathname !== '/contatti') {
                   window.dispatchEvent(new Event('START_PAGE_LOADING'))
-                  setTimeout(() => setIsMobileMenuOpen(false), 100)
-                } else {
-                  setIsMobileMenuOpen(false)
                 }
+                setIsMobileMenuOpen(false)
               }}
             >
               Contattaci
