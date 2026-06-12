@@ -97,15 +97,7 @@ export default function CertificazioniPage() {
                   icon: <ShieldCheck size={48} />,
                   title: 'Sistema di gestione per la qualità',
                   text: 'La certificazione ISO 9001 attesta che Trialux mantiene un sistema di gestione conforme allo standard internazionale. Significa processi documentati, controllo costante delle attività e miglioramento continuo.',
-                  fileUrl: '#'
-                },
-                {
-                  code: 'ISO 14001',
-                  color: '#F0921E',
-                  icon: <Leaf size={48} />,
-                  title: 'Sistema di gestione ambientale',
-                  text: 'Dimostriamo il nostro impegno nella gestione responsabile degli impatti ambientali legati alle attività di cantiere. Monitoriamo i consumi, gestiamo i rifiuti e minimizziamo l’impatto sull’ambiente.',
-                  fileUrl: '#'
+                  fileUrl: '/documents/Certificate%20ISO%209001%20TRIALUX.pdf'
                 },
                 {
                   code: 'ISO 45001',
@@ -113,7 +105,15 @@ export default function CertificazioniPage() {
                   icon: <HardHat size={48} />,
                   title: 'Salute e sicurezza sul lavoro',
                   text: 'La sicurezza è la nostra priorità. ISO 45001 attesta la gestione dei rischi professionali. Tutto il personale è formato per operare in sicurezza anche in condizioni critiche.',
-                  fileUrl: '#'
+                  fileUrl: '/documents/Certificate%20ISO%2045001%20TRIALUX.pdf'
+                },
+                {
+                  code: 'UNI/PdR 125',
+                  color: '#F0921E',
+                  icon: <Scale size={48} />,
+                  title: 'Parità di genere',
+                  text: 'La certificazione UNI/PdR 125:2022 attesta l’adozione di misure concrete per promuovere la parità di genere, ridurre il divario retributivo e valorizzare le diversità nel contesto aziendale.',
+                  fileUrl: '/documents/Certificato%20820_125_2026_TRIALUX%20S.R.L..pdf'
                 }
               ].map((cert, idx) => (
                 <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden border-b last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 border-zinc-100">
@@ -155,7 +155,7 @@ export default function CertificazioniPage() {
                             alert('Il file di certificazione sarà disponibile a breve.');
                           }
                         }}
-                        className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest py-4 px-6 border border-zinc-200 text-[#152238] transition-all duration-300 group-hover:text-white group-hover:border-white/30 hover:!bg-white hover:!text-[#152238]"
+                        className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest py-4 px-6 border border-zinc-200 text-[#152238] transition-all duration-300 group-hover:text-white group-hover:border-white/30 hover:!bg-white hover:!text-[#152238] w-full justify-center"
                       >
                         <Download size={16} />
                         <span>Scarica certificato</span>

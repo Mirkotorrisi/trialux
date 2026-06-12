@@ -3,7 +3,7 @@ import { FadeIn } from '../_components/FadeIn'
 import { Parallax } from '../_components/Parallax'
 import { DecorativePattern } from '../_components/DecorativeArcs'
 import Link from 'next/link'
-import { ArrowRight, Award, Users, Target, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Award, Users, Target, ShieldCheck, FileText, Download } from 'lucide-react'
 import { InteractiveOrgChart } from '../_components/OrgChart'
 import Image from 'next/image'
 
@@ -173,6 +173,59 @@ export default function ChiSiamoPage() {
             <FadeIn delay={100}>
               <InteractiveOrgChart />
             </FadeIn>
+          </div>
+        </section>
+
+        {/* ── 4b. POLITICA AZIENDALE (Certificazioni e Politiche) ───────── */}
+        <section className="bg-zinc-50 py-16 md:py-32 border-t border-zinc-100 relative">
+          <div className="container-wide">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+              
+              {/* Header (Left side on desktop) */}
+              <div className="lg:col-span-4">
+                <FadeIn effect="mask">
+                  <div className="sticky top-32">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-10 h-[2px] bg-[#EE2430]" />
+                      <span className="font-bold uppercase tracking-[0.15em] text-xs text-[#EE2430]">Trasparenza</span>
+                    </div>
+                    <h3 className="text-3xl md:text-5xl font-black tracking-tight text-[#152238] mb-6">Politica Aziendale.</h3>
+                    <p className="text-zinc-500 text-sm md:text-base leading-relaxed">
+                      Operiamo nel pieno rispetto dei più alti standard qualitativi, ambientali ed etici. Crediamo nella trasparenza come valore fondante e mettiamo a disposizione i nostri documenti ufficiali di politica aziendale e codice etico.
+                    </p>
+                  </div>
+                </FadeIn>
+              </div>
+
+              {/* Downloadable Document (Right side on desktop) */}
+              <div className="lg:col-span-8 flex items-center">
+                <FadeIn delay={100} className="w-full">
+                  <div className="bg-white p-8 md:p-10 border border-zinc-100 hover:border-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 group w-full">
+                    <div className="flex-1">
+                      <div className="w-12 h-12 bg-zinc-50 flex items-center justify-center mb-6 group-hover:bg-[#55ABE4]/10 transition-all duration-300">
+                        <FileText className="text-[#55ABE4] group-hover:scale-110 transition-transform duration-300" size={24} />
+                      </div>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-zinc-400 mb-2 block">POL-SGI-01</span>
+                      <h4 className="text-xl font-black text-[#152238] mb-3 leading-snug">Politica Aziendale Integrata</h4>
+                      <p className="text-zinc-500 text-sm leading-relaxed max-w-xl">
+                        Il documento ufficiale che definisce la Politica Integrata per la Qualità, Sicurezza sul Lavoro e Tutela Ambientale di Trialux S.r.l. (ISO 9001, ISO 45001, ISO 14001).
+                      </p>
+                    </div>
+                    <div className="w-full md:w-auto shrink-0">
+                      <a 
+                        href="/documents/ALL1-%20POLITICA.pdf" 
+                        download
+                        className="tri-btn tri-btn-outline-dark w-full md:w-auto justify-between text-xs"
+                      >
+                        <span>Scarica PDF</span>
+                        <Download size={14} className="ml-2" />
+                      </a>
+                    </div>
+                  </div>
+                </FadeIn>
+              </div>
+
+            </div>
           </div>
         </section>
 
