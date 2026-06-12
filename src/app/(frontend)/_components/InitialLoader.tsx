@@ -2,17 +2,33 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { LoaderSymbol } from './LoaderSymbol'
 import { DecorativePattern } from './DecorativeArcs'
+import { usePathname, useSearchParams } from 'next/navigation'
 
 export const InitialLoader = () => {
   const [show, setShow] = useState(true)
   const [phase, setPhase] = useState<'visible' | 'fading_out'>('visible')
   const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const handleStopNavigation = () => {
+    setPhase('fading_out')
+    hideTimeoutRef.current = setTimeout(() => setShow(false), 500)
+  }
+
+  useEffect(() => {
+    // When the route changes, hide the loader
+    // Only if it's currently showing, to avoid unnecessary state updates
+    if (show && phase === 'visible') {
+      handleStopNavigation()
+    }
+  }, [pathname, searchParams])
 
   useEffect(() => {
     // Initial load handler
     const hideLoader = () => {
-      setPhase('fading_out')
-      hideTimeoutRef.current = setTimeout(() => setShow(false), 500)
+      handleStopNavigation()
     }
 
     const timer = setTimeout(() => {
@@ -30,11 +46,6 @@ export const InitialLoader = () => {
       }
       setShow(true)
       setPhase('visible')
-    }
-
-    const handleStopNavigation = () => {
-      setPhase('fading_out')
-      hideTimeoutRef.current = setTimeout(() => setShow(false), 500)
     }
 
     window.addEventListener('START_PAGE_LOADING', handleStartNavigation)

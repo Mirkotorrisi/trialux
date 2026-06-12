@@ -175,7 +175,15 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
                   key={link.name}
                   href={link.href}
                   className={`text-3xl font-black tracking-tighter no-underline ${isActive ? 'text-[#F0921E]' : 'text-[#152238]'}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    if (!isActive) {
+                      window.dispatchEvent(new Event('START_PAGE_LOADING'))
+                      // Close the menu slightly after the loader appears
+                      setTimeout(() => setIsMobileMenuOpen(false), 100)
+                    } else {
+                      setIsMobileMenuOpen(false)
+                    }
+                  }}
                 >
                   {link.name}
                 </Link>
@@ -187,7 +195,14 @@ export const Header: React.FC<HeaderProps> = ({ forceSolid = false }) => {
             <Link
               href="/contatti"
               className="tri-btn tri-btn-dark w-full py-5 text-sm"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                if (pathname !== '/contatti') {
+                  window.dispatchEvent(new Event('START_PAGE_LOADING'))
+                  setTimeout(() => setIsMobileMenuOpen(false), 100)
+                } else {
+                  setIsMobileMenuOpen(false)
+                }
+              }}
             >
               Contattaci
             </Link>
