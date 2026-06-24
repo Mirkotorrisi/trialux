@@ -115,7 +115,7 @@ export default async function CareerPage() {
             </FadeIn>
             <FadeIn delay={200} effect="mask">
               <p className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed">
-                Trialux è in costante crescita e il team si allarga ogni anno. Cerchiamo professionisti tecnici, motivati e pronti a lavorare sul campo, in un ambiente che valorizza le competenze e investe nella formazione continua.
+                Trialux è in costante crescita e il team si amplia ogni anno. Cerchiamo professionisti tecnici, motivati e pronti a lavorare sul campo, in un ambiente che valorizza le competenze e investe nella formazione continua.
               </p>
             </FadeIn>
           </div>
