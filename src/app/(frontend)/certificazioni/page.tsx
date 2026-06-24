@@ -89,7 +89,7 @@ export default function CertificazioniPage() {
               </FadeIn>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-zinc-100 border border-zinc-100">
               {[
                 {
                   code: 'ISO 9001',
@@ -108,6 +108,14 @@ export default function CertificazioniPage() {
                   fileUrl: '/documents/Certificate%20ISO%2045001%20TRIALUX.pdf'
                 },
                 {
+                  code: 'ISO 14001',
+                  color: '#22c55e',
+                  icon: <Leaf size={48} />,
+                  title: 'Sistema di gestione ambientale',
+                  text: 'La certificazione ISO 14001 attesta il nostro impegno per la tutela dell’ambiente. Operiamo riducendo l’impatto ambientale dei nostri cantieri e ottimizzando l’uso delle risorse.',
+                  fileUrl: '/documents/Certificate%20ISO%2014001%20TRIALUX.pdf'
+                },
+                {
                   code: 'UNI/PdR 125',
                   color: '#F0921E',
                   icon: <Scale size={48} />,
@@ -116,7 +124,7 @@ export default function CertificazioniPage() {
                   fileUrl: '/documents/Certificato%20820_125_2026_TRIALUX%20S.R.L..pdf'
                 }
               ].map((cert, idx) => (
-                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden border-b last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 border-zinc-100">
+                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden bg-white">
                   {/* Hover Color Fill */}
                   <div 
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-0" 

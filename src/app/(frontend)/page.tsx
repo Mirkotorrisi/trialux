@@ -215,13 +215,13 @@ export default async function HomePage() {
                 </FadeIn>
                 <FadeIn delay={200} effect="mask">
                   <p className="text-white/50 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
-                    Operiamo con sistemi di gestione certificati ISO 9001, 14001 e 45001. Siamo iscritti alla White List e titolari del Rating di Legalità a due stelle.
+                    Operiamo con sistemi di gestione certificati ISO 9001, 14001 e 45001. Abbiamo ottenuto la certificazione per la Parità di Genere e il Rating di Legalità a due stelle.
                   </p>
                   <Link href="/certificazioni" className="tri-btn tri-btn-outline px-8 py-4 text-[11px]">Vedi certificazioni</Link>
                 </FadeIn>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {['ISO 9001:2015', 'ISO 45001:2018', 'UNI/PdR 125:2022', 'White List'].map(item => (
+                {['ISO 9001:2015', 'ISO 14001:2015', 'ISO 45001:2018', 'UNI/PdR 125:2022'].map(item => (
                   <div key={item} className="bg-white/5 border border-white/10 p-6 flex items-center gap-5 hover:bg-white/10 transition-all group">
                     <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 transition-colors">
                       <CheckCircle2 size={18} className="text-emerald-500 group-hover:text-white transition-colors" />
