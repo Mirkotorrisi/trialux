@@ -3,7 +3,7 @@ import { FadeIn } from '../_components/FadeIn'
 import { Parallax } from '../_components/Parallax'
 import { DecorativePattern } from '../_components/DecorativeArcs'
 import Link from 'next/link'
-import { ArrowRight, Award, Users, Target, ShieldCheck, FileText, Download } from 'lucide-react'
+import { ArrowRight, Award, Users, Target, ShieldCheck, FileText, Download, Infinity, TrendingUp } from 'lucide-react'
 import { InteractiveOrgChart } from '../_components/OrgChart'
 import Image from 'next/image'
 
@@ -138,9 +138,38 @@ export default function ChiSiamoPage() {
                   <p className="text-white/50 text-base leading-relaxed mb-6">
                     Il logo di Trialux nasce da un’idea semplice e significativa: tre foglie, tre persone, un’unica direzione. Ideato insieme ai tre figli di Salvatore Salamone, il simbolo racconta il carattere familiare e generazionale dell’azienda, senza rinunciare alla proiezione verso il futuro.
                   </p>
-                  <p className="text-white/50 text-base leading-relaxed mb-10">
-                    Le tre foglie rappresentano i valori che guidano ogni decisione: <strong className="text-white">unità</strong>, perché il lavoro di squadra è la nostra prima risorsa; <strong className="text-white">crescita</strong>, perché non ci accontentiamo mai del risultato raggiunto; <strong className="text-white">continuità</strong>, perché costruiamo relazioni e infrastrutture pensando al lungo periodo.
+                  <p className="text-white/50 text-base leading-relaxed mb-6">
+                    Le tre foglie rappresentano i valori che guidano ogni decisione:
                   </p>
+                  <div className="mb-12 flex flex-col gap-10">
+                    <div className="flex items-center gap-5">
+                      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                        <Users className="w-5 h-5 text-white" />
+                      </div>
+                      <p className="text-white/50 text-base leading-relaxed m-0">
+                        <strong className="text-white text-lg mr-2">Unità:</strong> 
+                        perché il lavoro di squadra è la nostra prima risorsa.
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-5">
+                      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                        <Infinity className="w-5 h-5 text-white" />
+                      </div>
+                      <p className="text-white/50 text-base leading-relaxed m-0">
+                        <strong className="text-white text-lg mr-2">Continuità:</strong> 
+                        perché costruiamo relazioni e infrastrutture pensando al lungo periodo.
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-5">
+                      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                        <TrendingUp className="w-5 h-5 text-white" />
+                      </div>
+                      <p className="text-white/50 text-base leading-relaxed m-0">
+                        <strong className="text-white text-lg mr-2">Crescita:</strong> 
+                        perché non ci accontentiamo mai del risultato raggiunto.
+                      </p>
+                    </div>
+                  </div>
                   <div className="border-l-4 border-[#EE2430] pl-6">
                     <p className="text-xl font-bold text-white italic">"Un marchio che non è solo estetica, ma identità."</p>
                   </div>
