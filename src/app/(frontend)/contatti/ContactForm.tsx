@@ -52,7 +52,7 @@ export function ContactForm() {
         <h3 className="text-2xl lg:text-3xl font-black mb-10 text-[#152238] tracking-tight">
           Invia una richiesta
         </h3>
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={onSubmit}>
           <div>
             <label
               htmlFor="name"
@@ -63,6 +63,7 @@ export function ContactForm() {
             <input
               type="text"
               id="name"
+              name="name"
               required
               className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400"
               placeholder="Mario Rossi"
@@ -79,6 +80,7 @@ export function ContactForm() {
             <input
               type="text"
               id="company"
+              name="company"
               className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400"
               placeholder="Nome azienda"
             />
@@ -93,6 +95,7 @@ export function ContactForm() {
               </label>
               <input
                 type="email"
+                name="email"
                 id="email"
                 required
                 className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#000080] transition-colors text-[#152238] placeholder:text-zinc-400"
@@ -109,6 +112,7 @@ export function ContactForm() {
               <input
                 type="tel"
                 id="phone"
+                name="phone"
                 className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400"
                 placeholder="+39"
               />
@@ -123,6 +127,7 @@ export function ContactForm() {
             </label>
             <select
               id="subject"
+              name="subject"
               required
               className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] cursor-pointer appearance-none"
             >
@@ -144,6 +149,7 @@ export function ContactForm() {
             </label>
             <textarea
               id="message"
+              name="message"
               required
               rows={4}
               className="w-full bg-white border border-zinc-200 px-4 py-3 focus:outline-none focus:border-[#55ABE4] transition-colors text-[#152238] placeholder:text-zinc-400 resize-none"
@@ -153,6 +159,7 @@ export function ContactForm() {
           <div className="flex items-start gap-3">
             <input
               id="privacy"
+              name="privacy"
               type="checkbox"
               required
               className="w-4 h-4 mt-1 border-zinc-300 rounded focus:ring-0 checked:bg-[#55ABE4] cursor-pointer"
