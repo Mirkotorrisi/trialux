@@ -89,7 +89,7 @@ export default function CertificazioniPage() {
               </FadeIn>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-zinc-100 border border-zinc-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 border border-zinc-200">
               {[
                 {
                   code: 'ISO 9001',
@@ -124,7 +124,7 @@ export default function CertificazioniPage() {
                   fileUrl: '/documents/Certificato%20820_125_2026_TRIALUX%20S.R.L..pdf'
                 }
               ].map((cert, idx) => (
-                <FadeIn key={idx} delay={idx * 150} className="group relative overflow-hidden bg-white">
+                <FadeIn key={idx} delay={idx * 150} className={`group relative overflow-hidden bg-white ${idx < 3 ? 'border-b border-zinc-200' : ''} ${idx % 2 === 0 ? 'md:border-r' : 'md:border-r-0'} ${idx < 2 ? 'md:border-b' : 'md:border-b-0'}`}>
                   {/* Hover Color Fill */}
                   <div 
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-0" 
