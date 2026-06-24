@@ -39,7 +39,7 @@ const teamData: Department[] = [
     title: 'Direzione Tecnica',
     color: '#55ABE4',
     members: [
-      { roles: ['Direttore Tecnico', 'Direttore Operativo', 'Resp. Commessa', 'Responsabile Commesse'], name: 'Salvatore Salamone', image: '/images/salamone.webp' },
+      { roles: ['Direttore Tecnico', 'Direttore Operativo', 'Responsabile Commesse'], name: 'Salvatore Salamone', image: '/images/salamone.webp' },
       { roles: ['Resp. Ufficio Tecnico', 'Responsabile Cantieri'], name: 'Dott. Placido Lavenia', image: '/images/lavenia.webp' },
       { roles: ['Ufficio Acquisti'], name: 'Giuseppe Magistro', image: '/images/magistro.webp' },
       { roles: ['Gestione Macchine e Attrezzature', 'Magazzino'], name: 'Pietro Maria Bonanno', image: '/images/bonanno.webp' },
