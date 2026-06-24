@@ -281,15 +281,17 @@ export default function ChiSiamoPage() {
               </FadeIn>
             </div>
 
-            {/* Metrics grid — 4 colonne con divisori */}
-            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-zinc-200 border border-zinc-200">
+            {/* Metrics grid — 3 colonne con divisori */}
+            <div className="grid grid-cols-1 md:grid-cols-3 border border-zinc-200">
               {[
                 { icon: <Target className="text-[#55ABE4]" size={24}/>, num: '2021', label: 'Anno di fondazione' },
                 { icon: <Users className="text-[#F0921E]" size={24}/>, num: '+100', label: 'Dipendenti in forza' },
                 { icon: <Award className="text-[#55ABE4]" size={24}/>, num: '3 ISO', label: 'Certificazioni ottenute' },
               ].map((stat, idx) => (
-                <FadeIn key={idx} delay={idx * 80}>
-                  <div className="p-8 md:p-10 flex flex-col items-center text-center gap-4 bg-white">
+                <FadeIn key={idx} delay={idx * 80} className="h-full">
+                  <div className={`p-8 md:p-10 flex flex-col items-center text-center gap-4 bg-white h-full ${
+                    idx !== 0 ? 'border-t md:border-t-0 md:border-l border-zinc-200' : ''
+                  }`}>
                     <div className="mb-2">{stat.icon}</div>
                     <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#152238] leading-none tracking-tighter">{stat.num}</div>
                     <div className="text-zinc-500 text-[10px] md:text-xs uppercase tracking-widest font-bold max-w-[140px] mx-auto">{stat.label}</div>
