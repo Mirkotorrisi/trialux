@@ -89,7 +89,7 @@ export default function CertificazioniPage() {
               </FadeIn>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-zinc-100 border border-zinc-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-zinc-100 border border-zinc-100">
               {[
                 {
                   code: 'ISO 9001',
