@@ -1,5 +1,6 @@
 import { CollectionConfig, FieldHook } from 'payload'
 import { formatSlug } from '../utilities/formatSlug'
+import { triggerNetlifyBuild } from '../utilities/triggerNetlifyBuild'
 
 const formatSlugHook: FieldHook = ({ value, data }) => {
   if (value && typeof value === 'string') {
@@ -67,4 +68,8 @@ export const Posts: CollectionConfig = {
       defaultValue: () => new Date(),
     },
   ],
+  hooks: {
+    afterChange: [async () => { await triggerNetlifyBuild() }],
+    afterDelete: [async () => { await triggerNetlifyBuild() }],
+  },
 }

@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload'
+import { triggerNetlifyBuild } from '../utilities/triggerNetlifyBuild'
 
 export const Jobs: CollectionConfig = {
   slug: 'jobs',
@@ -86,4 +87,8 @@ export const Jobs: CollectionConfig = {
       },
     },
   ],
+  hooks: {
+    afterChange: [async () => { await triggerNetlifyBuild() }],
+    afterDelete: [async () => { await triggerNetlifyBuild() }],
+  },
 }
