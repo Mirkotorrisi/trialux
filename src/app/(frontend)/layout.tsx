@@ -6,9 +6,21 @@ import { InitialLoader } from './_components/InitialLoader'
 
 import { Suspense } from 'react'
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
   description: 'Realizzazione e manutenzione reti elettriche di media e bassa tensione.',
   title: 'Trialux S.r.l.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-transparent.png', type: 'image/png', sizes: '32x32' },
+      { url: '/icon-white.png', type: 'image/png', sizes: '48x48' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', type: 'image/png', sizes: '180x180' },
+    ],
+  },
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
