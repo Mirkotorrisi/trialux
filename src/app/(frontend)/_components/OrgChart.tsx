@@ -53,7 +53,7 @@ const teamData: Department[] = [
       { roles: ['Ufficio Commesse'], name: 'Dott. Fabiano Lo Cicero', image: '/images/lo-cicero.webp' },
       { roles: ['Ufficio Personale'], name: 'Dott. Andrea Giovanni Nicosia', image: '/images/nicosia.webp' },
       { roles: ['Ufficio Contabilità'], name: 'Giuseppe Magistro', image: '/images/magistro.webp' },
-      { roles: ['Ufficio Istruttoria'], name: 'Luigi Pellegrini', image: '/images/pellegriti.webp' },
+      { roles: ['Ufficio Istruttoria'], name: 'Luigi Pellegriti', image: '/images/pellegriti.webp' },
     ]
   }
 ]
