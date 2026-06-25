@@ -163,12 +163,12 @@ export default async function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
               {[
-                { tag: 'Infrastrutture', title: 'Cavi MT/BT', desc: 'Posa di cavi sotterranei e aerei, inclusi i sistemi di giunzione e terminazione.', img: '/images/Trialux 119.webp' },
-                { tag: 'Impiantistica', title: 'Cabine Elettriche', desc: 'Installazione e manutenzione di cabine secondarie per la distribuzione locale.', img: '/images/Trialux 131.webp' },
-                { tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 148.webp' },
+                { id: 'cavi-sotterranei', tag: 'Infrastrutture', title: 'Cavi MT/BT', desc: 'Posa di cavi sotterranei e aerei, inclusi i sistemi di giunzione e terminazione.', img: '/images/Trialux 119.webp' },
+                { id: 'cabine-secondarie', tag: 'Impiantistica', title: 'Cabine Elettriche', desc: 'Installazione e manutenzione di cabine secondarie per la distribuzione locale.', img: '/images/Trialux 131.webp' },
+                { id: 'opere-murarie', tag: 'Opere civili', title: 'Opere Murarie', desc: 'Scavi di trincea, basamenti e opere edili a supporto degli impianti.', img: '/images/Trialux 148.webp' },
               ].map((s, i) => (
                 <FadeIn key={i} delay={i * 100}>
-                  <Link href="/servizi" className="group relative block aspect-[4/5] overflow-hidden bg-[#152238]">
+                  <Link href={`/servizi#${s.id}`} className="group relative block aspect-[4/5] overflow-hidden bg-[#152238]">
                     <Image 
                       src={s.img} 
                       alt={s.title} 
